@@ -4,7 +4,7 @@
 
 @layer base {
     * {
-        font-family: 'GmarketSans';
+        font-family: 'Pretendard';
         box-sizing: border-box;
     }
     em {
@@ -12,7 +12,7 @@
     }
     html,
     body {
-        @apply bg-[#191A32];
+        @apply fixed h-full w-full overflow-hidden bg-[#191A32];
     }
 }
 #wrap {
@@ -43,9 +43,6 @@ input[name='typeCheck']:checked + label span:last-child {
 }
 .progress span {
     background: linear-gradient(278.31deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%), #1c1c1c;
-}
-.inputName {
-    width: calc(100% - 52px);
 }
 
 .vanilla-calendar {
@@ -130,10 +127,12 @@ textarea:focus {
 }
 
 .vanilla-calendar-week__day {
-    @apply font-ptnd text-[16px] font-normal text-[#7B61FF] !important;
+    @apply text-[16px] font-normal text-[#7B61FF] !important;
 }
 #customCalendar {
-    padding: 0 !important;
+    padding: 20px 0 0 0 !important;
+    grid-gap: 20px !important;
+    gap: 20px !important;
 }
 .vanilla-calendar-header {
     justify-content: space-between !important;
@@ -143,7 +142,7 @@ textarea:focus {
     @apply justify-start px-0 leading-5 text-[#242731] !important;
 }
 .vanilla-calendar-header__content button {
-    @apply font-ptnd text-[18px] font-semibold !important;
+    @apply text-[18px] font-semibold !important;
 }
 .vanilla-calendar-header__content button:first-child:after {
     content: '.';
@@ -155,7 +154,7 @@ textarea:focus {
     right: 0 !important;
 }
 .vanilla-calendar-content {
-    @apply gap-4;
+    @apply gap-2;
 }
 .vanilla-calendar-day__btn {
     @apply flex-wrap content-center font-dm text-[16px] font-medium leading-[30px] text-[#5f6165] !important;
@@ -171,7 +170,12 @@ textarea:focus {
     @apply bg-violet-200  text-white !important;
 }
 .tab button.active {
-    @apply rounded-[20px] bg-violet-500 font-ptnd text-[16px] font-semibold text-white;
+    @apply rounded-[20px] bg-violet-500  text-[16px] font-semibold text-white;
+}
+
+.vanilla-calendar-time__hours,
+.vanilla-calendar-time__minutes {
+    @apply w-[30px] !important;
 }
 
 #week ol li div:first-child {

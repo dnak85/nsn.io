@@ -64,14 +64,9 @@
                     </div>
                     <!-- 진행단계 -->
 
-                    <div class="mt-10 flex w-full content-center items-center justify-between gap-4 px-4">
-                        <div class="block h-9 w-9 rounded-full border-[3px] border-white">
-                            <img src="./img/avata.png" alt="유저아바타" width="100%" />
-                        </div>
-                        <!-- //썸네일 -->
-
-                        <div class="inputName block">
-                            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="text-[16px] h-[58px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent text-center text-[#a78bfa]" />
+                    <div class="mt-10 block w-full px-4">
+                        <div class="inputName block w-full">
+                            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent text-center text-[16px] text-[#a78bfa]" />
                         </div>
                         <!-- // 입력 -->
                     </div>
@@ -80,109 +75,20 @@
                     <div class="mt-6 w-full">
                         <div class="w-full px-4">
                             <dl class="flex w-full justify-start gap-2.5">
-                                <dt class="text-[16px] h-5 leading-5 text-white">
-                                    <span class="font-ptnd font-semibold">약속날짜</span>
+                                <dt class="h-5 text-[16px] leading-5 text-white">
+                                    <span class="font-semibold">약속날짜</span>
                                 </dt>
                                 <dd class="h-5 text-[18px] leading-5 text-white">
-                                    <span class="font-ptnd font-semibold">2023년 5월 1일 수요일 14시</span>
+                                    <span class="font-semibold">2023년 5월 1일 수요일 14시</span>
                                 </dd>
                             </dl>
                         </div>
                         <!-- //날짜 텍스트 -->
 
                         <div class="mt-4 w-full overflow-hidden px-2">
-                            <div class="relative float-left min-h-[350px] w-full overflow-hidden rounded-[10px] bg-white px-3">
-                                <div class="tab float-left mt-5 grid h-9 w-full grid-cols-2 gap-3 rounded-full bg-[#e2e4ff] px-4">
-                                    <button onclick="tabButton()" class="block" data-tabs-id="week">주간</button>
-                                    <button onclick="tabButton()" class="active block" data-tabs-id="customCalendar">월간</button>
-                                </div>
-
-                                <div id="customCalendar" class="tabCont active float-left mt-6 w-full"></div>
+                            <div class="relative float-left block min-h-[360px] w-full overflow-hidden rounded-[10px] bg-white px-3">
+                                <div id="customCalendar" class="float-left w-full"></div>
                                 <!-- //calendar -->
-
-                                <div id="week" class="tabCont float-left mt-6 w-full pb-5">
-                                    <strong class="font-ptnd text-[16px] font-semibold">주간 약속</strong>
-                                    <ol class="w-full divide-y divide-gray-200">
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-
-                                        <li class="relative flex justify-between py-3">
-                                            <div class="flex-start flex content-center items-center gap-2">
-                                                <span class="font-ptnd text-[14px] font-light">23.02.08</span>
-                                                <span class="block font-ptnd text-[16px]" alt="인천 4인 골프약속 인천 4인 골프약속">인천 4인 골프약속 인천 4인 골프약속</span>
-                                            </div>
-                                            <!-- //일정 -->
-                                            <div>
-                                                <span class="font-ptnd text-[14px] font-light">04:00 ~ 12:00</span>
-                                            </div>
-                                            <!-- //시간 -->
-                                            <a href="#" class="absolute inset-0 z-20 h-full w-full"></a>
-                                        </li>
-                                    </ol>
-                                </div>
-                                <!-- //week -->
 
                                 <script>
                                     document.addEventListener('DOMContentLoaded', () => {
@@ -198,8 +104,8 @@
                                                 lang: 'define',
                                                 //iso8601: false,
                                                 selection: {
-                                                    time: false,
-                                                    controlTime: 'all',
+                                                    time: true,
+                                                    controlTime: '24',
                                                 },
                                                 selected: {
                                                     dates: ['2023-02-11', '2023-03-10', '2023-01-11'],
@@ -233,87 +139,41 @@
                                     });
 
                                     //tabs
-                                    function tabButton() {
-                                        const tabContentid = event.target.getAttribute('data-tabs-id');
-                                        const tabContent = document.getElementById(tabContentid);
-                                        const tcAll = document.querySelectorAll('.tabCont');
-                                        const tabBtn = document.querySelectorAll('.tab button');
+                                    // function tabButton() {
+                                    //     const tabContentid = event.target.getAttribute('data-tabs-id');
+                                    //     const tabContent = document.getElementById(tabContentid);
+                                    //     const tcAll = document.querySelectorAll('.tabCont');
+                                    //     const tabBtn = document.querySelectorAll('.tab button');
 
-                                        for (i = 0; i < tabBtn.length; i++) {
-                                            tabBtn[i].classList.remove('active');
-                                        }
-                                        event.target.classList.add('active');
+                                    //     for (i = 0; i < tabBtn.length; i++) {
+                                    //         tabBtn[i].classList.remove('active');
+                                    //     }
+                                    //     event.target.classList.add('active');
 
-                                        for (i = 0; i < tcAll.length; i++) {
-                                            tcAll[i].classList.remove('active');
-                                        }
-                                        if (tabContent.classList.contains('active')) {
-                                            //
-                                        } else {
-                                            tabContent.classList.add('active');
-                                        }
-                                    }
+                                    //     for (i = 0; i < tcAll.length; i++) {
+                                    //         tcAll[i].classList.remove('active');
+                                    //     }
+                                    //     if (tabContent.classList.contains('active')) {
+                                    //         //
+                                    //     } else {
+                                    //         tabContent.classList.add('active');
+                                    //     }
+                                    // }
                                 </script>
                             </div>
                             <!-- //달력 -->
-
-                            <div class="relative float-left mt-2 flex h-[104px] w-full flex-wrap content-center items-center justify-center gap-[25px] rounded-[10px] bg-white p-1">
-                                <div class="flex flex-col flex-wrap items-center justify-center gap-[3px]">
-                                    <button class="up flex h-6 w-6 flex-wrap content-center justify-center text-center" name="hour" onclick="minus()">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.700048 6.7C0.516715 6.51667 0.425049 6.28334 0.425049 6C0.425049 5.71667 0.516715 5.48334 0.700048 5.3L5.30005 0.700003C5.40005 0.600003 5.50838 0.529003 5.62505 0.487003C5.74172 0.44567 5.86672 0.425003 6.00005 0.425003C6.13338 0.425003 6.26271 0.450003 6.38805 0.500003C6.51271 0.550003 6.61671 0.616669 6.70005 0.700003L11.3 5.3C11.4834 5.48334 11.575 5.71667 11.575 6C11.575 6.28334 11.4834 6.51667 11.3 6.7C11.1167 6.88334 10.8834 6.975 10.6 6.975C10.3167 6.975 10.0834 6.88334 9.90005 6.7L6.00005 2.8L2.10005 6.7C1.91672 6.88334 1.68338 6.975 1.40005 6.975C1.11672 6.975 0.883382 6.88334 0.700048 6.7Z" fill="black" />
-                                        </svg>
-                                    </button>
-                                    <input id="hour" type="number" value="01" max="12" min="01" disabled class="h-[38px] w-[48px] bg-transparent text-center font-ptnd text-[32px] font-semibold leading-[38px] text-[#7b61ff]" />
-                                    <button class="down flex h-6 w-6 flex-wrap content-center justify-center text-center" name="hour">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.00005 6.975C5.86672 6.975 5.73772 6.95 5.61305 6.9C5.48772 6.85 5.38338 6.78334 5.30005 6.7L0.700048 2.1C0.516715 1.91667 0.425049 1.68334 0.425049 1.4C0.425049 1.11667 0.516715 0.883336 0.700048 0.700003C0.883382 0.516669 1.11672 0.425003 1.40005 0.425003C1.68338 0.425003 1.91672 0.516669 2.10005 0.700003L6.00005 4.6L9.90005 0.700003C10.0834 0.516669 10.3167 0.425003 10.6 0.425003C10.8834 0.425003 11.1167 0.516669 11.3 0.700003C11.4834 0.883336 11.575 1.11667 11.575 1.4C11.575 1.68334 11.4834 1.91667 11.3 2.1L6.70005 6.7C6.60005 6.8 6.49172 6.87067 6.37505 6.912C6.25838 6.954 6.13338 6.975 6.00005 6.975Z" fill="black" />
-                                        </svg>
-                                    </button>
-
-                                    <!-- // id와 name 값을 맞춰 주세요  -->
-                                </div>
-                                <!-- //hour -->
-
-                                <span class="flex h-10 flex-wrap content-center font-ptnd text-[32px] font-semibold leading-[40px] text-[#7b61ff]">:</span>
-
-                                <div class="flex flex-col flex-wrap items-center justify-center gap-[3px]">
-                                    <button class="up flex h-6 w-6 flex-wrap content-center justify-center text-center" name="minu">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.700048 6.7C0.516715 6.51667 0.425049 6.28334 0.425049 6C0.425049 5.71667 0.516715 5.48334 0.700048 5.3L5.30005 0.700003C5.40005 0.600003 5.50838 0.529003 5.62505 0.487003C5.74172 0.44567 5.86672 0.425003 6.00005 0.425003C6.13338 0.425003 6.26271 0.450003 6.38805 0.500003C6.51271 0.550003 6.61671 0.616669 6.70005 0.700003L11.3 5.3C11.4834 5.48334 11.575 5.71667 11.575 6C11.575 6.28334 11.4834 6.51667 11.3 6.7C11.1167 6.88334 10.8834 6.975 10.6 6.975C10.3167 6.975 10.0834 6.88334 9.90005 6.7L6.00005 2.8L2.10005 6.7C1.91672 6.88334 1.68338 6.975 1.40005 6.975C1.11672 6.975 0.883382 6.88334 0.700048 6.7Z" fill="black" />
-                                        </svg>
-                                    </button>
-                                    <input id="minu" type="number" value="01" max="12" min="01" disabled class="h-[38px] w-[48px] bg-transparent text-center font-ptnd text-[32px] font-semibold leading-[38px] text-[#7b61ff]" />
-                                    <button class="down flex h-6 w-6 flex-wrap content-center justify-center text-center" name="minu">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.00005 6.975C5.86672 6.975 5.73772 6.95 5.61305 6.9C5.48772 6.85 5.38338 6.78334 5.30005 6.7L0.700048 2.1C0.516715 1.91667 0.425049 1.68334 0.425049 1.4C0.425049 1.11667 0.516715 0.883336 0.700048 0.700003C0.883382 0.516669 1.11672 0.425003 1.40005 0.425003C1.68338 0.425003 1.91672 0.516669 2.10005 0.700003L6.00005 4.6L9.90005 0.700003C10.0834 0.516669 10.3167 0.425003 10.6 0.425003C10.8834 0.425003 11.1167 0.516669 11.3 0.700003C11.4834 0.883336 11.575 1.11667 11.575 1.4C11.575 1.68334 11.4834 1.91667 11.3 2.1L6.70005 6.7C6.60005 6.8 6.49172 6.87067 6.37505 6.912C6.25838 6.954 6.13338 6.975 6.00005 6.975Z" fill="black" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <!-- //min -->
-
-                                <div class="flex flex-col flex-wrap items-center justify-center gap-[3px] pl-5">
-                                    <button class="up flex h-6 w-6 flex-wrap content-center justify-center text-center" name="ampm">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.700048 6.7C0.516715 6.51667 0.425049 6.28334 0.425049 6C0.425049 5.71667 0.516715 5.48334 0.700048 5.3L5.30005 0.700003C5.40005 0.600003 5.50838 0.529003 5.62505 0.487003C5.74172 0.44567 5.86672 0.425003 6.00005 0.425003C6.13338 0.425003 6.26271 0.450003 6.38805 0.500003C6.51271 0.550003 6.61671 0.616669 6.70005 0.700003L11.3 5.3C11.4834 5.48334 11.575 5.71667 11.575 6C11.575 6.28334 11.4834 6.51667 11.3 6.7C11.1167 6.88334 10.8834 6.975 10.6 6.975C10.3167 6.975 10.0834 6.88334 9.90005 6.7L6.00005 2.8L2.10005 6.7C1.91672 6.88334 1.68338 6.975 1.40005 6.975C1.11672 6.975 0.883382 6.88334 0.700048 6.7Z" fill="black" />
-                                        </svg>
-                                    </button>
-                                    <input id="ampm" type="text" value="AM" disabled class="h-[38px] w-[48px] bg-transparent text-center font-ptnd text-[32px] font-semibold leading-[38px] text-[#7b61ff]" />
-                                    <button class="down flex h-6 w-6 flex-wrap content-center justify-center text-center" name="ampm">
-                                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.00005 6.975C5.86672 6.975 5.73772 6.95 5.61305 6.9C5.48772 6.85 5.38338 6.78334 5.30005 6.7L0.700048 2.1C0.516715 1.91667 0.425049 1.68334 0.425049 1.4C0.425049 1.11667 0.516715 0.883336 0.700048 0.700003C0.883382 0.516669 1.11672 0.425003 1.40005 0.425003C1.68338 0.425003 1.91672 0.516669 2.10005 0.700003L6.00005 4.6L9.90005 0.700003C10.0834 0.516669 10.3167 0.425003 10.6 0.425003C10.8834 0.425003 11.1167 0.516669 11.3 0.700003C11.4834 0.883336 11.575 1.11667 11.575 1.4C11.575 1.68334 11.4834 1.91667 11.3 2.1L6.70005 6.7C6.60005 6.8 6.49172 6.87067 6.37505 6.912C6.25838 6.954 6.13338 6.975 6.00005 6.975Z" fill="black" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <!-- //ampm -->
-                            </div>
-                            <!-- //시간 -->
                         </div>
                         <!-- //calendar -->
                     </div>
                     <!-- // 약속날짜 -->
 
-                    <div class="h-[40px] w-full"></div>
+                    <div class="mt-[48px] flex w-full justify-center gap-4">
+                        <button class="h-[48px] w-[140px] rounded-[10px] bg-[#cbc2f4]/40 text-[16px] font-bold text-white">이 전</button>
+                        <button class="h-[48px] w-[140px] rounded-[10px] text-[16px] font-bold text-white">다 음</button>
+                    </div>
+                    <!-- button -->
+
+                    <div class="h-[64px] w-full"></div>
                     <!-- // 하단여백 -->
                 </div>
                 <!-- // -->
