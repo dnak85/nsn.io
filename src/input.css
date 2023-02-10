@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: 'GmarketSans';
+        box-sizing: border-box;
+    }
+    em {
+        font-style: normal;
+    }
+    html,
+    body {
+        @apply bg-[#191A32];
+    }
+}
+#wrap {
+    @apply relative mx-auto h-full w-full max-w-[720px] bg-[#191A32];
+}
+#header {
+    @apply fixed inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6;
+}
+#container {
+    @apply h-full w-full pt-[80px];
+}
+#footer {
+    @apply w-full pb-6;
+}
+
+input[name='typeCheck'] + label {
+    @apply cursor-pointer;
+}
+input[name='typeCheck']:checked + label {
+    @apply bg-violet-500;
+}
+input[name='typeCheck']:checked + label span:last-child {
+    @apply text-white;
+}
+
+.progress {
+    width: calc(100% - 56px);
+}
+.progress span {
+    background: linear-gradient(278.31deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%), #1c1c1c;
+}
+.inputName {
+    width: calc(100% - 52px);
+}
+
+.vanilla-calendar {
+    @apply w-full !important;
+}
+
+.bnr-total {
+    background: linear-gradient(278.31deg, #d344fa 0.03%, #6e59d5 53.07%, rgba(252, 81, 133, 0.91) 97.82%);
+}
+input[type='checkbox'] + label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #637381;
+    display: block;
+}
+input[type='checkbox']:checked + label::before {
+    content: url('https://api.iconify.design/material-symbols/check.svg?color=white');
+    font-size: 34px;
+    width: 20px;
+    height: 20px;
+    line-height: 10px;
+    border-radius: 4px;
+    display: block;
+    background: #2563eb;
+    text-align: center;
+    color: #fff;
+    outline: 2px solid #2563eb;
+    border: 1px solid #191a32;
+}
+
+input[type='checkbox'] + label.small::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #637381;
+    display: block;
+}
+input[type='checkbox']:checked + label.small::before {
+    content: url('https://api.iconify.design/material-symbols/check.svg?color=white');
+    font-size: 30px;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    border-radius: 4px;
+    display: block;
+    background: #2563eb;
+    text-align: center;
+    color: #fff;
+    outline: 2px solid #2563eb;
+    border: 1px solid #191a32;
+}
+
+#topBnr {
+    background: linear-gradient(278.31deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%), #1c1c1c;
+}
+
+.submitButton {
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+.pmsInfo dt {
+    width: 110px;
+}
+.pmsInfo dd {
+    display: block;
+    width: calc(100% - 122px);
+}
+.urlinput {
+    width: calc(100% - 39px);
+}
+.snShare button {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+}
+
+.vanilla-calendar-week__day {
+    @apply font-ptnd text-[16px] font-normal text-[#7B61FF] !important;
+}
+#customCalendar {
+    padding: 0 !important;
+}
+.vanilla-calendar-header {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+}
+.vanilla-calendar-header__content {
+    @apply justify-start px-0 leading-5 text-[#242731] !important;
+}
+.vanilla-calendar-header__content button {
+    @apply font-ptnd text-[18px] font-semibold !important;
+}
+.vanilla-calendar-header__content button:first-child:after {
+    content: '.';
+}
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev {
+    left: -26px !important;
+}
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next {
+    right: 0 !important;
+}
+.vanilla-calendar-content {
+    @apply gap-4;
+}
+.vanilla-calendar-day__btn {
+    @apply flex-wrap content-center font-dm text-[16px] font-medium leading-[30px] text-[#5f6165] !important;
+}
+.vanilla-calendar-day__btn_weekend,
+.vanilla-calendar-day__btn_holiday {
+    @apply text-[#FC5185] !important;
+}
+.vanilla-calendar-day__btn_selected {
+    @apply bg-violet-500  text-white !important;
+}
+.vanilla-calendar-day__btn_today {
+    @apply bg-violet-200  text-white !important;
+}
+.tab button.active {
+    @apply rounded-[20px] bg-violet-500 font-ptnd text-[16px] font-semibold text-white;
+}
+
+#week ol li div:first-child {
+    width: calc(100% - 100px);
+}
+#week ol li div:first-child span:first-child {
+    width: 56px;
+}
+#week ol li div:first-child span:last-child {
+    width: calc(100% - 56px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tabCont {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    height: 1px !important;
+    animation: fadeout 0.5s;
+    -moz-animation: fadeout 0.5s; /* Firefox */
+    -webkit-animation: fadeout 0.5s; /* Safari and Chrome */
+    -o-animation: fadeout 0.5s; /* Opera */
+    animation-fill-mode: forwards;
+}
+.tabCont.active {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    height: auto !important;
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.prms-create {
+    height: calc(100% - 56px);
+}
+
+.calc-height {
+    min-height: calc(100% - 56px);
+}

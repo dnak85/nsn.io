@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="../dist/output.css" />
+        <!-- svg icon js -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- clipboard js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+        <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+        <!-- Plugin CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+        <!-- Plugin JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    </head>
+    <body class="h-full">
+        <div id="wrap" class="">
+            <header id="header" class="">
+                <div class="backButton absolute top-6 left-4 flex h-8 flex-wrap content-center text-[24px] text-white">
+                    <button class="h-6 w-6 text-center leading-6">
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- //backbutton -->
+
+                <div class="title leading-8">
+                    <span class="text-[24px] text-white">약속 생성</span>
+                </div>
+                <!-- //title -->
+
+                <div class="userable absolute top-6 right-4 flex flex-wrap content-center items-center justify-between gap-3">
+                    <div class="alarm inline-block h-6">
+                        <a href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- //alarm -->
+
+                    <div class="my inline-block">
+                        <a href="#" class="block h-8 w-8 rounded-full">
+                            <img src="./img/avata.png" alt="아바타" width="100%" />
+                        </a>
+                    </div>
+                    <!-- //my -->
+                </div>
+                <!-- //userable -->
+            </header>
+            <!-- //header -->
+
+            <section id="container" class="">
+                <div class="calc-height mt-6 block w-full overflow-auto">
+                    <div class="progress relative mx-7 block h-2 rounded-[20px] bg-[#e2e4ff]">
+                        <span class="absolute inset-0 z-10 h-2 w-[75%] rounded-[20px]"></span>
+                    </div>
+                    <!-- 진행단계 -->
+
+                    <div id="topBnrw" class="mt-[40px] w-full px-6">
+                        <div id="topBnr" class="flex h-[56px] flex-wrap content-center items-center justify-between rounded-[12px] px-4">
+                            <span class="text-[16px] text-white">거의 다 왔어요!</span>
+                            <!-- //text -->
+
+                            <a href="javscript:;" class="text-[20px] text-white" id="btnfadeOut">&times;</a>
+                            <!-- //close -->
+                        </div>
+                    </div>
+
+                    <script>
+                        let opacity = 0;
+                        let intervalID = 0;
+
+                        //순수 자바스크립트 클릭 이벤트 Fsade out 실행
+                        document.getElementById('btnfadeOut').addEventListener('click', function () {
+                            intervalID = setInterval(hide, 30);
+                        });
+
+                        function hide() {
+                            let div = document.getElementById('topBnrw');
+                            opacity = Number(window.getComputedStyle(div).getPropertyValue('opacity'));
+
+                            if (opacity > 0) {
+                                //Fade out 핵심 부분
+                                opacity = opacity - 0.1;
+                                div.style.opacity = opacity;
+                            } else if (opacity == 0) {
+                                div.style.display = 'none';
+                            } else {
+                                clearInterval(intervalID);
+                            }
+                        }
+                    </script>
+                    <!-- // 탑 배너 -->
+
+                    <div class="mt-[40px] flex w-full flex-col flex-wrap gap-[56px] px-4">
+                        <div class="flex w-full flex-col flex-wrap">
+                            <div class="w-full text-center leading-6">
+                                <span class="font-ptnd text-[24px] font-semibold text-white">각 멤버의 약속이 지켜지면 약속금은 <br />어떻게 가져갈까요?</span>
+                            </div>
+                            <!-- //text -->
+
+                            <div class="relative mt-8 w-full columns-2 gap-4 px-4">
+                                <div class="">
+                                    <input type="radio" name="returnCase01" id="rc0101" class="peer/rc0101 absolute top-0 left-[-9999em]" checked />
+                                    <label for="rc0101" class="relative flex h-9 w-full items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0101:border-[1px] peer-checked/rc0101:border-white peer-checked/rc0101:bg-[#1A1D2D]">
+                                        <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE]">각 멤버 돌려받기</span>
+                                    </label>
+                                    <!-- //각멤버 -->
+                                </div>
+
+                                <div class="">
+                                    <input type="radio" name="returnCase01" id="rc0102" class="peer/rc0102 absolute top-0 left-[-9999em]" />
+                                    <label for="rc0102" class="relative flex h-9 w-full items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0102:border-[1px] peer-checked/rc0102:border-white peer-checked/rc0102:bg-[#1A1D2D]">
+                                        <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE]">한명에게 몰아주기</span>
+                                    </label>
+                                    <!-- //한명 -->
+                                </div>
+                            </div>
+                            <!-- //선택 -->
+                        </div>
+                        <!-- // 전체약속 취소 -->
+
+                        <div class="flex w-full flex-col flex-wrap">
+                            <div class="w-full text-center leading-6">
+                                <span class="font-ptnd text-[24px] font-semibold text-white">멤버의 약속이 깨지면 약속금은 <br />어떻게 가져갈까요?</span>
+                            </div>
+                            <!-- //text -->
+
+                            <div class="relative mt-8 w-full columns-2 gap-4 px-4">
+                                <div class="">
+                                    <input type="radio" name="returnCase02" id="rc0201" class="peer/rc0201 absolute top-0 left-[-9999em]" checked />
+                                    <label for="rc0201" class="relative flex h-9 w-full items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0201:border-[1px] peer-checked/rc0201:border-white peer-checked/rc0201:bg-[#1A1D2D]">
+                                        <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE]">생성자 몰아주기</span>
+                                    </label>
+                                    <!-- //생성자 -->
+                                </div>
+
+                                <div class="">
+                                    <input type="radio" name="returnCase02" id="rc0202" class="peer/rc0202 absolute top-0 left-[-9999em]" />
+                                    <label for="rc0202" class="relative flex h-9 w-full items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0202:border-[1px] peer-checked/rc0202:border-white peer-checked/rc0202:bg-[#1A1D2D]">
+                                        <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE]">참여자 돌려받기</span>
+                                    </label>
+                                    <!-- //한명 -->
+                                </div>
+                            </div>
+                            <!-- //선택 -->
+                        </div>
+                        <!-- // 개인취소 -->
+
+                        <div class="w-full px-6">
+                            <strong class="block w-full text-center font-ptnd text-[18px] font-semibold leading-5 text-white">기타메모</strong>
+
+                            <div class="mt-4 w-full">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="메세지를 남겨주세요" class="h-[200px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent py-6 px-5 font-ptnd text-[16px] text-[#7a7a9a] placeholder:font-ptnd placeholder:text-[16px] placeholder:leading-5 placeholder:text-[#7a7a9a]"></textarea>
+                            </div>
+                        </div>
+                        <!-- // 기타메모 -->
+
+                        <div class="mt-[48px] w-full px-6">
+                            <button class="submitButton h-[48px] w-full rounded-[10px] bg-[#885cf6] font-ptnd text-[16px] font-bold text-white">약속생성</button>
+                        </div>
+                        <!-- // 생성 버튼 -->
+                    </div>
+                    <!-- //반환금 방식 선택 -->
+
+                    <div class="h-[40px] w-full"></div>
+                    <!-- // 하단여백 -->
+                </div>
+                <!-- // -->
+
+                <footer id="footer" class="">
+                    <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mx-auto">
+                        <rect width="70" height="29" fill="url(#pattern0)" />
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_2_697" transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" />
+                            </pattern>
+                            <image
+                                id="image0_2_697"
+                                width="351"
+                                height="144"
+                                xlink:href="data:image/png;base64,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"
+                            />
+                        </defs>
+                    </svg>
+                </footer>
+                <!-- //footer -->
+            </section>
+            <!-- //container -->
+        </div>
+        <!-- //wrap -->
+    </body>
+</html>
