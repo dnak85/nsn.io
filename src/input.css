@@ -19,10 +19,20 @@
     @apply relative mx-auto h-full w-full max-w-[720px] overflow-auto bg-[#191A32];
 }
 #header {
-    @apply fixed inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6;
+    @apply fixed inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6 font-gm xsm:h-[60px] xsm:px-2 xsm:py-4;
 }
+#header .backButton {
+    @apply xsm:top-4;
+}
+#header .title span {
+    @apply font-gm xsm:text-[18px];
+}
+#header .userable {
+    @apply xsm:top-4 xsm:right-2.5 xsm:gap-1;
+}
+
 #container {
-    @apply h-full w-full pt-[80px];
+    @apply h-full w-full pt-[80px] xsm:pt-[60px];
 }
 #footer {
     @apply w-full pb-6;
@@ -53,6 +63,7 @@ input[name='typeCheck']:checked + label span:last-child {
     background: linear-gradient(278.31deg, #d344fa 0.03%, #6e59d5 53.07%, rgba(252, 81, 133, 0.91) 97.82%);
 }
 input[type='checkbox'] + label::before {
+    @apply xsm:h-[18px] xsm:w-[18px];
     content: '';
     width: 20px;
     height: 20px;
@@ -61,6 +72,7 @@ input[type='checkbox'] + label::before {
     display: block;
 }
 input[type='checkbox']:checked + label::before {
+    @apply xsm:h-[18px] xsm:w-[18px];
     content: url('https://api.iconify.design/material-symbols/check.svg?color=white');
     font-size: 34px;
     width: 20px;
@@ -179,7 +191,11 @@ textarea:focus {
 
 .vanilla-calendar-time__hours,
 .vanilla-calendar-time__minutes {
-    @apply w-[30px] !important;
+    @apply w-[34px] !important;
+}
+.vanilla-calendar-time__hours input,
+.vanilla-calendar-time__minutes input {
+    @apply font-ptnd text-[24px] !important;
 }
 
 #week ol li div:first-child {
