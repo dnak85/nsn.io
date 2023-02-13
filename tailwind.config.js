@@ -14,8 +14,8 @@ module.exports = {
             dm: ['DM Sans'],
             gm: ['GmarketSans'],
         },
-        screens : {
-            'xsm' : '280px',
+        screens: {
+            xsm: { raw: '(max-height: 280px)' },
         },
     },
     plugins: [],
