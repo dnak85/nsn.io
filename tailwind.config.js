@@ -14,6 +14,9 @@ module.exports = {
             dm: ['DM Sans'],
             gm: ['GmarketSans'],
         },
+        screens : {
+            'xsm' : '280px',
+        },
     },
     plugins: [],
 };
