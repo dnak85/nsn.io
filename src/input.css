@@ -16,7 +16,7 @@
     }
 }
 #wrap {
-    @apply relative mx-auto h-full w-full max-w-[720px] bg-[#191A32];
+    @apply relative mx-auto h-full w-full max-w-[720px] overflow-auto bg-[#191A32];
 }
 #header {
     @apply fixed inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6;
@@ -104,6 +104,10 @@ input[type='checkbox']:checked + label.small::before {
 
 .submitButton {
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.customWidth {
+    width: calc(100% - 50px);
 }
 
 input:hover,
