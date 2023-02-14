@@ -537,6 +537,12 @@ html,
   width: 100%;
 }
 
+@media (min-width: 280px) {
+  .container {
+    max-width: 280px;
+  }
+}
+
 .absolute {
   position: absolute;
 }
