@@ -1249,7 +1249,7 @@ html,
   font-family: GmarketSans;
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   #header {
     height: 60px;
     padding-left: 0.5rem;
@@ -1267,7 +1267,7 @@ html,
   font-family: GmarketSans;
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   #header .title span {
     font-size: 18px;
   }
@@ -1285,7 +1285,7 @@ html,
   padding-top: 80px;
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   #container {
     padding-top: 60px;
   }
@@ -1326,7 +1326,7 @@ input[name='typeCheck']:checked + label span:last-child {
   background: linear-gradient(278.31deg, #d344fa 0.03%, #6e59d5 53.07%, rgba(252, 81, 133, 0.91) 97.82%);
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   input[type='checkbox'] + label::before {
     height: 18px;
     width: 18px;
@@ -1342,7 +1342,7 @@ input[type='checkbox'] + label::before {
   display: block;
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   input[type='checkbox']:checked + label::before {
     height: 18px;
     width: 18px;
@@ -1912,7 +1912,7 @@ textarea:focus {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (max-height: 280px) {
+@media (max-width: 280px) {
   .xsm\:ml-1 {
     margin-left: 0.25rem;
   }
