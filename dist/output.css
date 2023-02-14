@@ -422,6 +422,7 @@ video {
 * {
   font-family: 'Pretendard';
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 em {
@@ -534,6 +535,12 @@ html,
 
 .container {
   width: 100%;
+}
+
+@media (min-width: 280px) {
+  .container {
+    max-width: 280px;
+  }
 }
 
 .absolute {
@@ -1439,7 +1446,7 @@ textarea:focus {
 
 .vanilla-calendar-header {
   justify-content: space-between !important;
-  padding: 0 15px !important;
+  padding: 0 15px 0 10px !important;
 }
 
 .vanilla-calendar-header__content {
