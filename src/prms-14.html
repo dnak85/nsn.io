@@ -110,14 +110,33 @@
                             <div class="relative w-full px-4 mt-8">
                                 <input type="radio" name="returnCase01" id="rc0101" class="peer/rc0101 absolute top-0 left-[-9999em]" checked />
                                 <label for="rc0101" class="relative float-left flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0101:border-[1px] peer-checked/rc0101:border-white peer-checked/rc0101:bg-[#1A1D2D]">
-                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">생성자 몰아주기</span>
+                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각 멤버 돌려받기</span>
                                 </label>
                                 <!-- //각멤버 -->
                                 <input type="radio" name="returnCase01" id="rc0102" class="peer/rc0102 absolute top-0 left-[-9999em]" />
                                 <label for="rc0102" class="relative float-left ml-[6%] flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0102:border-[1px] peer-checked/rc0102:border-white peer-checked/rc0102:bg-[#1A1D2D]">
-                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">참여자 돌려받기</span>
+                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 몰아주기</span>
                                 </label>
                                 <!-- //한명 -->
+
+                                <div class="relative float-left clear-both mt-[48px] hidden w-full overflow-hidden rounded-[10px] border-[1px] border-white py-[14px] text-center text-white peer-checked/rc0102:block">
+                                    <strong class="text-[24px] font-semibold text-white xsm:text-[16px]">약속금은 누가 가져갈까요?</strong>
+                                    <div class="flex flex-wrap justify-center w-full h-auto my-6 gap-x-2 gap-y-6">
+                                        <input type="radio" name="whoRdo" checked id="who01" class="peer/who021 absolute top-0 left-[-9999em]" />
+                                        <label for="who01" class="block w-fit rounded-full bg-[#252A41] py-2 px-4 text-[16px] font-semibold text-white peer-checked/who021:bg-[#1A1D2D] peer-checked/who021:shadow-cs2 xsm:px-2 xsm:py-1 xsm:text-[12px]">나</label>
+                                        <!-- // -->
+                                        <input type="radio" name="whoRdo" id="who02" class="peer/who022 absolute top-0 left-[-9999em]" />
+                                        <label for="who02" class="block w-fit rounded-full bg-[#252A41] py-2 px-4 text-[16px] font-semibold text-white peer-checked/who022:bg-[#1A1D2D] peer-checked/who022:shadow-cs2 xsm:px-2 xsm:py-1 xsm:text-[12px]">참여자</label>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // check -->
+
+                                    <div class="w-full text-center leading-[14px]">
+                                        <span class="text-[12px] text-[#a78bfa]">참여자가 약속을 체결하지 않으면 약속은 사라져요.</span>
+                                    </div>
+                                    <!-- // text -->
+                                </div>
+                                <!-- //약속금 누가 -->
                             </div>
                             <!-- //선택 -->
                         </div>
@@ -132,15 +151,34 @@
                             <div class="relative w-full px-4 mt-8">
                                 <input type="radio" name="returnCase02" id="rc0201" class="peer/rc0201 absolute top-0 left-[-9999em]" checked />
                                 <label for="rc0201" class="relative float-left flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0201:border-[1px] peer-checked/rc0201:border-white peer-checked/rc0201:bg-[#1A1D2D]">
-                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">생성자 몰아주기</span>
+                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각 멤버 돌려받기</span>
                                 </label>
                                 <!-- //생성자 -->
 
                                 <input type="radio" name="returnCase02" id="rc0202" class="peer/rc0202 absolute top-0 left-[-9999em]" />
                                 <label for="rc0202" class="relative float-left ml-[6%] flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0202:border-[1px] peer-checked/rc0202:border-white peer-checked/rc0202:bg-[#1A1D2D]">
-                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">참여자 돌려받기</span>
+                                    <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 몰아주기</span>
                                 </label>
                                 <!-- //한명 -->
+
+                                <div class="relative float-left clear-both mt-[48px] hidden w-full overflow-hidden rounded-[10px] border-[1px] border-white py-[14px] text-center text-white peer-checked/rc0202:block">
+                                    <strong class="text-[24px] font-semibold text-white xsm:text-[16px]">약속금은 누가 가져갈까요?</strong>
+                                    <div class="flex flex-wrap justify-center w-full h-auto my-6 gap-x-2 gap-y-6">
+                                        <input type="radio" name="whoRdo1" checked id="who021" class="peer/who021 absolute top-0 left-[-9999em]" />
+                                        <label for="who021" class="block w-fit rounded-full bg-[#252A41] py-2 px-4 text-[16px] font-semibold text-white peer-checked/who021:bg-[#1A1D2D] peer-checked/who021:shadow-cs2 xsm:px-2 xsm:py-1 xsm:text-[12px]">나</label>
+                                        <!-- // -->
+                                        <input type="radio" name="whoRdo1" id="who022" class="peer/who022 absolute top-0 left-[-9999em]" />
+                                        <label for="who022" class="block w-fit rounded-full bg-[#252A41] py-2 px-4 text-[16px] font-semibold text-white peer-checked/who022:bg-[#1A1D2D] peer-checked/who022:shadow-cs2 xsm:px-2 xsm:py-1 xsm:text-[12px]">참여자</label>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // check -->
+
+                                    <div class="w-full text-center leading-[14px]">
+                                        <span class="text-[12px] text-[#a78bfa]">참여자가 약속을 체결하지 않으면 약속은 사라져요.</span>
+                                    </div>
+                                    <!-- // text -->
+                                </div>
+                                <!-- //약속금 누가 -->
                             </div>
                             <!-- //선택 -->
                         </div>
