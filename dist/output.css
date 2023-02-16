@@ -537,12 +537,6 @@ html,
   width: 100%;
 }
 
-@media (min-width: 280px) {
-  .container {
-    max-width: 280px;
-  }
-}
-
 .absolute {
   position: absolute;
 }
@@ -1505,9 +1499,9 @@ textarea:focus {
 
 .vanilla-calendar-day__btn_today {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(221 214 254 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(224 242 254 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
 }
 
 .tab button.active {
@@ -1602,6 +1596,10 @@ textarea:focus {
 
 .calc-height {
   min-height: calc(100% - 56px);
+}
+
+.vanilla-calendar-day__btn_next, .vanilla-calendar-day__btn_prev{
+  color:#d8d8d8 !important;
 }
 
 .placeholder\:font-ptnd::-moz-placeholder {

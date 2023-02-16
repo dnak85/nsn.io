@@ -184,7 +184,7 @@ textarea:focus {
     @apply bg-violet-500  text-white !important;
 }
 .vanilla-calendar-day__btn_today {
-    @apply bg-violet-200  text-white !important;
+    @apply bg-sky-100 text-gray-500 !important;
 }
 .tab button.active {
     @apply rounded-[20px] bg-violet-500  text-[16px] font-semibold text-white;
@@ -221,7 +221,8 @@ textarea:focus {
     -moz-animation: fadeout 0.5s; /* Firefox */
     -webkit-animation: fadeout 0.5s; /* Safari and Chrome */
     -o-animation: fadeout 0.5s; /* Opera */
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 .tabCont.active {
     position: relative;
@@ -234,12 +235,28 @@ textarea:focus {
     -webkit-animation: fadein 0.5s; /* Safari and Chrome */
     -o-animation: fadein 0.5s;
 }
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes fadein {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
+    }
+}
+@-webkit-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 @keyframes fadeout {
@@ -256,4 +273,8 @@ textarea:focus {
 
 .calc-height {
     min-height: calc(100% - 56px);
+}
+
+.vanilla-calendar-day__btn_next, .vanilla-calendar-day__btn_prev{
+    color:#d8d8d8 !important;
 }
