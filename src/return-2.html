@@ -193,7 +193,7 @@
 
                     <div class="mt-[56px] flex w-full flex-col gap-6">
                       <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속 확정</button>
-                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
+                      <button data-custom-close class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
                     </div>
                     <!-- button -->
                   </div>
@@ -263,7 +263,7 @@
 
                     <div class="mt-5 flex w-full flex-col gap-6">
                       <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">반환받기</button>
-                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다른계좌 연결하기</button>
+                      <button data-custom-open="returnBankCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다른계좌 연결하기</button>
                     </div>
                     <!-- //button -->
                   </div>
@@ -408,8 +408,8 @@
               openClass: 'is-open', // [5]
               disableScroll: true, // [6]
               disableFocus: false, // [7]
-              awaitOpenAnimation: false, // [8]
-              awaitCloseAnimation: false, // [9]
+              awaitOpenAnimation: true, // [8]
+              awaitCloseAnimation: true, // [9]
               debugMode: true, // [10]
             });
           </script>
