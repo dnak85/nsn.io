@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- modal cdn add -->
+  </head>
+  <body class="h-full">
+    <div id="wrap" class="">
+      <header id="header" class="">
+        <div class="backButton absolute top-6 left-4 flex h-8 flex-wrap content-center text-[24px] text-white">
+          <button class="h-6 w-6 text-center leading-6">
+            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+        <!-- //backbutton -->
+
+        <div class="title leading-9">
+          <span class="text-[24px] text-white">약속상세페이지</span>
+        </div>
+        <!-- //title -->
+
+        <div class="userable absolute top-6 right-4 flex flex-wrap content-center items-center justify-between gap-3">
+          <div class="alarm inline-block h-6">
+            <a href="">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <!-- //alarm -->
+
+          <div class="my inline-block">
+            <a href="#" class="block h-8 w-8 rounded-full">
+              <img src="./img/avata.png" alt="아바타" width="100%" />
+            </a>
+          </div>
+          <!-- //my -->
+        </div>
+        <!-- //userable -->
+      </header>
+      <!-- //header -->
+
+      <section id="container" class="">
+        <div class="block w-full">
+          <div class="block w-full px-4">
+            <div class="inputName block w-full">
+              <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent text-center text-[16px] text-[#a78bfa]" />
+            </div>
+            <!-- // 입력 -->
+          </div>
+          <!-- // 약속명 -->
+
+          <!-- 반환금 정보 -->
+          <div class="mt-8 w-full px-4">
+            <div class="w-full rounded-[12px] bg-[#252a41] px-3 py-6">
+              <span class="block h-[14px] w-full px-3 text-[12px] leading-[14px] text-[#F472B6]">* 약속 당일 반환기능이 활성화 됩니다.</span>
+
+              <!-- 약속반환조건 -->
+              <div class="mt-5 w-full px-3">
+                <span class="block h-4 text-[14px] font-semibold leading-4 text-[#cdc4ff] before:inline-block before:w-4 before:text-center before:text-[18px] before:content-['\00b7']">약속반환조건</span>
+
+                <ol class="mt-2 px-3">
+                  <li class="block w-full text-[14px] leading-[18px] text-white">
+                    <span class="before:inline-block before:w-4 before:content-['1.']">약속이 지켜진 경우: 게스트 1계좌로 반환</span>
+                  </li>
+                  <li class="block w-full text-[14px] leading-[18px] text-white">
+                    <span class="before:inline-block before:w-4 before:content-['2.']">약속이 깨진 경우: 참여자 각자 계좌로 반환</span>
+                  </li>
+                </ol>
+              </div>
+              <!-- //약속반환조건 -->
+
+              <!-- start 다수형약속 -->
+              <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-8">
+                <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">상대방이 약속을 지켯나요?</strong>
+
+                <dl class="mt-6 flex w-full flex-wrap items-center gap-y-6">
+                  <dt class="h-5 w-[calc(100%-160px)] text-[16px] font-semibold leading-5 text-[#cdc4ff]">게스트01</dt>
+                  <dd class="relative flex w-[160px] flex-wrap content-center items-center gap-8">
+                    <input type="radio" name="gst01" id="gst0101" class="peer/gst0101 absolute top-[-9999em] left-[-9999em]" checked />
+                    <label for="gst0101" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0101:bg-[#252a41] peer-checked/gst0101:text-white peer-checked/gst0101:shadow-cs2">&nbsp;예&nbsp;</label>
+
+                    <input type="radio" name="gst01" id="gst0102" class="peer/gst0102 absolute top-[-9999em] left-[-9999em]" />
+                    <label for="gst0102" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0102:bg-[#252a41] peer-checked/gst0102:text-white peer-checked/gst0102:shadow-cs2">아니오</label>
+                  </dd>
+                  <!-- 게스트01 -->
+
+                  <dt class="h-5 w-[calc(100%-160px)] text-[16px] font-semibold leading-5 text-[#cdc4ff]">게스트02</dt>
+                  <dd class="relative flex w-[160px] flex-wrap content-center items-center gap-8">
+                    <input type="radio" name="gst02" id="gst0201" class="peer/gst0201 absolute top-[-9999em] left-[-9999em]" />
+                    <label for="gst0201" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0201:bg-[#252a41] peer-checked/gst0201:text-white peer-checked/gst0201:shadow-cs2">&nbsp;예&nbsp;</label>
+
+                    <input type="radio" name="gst02" id="gst0202" class="peer/gst0202 absolute top-[-9999em] left-[-9999em]" checked />
+                    <label for="gst0202" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0202:bg-[#252a41] peer-checked/gst0202:text-white peer-checked/gst0202:shadow-cs2">아니오</label>
+                  </dd>
+                  <!-- 게스트02 -->
+
+                  <dt class="h-5 w-[calc(100%-160px)] text-[16px] font-semibold leading-5 text-[#cdc4ff]">게스트03</dt>
+                  <dd class="relative flex w-[160px] flex-wrap content-center items-center gap-8">
+                    <input type="radio" name="gst03" id="gst0301" class="peer/gst0301 absolute top-[-9999em] left-[-9999em]" checked />
+                    <label for="gst0301" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0301:bg-[#252a41] peer-checked/gst0301:text-white peer-checked/gst0301:shadow-cs2">&nbsp;예&nbsp;</label>
+
+                    <input type="radio" name="gst03" id="gst0302" class="peer/gst0302 absolute top-[-9999em] left-[-9999em]" />
+                    <label for="gst0302" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/gst0302:bg-[#252a41] peer-checked/gst0302:text-white peer-checked/gst0302:shadow-cs2">아니오</label>
+                  </dd>
+                  <!-- 게스트03 -->
+                </dl>
+              </div>
+              <!-- end 약속확인 -->
+
+              <!-- start 1:1약속 -->
+              <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-8">
+                <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">상대방이 약속을 지켯나요?</strong>
+
+                <div class="relative mt-6 flex w-full justify-between px-6">
+                  <input type="radio" name="sgle" id="sgl01" class="peer/sgl01 absolute top-[-9999em] left-[-9999em]" checked />
+                  <label for="sgl01" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/sgl01:bg-[#252a41] peer-checked/sgl01:text-white peer-checked/sgl01:shadow-cs2">&nbsp;예&nbsp;</label>
+                  <!-- &nbsp;예&nbsp; -->
+
+                  <input type="radio" name="sgle" id="sgl02" class="peer/sgl02 absolute top-[-9999em] left-[-9999em]" />
+                  <label for="sgl02" class="block h-fit w-fit rounded-full bg-[#545290] px-4 py-2 text-[16px] font-semibold text-[#b9c3f3] peer-checked/sgl02:bg-[#252a41] peer-checked/sgl02:text-white peer-checked/sgl02:shadow-cs2">아니오</label>
+                  <!-- 아니오 -->
+                </div>
+                <!-- // -->
+              </div>
+              <!-- end 약속확인 -->
+            </div>
+          </div>
+          <!-- //반환금 정보 -->
+
+          <div class="mt-6 w-full">
+            <span class="block w-full px-4 text-[16px] leading-5 text-[#e2e4ff] before:inline-block before:w-3 before:text-center before:content-['\00b7']">모든 약속멤버가 응답하면 반환이 시작됩니다.</span>
+          </div>
+          <!-- 안내문 -->
+
+          <div class="mt-8 block px-[40px] text-center">
+            <button data-custom-open="returnComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
+            <!-- 약속반환확정 -->
+            <button data-custom-open="returnBank" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
+            <!-- 반환계좌반환 -->
+            <button data-custom-open="returnBankCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
+            <!-- 다른계좌연결 -->
+            <button data-custom-open="prmsComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
+            <!-- 약속완료반환 -->
+
+            <!-- 
+              !
+              팝업 확인용 버튼 1개만 사용
+              data-custom-open - modalID
+             -->
+          </div>
+          <!-- //button -->
+
+          <!-- modal 반환확정팝업 -->
+          <div class="modal micromodal-slide" id="returnComplete" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+                <main class="modal__content" id="modal-1-content">
+                  <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                  <div class="w-full px-1 pt-[72px]">
+                    <div class="flex w-full flex-col gap-3 text-center text-white">
+                      <strong class="block font-gm text-[20px] font-[400] leading-5">약속반환을 확정 하시겠습니까?</strong>
+                      <span class="block text-[16px] leading-5">확정한 약속은 다시 선택할 수 없습니다.</span>
+                    </div>
+                    <!-- text -->
+
+                    <div class="mt-[40px] w-full text-center">
+                      <svg class="inline-block" width="125" height="100" viewBox="0 0 125 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M112.5 50V18.75H125V56.25H112.5M112.5 81.25H125V68.75H112.5M50 56.25C66.6875 56.25 100 64.625 100 81.25V100H0V81.25C0 64.625 33.3125 56.25 50 56.25ZM50 0C56.6304 0 62.9893 2.63392 67.6777 7.32233C72.3661 12.0107 75 18.3696 75 25C75 31.6304 72.3661 37.9893 67.6777 42.6777C62.9893 47.3661 56.6304 50 50 50C43.3696 50 37.0107 47.3661 32.3223 42.6777C27.6339 37.9893 25 31.6304 25 25C25 18.3696 27.6339 12.0107 32.3223 7.32233C37.0107 2.63392 43.3696 0 50 0ZM50 68.125C31.4375 68.125 11.875 77.25 11.875 81.25V88.125H88.125V81.25C88.125 77.25 68.5625 68.125 50 68.125ZM50 11.875C46.519 11.875 43.1806 13.2578 40.7192 15.7192C38.2578 18.1806 36.875 21.519 36.875 25C36.875 28.481 38.2578 31.8194 40.7192 34.2808C43.1806 36.7422 46.519 38.125 50 38.125C53.481 38.125 56.8194 36.7422 59.2808 34.2808C61.7422 31.8194 63.125 28.481 63.125 25C63.125 21.519 61.7422 18.1806 59.2808 15.7192C56.8194 13.2578 53.481 11.875 50 11.875Z" fill="#8B5CF6" />
+                      </svg>
+                    </div>
+                    <!-- visual -->
+
+                    <div class="mt-[56px] flex w-full flex-col gap-6">
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속 확정</button>
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
+                    </div>
+                    <!-- button -->
+                  </div>
+                </main>
+                <!-- //main -->
+              </div>
+              <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+          </div>
+          <!-- //modal -->
+
+          <!-- modal 반환계좌팝업 -->
+          <div class="modal micromodal-slide" id="returnBank" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="반환계좌">
+                <main class="modal__content" id="modal-1-content">
+                  <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                  <div class="w-full pt-[25px]">
+                    <div class="w-full text-center">
+                      <strong class="block font-gm text-[20px] font-[400] leading-5 text-white">내 반환계좌로 돈이 입금됩니다.</strong>
+                    </div>
+                    <!-- //text -->
+
+                    <div class="mt-8 w-full">
+                      <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">약속 달성</strong>
+
+                      <div class="mt-2.5 w-full border-t-[1px] border-b-[1px] border-[#CDC3FF] py-4">
+                        <dl class="flex w-full flex-wrap justify-start gap-y-4 px-7">
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">반환금</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>10,000원</span>
+                          </dd>
+                          <!-- 반환금 -->
+
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">은행명</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>OO은행</span>
+                          </dd>
+                          <!-- 은행명 -->
+
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">계좌번호</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>123-1234-1234-12</span>
+                          </dd>
+                          <!-- 계좌번호 -->
+
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">예금주</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>홍길동</span>
+                          </dd>
+                          <!-- 예금주 -->
+                        </dl>
+                      </div>
+                      <p class="mt-3 h-4 w-full text-center text-[14px] leading-4 text-white">(반환수수료:2,000원)</p>
+                    </div>
+                    <!-- //약속달성 -->
+
+                    <div class="mt-5 flex w-full flex-col gap-6">
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">반환받기</button>
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다른계좌 연결하기</button>
+                    </div>
+                    <!-- //button -->
+                  </div>
+                  <!-- // -->
+                </main>
+                <!-- //main -->
+              </div>
+              <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+          </div>
+          <!-- //modal -->
+
+          <!-- modal 반환계좌팝업 -->
+          <div class="modal micromodal-slide" id="returnBankCount" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="다른계좌연결">
+                <main class="modal__content" id="modal-1-content">
+                  <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                  <div class="w-full pt-[25px]">
+                    <div class="h-5 w-full text-center leading-5">
+                      <strong class="font-gm text-[20px] font-[400] text-white">계좌연결하기</strong>
+                    </div>
+                    <!-- text -->
+                    <div>
+                      <dl class="w-full pt-2">
+                        <dt class="mt-4 h-5 w-full text-center text-[18px] leading-5 text-white">
+                          <span class="font-semibold">은행선택</span>
+                        </dt>
+                        <dd class="mt-2 w-full">
+                          <input type="text" name="" id="" placeholder="은행명" class="h-[58px] w-full rounded-[15px] border-[1px] border-[#7a7a9a] bg-transparent px-5 text-[16px] text-white placeholder:text-[#7a7a9a]" />
+                        </dd>
+                        <!-- 은행선택 -->
+                        <dt class="mt-4 h-5 w-full text-center text-[18px] leading-5 text-white">
+                          <span class="font-semibold">계좌번호</span>
+                        </dt>
+                        <dd class="mt-2 w-full">
+                          <input type="text" name="" id="" placeholder="계좌번호" class="h-[58px] w-full rounded-[15px] border-[1px] border-[#7a7a9a] bg-transparent px-5 text-[16px] text-white placeholder:text-[#7a7a9a]" />
+                        </dd>
+                        <!-- 계좌번호 -->
+                        <dt class="mt-4 h-5 w-full text-center text-[18px] leading-5 text-white">
+                          <span class="font-semibold">예금주</span>
+                        </dt>
+                        <dd class="mt-2 w-full">
+                          <input type="text" name="" id="" placeholder="예금주" class="h-[58px] w-full rounded-[15px] border-[1px] border-[#7a7a9a] bg-transparent px-5 text-[16px] text-white placeholder:text-[#7a7a9a]" />
+                        </dd>
+                        <!-- 예금주 -->
+                      </dl>
+                    </div>
+                    <!-- bank -->
+
+                    <div class="mt-8 w-full">
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">계좌정보저장</button>
+                    </div>
+                    <!-- button -->
+                  </div>
+                  <!-- // -->
+                </main>
+                <!-- //main -->
+              </div>
+              <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+          </div>
+          <!-- //modal -->
+
+          <!-- modal 약속완료 -->
+          <div class="modal micromodal-slide" id="prmsComplete" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속완료반환">
+                <main class="modal__content" id="modal-1-content">
+                  <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                  <div class="w-full pt-[25px]">
+                    <div class="w-full text-center leading-5 text-white">
+                      <span class="font-gm text-[20px] font-[400]">약속이 완료되었습니다. <br />반환계좌로 돈이 입금됩니다</span>
+                    </div>
+                    <!-- text -->
+
+                    <div class="mt-8 w-full text-center">
+                      <svg class="inline-block" width="108" height="94" viewBox="0 0 108 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29 19.5V9.5C29 6.73857 31.2385 4.5 34 4.5H99C101.761 4.5 104 6.73857 104 9.5V54.5C104 57.2615 101.761 59.5 99 59.5H94" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M74 34.5H9C6.23858 34.5 4 36.7386 4 39.5V84.5C4 87.2614 6.23858 89.5 9 89.5H74C76.7614 89.5 79 87.2614 79 84.5V39.5C79 36.7386 76.7614 34.5 74 34.5Z" fill="white" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 57H79" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M79 44.5V74.5" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 44.5V74.5" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.5 72H41.5" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M56.5 72H61.5" stroke="#7B61FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <!-- svg -->
+
+                    <div class="mt-8 w-full">
+                      <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">약속 달성</strong>
+
+                      <div class="mt-2.5 w-full border-t-[1px] border-b-[1px] border-[#CDC3FF] py-4">
+                        <dl class="flex w-full flex-wrap justify-start gap-y-4 px-7">
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">반환금</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>10,000원</span>
+                          </dd>
+                          <!-- 반환금 -->
+
+                          <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                            <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">반환계좌</span>
+                          </dt>
+                          <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                            <span>참가자 01</span>
+                          </dd>
+                          <!-- 은행명 -->
+                        </dl>
+                      </div>
+                      <p class="mt-3 h-4 w-full text-center text-[14px] leading-4 text-white">(반환수수료:2,000원)</p>
+                    </div>
+                    <!-- //약속달성 -->
+                    <!-- 약속달성 -->
+
+                    <div class="mt-5 flex w-full flex-col gap-6">
+                      <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">확 인</button>
+                    </div>
+                    <!-- //button -->
+                  </div>
+                  <!-- // -->
+                </main>
+                <!-- //main -->
+              </div>
+              <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+          </div>
+          <!-- //modal -->
+
+          <script>
+            MicroModal.init({
+              onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+              onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+              openTrigger: 'data-custom-open', // [3]
+              closeTrigger: 'data-custom-close', // [4]
+              openClass: 'is-open', // [5]
+              disableScroll: true, // [6]
+              disableFocus: false, // [7]
+              awaitOpenAnimation: false, // [8]
+              awaitCloseAnimation: false, // [9]
+              debugMode: true, // [10]
+            });
+          </script>
+
+          <div class="h-[64px] w-full"></div>
+          <!-- // 하단여백 -->
+        </div>
+        <!-- // -->
+
+        <footer id="footer" class="">
+          <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mx-auto">
+            <rect width="70" height="29" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_2_697" transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" />
+              </pattern>
+              <image
+                id="image0_2_697"
+                width="351"
+                height="144"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+        </footer>
+        <!-- //footer -->
+      </section>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
