@@ -1332,14 +1332,6 @@ html,
   line-height: 14px;
 }
 
-.leading-\[17px\] {
-  line-height: 17px;
-}
-
-.leading-\[18px\] {
-  line-height: 18px;
-}
-
 .leading-\[30px\] {
   line-height: 30px;
 }
@@ -2049,6 +2041,11 @@ textarea:focus {
   color: rgb(122 122 154 / var(--tw-text-opacity));
 }
 
+.before\:float-left::before {
+  content: var(--tw-content);
+  float: left;
+}
+
 .before\:block::before {
   content: var(--tw-content);
   display: block;
@@ -2093,6 +2090,21 @@ textarea:focus {
 .before\:text-\[20px\]::before {
   content: var(--tw-content);
   font-size: 20px;
+}
+
+.before\:text-\[16px\]::before {
+  content: var(--tw-content);
+  font-size: 16px;
+}
+
+.before\:font-bold::before {
+  content: var(--tw-content);
+  font-weight: 700;
+}
+
+.before\:leading-5::before {
+  content: var(--tw-content);
+  line-height: 1.25rem;
 }
 
 .before\:text-\[\#CDC3FF\]::before {
