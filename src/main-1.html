@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css"
+        rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js"
+        defer></script>
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <header id="mainHeader">
+            <div class="flex flex-wrap items-center content-center justify-between px-4 pt-4">
+                <div>
+                    <button class="w-6 h-6">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.5 15.5C1.08333 15.5 0.729333 15.354 0.438 15.062C0.146 14.7707 0 14.4167 0 14C0 13.5833 0.146 13.2293 0.438 12.938C0.729333 12.646 1.08333 12.5 1.5 12.5C1.91667 12.5 2.27067 12.646 2.562 12.938C2.854 13.2293 3 13.5833 3 14C3 14.4167 2.854 14.7707 2.562 15.062C2.27067 15.354 1.91667 15.5 1.5 15.5ZM5 15V13H18V15H5ZM1.5 9.5C1.08333 9.5 0.729333 9.354 0.438 9.062C0.146 8.77067 0 8.41667 0 8C0 7.58333 0.146 7.22933 0.438 6.938C0.729333 6.646 1.08333 6.5 1.5 6.5C1.91667 6.5 2.27067 6.646 2.562 6.938C2.854 7.22933 3 7.58333 3 8C3 8.41667 2.854 8.77067 2.562 9.062C2.27067 9.354 1.91667 9.5 1.5 9.5ZM5 9V7H18V9H5ZM1.5 3.5C1.08333 3.5 0.729333 3.354 0.438 3.062C0.146 2.77067 0 2.41667 0 2C0 1.58333 0.146 1.22933 0.438 0.938C0.729333 0.646 1.08333 0.5 1.5 0.5C1.91667 0.5 2.27067 0.646 2.562 0.938C2.854 1.22933 3 1.58333 3 2C3 2.41667 2.854 2.77067 2.562 3.062C2.27067 3.354 1.91667 3.5 1.5 3.5ZM5 3V1H18V3H5Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- menu button -->
+
+                <div class="flex gap-3">
+                    <button class="relative w-8 h-8 p-0 text-center bg-white rounded-full alarm active">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="mx-auto">
+                            <path
+                                d="M7.30063 1.97761C7.57303 1.30664 8.23126 0.833496 9 0.833496C9.76874 0.833496 10.427 1.30664 10.6994 1.97761C13.4185 2.72249 15.4167 5.21131 15.4167 8.16683V12.4726L17.096 14.9917C17.2836 15.273 17.3011 15.6346 17.1415 15.9327C16.982 16.2308 16.6714 16.4168 16.3333 16.4168H12.1758C11.9534 17.9716 10.6163 19.1668 9 19.1668C7.3837 19.1668 6.04656 17.9716 5.82416 16.4168H1.66667C1.32861 16.4168 1.01798 16.2308 0.858466 15.9327C0.698949 15.6346 0.716432 15.273 0.903955 14.9917L2.58333 12.4726V8.16683C2.58333 5.21131 4.58151 2.72249 7.30063 1.97761ZM7.70324 16.4168C7.892 16.9509 8.40132 17.3335 9 17.3335C9.59869 17.3335 10.108 16.9509 10.2968 16.4168H7.70324ZM9 3.5835C6.4687 3.5835 4.41667 5.63552 4.41667 8.16683V12.7502C4.41667 12.9311 4.3631 13.1081 4.26271 13.2586L3.37948 14.5835H14.6205L13.7373 13.2586C13.6369 13.1081 13.5833 12.9311 13.5833 12.7502V8.16683C13.5833 5.63552 11.5313 3.5835 9 3.5835Z"
+                                fill="#7B61FF" />
+                        </svg>
+                        <span
+                            class="absolute top-[10px] right-[8px] inline-block w-[6px] h-[6px] bg-[#ffa048] rounded-full"></span>
+                    </button>
+                    <!--  alarm button : 알람있을때 - active ,  -->
+
+                    <button
+                        class="w-8 h-8 text-center border-[2px] border-white rounded-full text-[14px] text-white font-bold">
+                        My
+                    </button>
+                </div>
+                <!-- // right menu -->
+            </div>
+            <!-- // header button area -->
+
+            <div class="w-full mt-[14px] px-6 flex flex-col gap-[6px]">
+                <div class="leading-4">
+                    <span class="text-white text-[14px] font-semibold">홍길동 님</span>
+                </div>
+                <!-- user name -->
+                <div class="leading-5">
+                    <span class="font-gm text-[20px] text-white ">다가오는 <em class="font-gm">04</em>개의 약속이
+                        있어요.</span>
+                </div>
+                <!-- text alarm -->
+            </div>
+            <!-- // header title area -->
+        </header>
+        <!-- //main header -->
+
+        <section id="mainSection" class="w-full h-full bg-[#EDE9FE]">
+            <div class="w-full p-10">
+                <button class=" w-full h-[48px] bg-[#8b5cf6] shadow-cs1 rounded-[10px]">
+                    <span class="font-bold text-[16px] text-white inline-block h-5 leading-5">약속 만들기 +</span>
+                </button>
+            </div>
+            <!-- 약속생성 -->
+
+            <div class="w-full mt-6">
+                <div class="w-full px-4">
+                    <span class="font-gm text-[18px] font-medium leading-[18px] block w-full">이런 약속을 만들 수 있어요~</span>
+                </div>
+                <!--  타이틀 -->
+
+                <div class="w-full py-6 mt-3 bg-white">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner01.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">2030
+                                            서울 맛집 투어</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2023.01.11</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner02.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">rock'n
+                                            roll 90s</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2022.10.14</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner03.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">뉴에이지
+                                            음악모임</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2023.03.01</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner04.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">여의도
+                                            골린이들</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2022.12.20</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner05.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">부산골잡이</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2022.03.11</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner06.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">삼성동
+                                            개발자들</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2022.03.11</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner07.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">송파산악회</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2023.02.15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col w-[104px] gap-2.5">
+                                    <div class="rounded-[6px] overflow-hidden h-[120px] w-full">
+                                        <img src="./img/mainBanner08.png" alt="모임이미지">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="block w-full truncate text-[14px] font-semibold text-black leading-[17px]">직딩아크릴화레슨</span>
+                                        <span
+                                            class="block w-full text-[12px] text-[#5e5e5e] leading-[14px]">2022.03.11</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper JS -->
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper(".mySwiper", {
+                            slidesPerView: "auto",
+                            spaceBetween: 8,
+                            centeredSlides: true,
+                            loop: true,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false
+                            },
+                        });
+                    </script>
+                </div>
+                <!-- 예제 리스트 -->
+            </div>
+            <!-- 예제 -->
+
+            <div class="h-[128px] w-full"></div>
+            <!-- 푸터 여백 -->
+
+            <div id="mainFooter"
+                class="absolute bottom-0 left-0 flex flex-wrap justify-center gap-2 pt-3 pb-2 bg-white bg-opacity-50">
+                <div class="flex justify-center gap-2">
+                    <button class="leading-[14px] text-[12px] text-[#50555c]">이용약관</button>
+                    <button class="leading-[14px] text-[12px] text-[#50555c]">개인정보처리방침</button>
+                </div>
+                <!-- 이용약관 / 개인정보 -->
+
+                <address class="text-[11px] leading-[13px] text-[#50555c] not-italic">
+                    (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                    고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                </address>
+                <!-- address -->
+
+                <div class="text-[11px] leading-[13px] text-[#8994a4]">
+                    Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                </div>
+                <!-- copy -->
+            </div>
+        </section>
+        <!-- mainSection -->
+
+        <script>
+            window.addEventListener('scroll', function () {
+                const scroll = window.scrollY;
+
+                if (scroll > 144) {
+                    document.querySelector('#mainHeader').classList.add('scrolling');
+                    document.querySelector("#mainSection").classList.add('scrolling');
+                } else {
+                    document.querySelector('#mainHeader').classList.remove('scrolling');
+                    document.querySelector('#mainSection').classList.remove('scrolling');
+                }
+            })
+        </script>
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
