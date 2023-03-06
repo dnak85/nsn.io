@@ -564,8 +564,8 @@ button svg {
   bottom: 0px;
 }
 
-.bottom-5 {
-  bottom: 1.25rem;
+.bottom-\[14px\] {
+  bottom: 14px;
 }
 
 .left-0 {
@@ -578,6 +578,10 @@ button svg {
 
 .left-\[-9999em\] {
   left: -9999em;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-3 {
@@ -602,6 +606,10 @@ button svg {
 
 .top-6 {
   top: 1.5rem;
+}
+
+.top-7 {
+  top: 1.75rem;
 }
 
 .top-\[-9999em\] {
@@ -729,6 +737,10 @@ button svg {
   margin-top: 48px;
 }
 
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
 .mt-\[56px\] {
   margin-top: 56px;
 }
@@ -759,6 +771,10 @@ button svg {
 
 .hidden {
   display: none;
+}
+
+.h-0 {
+  height: 0px;
 }
 
 .h-14 {
@@ -878,6 +894,10 @@ button svg {
   min-height: 205px;
 }
 
+.min-h-\[310px\] {
+  min-height: 310px;
+}
+
 .min-h-\[352px\] {
   min-height: 352px;
 }
@@ -916,10 +936,6 @@ button svg {
 
 .w-\[120px\] {
   width: 120px;
-}
-
-.w-\[130px\] {
-  width: 130px;
 }
 
 .w-\[140px\] {
@@ -978,6 +994,10 @@ button svg {
   width: 90px;
 }
 
+.w-\[calc\(100\%-106px\)\] {
+  width: calc(100% - 106px);
+}
+
 .w-\[calc\(100\%-135px\)\] {
   width: calc(100% - 135px);
 }
@@ -992,6 +1012,10 @@ button svg {
 
 .w-\[calc\(100\%-80px\)\] {
   width: calc(100% - 80px);
+}
+
+.w-\[calc\(100\%-88px\)\] {
+  width: calc(100% - 88px);
 }
 
 .w-fit {
@@ -1065,6 +1089,10 @@ button svg {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-\[14px\] {
+  gap: 14px;
 }
 
 .gap-\[48px\] {
@@ -1319,6 +1347,10 @@ button svg {
   padding: 1.5rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1384,8 +1416,17 @@ button svg {
   padding-bottom: 14px;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .pr-\[10px\] {
@@ -1406,6 +1447,10 @@ button svg {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .pt-\[25px\] {
@@ -1498,6 +1543,14 @@ button svg {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-\[1\] {
+  font-weight: 1;
+}
+
+.font-\[13px\] {
+  font-weight: 13px;
 }
 
 .not-italic {
@@ -1712,6 +1765,12 @@ button svg {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-cs3 {
+  --tw-shadow: 0px 00px 16px rgba(0,0,0, 0.25);
+  --tw-shadow-colored: 0px 00px 16px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -1814,7 +1873,13 @@ input[name="typeCheck"]:checked + label span:last-child {
 }
 
 .progress span {
-  background: linear-gradient(278.31deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%), #1c1c1c;
+  background: linear-gradient(
+      278.31deg,
+      #7b61ff 0.03%,
+      #d665f4 47.9%,
+      #fc5185 97.82%
+    ),
+    #1c1c1c;
 }
 
 .vanilla-calendar {
@@ -1822,7 +1887,12 @@ input[name="typeCheck"]:checked + label span:last-child {
 }
 
 .bnr-total {
-  background: linear-gradient(278.31deg, #d344fa 0.03%, #6e59d5 53.07%, rgba(252, 81, 133, 0.91) 97.82%);
+  background: linear-gradient(
+    278.31deg,
+    #d344fa 0.03%,
+    #6e59d5 53.07%,
+    rgba(252, 81, 133, 0.91) 97.82%
+  );
 }
 
 @media (max-width: 280px) {
@@ -1893,7 +1963,13 @@ input[type="checkbox"]#returnCheck:checked + label::before {
 }
 
 #topBnr {
-  background: linear-gradient(278.31deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%), #1c1c1c;
+  background: linear-gradient(
+      278.31deg,
+      #7b61ff 0.03%,
+      #d665f4 47.9%,
+      #fc5185 97.82%
+    ),
+    #1c1c1c;
 }
 
 .submitButton {
@@ -2028,8 +2104,43 @@ textarea:focus {
   font-size: 24px !important;
 }
 
+#mainCalendar {
+  padding: 0px !important;
+}
+
+#mainCalendar .vanilla-calendar-day__btn_selected {
+  background-color: transparent !important;
+  font-family: DM Sans !important;
+  font-weight: 700 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
+}
+
+#mainCalendar .vanilla-calendar-week__day {
+  font-weight: 500 !important;
+}
+
+#mainCalendar .vanilla-calendar-day__btn_today {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 63 2 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+#mainCalendar .vanilla-calendar-wrapper {
+  margin-top: 1.5rem !important;
+}
+
 #week ol li div:first-child {
   width: calc(100% - 100px);
+}
+
+#mainCalendar .vanilla-calendar-arrow::after,
+#mainCalendar .vanilla-calendar-arrow::before {
+  height: 2px !important;
+  border-radius: 9999px !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(128 129 145 / var(--tw-bg-opacity)) !important;
 }
 
 #week ol li div:first-child span:first-child {
@@ -2292,7 +2403,8 @@ textarea:focus {
   width: 100%;
   height: 144px;
   background: linear-gradient(279.04deg, #7b61ff 0%, #fc5185 100%);
-  box-shadow: 0px 0px 2px rgba(184, 184, 184, 0.2), 0px 4px 60px rgba(143, 143, 143, 0.1);
+  box-shadow: 0px 0px 2px rgba(184, 184, 184, 0.2),
+    0px 4px 60px rgba(143, 143, 143, 0.1);
   border-radius: 0px 0px 40px 0px;
   transition: 1s all ease-in;
   z-index: 999;
@@ -2530,6 +2642,40 @@ textarea:focus {
   background-color: rgb(123 97 255 / var(--tw-bg-opacity));
 }
 
+.state-box.waitA .icon,
+.state-box.waitC .icon,
+.state-box.waitR .icon {
+  position: relative;
+}
+
+.state-box.waitA .icon::after,
+.state-box.waitC .icon::after,
+.state-box.waitR .icon::after {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.state-box.waitA .icon::after {
+  --tw-bg-opacity: 1;
+  background-color: rgb(114 255 204 / var(--tw-bg-opacity));
+}
+
+.state-box.waitC .icon::after {
+  --tw-bg-opacity: 1;
+  background-color: rgb(114 255 204 / var(--tw-bg-opacity));
+}
+
+.state-box.waitR .icon::after {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 93 2 / var(--tw-bg-opacity));
+}
+
 .eventBg {
   position: absolute;
   top: 0px;
@@ -2541,10 +2687,11 @@ textarea:focus {
   height: 100%;
   width: 100%;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.7;
+  --tw-bg-opacity: 0.8;
 }
 
 .eventBg.active {
+  display: block;
 }
 
 .placeholder\:text-center::-moz-placeholder {
@@ -2733,6 +2880,20 @@ textarea:focus {
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.hover\:bg-\[\]:hover {
+  background-color: ;
+}
+
+.hover\:bg-\[\#f5f5f5\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f8f8f8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
 
 .focus\:border-\[1px\]:focus {

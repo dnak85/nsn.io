@@ -7,8 +7,11 @@ for (i = 0; i < dnToggle.length; i++) {
   const _this = dnToggle[i];
 
   // toggle 버튼 click
-  _this.addEventListener("click", () => {
-    const dnTarget = document.querySelector(_this.getAttribute("data-dn-target"));
+  _this.addEventListener("click", (event) => {
+    event.preventDefault();
+    const dnTarget = document.querySelector(
+      _this.getAttribute("data-dn-target")
+    );
     document.body.appendChild(newDiv);
 
     if (dnTarget.classList.contains("modal")) {
@@ -43,6 +46,33 @@ for (i = 0; i < dnToggle.length; i++) {
     } else if (dnTarget.classList.contains("offcanvas")) {
       //offcanvas
       dnTarget.classList.add("active");
+    } else if (dnTarget.classList.contains("dropdown")) {
+      //dropdown
+      if (dnTarget.classList.contains("show")) {
+        dnTarget.animate(
+          [
+            { opacity: 1, height: "104px" },
+            { opacity: 0, height: 0 },
+          ],
+          200
+        );
+        dnTarget.classList.add("h-0");
+        dnTarget.classList.remove("show");
+        setTimeout(() => {
+          dnTarget.classList.add("hidden");
+        }, 250);
+      } else {
+        dnTarget.classList.remove("hidden");
+        dnTarget.animate(
+          [
+            { opacity: 0, height: 0 },
+            { opacity: 1, height: "104px" },
+          ],
+          200
+        );
+        dnTarget.classList.remove("h-0");
+        dnTarget.classList.add("show");
+      }
     }
   });
 }
@@ -102,7 +132,9 @@ const btnClose = document.querySelectorAll("[data-dn-close]");
 for (i = 0; i < btnClose.length; i++) {
   const _close = btnClose[i];
   _close.addEventListener("click", (e) => {
-    const eventTarget = document.querySelector(_close.getAttribute("data-dn-close"));
+    const eventTarget = document.querySelector(
+      _close.getAttribute("data-dn-close")
+    );
 
     if (eventTarget.classList.contains("modal")) {
       document.body.classList.remove("overflow-hidden");
@@ -139,6 +171,19 @@ for (i = 0; i < btnClose.length; i++) {
       setTimeout(function () {
         newDiv.classList.remove("active");
       }, 450);
+    } else if (eventTarget.classList.contains("dropdown")) {
+      eventTarget.animate(
+        [
+          { opacity: 1, height: "104px" },
+          { opacity: 0, height: 0 },
+        ],
+        200
+      );
+      eventTarget.classList.add("h-0");
+      eventTarget.classList.remove("show");
+      setTimeout(() => {
+        eventTarget.classList.add("hidden");
+      }, 250);
     }
   });
 }
@@ -149,24 +194,38 @@ const stateBox = document.querySelectorAll(".state-box");
 for (i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];
 
-  setTimeout(() => {
-    _this.classList.remove("opacity-0");
-    _this.animate(
-      [
-        {
-          opacity: 0,
-          marginTop: i * 10 + "%",
-        },
-        {
-          opacity: 0.2,
-          marginTop: i * 2 + "%",
-        },
-        {
-          opacity: 1,
-          marginTop: 0,
-        },
-      ],
-      550
-    );
-  }, (i / 2) * 400);
+  _this.classList.remove("opacity-0");
+
+  // setTimeout(() => {
+  //   _this.classList.remove("opacity-0");
+  //   _this.animate(
+  //     [
+  //       {
+  //         opacity: 0,
+  //         marginTop: i * 10 + "%",
+  //       },
+  //       {
+  //         opacity: 0.2,
+  //         marginTop: i * 2 + "%",
+  //       },
+  //       {
+  //         opacity: 1,
+  //         marginTop: 0,
+  //       },
+  //     ],
+  //     550
+  //   );
+  // }, (i / 2) * 400);
+}
+
+// list더보기 딜레이
+const moreBtn = document.querySelectorAll(".list-more");
+
+for (i = 0; i < moreBtn.length; i++) {
+  const _this = moreBtn[i];
+  _this.classList.remove("hidden");
+  // setTimeout(() => {
+  //   _this.classList.remove("hidden");
+  //   _this.animate([{ opacity: 0 }, { opacity: 1 }], 500);
+  // }, 1500);
 }
