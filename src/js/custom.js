@@ -29,7 +29,7 @@ for (i = 0; i < dnToggle.length; i++) {
             marginTop: 0,
           },
         ],
-        450
+        350
       );
       newDiv.classList.add("active");
       newDiv.animate(
@@ -102,11 +102,11 @@ for (i = 0; i < modal.length; i++) {
             marginTop: "5%",
           },
         ],
-        450
+        350
       );
       setTimeout(function () {
         _this.classList.remove("active");
-      }, 440);
+      }, 340);
 
       newDiv.animate(
         [
@@ -117,11 +117,11 @@ for (i = 0; i < modal.length; i++) {
             opacity: 0,
           },
         ],
-        460
+        360
       );
       setTimeout(function () {
         newDiv.classList.remove("active");
-      }, 450);
+      }, 350);
     }
   });
 }
@@ -151,11 +151,11 @@ for (i = 0; i < btnClose.length; i++) {
             marginTop: "5%",
           },
         ],
-        450
+        350
       );
       setTimeout(function () {
         eventTarget.classList.remove("active");
-      }, 440);
+      }, 340);
 
       newDiv.animate(
         [
@@ -170,7 +170,7 @@ for (i = 0; i < btnClose.length; i++) {
       );
       setTimeout(function () {
         newDiv.classList.remove("active");
-      }, 450);
+      }, 350);
     } else if (eventTarget.classList.contains("dropdown")) {
       eventTarget.animate(
         [
