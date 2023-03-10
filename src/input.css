@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    font-family: "Pretendard";
+    font-family: "Pretendard", serif;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
   }
@@ -145,7 +145,7 @@ input[type="checkbox"]#returnCheck:checked + label::before {
 }
 
 .submitButton {
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 .customWidth {
@@ -169,7 +169,7 @@ textarea:focus {
   width: calc(100% - 39px);
 }
 .snShare button {
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
 .vanilla-calendar-week__day {
@@ -350,6 +350,10 @@ textarea:focus {
 .modal__close {
   @apply absolute top-5 right-4 block h-5 w-5;
 }
+.modal__close:focus, .modal__close:active{
+  outline:0;
+  border:0;
+}
 .modal__close::before {
   content: "";
   width: 14px;
@@ -374,10 +378,7 @@ textarea:focus {
 }
 .modal__btn {
   font-size: 0.875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   border-radius: 0.25rem;
@@ -521,9 +522,9 @@ textarea:focus {
   width: 100%;
   height: 144px;
   background: linear-gradient(279.04deg, #7b61ff 0%, #fc5185 100%);
-  box-shadow: 0px 0px 2px rgba(184, 184, 184, 0.2),
-    0px 4px 60px rgba(143, 143, 143, 0.1);
-  border-radius: 0px 0px 40px 0px;
+  box-shadow: 0 0 2px rgba(184, 184, 184, 0.2),
+    0 4px 60px rgba(143, 143, 143, 0.1);
+  border-radius: 0 0 40px 0;
   transition: 1s all ease-in;
   z-index: 999;
   overflow: hidden;
@@ -534,7 +535,7 @@ textarea:focus {
 #mainSection {
   padding-top: 144px;
   transition: 1s all ease-in;
-  overflow-style: none;
+  overflow-style: initial;
   scrollbar-width: none;
 }
 #mainSection.scrolling {
@@ -640,7 +641,7 @@ textarea:focus {
   height: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
   padding: 30px 16px;
   z-index: 10015;
 }

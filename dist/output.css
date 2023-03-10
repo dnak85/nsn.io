@@ -420,7 +420,7 @@ video {
 }
 
 * {
-  font-family: "Pretendard";
+  font-family: "Pretendard", serif;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
@@ -624,6 +624,10 @@ button svg {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .float-left {
   float: left;
 }
@@ -721,6 +725,10 @@ button svg {
   margin-top: 18px;
 }
 
+.mt-\[24px\] {
+  margin-top: 24px;
+}
+
 .mt-\[32px\] {
   margin-top: 32px;
 }
@@ -743,6 +751,10 @@ button svg {
 
 .mt-\[56px\] {
   margin-top: 56px;
+}
+
+.mt-\[58px\] {
+  margin-top: 58px;
 }
 
 .mt-\[62px\] {
@@ -1343,12 +1355,12 @@ button svg {
   padding: 2.5rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1416,11 +1428,6 @@ button svg {
   padding-bottom: 14px;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1453,12 +1460,20 @@ button svg {
   padding-top: 1.75rem;
 }
 
+.pt-\[24px\] {
+  padding-top: 24px;
+}
+
 .pt-\[25px\] {
   padding-top: 25px;
 }
 
 .pt-\[30px\] {
   padding-top: 30px;
+}
+
+.pt-\[32px\] {
+  padding-top: 32px;
 }
 
 .pt-\[72px\] {
@@ -1517,6 +1532,10 @@ button svg {
   font-size: 36px;
 }
 
+.font-\[13px\] {
+  font-weight: 13px;
+}
+
 .font-\[400\] {
   font-weight: 400;
 }
@@ -1543,14 +1562,6 @@ button svg {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-\[1\] {
-  font-weight: 1;
-}
-
-.font-\[13px\] {
-  font-weight: 13px;
 }
 
 .not-italic {
@@ -1973,7 +1984,7 @@ input[type="checkbox"]#returnCheck:checked + label::before {
 }
 
 .submitButton {
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 .customWidth {
@@ -2001,7 +2012,7 @@ textarea:focus {
 }
 
 .snShare button {
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
 .vanilla-calendar-week__day {
@@ -2264,6 +2275,11 @@ textarea:focus {
   width: 1.25rem;
 }
 
+.modal__close:focus, .modal__close:active{
+  outline:0;
+  border:0;
+}
+
 .modal__close::before {
   content: "";
   width: 14px;
@@ -2290,10 +2306,7 @@ textarea:focus {
 
 .modal__btn {
   font-size: 0.875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   border-radius: 0.25rem;
@@ -2403,9 +2416,9 @@ textarea:focus {
   width: 100%;
   height: 144px;
   background: linear-gradient(279.04deg, #7b61ff 0%, #fc5185 100%);
-  box-shadow: 0px 0px 2px rgba(184, 184, 184, 0.2),
-    0px 4px 60px rgba(143, 143, 143, 0.1);
-  border-radius: 0px 0px 40px 0px;
+  box-shadow: 0 0 2px rgba(184, 184, 184, 0.2),
+    0 4px 60px rgba(143, 143, 143, 0.1);
+  border-radius: 0 0 40px 0;
   transition: 1s all ease-in;
   z-index: 999;
   overflow: hidden;
@@ -2418,7 +2431,7 @@ textarea:focus {
 #mainSection {
   padding-top: 144px;
   transition: 1s all ease-in;
-  overflow-style: none;
+  overflow-style: initial;
   scrollbar-width: none;
 }
 
@@ -2539,7 +2552,7 @@ textarea:focus {
   height: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
   padding: 30px 16px;
   z-index: 10015;
 }
@@ -2880,15 +2893,6 @@ textarea:focus {
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
-}
-
-.hover\:bg-\[\]:hover {
-  background-color: ;
-}
-
-.hover\:bg-\[\#f5f5f5\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#f8f8f8\]:hover {

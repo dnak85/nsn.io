@@ -3,7 +3,7 @@ const dnToggle = document.querySelectorAll("[data-dn-toggle]");
 const newDiv = document.createElement("div");
 newDiv.classList.add("eventBg");
 
-for (i = 0; i < dnToggle.length; i++) {
+for (let i = 0; i < dnToggle.length; i++) {
   const _this = dnToggle[i];
 
   // toggle 버튼 click
@@ -79,7 +79,7 @@ for (i = 0; i < dnToggle.length; i++) {
 
 // modal click
 const modal = document.querySelectorAll(".modal");
-for (i = 0; i < modal.length; i++) {
+for (let i = 0; i < modal.length; i++) {
   const _this = modal[i];
 
   _this.addEventListener("click", (e) => {
@@ -129,9 +129,9 @@ for (i = 0; i < modal.length; i++) {
 // event close - 공통
 const btnClose = document.querySelectorAll("[data-dn-close]");
 
-for (i = 0; i < btnClose.length; i++) {
+for (let i = 0; i < btnClose.length; i++) {
   const _close = btnClose[i];
-  _close.addEventListener("click", (e) => {
+  _close.addEventListener("click", () => {
     const eventTarget = document.querySelector(
       _close.getAttribute("data-dn-close")
     );
@@ -187,11 +187,10 @@ for (i = 0; i < btnClose.length; i++) {
     }
   });
 }
-
 // state-box loading
 const stateBox = document.querySelectorAll(".state-box");
 
-for (i = 0; i < stateBox.length; i++) {
+for (let i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];
 
   _this.classList.remove("opacity-0");
@@ -221,7 +220,7 @@ for (i = 0; i < stateBox.length; i++) {
 // list더보기 딜레이
 const moreBtn = document.querySelectorAll(".list-more");
 
-for (i = 0; i < moreBtn.length; i++) {
+for (let i = 0; i < moreBtn.length; i++) {
   const _this = moreBtn[i];
   _this.classList.remove("hidden");
   // setTimeout(() => {

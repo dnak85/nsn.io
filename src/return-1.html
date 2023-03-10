@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../dist/output.css" />
   <!-- svg icon js -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
@@ -18,11 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
   <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
   <!-- Plugin CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css"
-    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
   <!-- Plugin JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js"
-    defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </head>
 
 <body class="h-full">
@@ -46,9 +43,7 @@
         <div class="inline-block h-6 alarm">
           <a href="">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17"
-                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
         </div>
@@ -69,8 +64,7 @@
       <div class="block w-full">
         <div class="block w-full px-4">
           <div class="block w-full inputName">
-            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)"
-              class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent text-center text-[16px] text-[#a78bfa]" />
+            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7a7a9a] bg-transparent text-center text-[16px] text-[#a78bfa]" />
           </div>
           <!-- // 입력 -->
         </div>
@@ -79,12 +73,10 @@
         <!-- 반환금 정보 -->
         <div class="w-full px-4 mt-8">
           <!-- dl -->
-          <dl
-            class="flex h-fit w-full flex-wrap justify-start gap-x-3 gap-y-3 overflow-hidden rounded-[12px] bg-[#252a41] px-5 py-6 xsm:px-2 xsm:py-3">
+          <dl class="flex h-fit w-full flex-wrap justify-start gap-x-3 gap-y-3 overflow-hidden rounded-[12px] bg-[#252a41] px-5 py-6 xsm:px-2 xsm:py-3">
             <!-- start -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">약속날짜</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] leading-5 text-white">
@@ -92,8 +84,7 @@
             </dd>
             <!-- //약속날짜 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">약속호스트</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] leading-5 text-white">
@@ -101,18 +92,14 @@
             </dd>
             <!-- //약속호스트 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">약속인원</span>
             </dt>
             <dd class="min-h-4 flex h-fit w-[calc(100%-135px)] gap-2.5 text-[16px] leading-5 text-white">
-              <span
-                class="flex h-[40px] w-fit min-w-[82px] flex-wrap content-center items-center gap-6 rounded-[8px] px-4 text-[16px] font-semibold leading-[40px] shadow-cs2 after:mt-[-4px] after:block after:h-2 after:w-2 after:rotate-45 after:border-[.106em] after:border-l-0 after:border-t-0 after:border-[#ABADC6;] after:content-['']">3</span>
+              <span class="flex h-[40px] w-fit min-w-[82px] flex-wrap content-center items-center gap-6 rounded-[8px] px-4 text-[16px] font-semibold leading-[40px] shadow-cs2 after:mt-[-4px] after:block after:h-2 after:w-2 after:rotate-45 after:border-[.106em] after:border-l-0 after:border-t-0 after:border-[#ABADC6;] after:content-['']">3</span>
               <span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                    stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
             </dd>
@@ -121,8 +108,7 @@
                 있습니다.</span>
 
               <!-- start -->
-              <div
-                class="mt-8 mb-3 min-h-[140px] w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] p-6">
+              <div class="mt-8 mb-3 min-h-[140px] w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] p-6">
                 <ul class="flex flex-col justify-between gap-6">
                   <!-- start -->
 
@@ -145,13 +131,12 @@
                   <!-- // -->
 
                   <li class="flex flex-wrap items-center content-center justify-start w-full">
-                    <!-- 
+                    <!--
                         ! 약속 안맺은 멤버
                         ! css 다름
                      -->
                     <div class="w-[calc(100%-163px)]">
-                      <span
-                        class="block h-8 w-fit rounded-full bg-[#cdc3ff] px-4 text-[14px] font-bold leading-8 text-violet-900">게스트1</span>
+                      <span class="block h-8 w-fit rounded-full bg-[#cdc3ff] px-4 text-[14px] font-bold leading-8 text-violet-900">게스트1</span>
                     </div>
                     <!-- // -->
 
@@ -188,13 +173,12 @@
               </div>
               <!-- end -->
             </dd>
-            <!-- 
-                ! dd class 다름 
+            <!--
+                ! dd class 다름
                -->
             <!-- //약속인원 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">총 모인 약속 보증금</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] leading-5 text-white">
@@ -202,8 +186,7 @@
             </dd>
             <!-- //총모인약속보증금 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">약속지킴반환</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] leading-5 text-white">
@@ -211,8 +194,7 @@
             </dd>
             <!-- //약속지킴반환 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">약속깨짐반환</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] leading-5 text-white">
@@ -220,8 +202,7 @@
             </dd>
             <!-- //약속깨짐반환 -->
 
-            <dt
-              class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
+            <dt class="min-h-4 h-fit w-[120px] text-[14px] leading-5 text-[#CDC3FF] before:text-[16px] before:font-bold before:content-['\00b7']">
               <span class="font-semibold">기타내용</span>
             </dt>
             <dd class="min-h-4 h-fit w-[calc(100%-135px)] text-[16px] font-normal leading-5 text-white">
@@ -236,35 +217,160 @@
 
         <!-- 약속취소 버튼 -->
         <div class="mt-[48px] w-full text-center">
-          <a href="#" class="block text-[16px] font-bold leading-5 text-[#a78bfa] underline">약속취소</a>
+          <a href="javascript:" data-custom-open="cancel1" class="block text-[16px] font-bold leading-5 text-[#a78bfa] underline">약속취소</a>
+          <a href="javascript:" data-custom-open="cancel2" class="block text-[16px] font-bold leading-5 text-[#a78bfa] underline">약속취소2(예시버튼 삭제요청)</a>
+          <a href="javascript:" data-custom-open="cancel3" class="block text-[16px] font-bold leading-5 text-[#a78bfa] underline">약속취소3(예시버튼 삭제요청)</a>
         </div>
         <!-- //약속취소 버튼 -->
 
-        <div class="mt-8 block px-[40px] text-center">
-          <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
-        </div>
-
-        <div class="h-[64px] w-full"></div>
-        <!-- // 하단여백 -->
       </div>
-      <!-- // -->
+      <!-- //약속취소 버튼 -->
 
-      <footer id="footer" class="">
-        <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" class="mx-auto">
-          <rect width="70" height="29" fill="url(#pattern0)" />
-          <defs>
-            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_2_697" transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" />
-            </pattern>
-            <image id="image0_2_697" width="351" height="144"
-              xlink:href="data:image/png;base64,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" />
-          </defs>
-        </svg>
-      </footer>
-      <!-- //footer -->
-    </section>
-    <!-- //container -->
+      <div class="mt-8 block px-[40px] text-center">
+        <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속보증금반환하기</button>
+      </div>
+
+      <div class="h-[64px] w-full"></div>
+      <!-- // 하단여백 -->
+
+      <!-- modal 약속취소 -->
+      <div class="modal micromodal-slide" id="cancel1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+            <main class="modal__content">
+              <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+              <div class="w-full px-1 pt-[32px]">
+                <div class="flex flex-col w-full gap-4 text-center text-white">
+                  <span class="w-full text-center block text-[16px] text-white leading-5">초대한 게스트가 <br>약속일까지 약속을 체결하지 않으면 약속은 자동 환불됩니다.</span>
+                  <strong class="block leading-5 text-[20px] font-gm font-medium">그래도 약속을 취소하시겠습니까?</strong>
+                </div>
+                <!-- text -->
+
+                <div class="mt-[24px] w-full text-center">
+                  <svg class="inline-block" width="90" height="100" viewBox="0 0 90 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M44.125 60H60C61.4167 60 62.605 59.52 63.565 58.56C64.525 57.6 65.0033 56.4133 65 55C65 53.5833 64.52 52.395 63.56 51.435C62.6 50.475 61.4133 49.9967 60 50H44.125L48.625 45.5C49.625 44.5833 50.105 43.4367 50.065 42.06C50.025 40.6833 49.5033 39.4967 48.5 38.5C47.5833 37.5833 46.4167 37.125 45 37.125C43.5833 37.125 42.4167 37.5833 41.5 38.5L28.5 51.5C27.5833 52.4167 27.125 53.5833 27.125 55C27.125 56.4167 27.5833 57.5833 28.5 58.5L41.5 71.5C42.4167 72.4167 43.5833 72.875 45 72.875C46.4167 72.875 47.5833 72.4167 48.5 71.5C49.4167 70.5833 49.875 69.4367 49.875 68.06C49.875 66.6833 49.4167 65.4967 48.5 64.5L44.125 60ZM10 90H80V20H10V90ZM10 100C7.25001 100 4.89501 99.02 2.93501 97.06C0.975008 95.1 -0.00332484 92.7467 8.48897e-06 90V20C8.48897e-06 17.25 0.980009 14.895 2.94001 12.935C4.90001 10.975 7.25334 9.99667 10 10H31C32.0833 7 33.8967 4.58333 36.44 2.75C38.9833 0.916666 41.8367 0 45 0C48.1667 0 51.0217 0.916666 53.565 2.75C56.1083 4.58333 57.92 7 59 10H80C82.75 10 85.105 10.98 87.065 12.94C89.025 14.9 90.0033 17.2533 90 20V90C90 92.75 89.02 95.105 87.06 97.065C85.1 99.025 82.7467 100.003 80 100H10ZM45 16.25C46.0833 16.25 46.9783 15.895 47.685 15.185C48.3917 14.475 48.7467 13.58 48.75 12.5C48.75 11.4167 48.395 10.5217 47.685 9.815C46.975 9.10833 46.08 8.75333 45 8.75C43.9167 8.75 43.0217 9.105 42.315 9.815C41.6083 10.525 41.2533 11.42 41.25 12.5C41.25 13.5833 41.605 14.4783 42.315 15.185C43.025 15.8917 43.92 16.2467 45 16.25Z" fill="#8B5CF6" />
+                  </svg>
+                </div>
+                <!-- visual -->
+
+                <div class="mt-[40px] flex w-full flex-col gap-6">
+                  <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속 취소</button>
+                </div>
+                <!-- button -->
+              </div>
+            </main>
+            <!-- //main -->
+          </div>
+          <!-- //modal__container -->
+        </div>
+        <!-- //modal__overlay -->
+      </div>
+      <!-- //modal -->
+
+      <!-- modal 약속취소 -->
+      <div class="modal micromodal-slide" id="cancel2" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+            <main class="modal__content">
+              <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+              <div class="w-full px-1 pt-[24px]">
+                <div class="flex flex-col w-full gap-2 text-center text-white">
+                  <strong class="font-gm font-medium text-[20px] leading-5 block">체결 중인 약속입니다.</strong>
+                  <strong class="block font-medium leading-5 font-gm">약속을 체결한 멤버에게 취소요청을 보내겠습니까?</strong>
+                  <span class="text-[16px] leading-5 block mt-2">* 약속을 체결한 모든 멤버가 동의하면 약속이 취소됩니다.</span>
+                </div>
+                <!-- text -->
+
+                <div class="mt-[24px] w-full text-center">
+                  <svg class="inline-block" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M54.8857 0V10.1152C76.8901 12.8192 92.4786 32.7992 89.7719 54.7822C87.4662 73.0095 73.1308 87.4812 54.8857 89.6345V99.6495C82.4538 96.8953 102.503 72.4587 99.7466 44.9174C97.491 21.1317 78.5943 2.35353 54.8857 0ZM44.8609 0.150225C35.0867 1.10165 25.7637 4.85729 18.1449 11.1668L25.3126 18.5779C30.9265 14.0711 37.6932 11.1668 44.8609 10.1652V0.150225ZM11.0774 18.2273C4.81017 25.8255 0.953367 35.1181 0 44.9174H10.0248C10.9771 37.8067 13.7841 31.0466 18.2451 25.3881L11.0774 18.2273ZM0.0501239 54.9324C1.0526 64.7471 4.91214 74.011 11.1275 81.6224L18.2451 74.4617C13.8188 68.8012 10.997 62.0561 10.0749 54.9324H0.0501239ZM25.3126 81.8227L18.1449 88.683C25.7375 95.006 35.033 98.9436 44.8609 100V89.985C37.7303 89.0638 30.9786 86.2447 25.3126 81.8227ZM52.3795 24.8873V51.1768L74.9352 64.5468L71.1759 70.7061L44.8609 54.9324V24.8873H52.3795Z" fill="#8B5CF6" />
+                  </svg>
+                </div>
+                <!-- visual -->
+
+                <div class="mt-[58px] flex w-full flex-col gap-6">
+                  <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">취소 요청 보내기</button>
+                </div>
+                <!-- button -->
+              </div>
+            </main>
+            <!-- //main -->
+          </div>
+          <!-- //modal__container -->
+        </div>
+        <!-- //modal__overlay -->
+      </div>
+      <!-- //modal -->
+
+      <!-- modal 약속취소 -->
+      <div class="modal micromodal-slide" id="cancel3" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+            <main class="modal__content">
+              <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+              <div class="w-full px-1 pt-[24px]">
+                <div class="flex flex-col w-full gap-2 text-center text-white">
+                  <strong class="font-gm font-medium text-[20px] leading-5 block">체결 완료된 약속입니다.</strong>
+                  <strong class="block font-medium leading-5 font-gm">약속을 체결한 멤버에게 취소요청을 보내겠습니까?</strong>
+                  <span class="text-[16px] leading-5 block mt-2">* 약속을 체결한 모든 멤버가 동의하면 약속이 취소됩니다.</span>
+                </div>
+                <!-- text -->
+
+                <div class="mt-[24px] w-full text-center">
+                  <svg class="inline-block" width="95" height="105" viewBox="0 0 95 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M63.75 11.25H75C76.9873 11.2559 78.8915 12.048 80.2967 13.4533C81.702 14.8585 82.4941 16.7627 82.5 18.75V60H75V18.75H63.75V30H18.75V18.75H7.5V97.5H41.25V105H7.5C5.5127 104.994 3.60849 104.202 2.20326 102.797C0.798018 101.392 0.00593523 99.4873 0 97.5V18.75C0.00593523 16.7627 0.798018 14.8585 2.20326 13.4533C3.60849 12.048 5.5127 11.2559 7.5 11.25H18.75V7.5C18.7559 5.5127 19.548 3.60849 20.9533 2.20326C22.3585 0.798018 24.2627 0.00593523 26.25 0H56.25C58.2373 0.00593523 60.1415 0.798018 61.5467 2.20326C62.952 3.60849 63.7441 5.5127 63.75 7.5V11.25ZM26.25 22.5H56.25V7.5H26.25V22.5ZM55.2875 84.7124L65 94.4249L89.7125 69.7124L95 74.9999L65 105L50 89.9999L55.2875 84.7124Z" fill="#8B5CF6" />
+                  </svg>
+                </div>
+                <!-- visual -->
+
+                <div class="mt-[58px] flex w-full flex-col gap-6">
+                  <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">취소 요청 보내기</button>
+                </div>
+                <!-- button -->
+              </div>
+            </main>
+            <!-- //main -->
+          </div>
+          <!-- //modal__container -->
+        </div>
+        <!-- //modal__overlay -->
+      </div>
+      <!-- //modal -->
+
+      <script>
+        MicroModal.init({
+          onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+          onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+          openTrigger: 'data-custom-open', // [3]
+          closeTrigger: 'data-custom-close', // [4]
+          openClass: 'is-open', // [5]
+          disableScroll: true, // [6]
+          disableFocus: false, // [7]
+          awaitOpenAnimation: true, // [8]
+          awaitCloseAnimation: true, // [9]
+          debugMode: true, // [10]
+        });
+      </script>
+  </div>
+  <!-- // -->
+
+  <footer id="footer" class="">
+    <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mx-auto">
+      <rect width="70" height="29" fill="url(#pattern0)" />
+      <defs>
+        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+          <use xlink:href="#image0_2_697" transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" />
+        </pattern>
+        <image id="image0_2_697" width="351" height="144" xlink:href="data:image/png;base64,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" />
+      </defs>
+    </svg>
+  </footer>
+  <!-- //footer -->
+  </section>
+  <!-- //container -->
   </div>
   <!-- //wrap -->
 </body>
