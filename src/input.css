@@ -231,7 +231,7 @@ textarea:focus {
   @apply p-0 !important;
 }
 #mainCalendar .vanilla-calendar-day__btn_selected {
-  @apply bg-transparent font-dm font-bold text-[#7B61FF] !important;
+  @apply bg-[#ffd500] text-white !important
 }
 
 #mainCalendar .vanilla-calendar-week__day {
@@ -239,17 +239,21 @@ textarea:focus {
 }
 
 #mainCalendar .vanilla-calendar-day__btn_today {
-  @apply bg-[#FF3F02] text-white !important;
+  @apply bg-transparent font-dm font-bold text-[#7b61ff] !important;
 }
 #mainCalendar .vanilla-calendar-wrapper {
   @apply mt-6 !important;
 }
 #week ol li div:first-child {
-  width: calc(100% - 100px);
+@apply w-[calc(100%-100px)]
 }
 #mainCalendar .vanilla-calendar-arrow::after,
 #mainCalendar .vanilla-calendar-arrow::before {
   @apply h-[2px] rounded-full bg-[#808191] !important;
+}
+
+#mainCalendar .vanilla-calendar-day__btn.bg-red {
+  @apply bg-[#ff3f02] text-white !important;
 }
 #week ol li div:first-child span:first-child {
   width: 56px;
@@ -718,4 +722,22 @@ textarea:focus {
 }
 .eventBg.active {
   @apply block;
+}
+.msg.bgmsg{
+  @apply bg-[#7b61ff] bg-opacity-100;
+}
+.msg{
+  @apply h-[80px] w-full rounded-[12px] flex flex-col justify-center relative bg-white bg-opacity-10;
+}
+.msg span{
+  @apply block h-5 leading-5 text-[16px] text-white pl-[25px];
+}
+.msg .bullet{
+  @apply w-5 h-5 flex justify-center items-center flex-wrap bg-white rounded-full text-[12px] text-[#ff5ab3] font-extrabold inset-2 absolute;
+}
+.msg .time{
+  @apply absolute bottom-[10px] right-4 text-[12px] text-[#CDC3FF];
+}
+.msg.bgmsg .time{
+  @apply text-white;
 }

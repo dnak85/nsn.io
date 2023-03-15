@@ -545,12 +545,20 @@ button svg {
   width: 100%;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .inset-0 {
@@ -562,6 +570,10 @@ button svg {
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-\[-4px\] {
+  bottom: -4px;
 }
 
 .bottom-\[14px\] {
@@ -592,6 +604,10 @@ button svg {
   right: 1rem;
 }
 
+.right-\[-4px\] {
+  right: -4px;
+}
+
 .right-\[8px\] {
   right: 8px;
 }
@@ -620,12 +636,20 @@ button svg {
   top: 10px;
 }
 
+.top-\[3px\] {
+  top: 3px;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .float-left {
@@ -638,6 +662,11 @@ button svg {
 
 .clear-both {
   clear: both;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-7 {
@@ -660,6 +689,11 @@ button svg {
   margin-bottom: 0.5rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -669,8 +703,16 @@ button svg {
   margin-bottom: 0.75rem;
 }
 
+.mb-\[45px\] {
+  margin-bottom: 45px;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .ml-\[6\%\] {
@@ -717,12 +759,20 @@ button svg {
   margin-top: 2rem;
 }
 
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
 .mt-\[14px\] {
   margin-top: 14px;
 }
 
 .mt-\[18px\] {
   margin-top: 18px;
+}
+
+.mt-\[205px\] {
+  margin-top: 205px;
 }
 
 .mt-\[24px\] {
@@ -741,12 +791,20 @@ button svg {
   margin-top: 42px;
 }
 
+.mt-\[45px\] {
+  margin-top: 45px;
+}
+
 .mt-\[48px\] {
   margin-top: 48px;
 }
 
 .mt-\[50px\] {
   margin-top: 50px;
+}
+
+.mt-\[52px\] {
+  margin-top: 52px;
 }
 
 .mt-\[56px\] {
@@ -761,12 +819,40 @@ button svg {
   margin-top: 62px;
 }
 
+.mt-\[64px\] {
+  margin-top: 64px;
+}
+
+.mt-\[65px\] {
+  margin-top: 65px;
+}
+
 .mt-\[6px\] {
   margin-top: 6px;
 }
 
+.mt-\[72px\] {
+  margin-top: 72px;
+}
+
+.mt-\[74px\] {
+  margin-top: 74px;
+}
+
+.mt-\[75px\] {
+  margin-top: 75px;
+}
+
 .mt-\[7px\] {
   margin-top: 7px;
+}
+
+.mt-\[80px\] {
+  margin-top: 80px;
+}
+
+.mt-\[60px\] {
+  margin-top: 60px;
 }
 
 .block {
@@ -809,6 +895,10 @@ button svg {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -839,6 +929,10 @@ button svg {
 
 .h-\[17px\] {
   height: 17px;
+}
+
+.h-\[18px\] {
+  height: 18px;
 }
 
 .h-\[200px\] {
@@ -881,6 +975,10 @@ button svg {
   height: 6px;
 }
 
+.h-\[80px\] {
+  height: 80px;
+}
+
 .h-\[88px\] {
   height: 88px;
 }
@@ -896,6 +994,10 @@ button svg {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[45px\] {
+  height: 45px;
 }
 
 .min-h-\[140px\] {
@@ -916,6 +1018,10 @@ button svg {
 
 .min-h-\[360px\] {
   min-height: 360px;
+}
+
+.min-h-\[calc\(100\%-53px\)\] {
+  min-height: calc(100% - 53px);
 }
 
 .min-h-full {
@@ -940,6 +1046,10 @@ button svg {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[102px\] {
+  width: 102px;
 }
 
 .w-\[104px\] {
@@ -978,8 +1088,16 @@ button svg {
   width: 50%;
 }
 
+.w-\[64px\] {
+  width: 64px;
+}
+
 .w-\[6px\] {
   width: 6px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-\[73px\] {
@@ -1006,8 +1124,16 @@ button svg {
   width: 90px;
 }
 
+.w-\[calc\(100\%-105px\)\] {
+  width: calc(100% - 105px);
+}
+
 .w-\[calc\(100\%-106px\)\] {
   width: calc(100% - 106px);
+}
+
+.w-\[calc\(100\%-10px\)\] {
+  width: calc(100% - 10px);
 }
 
 .w-\[calc\(100\%-135px\)\] {
@@ -1022,12 +1148,28 @@ button svg {
   width: calc(100% - 163px);
 }
 
+.w-\[calc\(100\%-32px\)\] {
+  width: calc(100% - 32px);
+}
+
+.w-\[calc\(100\%-38px\)\] {
+  width: calc(100% - 38px);
+}
+
 .w-\[calc\(100\%-80px\)\] {
   width: calc(100% - 80px);
 }
 
+.w-\[calc\(100\%-87px\)\] {
+  width: calc(100% - 87px);
+}
+
 .w-\[calc\(100\%-88px\)\] {
   width: calc(100% - 88px);
+}
+
+.w-auto {
+  width: auto;
 }
 
 .w-fit {
@@ -1037,6 +1179,18 @@ button svg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[calc\(\)\] {
+  width: calc();
+}
+
+.w-\[calc\(100\)\] {
+  width: calc(100);
+}
+
+.w-\[calc\(100-\)\] {
+  width: calc(100 - );
 }
 
 .min-w-\[61px\] {
@@ -1071,12 +1225,20 @@ button svg {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -1093,6 +1255,10 @@ button svg {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -1175,6 +1341,10 @@ button svg {
   border-radius: 24px;
 }
 
+.rounded-\[25px\] {
+  border-radius: 25px;
+}
+
 .rounded-\[32px\] {
   border-radius: 32px;
 }
@@ -1215,6 +1385,11 @@ button svg {
   border-style: dashed;
 }
 
+.border-\[\#7a749a\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(122 116 154 / var(--tw-border-opacity));
+}
+
 .border-\[\#7a7a9a\] {
   --tw-border-opacity: 1;
   border-color: rgb(122 122 154 / var(--tw-border-opacity));
@@ -1223,6 +1398,11 @@ button svg {
 .border-\[\#7b61ff\] {
   --tw-border-opacity: 1;
   border-color: rgb(123 97 255 / var(--tw-border-opacity));
+}
+
+.border-\[\#7b81ff\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(123 129 255 / var(--tw-border-opacity));
 }
 
 .border-\[\#CDC3FF\] {
@@ -1263,6 +1443,11 @@ button svg {
 .bg-\[\#545290\] {
   --tw-bg-opacity: 1;
   background-color: rgb(84 82 144 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#6A6197\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 97 151 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#7B61FF\] {
@@ -1310,6 +1495,11 @@ button svg {
   background-color: rgb(255 252 252 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#cbc2f4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 194 244 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#cbc2f4\]\/40 {
   background-color: rgb(203 194 244 / 0.4);
 }
@@ -1343,6 +1533,14 @@ button svg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1355,6 +1553,10 @@ button svg {
   padding: 2.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -1363,9 +1565,30 @@ button svg {
   padding: 1.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-\[\] {
+  padding: ;
+}
+
+.p-\[5px\] {
+  padding: 5px;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-2 {
@@ -1408,6 +1631,11 @@ button svg {
   padding-right: 40px;
 }
 
+.px-\[5px\] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1416,6 +1644,11 @@ button svg {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-6 {
@@ -1436,6 +1669,10 @@ button svg {
   padding-bottom: 1.25rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pr-\[10px\] {
   padding-right: 10px;
 }
@@ -1450,6 +1687,10 @@ button svg {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-6 {
@@ -1478,6 +1719,18 @@ button svg {
 
 .pt-\[72px\] {
   padding-top: 72px;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-\[\] {
+  padding-top: ;
+}
+
+.pt-\[2px\] {
+  padding-top: 2px;
 }
 
 .text-center {
@@ -1742,6 +1995,11 @@ button svg {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-violet-400 {
+  --tw-text-opacity: 1;
+  color: rgb(167 139 250 / var(--tw-text-opacity));
+}
+
 .text-violet-900 {
   --tw-text-opacity: 1;
   color: rgb(76 29 149 / var(--tw-text-opacity));
@@ -1750,6 +2008,10 @@ button svg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#a7\] {
+  color: #a7;
 }
 
 .underline {
@@ -2120,11 +2382,10 @@ textarea:focus {
 }
 
 #mainCalendar .vanilla-calendar-day__btn_selected {
-  background-color: transparent !important;
-  font-family: DM Sans !important;
-  font-weight: 700 !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 213 0 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 #mainCalendar .vanilla-calendar-week__day {
@@ -2132,10 +2393,11 @@ textarea:focus {
 }
 
 #mainCalendar .vanilla-calendar-day__btn_today {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 63 2 / var(--tw-bg-opacity)) !important;
+  background-color: transparent !important;
+  font-family: DM Sans !important;
+  font-weight: 700 !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
 }
 
 #mainCalendar .vanilla-calendar-wrapper {
@@ -2152,6 +2414,13 @@ textarea:focus {
   border-radius: 9999px !important;
   --tw-bg-opacity: 1 !important;
   background-color: rgb(128 129 145 / var(--tw-bg-opacity)) !important;
+}
+
+#mainCalendar .vanilla-calendar-day__btn.bg-red {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 63 2 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 #week ol li div:first-child span:first-child {
@@ -2707,6 +2976,68 @@ textarea:focus {
   display: block;
 }
 
+.msg.bgmsg {
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+}
+
+.msg {
+  position: relative;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+}
+
+.msg span {
+  display: block;
+  height: 1.25rem;
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.msg .bullet {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 12px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 90 179 / var(--tw-text-opacity));
+}
+
+.msg .time {
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(205 195 255 / var(--tw-text-opacity));
+}
+
+.msg.bgmsg .time {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
 }
@@ -2767,6 +3098,11 @@ textarea:focus {
   color: rgb(173 163 223 / var(--tw-text-opacity));
 }
 
+.before\:invisible::before {
+  content: var(--tw-content);
+  visibility: hidden;
+}
+
 .before\:block::before {
   content: var(--tw-content);
   display: block;
@@ -2775,6 +3111,11 @@ textarea:focus {
 .before\:inline-block::before {
   content: var(--tw-content);
   display: inline-block;
+}
+
+.before\:hidden::before {
+  content: var(--tw-content);
+  display: none;
 }
 
 .before\:w-3::before {
@@ -2956,6 +3297,56 @@ textarea:focus {
 .peer\/rc0202:checked ~ .peer-checked\/rc0202\:border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.peer\/chkico01:checked ~ .peer-checked\/chkico01\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico02:checked ~ .peer-checked\/chkico02\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico03:checked ~ .peer-checked\/chkico03\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico04:checked ~ .peer-checked\/chkico04\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico05:checked ~ .peer-checked\/chkico05\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico06:checked ~ .peer-checked\/chkico06\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico07:checked ~ .peer-checked\/chkico07\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico08:checked ~ .peer-checked\/chkico08\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico09:checked ~ .peer-checked\/chkico09\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer\/chkico10:checked ~ .peer-checked\/chkico10\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .peer\/gst0101:checked ~ .peer-checked\/gst0101\:bg-\[\#252a41\] {
