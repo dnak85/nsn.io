@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
   * {
     font-family: "Pretendard", serif;
     box-sizing: border-box;
@@ -231,7 +232,7 @@ textarea:focus {
   @apply p-0 !important;
 }
 #mainCalendar .vanilla-calendar-day__btn_selected {
-  @apply bg-[#ffd500] text-white !important
+  @apply bg-[#ffd500] text-white !important;
 }
 
 #mainCalendar .vanilla-calendar-week__day {
@@ -245,7 +246,7 @@ textarea:focus {
   @apply mt-6 !important;
 }
 #week ol li div:first-child {
-@apply w-[calc(100%-100px)]
+  @apply w-[calc(100%-100px)];
 }
 #mainCalendar .vanilla-calendar-arrow::after,
 #mainCalendar .vanilla-calendar-arrow::before {
@@ -354,9 +355,10 @@ textarea:focus {
 .modal__close {
   @apply absolute top-5 right-4 block h-5 w-5;
 }
-.modal__close:focus, .modal__close:active{
-  outline:0;
-  border:0;
+.modal__close:focus,
+.modal__close:active {
+  outline: 0;
+  border: 0;
 }
 .modal__close::before {
   content: "";
@@ -723,21 +725,61 @@ textarea:focus {
 .eventBg.active {
   @apply block;
 }
-.msg.bgmsg{
+.msg.bgmsg {
   @apply bg-[#7b61ff] bg-opacity-100;
 }
-.msg{
-  @apply h-[80px] w-full rounded-[12px] flex flex-col justify-center relative bg-white bg-opacity-10;
+.msg {
+  @apply relative flex h-[80px] w-full flex-col justify-center rounded-[12px] bg-white bg-opacity-10;
 }
-.msg span{
-  @apply block h-5 leading-5 text-[16px] text-white pl-[25px];
+.msg span {
+  @apply block h-5 pl-[25px] text-[16px] leading-5 text-white;
 }
-.msg .bullet{
-  @apply w-5 h-5 flex justify-center items-center flex-wrap bg-white rounded-full text-[12px] text-[#ff5ab3] font-extrabold inset-2 absolute;
+.msg .bullet {
+  @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
 }
-.msg .time{
+.msg .time {
   @apply absolute bottom-[10px] right-4 text-[12px] text-[#CDC3FF];
 }
-.msg.bgmsg .time{
+.msg.bgmsg .time {
   @apply text-white;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cs-banner {
+  background: linear-gradient(
+    278.31deg,
+    #563dd9 0.03%,
+    #af2bd2 47.9%,
+    #bd355e 97.82%
+  );
+}
+
+.board-tabs button.active {
+  @apply rounded-[99px] bg-[#252a41] text-white;
+}
+.collapse-box {
+}
+.pagingNum {
+  @apply h-[42px] w-[42px] text-[14px] font-semibold leading-[17px] text-[#abadc6];
+}
+
+.pagingNum.active {
+  @apply border-[2px] border-[#abadc6] text-white;
+}
+.prev {
+  @apply relative h-[42px] pl-[6px] pr-[16px];
+}
+.prev:after {
+  @apply absolute right-0 top-1 h-[32px] w-[2px] bg-[#424b67] content-[''];
+}
+
+.next {
+  @apply relative h-[42px] pr-[6px] pl-[16px];
+}
+.next:before {
+  @apply absolute left-0 top-1 h-[32px] w-[2px] bg-[#424b67] content-[''];
 }

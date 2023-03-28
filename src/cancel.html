@@ -152,6 +152,9 @@
                 <!-- 완료메시지 -->
                 <div class="mt-[48px] h-[30px] w-full text-center leading-[30px]">
                     <span class="text-[24px] text-[#A78BFA]">약속 취소 대기 중</span>
+
+                    <button data-custom-open="alert01" class="text-white">알럿창1(임시)</button>
+                    <button data-custom-open="alert02" class="text-white">알럿창2(임시)</button>
                 </div>
 
                 <!-- modal 약속취소
@@ -192,6 +195,66 @@
                 </div>
                 <!-- //modal -->
 
+
+                <div aria-hidden="true" class="modal micromodal-slide" id="alert01">
+                    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                        <div aria-labelledby="알럿창" aria-modal="true" class="modal__container" role="dialog">
+                            <main class="modal__content">
+                                <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                                <div class="w-full px-1 pt-[50px]">
+                                    <div class="flex flex-col w-full gap-2 text-[20px] leading-5 text-center text-white">
+
+                                        게스트1(홍길동)님과 <br>
+                                        응답이 일치하지 않습니다. <br>
+                                        확인 후 다시 선택해주세요
+                                    </div>
+                                    <!-- text -->
+
+                                    <div class="mt-[80px] flex w-full flex-col gap-6">
+                                        <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
+                                    </div>
+                                    <!-- button -->
+                                </div>
+                            </main>
+                            <!-- //main -->
+                        </div>
+                        <!-- //modal__container -->
+                    </div>
+                    <!-- //modal__overlay -->
+                </div>
+                <!-- alert01 -->
+
+                <div aria-hidden="true" class="modal micromodal-slide" id="alert02">
+                    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                        <div aria-labelledby="알럿창" aria-modal="true" class="modal__container" role="dialog">
+                            <main class="modal__content">
+                                <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                                <div class="w-full px-1 pt-[50px]">
+                                    <div class="flex flex-col w-full gap-2 text-[20px] leading-5 text-center text-white">
+                                        모든멤버의 <br>
+                                        응답이 일치하지 않습니다. <br>
+                                        확인 후 다시 선택해주세요
+                                    </div>
+                                    <!-- text -->
+
+                                    <div class="mt-[80px] flex w-full flex-col gap-6">
+                                        <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
+                                    </div>
+                                    <!-- button -->
+                                </div>
+                            </main>
+                            <!-- //main -->
+                        </div>
+                        <!-- //modal__container -->
+                    </div>
+                    <!-- //modal__overlay -->
+                </div>
+                <!-- alert02 -->
+
+
+
                 <script>
                     MicroModal.show('reCancel');
                     const closeB = document.querySelectorAll('.modal__close');
@@ -202,6 +265,20 @@
                             MicroModal.close('reCancel');
                         })
                     }
+
+
+                    MicroModal.init({
+                        onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+                        onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+                        openTrigger: 'data-custom-open', // [3]
+                        closeTrigger: 'data-custom-close', // [4]
+                        openClass: 'is-open', // [5]
+                        disableScroll: true, // [6]
+                        disableFocus: false, // [7]
+                        awaitOpenAnimation: true, // [8]
+                        awaitCloseAnimation: true, // [9]
+                        debugMode: true, // [10]
+                    });
                 </script>
 
 
