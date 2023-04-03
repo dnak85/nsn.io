@@ -193,28 +193,28 @@ const stateBox = document.querySelectorAll(".state-box");
 for (let i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];
 
-  _this.classList.remove("opacity-0");
+  //_this.classList.remove("opacity-0");
 
-  // setTimeout(() => {
-  //   _this.classList.remove("opacity-0");
-  //   _this.animate(
-  //     [
-  //       {
-  //         opacity: 0,
-  //         marginTop: i * 10 + "%",
-  //       },
-  //       {
-  //         opacity: 0.2,
-  //         marginTop: i * 2 + "%",
-  //       },
-  //       {
-  //         opacity: 1,
-  //         marginTop: 0,
-  //       },
-  //     ],
-  //     550
-  //   );
-  // }, (i / 2) * 400);
+  setTimeout(() => {
+    _this.classList.remove("opacity-0");
+    _this.animate(
+      [
+        {
+          opacity: 0,
+          marginTop: i * 20 + "%",
+        },
+        {
+          opacity: 0.2,
+          marginTop: i * 10 + "%",
+        },
+        {
+          opacity: 1,
+          marginTop: 0,
+        },
+      ],
+      550
+    );
+  }, (i / 2) * 250);
 }
 
 // list더보기 딜레이
@@ -223,8 +223,8 @@ const moreBtn = document.querySelectorAll(".list-more");
 for (let i = 0; i < moreBtn.length; i++) {
   const _this = moreBtn[i];
   _this.classList.remove("hidden");
-  // setTimeout(() => {
-  //   _this.classList.remove("hidden");
-  //   _this.animate([{ opacity: 0 }, { opacity: 1 }], 500);
-  // }, 1500);
+  setTimeout(() => {
+    _this.classList.remove("hidden");
+    _this.animate([{ opacity: 0 }, { opacity: 1 }], 500);
+  }, 1500);
 }
