@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <div id="identification" class="relative w-full h-full bg-[#F2EFF8] overflow-x-hidden overflow-y-auto flex flex-col px-7">
+            <div class="w-full mt-10">
+                <div class="text-[32px] text-slate-900 after:content-[''] after:absolute after:w-full after:h-[18px] after:bg-[#cdc4ff] after:bottom-0 after:left-0 relative w-fit h-10 leading-10 mx-auto px-[5px] after:z-[0] z-10">
+                    <span class="relative z-10 block"><em class="font-semibold">본인인증</em>이 필요합니다.</span>
+                </div>
+            </div>
+            <!-- top text -->
+
+            <div class="flex flex-col w-full gap-8 mt-10">
+
+                <div>
+                    <div class="w-full h-5 leading-5">
+                        <strong class="text-[16px] text-slate-900 font-normal">이름</strong>
+                    </div>
+                    <div class="w-full h-[48px] border-[1px] border-[#d7d5dc] bg-white mt-2">
+                        <label for="" class="hidden">이름</label>
+                        <input type="text" class="w-full h-[46px] px-4 text-[16px] leading-5 text-slate-900 text-center" placeholder="홍길동">
+                    </div>
+                </div>
+                <!--  -->
+
+                <div>
+                    <div class="w-full h-5 leading-5">
+                        <strong class="text-[16px] text-slate-900 font-normal">주민등록번호</strong>
+                    </div>
+                    <div class="w-full h-[48px] border-[1px] border-[#d7d5dc] bg-white mt-2 flex content-center items-center">
+                        <label for="" class="hidden">주민등록번호</label>
+                        <input type="text" class="h-[46px] w-[calc((100%-10px)/2)] px-4 text-[16px] leading-5 text-slate-900" placeholder="940831">
+                        <span class="w-2.5">-</span>
+                        <input type="text" class="h-[46px] w-[calc((100%-10px)/2-94px)] text-[16px] leading-5 text-slate-900 text-right pr-2" placeholder="4">
+                        <span class="flex gap-2 pr-4 w-[94px]">
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#E1DFEB" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+            <!-- 유저정보 -->
+
+            <div class="w-full mt-10">
+                <div class="w-full pb-2.5 border-b-[1px] border-[#cdc4ff] relative">
+                    <input type="checkbox" id="allcheck" class="absolute top-0 left-[-9999em]">
+                    <label for="allcheck" class="flex items-center gap-4 text-[16px] text-slate-900 font-semibold">휴대전화 인증 전체 동의</label>
+                </div>
+                <!-- 전체 -->
+
+                <div class="w-full flex flex-col mt-[14px] px-[5px] gap-3 usrAgree">
+                    <div class="relative flex justify-between clear-both w-full">
+                        <input type="checkbox" name="" id="chk01" class="absolute top-0 left-[-9999em] chk00">
+                        <label for="chk01">
+                            (필수) 본인확인서비스 이용약관
+                        </label>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                    </div>
+                    <!--  -->
+                    <div class="relative flex justify-between clear-both w-full">
+                        <input type="checkbox" name="" id="chk02" class="absolute top-0 left-[-9999em] chk00">
+                        <label for="chk02">
+                            (필수) 개인정보 수집/이용동의
+                        </label>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                    </div>
+                    <!--  -->
+                    <div class="relative flex justify-between clear-both w-full">
+                        <input type="checkbox" name="" id="chk03" class="absolute top-0 left-[-9999em] chk00">
+                        <label for="chk03">
+                            (필수) 고유식별정보처리 동의
+                        </label>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                    </div>
+                    <!--  -->
+                    <div class="relative flex justify-between clear-both w-full">
+                        <input type="checkbox" name="" id="chk04" class="absolute top-0 left-[-9999em] chk00">
+                        <label for="chk04">
+                            (필수) 통신사 이용약관
+                        </label>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                    </div>
+                    <!--  -->
+                    <div class="relative flex justify-between clear-both w-full">
+                        <input type="checkbox" name="" id="chk05" class="absolute top-0 left-[-9999em] chk00">
+                        <label for="chk05">
+                            (알뜰폰) 개인정보 제3자 제공 동의
+                        </label>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- 각개 -->
+
+                <script>
+                    // vue 대신 스크립트로 전체동의를 해야할 경우 말해주세요. 
+                </script>
+            </div>
+            <!-- 전체동의 -->
+
+            <div class="flex flex-col w-full gap-5 mt-10">
+                <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white">
+                    <select name="" id="" class="h-full pl-4 w-[75px] text-[16px] text-slate-900">
+                        <optgroup label="통신사 선택">
+                            <option value="" selected>SKT</option>
+                            <option value="">KT</option>
+                            <option value="">LGU+</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" placeholder="휴대폰 번호 - 없이 입력" class="text-[16px] text-slate-900 h-full w-[calc(100%-157px)] px-1">
+                    <button class="absolute top-[-1px] right-0 w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px]">인증요청</button>
+                </div>
+                <!-- 인증요청 -->
+
+                <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white flex">
+                    <input type="text" class="w-[calc(100%-72px)] h-full text-[16px] text-slate-900 pl-4 pr-[100px]" placeholder="000000">
+                    <button class="w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]">인증하기</button>
+                    <em class="absolute top-4 time right-[96px] text-[16px] text-slate-900 leading-5 block">05:00</em>
+                </div>
+                <!-- 인증하기 -->
+
+                <div class="block w-full mt-4">
+                    <span class="block w-full text-center text-[16px] text-[#ca2727] leading-5">!인증번호를 확인해 주세요.</span>
+                </div>
+                <!-- 실패시 -->
+            </div>
+            <!-- 휴대전화인증 -->
+
+            <div class="h-10"></div>
+            <!-- 하단 빈공간 -->
+        </div>
+        <!-- identification -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

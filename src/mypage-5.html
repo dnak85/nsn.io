@@ -64,9 +64,40 @@
                 <div class="flex flex-col w-full gap-8">
                     <div class="flex flex-col items-center w-full gap-5 px-10">
                         <p class="text-[18px] text-white font-semibold">은행선택</p>
-                        <div class="flex justify-between w-full">
-                            <input type="text" name="" id="" value="" class="w-full h-[58px] border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-violet-400 bg-transparent px-5" placeholder="은행명">
+                        <div class="w-full selectbox relative h-fit border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-white bg-transparent px-5">
+                            <!-- <input type="text" name="" id="" value="" class="w-full h-[58px] border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-violet-400 bg-transparent px-5" placeholder="은행명"> -->
+                            <div class="selected-txt w-full h-[58px] leading-[58px]">은행명</div>
+                            <div class="hidden w-full pt-3 pb-3 overflow-hidden options">
+                                <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명1</span>
+                                <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명2</span>
+                                <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명3</span>
+                                <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                            </div>
+                            <svg class="absolute top-[25px] right-[15px] z-10" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1L8 8L1 1" stroke="#ABADC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+                        <script>
+                            const viewSelect = document.querySelector('.selected-txt');
+                            const optionCase = document.querySelectorAll('.option-txt');
+                            const selectbox = document.querySelector('.selectbox');
+
+                            selectbox.addEventListener('click', () => {
+                                document.querySelector('.options').classList.toggle('hidden');
+                                document.querySelector('.options').animate([
+                                    { height: 0 },
+                                    { height: (document.querySelector('.options span').offsetHeight * 4) + 'px' }
+                                ], 350);
+                            })
+
+                            optionCase.forEach((options) => {
+                                options.addEventListener('click', (e) => {
+                                    const _this = e.target;
+
+                                    viewSelect.innerHTML = _this.innerHTML;
+                                })
+                            })
+                        </script>
                     </div>
                     <!-- 은행명 -->
 

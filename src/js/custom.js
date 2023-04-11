@@ -46,6 +46,18 @@ for (let i = 0; i < dnToggle.length; i++) {
     } else if (dnTarget.classList.contains("offcanvas")) {
       //offcanvas
       dnTarget.classList.add("active");
+      newDiv.classList.add("active");
+      newDiv.animate(
+        [
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+          },
+        ],
+        350
+      );
     } else if (dnTarget.classList.contains("dropdown")) {
       //dropdown
       if (dnTarget.classList.contains("show")) {
@@ -74,6 +86,30 @@ for (let i = 0; i < dnToggle.length; i++) {
         dnTarget.classList.add("show");
       }
     }
+
+    newDiv.addEventListener("click", () => {
+      if (dnTarget.classList.contains("offcanvas")) {
+        // offcanvas close
+        dnTarget.animate([{ bottom: 0 }, { bottom: "-324px" }], 250);
+        setTimeout(() => {
+          dnTarget.classList.remove("active");
+        }, 200);
+        newDiv.animate(
+          [
+            {
+              opacity: 1,
+            },
+            {
+              opacity: 0,
+            },
+          ],
+          360
+        );
+        setTimeout(function () {
+          newDiv.classList.remove("active");
+        }, 300);
+      }
+    });
   });
 }
 
@@ -106,7 +142,7 @@ for (let i = 0; i < modal.length; i++) {
       );
       setTimeout(function () {
         _this.classList.remove("active");
-      }, 340);
+      }, 300);
 
       newDiv.animate(
         [
@@ -121,7 +157,7 @@ for (let i = 0; i < modal.length; i++) {
       );
       setTimeout(function () {
         newDiv.classList.remove("active");
-      }, 350);
+      }, 300);
     }
   });
 }
@@ -189,11 +225,14 @@ for (let i = 0; i < btnClose.length; i++) {
 }
 // state-box loading
 const stateBox = document.querySelectorAll(".state-box");
+const prDiv = stateBox[0].parentElement;
+const prDivHeight = (stateBox[0].offsetHeight * 7) + 144;
+prDiv.style.minHeight = "928px";
 
 for (let i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];
 
-  //_this.classList.remove("opacity-0");
+  //_this.classList.remove("opacity-0");  
 
   setTimeout(() => {
     _this.classList.remove("opacity-0");
