@@ -225,9 +225,9 @@ for (let i = 0; i < btnClose.length; i++) {
 }
 // state-box loading
 const stateBox = document.querySelectorAll(".state-box");
-const prDiv = stateBox[0].parentElement;
-const prDivHeight = (stateBox[0].offsetHeight * 7) + 144;
-prDiv.style.minHeight = "928px";
+// const prDiv = stateBox[0].parentElement;
+// const prDivHeight = (stateBox[0].offsetHeight * 7) + 144;
+// prDiv.style.minHeight = "928px";
 
 for (let i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];

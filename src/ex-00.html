@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <header id="mainHeader">
+            <div class="flex flex-wrap items-center content-center justify-between px-4 pt-4">
+                <div>
+                    <button class="w-6 h-6">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 15.5C1.08333 15.5 0.729333 15.354 0.438 15.062C0.146 14.7707 0 14.4167 0 14C0 13.5833 0.146 13.2293 0.438 12.938C0.729333 12.646 1.08333 12.5 1.5 12.5C1.91667 12.5 2.27067 12.646 2.562 12.938C2.854 13.2293 3 13.5833 3 14C3 14.4167 2.854 14.7707 2.562 15.062C2.27067 15.354 1.91667 15.5 1.5 15.5ZM5 15V13H18V15H5ZM1.5 9.5C1.08333 9.5 0.729333 9.354 0.438 9.062C0.146 8.77067 0 8.41667 0 8C0 7.58333 0.146 7.22933 0.438 6.938C0.729333 6.646 1.08333 6.5 1.5 6.5C1.91667 6.5 2.27067 6.646 2.562 6.938C2.854 7.22933 3 7.58333 3 8C3 8.41667 2.854 8.77067 2.562 9.062C2.27067 9.354 1.91667 9.5 1.5 9.5ZM5 9V7H18V9H5ZM1.5 3.5C1.08333 3.5 0.729333 3.354 0.438 3.062C0.146 2.77067 0 2.41667 0 2C0 1.58333 0.146 1.22933 0.438 0.938C0.729333 0.646 1.08333 0.5 1.5 0.5C1.91667 0.5 2.27067 0.646 2.562 0.938C2.854 1.22933 3 1.58333 3 2C3 2.41667 2.854 2.77067 2.562 3.062C2.27067 3.354 1.91667 3.5 1.5 3.5ZM5 3V1H18V3H5Z" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- menu button -->
+
+                <div class="flex gap-3">
+                    <button class="relative w-8 h-8 p-0 text-center bg-white rounded-full alarm active">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+                            <path d="M7.30063 1.97761C7.57303 1.30664 8.23126 0.833496 9 0.833496C9.76874 0.833496 10.427 1.30664 10.6994 1.97761C13.4185 2.72249 15.4167 5.21131 15.4167 8.16683V12.4726L17.096 14.9917C17.2836 15.273 17.3011 15.6346 17.1415 15.9327C16.982 16.2308 16.6714 16.4168 16.3333 16.4168H12.1758C11.9534 17.9716 10.6163 19.1668 9 19.1668C7.3837 19.1668 6.04656 17.9716 5.82416 16.4168H1.66667C1.32861 16.4168 1.01798 16.2308 0.858466 15.9327C0.698949 15.6346 0.716432 15.273 0.903955 14.9917L2.58333 12.4726V8.16683C2.58333 5.21131 4.58151 2.72249 7.30063 1.97761ZM7.70324 16.4168C7.892 16.9509 8.40132 17.3335 9 17.3335C9.59869 17.3335 10.108 16.9509 10.2968 16.4168H7.70324ZM9 3.5835C6.4687 3.5835 4.41667 5.63552 4.41667 8.16683V12.7502C4.41667 12.9311 4.3631 13.1081 4.26271 13.2586L3.37948 14.5835H14.6205L13.7373 13.2586C13.6369 13.1081 13.5833 12.9311 13.5833 12.7502V8.16683C13.5833 5.63552 11.5313 3.5835 9 3.5835Z" fill="#7B61FF" />
+                        </svg>
+                        <span class="absolute top-[10px] right-[8px] inline-block h-[6px] w-[6px] rounded-full bg-[#ffa048]"></span>
+                    </button>
+                    <!--  alarm button : 알람있을때 - active ,  -->
+
+                    <button class="h-8 w-8 rounded-full border-[2px] border-white text-center text-[14px] font-bold text-white">
+                        My
+                    </button>
+                </div>
+                <!-- // right menu -->
+            </div>
+            <!-- // header button area -->
+
+            <div class="mt-[14px] flex w-full flex-col gap-[6px] px-6">
+                <div class="leading-4">
+                    <span class="text-[14px] font-semibold text-white">홍길동 님</span>
+                </div>
+                <!-- user name -->
+                <div class="leading-5">
+                    <span class="font-gm text-[20px] text-white">다가오는 <em class="font-gm">04</em>개의 약속이 있어요.</span>
+                </div>
+                <!-- text alarm -->
+            </div>
+            <!-- // header title area -->
+        </header>
+        <!-- //main header -->
+
+        <section id="mainSection" class="relative min-h-full w-full bg-[#EDE9FE]">
+            <div class="w-full p-10">
+                <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] shadow-cs1">
+                    <span class="inline-block h-5 text-[16px] font-bold leading-5 text-white">약속 만들기 +</span>
+                </button>
+            </div>
+            <!-- 약속생성 -->
+
+            <div class="mt-2.5 w-full">
+                <div class="flex flex-wrap items-center content-center justify-between w-full px-3">
+                    <div>
+                        <span class="block font-gm text-[18px] font-medium leading-[18px]"></span>
+                    </div>
+                    <!-- 타이틀 -->
+
+                    <div class="relative flex justify-between gap-4">
+                        <button class="w-6 h-6" data-dn-toggle="modal" data-dn-target="#search">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.2614 17.7183L10.5341 11.9829C10.0227 12.3926 9.43466 12.7169 8.76989 12.9559C8.10511 13.1949 7.39773 13.3144 6.64773 13.3144C4.78977 13.3144 3.2175 12.6702 1.93091 11.3817C0.643636 10.0926 0 8.51778 0 6.65718C0 4.79659 0.643636 3.22174 1.93091 1.93263C3.2175 0.644211 4.78977 0 6.64773 0C8.50568 0 10.0783 0.644211 11.3656 1.93263C12.6522 3.22174 13.2955 4.79659 13.2955 6.65718C13.2955 7.40825 13.1761 8.11664 12.9375 8.78236C12.6989 9.44808 12.375 10.037 11.9659 10.5491L17.7188 16.3101C17.9062 16.4979 18 16.7283 18 17.0014C18 17.2745 17.8977 17.5135 17.6932 17.7183C17.5057 17.9061 17.267 18 16.9773 18C16.6875 18 16.4489 17.9061 16.2614 17.7183ZM6.64773 11.266C7.92614 11.266 9.01295 10.8181 9.90818 9.92228C10.8027 9.02577 11.25 7.93741 11.25 6.65718C11.25 5.37696 10.8027 4.28859 9.90818 3.39209C9.01295 2.49627 7.92614 2.04836 6.64773 2.04836C5.36932 2.04836 4.2825 2.49627 3.38727 3.39209C2.49273 4.28859 2.04545 5.37696 2.04545 6.65718C2.04545 7.93741 2.49273 9.02577 3.38727 9.92228C4.2825 10.8181 5.36932 11.266 6.64773 11.266Z" fill="#1C1D22" />
+                            </svg>
+                        </button>
+                        <!-- 검색 -->
+
+                        <button class="w-6 h-6" type="button">
+                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12V10H6V12H0ZM0 7V5H12V7H0ZM0 2V0H18V2H0Z" fill="#1C1D22" />
+                            </svg>
+                        </button>
+                        <!-- 일정 -->
+
+                        <!-- <button class="w-6 h-6" data-dn-toggle="dropdown" data-dn-target="#filterAlign">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.85731 18C8.53938 18 8.27306 17.892 8.05837 17.676C7.84292 17.4608 7.7352 17.1938 7.7352 16.875V10.125L1.22695 1.8C0.946417 1.425 0.904525 1.03125 1.10127 0.61875C1.29726 0.20625 1.63839 0 2.12464 0H17.8342C18.3205 0 18.662 0.20625 18.8587 0.61875C19.0547 1.03125 19.0124 1.425 18.7319 1.8L12.2236 10.125V16.875C12.2236 17.1938 12.1163 17.4608 11.9016 17.676C11.6862 17.892 11.4195 18 11.1015 18H8.85731ZM9.97942 9.3375L15.5339 2.25H4.42497L9.97942 9.3375Z" fill="#1C1D22" />
+                            </svg>
+                        </button> -->
+                        <!-- 순서 -->
+
+                        <div id="filterAlign" class="dropdown absolute top-7 right-0 z-10 hidden h-0 w-[160px] overflow-hidden rounded-[10px] bg-white shadow-cs3">
+                            <div class="flex h-full w-full flex-col justify-center gap-[14px] px-4 py-6">
+                                <button class="flex flex-wrap items-center content-center justify-between w-full h-5">
+                                    <span>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="#1C1D22" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-[16px] font-semibold text-black">내 약속목록</span>
+                                </button>
+                                <!-- 내 약속목록 -->
+                                <button class="flex flex-wrap items-center content-center justify-between w-full h-5">
+                                    <span>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="#1C1D22" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-[16px] font-semibold text-black">종료된 약속</span>
+                                </button>
+                                <!-- 종료된 약속 -->
+                            </div>
+                        </div>
+                        <!-- 순서선택 -->
+                    </div>
+                </div>
+                <!--  타이틀&버튼 -->
+
+                <div class="w-full px-2">
+                    <div class="relative mt-5 block min-h-[310px] w-full overflow-hidden rounded-[10px] bg-transparent pt-7 pb-5 px-2">
+                       <xmp class="px-1 text-left bg-black text-yellow-500 text-[13px] overflow-x-auto">
+<button 
+data-dn-toggle="modal" // 실행할 스크립트 
+data-dn-target="#모달아이디" // 선택할 타겟
+>
+    모달버튼
+</button>
+                       </xmp>
+                    </div>
+                </div>
+                <!-- //달력 -->
+
+                <div class="mt-[50px] flex w-full flex-wrap content-center items-center justify-between px-3">
+                    <div>
+                        <span class="block font-gm text-[18px] font-medium leading-[18px]">일정 별 약속</span>
+                    </div>
+                    <!-- 타이틀 -->
+                </div>
+                <!--  타이틀&버튼 -->
+
+                <div class="flex flex-col w-full gap-3 px-4 mt-6">
+                    <div class="opacity-0 state-box dDay">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-white text-center">
+                            <svg class="mt-[18px] inline-block" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.4545 6.18182V0H18.5455V6.18182H15.4545ZM25.7318 10.4318L23.6068 8.30682L27.9341 3.86364L30.0977 6.06591L25.7318 10.4318ZM27.8182 18.5455V15.4545H34V18.5455H27.8182ZM15.4545 34V27.8182H18.5455V34H15.4545ZM8.26818 10.3545L3.86364 6.06591L6.06591 3.90227L10.4318 8.26818L8.26818 10.3545ZM27.8955 30.1364L23.6068 25.6932L25.6932 23.6068L30.0977 27.8568L27.8955 30.1364ZM0 18.5455V15.4545H6.18182V18.5455H0ZM6.06591 30.1364L3.90227 27.9341L8.22955 23.6068L9.35 24.65L10.4705 25.7318L6.06591 30.1364ZM17 26.2727C14.4242 26.2727 12.2348 25.3712 10.4318 23.5682C8.62879 21.7652 7.72727 19.5758 7.72727 17C7.72727 14.4242 8.62879 12.2348 10.4318 10.4318C12.2348 8.62879 14.4242 7.72727 17 7.72727C19.5758 7.72727 21.7652 8.62879 23.5682 10.4318C25.3712 12.2348 26.2727 14.4242 26.2727 17C26.2727 19.5758 25.3712 21.7652 23.5682 23.5682C21.7652 25.3712 19.5758 26.2727 17 26.2727Z" fill="#EC4899" />
+                            </svg>
+                            <span class="mt-[6px] block font-gm text-[16px] font-bold text-[#ec4899]">D-Day</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도 힐링을 위한 다도 힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 컴퍼니회의실 컴퍼니회의실 컴퍼니회의실
+                                컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 디데이 -->
+
+                    <div class="opacity-0 state-box dLatest">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-[#7B61FF] text-center">
+                            <svg class="inline-block mt-5" width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.6134 4.19385H4.00218C2.69159 4.19385 1.62915 5.25629 1.62915 6.56688V23.1781C1.62915 24.4887 2.69159 25.5511 4.00218 25.5511H20.6134C21.924 25.5511 22.9864 24.4887 22.9864 23.1781V6.56688C22.9864 5.25629 21.924 4.19385 20.6134 4.19385Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.0538 1.82031V6.56637M7.56172 1.82031V6.56637M1.62915 11.3124H22.9864M7.56172 16.0585H7.57359M12.3078 16.0585H12.3196M17.0538 16.0585H17.0657M7.56172 20.8045H7.57359M12.3078 20.8045H12.3196M17.0538 20.8045H17.0657" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span class="mt-[6px] block font-gm text-[16px] font-bold text-white">D-13</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 디데이남은날 -->
+
+                    <div class="opacity-0 state-box waitA">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-[#FF5A5A] text-center">
+                            <svg class="inline-block mt-5" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.1068 12L21.2615 4.09205C21.6122 3.75873 21.852 3.33157 21.9502 2.86538C22.0485 2.39918 22.0006 1.9152 21.8129 1.47551C21.6251 1.03581 21.3059 0.660453 20.8964 0.397572C20.4868 0.134691 20.0054 -0.00372497 19.5141 7.62418e-05H2.48593C1.99456 -0.00372497 1.51321 0.134691 1.10363 0.397572C0.694054 0.660453 0.374915 1.03581 0.187149 1.47551C-0.000617802 1.9152 -0.0484499 2.39918 0.0497863 2.86538C0.148023 3.33157 0.387849 3.75873 0.738505 4.09205L8.89317 12L0.738505 19.9079C0.387849 20.2413 0.148023 20.6684 0.0497863 21.1346C-0.0484499 21.6008 -0.000617802 22.0848 0.187149 22.5245C0.374915 22.9642 0.694054 23.3395 1.10363 23.6024C1.51321 23.8653 1.99456 24.0037 2.48593 23.9999H19.5141C20.0054 24.0037 20.4868 23.8653 20.8964 23.6024C21.3059 23.3395 21.6251 22.9642 21.8129 22.5245C22.0006 22.0848 22.0485 21.6008 21.9502 21.1346C21.852 20.6684 21.6122 20.2413 21.2615 19.9079L13.1068 12ZM18.3119 2.88006L16.329 4.80005H5.67096L3.68807 2.88006H18.3119ZM8.64531 7.68003H13.3547L11 9.96001L8.64531 7.68003ZM3.68807 21.1199L9.51283 15.48V16.8C9.51283 17.1819 9.66951 17.5481 9.94841 17.8182C10.2273 18.0882 10.6056 18.24 11 18.24C11.3944 18.24 11.7727 18.0882 12.0516 17.8182C12.3305 17.5481 12.4872 17.1819 12.4872 16.8V15.48L18.3119 21.1199H3.68807Z" fill="white" />
+                            </svg>
+                            <span class="mt-[6px] block font-gm text-[16px] font-bold text-white">체결대기</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 체결대기 -->
+
+                    <div class="opacity-0 state-box waitC">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-[#DA48FF] text-center">
+                            <svg class="inline-block mt-5" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.1068 12L21.2615 4.09205C21.6122 3.75873 21.852 3.33157 21.9502 2.86538C22.0485 2.39918 22.0006 1.9152 21.8129 1.47551C21.6251 1.03581 21.3059 0.660453 20.8964 0.397572C20.4868 0.134691 20.0054 -0.00372497 19.5141 7.62418e-05H2.48593C1.99456 -0.00372497 1.51321 0.134691 1.10363 0.397572C0.694054 0.660453 0.374915 1.03581 0.187149 1.47551C-0.000617802 1.9152 -0.0484499 2.39918 0.0497863 2.86538C0.148023 3.33157 0.387849 3.75873 0.738505 4.09205L8.89317 12L0.738505 19.9079C0.387849 20.2413 0.148023 20.6684 0.0497863 21.1346C-0.0484499 21.6008 -0.000617802 22.0848 0.187149 22.5245C0.374915 22.9642 0.694054 23.3395 1.10363 23.6024C1.51321 23.8653 1.99456 24.0037 2.48593 23.9999H19.5141C20.0054 24.0037 20.4868 23.8653 20.8964 23.6024C21.3059 23.3395 21.6251 22.9642 21.8129 22.5245C22.0006 22.0848 22.0485 21.6008 21.9502 21.1346C21.852 20.6684 21.6122 20.2413 21.2615 19.9079L13.1068 12ZM18.3119 2.88006L16.329 4.80005H5.67096L3.68807 2.88006H18.3119ZM8.64531 7.68003H13.3547L11 9.96001L8.64531 7.68003ZM3.68807 21.1199L9.51283 15.48V16.8C9.51283 17.1819 9.66951 17.5481 9.94841 17.8182C10.2273 18.0882 10.6056 18.24 11 18.24C11.3944 18.24 11.7727 18.0882 12.0516 17.8182C12.3305 17.5481 12.4872 17.1819 12.4872 16.8V15.48L18.3119 21.1199H3.68807Z" fill="white" />
+                            </svg>
+                            <span class="mt-[6px] block font-gm text-[16px] font-bold text-white">취소대기</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 취소대기 -->
+
+                    <div class="opacity-0 state-box complete">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-[#E3DEFF] text-center">
+                            <svg class="inline-block mt-2" width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.0786 4.62462C10.0161 5.93518 9.43493 7.5576 9.42857 9.23077C9.42857 9.53679 9.3044 9.83027 9.08338 10.0467C8.86235 10.263 8.56258 10.3846 8.25 10.3846C3.97886 10.3846 2.35714 13.3015 2.35714 15C2.35714 15.9854 2.61171 17.1185 3.39193 17.9908C4.14386 18.8308 5.54871 19.6154 8.25 19.6154H9.42857C9.42857 20.4023 9.50164 21.1754 9.64071 21.9231H8.25C5.05843 21.9231 2.92757 20.9769 1.617 19.5092C0.334714 18.0738 0 16.3223 0 15C0 12.2815 2.27464 8.61923 7.13743 8.13231C7.34963 6.3137 8.08352 4.59109 9.25414 3.16385C10.8028 1.30846 13.2 0 16.5 0C18.5036 0 20.8395 0.646154 22.6993 2.13692C24.2031 3.34154 25.3581 5.07462 25.7659 7.35692C24.944 7.14094 24.1024 7.0049 23.2532 6.95077C22.9008 5.75988 22.1853 4.70275 21.2025 3.92077C19.8642 2.88191 18.2079 2.31378 16.5 2.30769C13.9071 2.30769 12.1794 3.30692 11.0786 4.62462ZM33 19.6154C33 20.9791 32.7256 22.3295 32.1926 23.5894C31.6595 24.8493 30.8782 25.9941 29.8932 26.9584C28.9083 27.9227 27.739 28.6876 26.452 29.2095C25.1651 29.7314 23.7858 30 22.3929 30C20.9999 30 19.6206 29.7314 18.3337 29.2095C17.0468 28.6876 15.8774 27.9227 14.8925 26.9584C13.9075 25.9941 13.1262 24.8493 12.5931 23.5894C12.0601 22.3295 11.7857 20.9791 11.7857 19.6154C11.7857 16.8612 12.9032 14.2198 14.8925 12.2724C16.8817 10.3249 19.5797 9.23077 22.3929 9.23077C25.206 9.23077 27.904 10.3249 29.8932 12.2724C31.8825 14.2198 33 16.8612 33 19.6154ZM27.9416 15.3369C27.8321 15.2295 27.702 15.1442 27.5589 15.086C27.4157 15.0279 27.2622 14.9979 27.1071 14.9979C26.9521 14.9979 26.7986 15.0279 26.6554 15.086C26.5123 15.1442 26.3822 15.2295 26.2727 15.3369L20.0357 21.4454L18.513 19.9523C18.4034 19.845 18.2733 19.7599 18.1302 19.7019C17.987 19.6438 17.8335 19.6139 17.6786 19.6139C17.5236 19.6139 17.3702 19.6438 17.227 19.7019C17.0838 19.7599 16.9537 19.845 16.8441 19.9523C16.7346 20.0596 16.6476 20.1869 16.5883 20.3271C16.529 20.4673 16.4985 20.6175 16.4985 20.7692C16.4985 20.9209 16.529 21.0712 16.5883 21.2113C16.6476 21.3515 16.7346 21.4789 16.8441 21.5862L19.2013 23.8938C19.3108 24.0013 19.4408 24.0866 19.584 24.1447C19.7272 24.2029 19.8807 24.2328 20.0357 24.2328C20.1907 24.2328 20.3442 24.2029 20.4874 24.1447C20.6306 24.0866 20.7607 24.0013 20.8701 23.8938L27.9416 16.9708C28.0513 16.8636 28.1384 16.7363 28.1978 16.5961C28.2572 16.4559 28.2878 16.3056 28.2878 16.1538C28.2878 16.0021 28.2572 15.8518 28.1978 15.7116C28.1384 15.5714 28.0513 15.4441 27.9416 15.3369Z" fill="#7166AB" />
+                            </svg>
+                            <span class="mt-2.5 block font-gm text-[16px] font-bold leading-[16px] text-[#7166AB]">완료된<br />약속</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 약속완료 -->
+
+                    <div class="opacity-0 state-box cancel">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-[#E3E0EF] text-center">
+                            <svg class="inline-block mt-2" width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.1995 32L15.6454 26.4585L17.8357 24.2732L21.1604 27.5902L27.8096 20.9561L30 23.1805L21.1995 32ZM6.88397 23.4146L4.69361 21.2293L7.19687 18.7317L4.69361 16.2341L6.88397 14.0488L9.38723 16.5463L11.8905 14.0488L14.0808 16.2341L11.5776 18.7317L14.0808 21.2293L11.8905 23.4146L9.38723 20.9171L6.88397 23.4146ZM3.12908 31.2195C2.26858 31.2195 1.53168 30.9136 0.918386 30.3017C0.305087 29.6898 -0.00104037 28.9551 2.65626e-06 28.0976V6.2439C2.65626e-06 5.38537 0.306652 4.65015 0.91995 4.03824C1.53325 3.42634 2.26962 3.12091 3.12908 3.12195H4.69361V0H7.82269V3.12195H20.339V0H23.4681V3.12195H25.0326C25.8931 3.12195 26.63 3.4279 27.2433 4.0398C27.8566 4.65171 28.1627 5.38641 28.1617 6.2439V16.1561L25.0326 19.3171V12.4878H3.12908V28.0976H12.9074L15.9974 31.2195H3.12908ZM3.12908 9.36585H25.0326V6.2439H3.12908V9.36585Z" fill="#554F73" />
+                            </svg>
+
+                            <span class="mt-2 block font-gm text-[16px] font-bold leading-[16px] text-[#554F73]">취소된<br />약속</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 약속취소 -->
+
+                    <div class="opacity-0 state-box waitR">
+                        <div class="icon h-[88px] w-[88px] rounded-[10px] bg-white text-center">
+                            <svg class="inline-block mt-5" width="38" height="26" viewBox="0 0 38 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.03168 24.4762H2.28564V3.87302C2.28564 3.37626 2.48298 2.89985 2.83424 2.54859C3.1855 2.19734 3.66191 2 4.15866 2H21.0158V13.2381H11.6507M11.6507 13.2381L15.3968 16.9841M11.6507 13.2381L15.3968 9.49206M13.5237 24.4762H24.7618M21.0158 3.87302H30.3809L35.9999 13.2381V24.4762H32.2539" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span class="mt-2.5 block font-gm text-[16px] font-bold text-[#7B61FF]">반환대기</span>
+                        </div>
+                        <!-- icon -->
+
+                        <div class="info w-[calc(100%-106px)]">
+                            <strong class="mt-[7px] block h-[21px] w-full truncate text-[18px] font-semibold leading-[21px]">힐링을 위한 다도</strong>
+                            <span class="mt-3 block h-[14px] w-full truncate text-[12px] leading-[14px]">컴퍼니회의실 4명</span>
+                            <span class="mt-2 block h-[17px] w-[calc(100%-88px)] text-[14px] font-semibold leading-[17px]">나 (홍길동)</span>
+                        </div>
+                        <!-- info -->
+
+                        <div class="date absolute bottom-[14px] right-3 h-6 w-[83px] rounded-full border-[1px] text-center leading-[20px]">
+                            <span class="text-[12px]">2022.03.11</span>
+                        </div>
+                        <!-- date -->
+                    </div>
+                    <!-- state-body 반환대기 -->
+
+                    <div class="w-full mt-3">
+                        <button class="list-more hidden h-[48px] w-full rounded-[12px] border-[1px] border-[#cdc3ff] bg-white">
+                            <span class="block h-5 text-[16px] font-semibold leading-5 text-[#7b61ff]">더보기 +</span>
+                        </button>
+                    </div>
+                    <!-- more -->
+                </div>
+                <!-- 약속목록 -->
+            </div>
+            <!-- 예제 -->
+
+            <div id="search" class="modal">
+                <div class="modal-dialog search">
+                    <div class="modal-content">
+                        <div class="relative modal-body">
+                            <input type="text" placeholder="검색어 입력" class="h-[44px] w-full rounded-[10px] border-[2px] border-[#7b61ff] bg-[#FFFCFC] px-[40px] text-center text-[16px] text-[#1c1d22] placeholder:text-center placeholder:text-[14px] placeholder:text-[#ada3df]" />
+                            <!-- 검색 입력 -->
+
+                            <button id="back" data-dn-close="#search" class="absolute z-10 top-3 left-4">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.8449 7.81998H3.94187L9.57898 2.03131C10.0295 1.56869 10.0295 0.809517 9.57898 0.346898C9.47212 0.236933 9.34518 0.14969 9.20544 0.0901647C9.0657 0.0306393 8.91589 0 8.76461 0C8.61332 0 8.46352 0.0306393 8.32377 0.0901647C8.18403 0.14969 8.0571 0.236933 7.95023 0.346898L0.337816 8.16398C0.23073 8.27372 0.145771 8.40407 0.0878046 8.54757C0.0298377 8.69107 0 8.8449 0 9.00025C0 9.15561 0.0298377 9.30944 0.0878046 9.45294C0.145771 9.59643 0.23073 9.72679 0.337816 9.83652L7.95023 17.6536C8.05717 17.7634 8.18414 17.8505 8.32387 17.91C8.4636 17.9694 8.61336 18 8.76461 18C8.91585 18 9.06561 17.9694 9.20534 17.91C9.34508 17.8505 9.47204 17.7634 9.57898 17.6536C9.68593 17.5438 9.77076 17.4134 9.82864 17.2699C9.88652 17.1264 9.91631 16.9726 9.91631 16.8173C9.91631 16.662 9.88652 16.5082 9.82864 16.3647C9.77076 16.2213 9.68593 16.0909 9.57898 15.9811L3.94187 10.1924H16.8449C17.4802 10.1924 18 9.6586 18 9.00618C18 8.35377 17.4802 7.81998 16.8449 7.81998Z" fill="#8B5CF6" />
+                                </svg>
+                            </button>
+                            <!-- 닫기&뒤로가기 -->
+
+                            <button type="button" class="absolute z-10 right-3 top-3">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.2049 12.952L18 16.7462L16.7462 18L12.952 14.2049C11.5402 15.3366 9.78419 15.9522 7.9748 15.9496C3.57271 15.9496 0 12.3769 0 7.9748C0 3.57271 3.57271 0 7.9748 0C12.3769 0 15.9496 3.57271 15.9496 7.9748C15.9522 9.78419 15.3366 11.5402 14.2049 12.952ZM12.4274 12.2945C13.5519 11.138 14.18 9.58786 14.1774 7.9748C14.1774 4.54741 11.4013 1.77218 7.9748 1.77218C4.54741 1.77218 1.77218 4.54741 1.77218 7.9748C1.77218 11.4013 4.54741 14.1774 7.9748 14.1774C9.58786 14.18 11.138 13.5519 12.2945 12.4274L12.4274 12.2945Z" fill="#8B5CF6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+
+            <div id="sideContent" class="offcanvas"></div>
+            <!-- // -->
+
+            <div class="h-[128px] w-full"></div>
+            <!-- 푸터 여백 -->
+
+            <div id="mainFooter" class="absolute bottom-0 left-0 flex flex-wrap justify-center gap-2 pt-3 pb-2 bg-white bg-opacity-50">
+                <div class="flex justify-center gap-2">
+                    <button class="text-[12px] leading-[14px] text-[#50555c]">
+                        이용약관
+                    </button>
+                    <button class="text-[12px] leading-[14px] text-[#50555c]">
+                        개인정보처리방침
+                    </button>
+                </div>
+                <!-- 이용약관 / 개인정보 -->
+
+                <address class="text-[11px] not-italic leading-[13px] text-[#50555c]">
+                    (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩)
+                    <br />
+                    고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                </address>
+                <!-- address -->
+
+                <div class="text-[11px] leading-[13px] text-[#8994a4]">
+                    Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                </div>
+                <!-- copy -->
+            </div>
+        </section>
+        <!-- mainSection -->
+
+        <script></script>
+
+        <script src="./js/custom.js"></script>
+    </div>
+
+    <!-- //wrap -->
+</body>
+
+</html>
