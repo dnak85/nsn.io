@@ -640,9 +640,9 @@ textarea:focus {
 .search .modal-content {
   top: 340px;
 }
-.fullpage .modal-content{
-  height:calc(100% - 80px);
-  overflow:hidden;
+.fullpage .modal-content {
+  height: calc(100% - 80px);
+  overflow: hidden;
 }
 .modal-content {
   position: absolute;
@@ -1039,6 +1039,14 @@ input[type="number"]::-webkit-inner-spin-button {
     bottom: 0;
   }
 }
+@keyframes offcanvas-left {
+  from {
+    left: -110%; /* offcanvas height값 과 동일 */
+  }
+  to {
+    left: 0;
+  }
+}
 @keyframes offcanvas-bottom-reverse {
   from {
     bottom: 0;
@@ -1047,6 +1055,7 @@ input[type="number"]::-webkit-inner-spin-button {
     bottom: -324px; /* offcanvas height값 과 동일 */
   }
 }
+
 .offcanvas {
   position: absolute;
   width: 100%;
@@ -1063,6 +1072,20 @@ input[type="number"]::-webkit-inner-spin-button {
 .offcavas.active.reverse {
   animation: offcanvas-bottom-reverse 0.45s ease-in-out;
 }
+.offcanvas.left {
+  position: fixed;
+  width:90%;
+  height:100%;
+  top: 0;
+  left: -110%;
+  z-index: 10015;
+  background: #fff;
+  border-radius:0 !important;
+}
+.offcanvas.left.active {
+  left: 0;
+  animation: offcanvas-left 0.45s ease-in-out;
+}
 .usrAgree div label {
   @apply flex content-center items-center gap-3 text-[14px] leading-4 text-slate-900;
 }
@@ -1074,14 +1097,14 @@ input[type="number"]::-webkit-inner-spin-button {
   background-size: cover;
   border: 0;
 }
-.usrAgree div input:checked + label:before{
-  content:'';
-  width:20px;
-  height:20px;
+.usrAgree div input:checked + label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
   background: url(../src/img/join/rdo_check.png) no-repeat 0 0;
   background-size: cover;
   border: 0;
-  outline:0;
+  outline: 0;
 }
 
 #allcheck + label:before {
@@ -1092,12 +1115,12 @@ input[type="number"]::-webkit-inner-spin-button {
   background-size: cover;
   border: 0;
 }
-#allcheck:checked + label:before{
-  content:'';
-  width:24px;
-  height:24px;
+#allcheck:checked + label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
   background: url(../src/img/join/rdo_check.png) no-repeat 0 0;
   background-size: cover;
   border: 0;
-  outline:0;
+  outline: 0;
 }
