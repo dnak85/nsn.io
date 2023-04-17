@@ -1055,6 +1055,14 @@ input[type="number"]::-webkit-inner-spin-button {
     bottom: -324px; /* offcanvas height값 과 동일 */
   }
 }
+@keyframes offcanvas-left-reverse {
+  from {
+    left: 0; /* offcanvas height값 과 동일 */
+  }
+  to {
+    left: -110%;
+  }
+}
 
 .offcanvas {
   position: absolute;
@@ -1074,17 +1082,20 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .offcanvas.left {
   position: fixed;
-  width:90%;
-  height:100%;
+  width: 80%;
+  height: 100%;
   top: 0;
   left: -110%;
   z-index: 10015;
-  background: #fff;
-  border-radius:0 !important;
+  border-radius: 0 !important;
+  @apply bg-gray-900
 }
 .offcanvas.left.active {
   left: 0;
   animation: offcanvas-left 0.45s ease-in-out;
+}
+.offcanvas.left.active.reverse {
+  animation: offcanvas-left-reverse 0.45s ease-in-out;
 }
 .usrAgree div label {
   @apply flex content-center items-center gap-3 text-[14px] leading-4 text-slate-900;
