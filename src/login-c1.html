@@ -38,13 +38,10 @@
             </h1>
             <!-- logo -->
 
-            <div class="absolute top-[110px] w-full text-center">
-                <span class="text-[35px] inline-block font-gm font-medium bg-lnar">가입완료</span>
-            </div>
-            <!-- text -->
+
 
             <div class="absolute px-10 bottom-[17%] w-full">
-                <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]" >이용하기</button>
+                <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]" data-dn-toggle="offcanvas" data-dn-target="#usrcheck">노쇼노 이용하기</button>
             </div>
             <!-- button -->
 
@@ -52,9 +49,22 @@
             <!-- bg -->
 
 
-           
+            <div id="usrcheck" class="offcanvas show">
+                <div id="before" class="flex flex-col w-full h-full">
+                    <div class="w-full text-center mt-[108px] text-[24px] text-slate-900 font-semibold leading-[30px]">
+                        14세 미만은 <br>
+                        서비스 이용이 불가합니다.
+                    </div>
+                    <div class="w-full mt-[68px] px-10">
+                        <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">다음에 이용하기</button>
+                    </div>
+                </div>
+                <!-- before -->
+            </div>
+            <!-- offcanvas -->
         </div>
         <!-- join -->
+        <div class="eventBg active"></div>
         <script src="./js/custom.js"></script>
 
     </div>
