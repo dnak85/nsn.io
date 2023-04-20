@@ -124,40 +124,44 @@ for (let i = 0; i < modal.length; i++) {
     e.preventDefault();
 
     if (e.target === content) {
-      document.body.classList.remove("overflow-hidden");
-      _this.animate(
-        //from keyframe
-        [
-          {
-            opacity: 1,
-            marginTop: 0,
-          },
-          //to keyframe
-          {
-            opacity: 0,
-            marginTop: "5%",
-          },
-        ],
-        350
-      );
-      setTimeout(function () {
-        _this.classList.remove("active");
-      }, 300);
+      if (content.classList.contains("alert")) {
+        //
+      } else {
+        document.body.classList.remove("overflow-hidden");
+        _this.animate(
+          //from keyframe
+          [
+            {
+              opacity: 1,
+              marginTop: 0,
+            },
+            //to keyframe
+            {
+              opacity: 0,
+              marginTop: "5%",
+            },
+          ],
+          350
+        );
+        setTimeout(function () {
+          _this.classList.remove("active");
+        }, 300);
 
-      newDiv.animate(
-        [
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-          },
-        ],
-        360
-      );
-      setTimeout(function () {
-        newDiv.classList.remove("active");
-      }, 300);
+        newDiv.animate(
+          [
+            {
+              opacity: 1,
+            },
+            {
+              opacity: 0,
+            },
+          ],
+          360
+        );
+        setTimeout(function () {
+          newDiv.classList.remove("active");
+        }, 300);
+      }
     }
   });
 }
@@ -232,7 +236,7 @@ const stateBox = document.querySelectorAll(".state-box");
 for (let i = 0; i < stateBox.length; i++) {
   const _this = stateBox[i];
 
-  //_this.classList.remove("opacity-0");  
+  //_this.classList.remove("opacity-0");
 
   setTimeout(() => {
     _this.classList.remove("opacity-0");

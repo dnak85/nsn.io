@@ -644,6 +644,9 @@ textarea:focus {
   height: calc(100% - 80px);
   overflow: hidden;
 }
+.alert .modal-content{
+  
+}
 .modal-content {
   position: absolute;
   display: block;
