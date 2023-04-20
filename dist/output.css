@@ -971,10 +971,6 @@ button svg {
   margin-top: 65px;
 }
 
-.mt-\[68px\] {
-  margin-top: 68px;
-}
-
 .mt-\[6px\] {
   margin-top: 6px;
 }
@@ -4126,6 +4122,7 @@ input[type="number"]::-webkit-inner-spin-button {
   left: -110%;
   z-index: 10015;
   border-radius: 0 !important;
+  color:#fff;
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity))
 }
