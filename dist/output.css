@@ -1062,6 +1062,10 @@ button svg {
   margin-top: auto;
 }
 
+.mb-\[50px\] {
+  margin-bottom: 50px;
+}
+
 .block {
   display: block;
 }
@@ -2408,6 +2412,10 @@ button svg {
 
 .pt-\[72px\] {
   padding-top: 72px;
+}
+
+.pb-\[50px\] {
+  padding-bottom: 50px;
 }
 
 .text-left {
