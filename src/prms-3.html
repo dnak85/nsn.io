@@ -68,7 +68,7 @@
 
         <div class="mt-[62px] flex w-full flex-col flex-wrap content-center items-center gap-6 px-6">
           <div class="w-full text-center">
-            <strong class="font-ptnd text-[24px] font-semibold leading-7 text-white xsm:text-[22px]">몇 명이 하는 약속인가요?</strong>
+            <strong class="font-ptnd text-[24px] font-semibold text-white xsm:text-[22px] leading-[30px]">나를 제외한 약속멤버는 <br>몇 명인가요?</strong>
           </div>
           <!-- //title -->
 
@@ -159,9 +159,41 @@
         <!-- //보증금 입력 -->
 
         <div class="mt-[56px] flex w-full flex-col flex-wrap content-center items-center px-5">
-          <div class="relative w-full">
-            <input type="checkbox" name="" id="indv" class="indv absolute top-0 left-[-9999em]" />
-            <label for="indv" class="flex flex-wrap content-center items-center gap-4 font-ptnd text-[24px] font-semibold leading-7 text-white xsm:gap-2 xsm:text-[18px]">닉네임/약속금 개별설정하기</label>
+          <div class="relative block w-full">
+            <input type="checkbox" name="" id="indv1" class="indv absolute top-0 left-[-9999em]" />
+            <label for="indv1" class="flex before:mt-[2px] gap-3 font-ptnd text-[18px] font-semibold leading-6 text-white xsm:gap-2 xsm:text-[18px]">
+              <span class="">닉네임/약속금 개별설정하기</span>
+            </label>
+          </div>
+          <!-- // -->
+
+          <div class="relative block w-full mt-6">
+            <input type="checkbox" name="" id="indv2" class="indv absolute top-0 left-[-9999em]" />
+            <label for="indv2" class="flex before:mt-[2px] gap-3 font-ptnd text-[18px] font-semibold leading-6 text-white xsm:gap-2 xsm:text-[18px]">
+              <span class="">
+                멤버가 모두 모이지 않아도 약속진행
+              </span>
+            </label>
+            <svg fill="none" class="gswitch absolute top-0 left-[290px]" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#F97316" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+
+            <div class="g-txt top-[40px] text-center">
+              초대한 약속인원이 모두 약속을
+              체결하지 않아도 체결한 멤버들끼리
+              약속을 진행할 수 있어요.
+            </div>
+            <!-- // -->
+
+            <script>
+              const gswitch = document.querySelectorAll('.gswitch');
+              gswitch.forEach(i => {
+                i.addEventListener('click', () => {
+                  i.nextElementSibling.classList.toggle('active');
+                });
+                
+              })
+            </script>
           </div>
           <!-- //check -->
 
@@ -203,7 +235,7 @@
                 setName.onfocus = () => {
                   setName.value = '';
                 }
-                
+
                 setName.addEventListener('input', (e) => {
                   setName.setAttribute('name', setName.value);
                 })
@@ -226,7 +258,7 @@
             <span class="my-2 block h-9 font-ptnd text-[16px] font-semibold leading-9 text-white"><em class="text-[32px] font-black">20,000</em> 원</span>
             <!-- // -->
 
-            <span class="mt-2 block h-6 font-ptnd text-[14px] leading-6 text-white">(반환수수료:2,000원)</span>
+            <span class="mt-2 block h-6 font-ptnd text-[14px] leading-6 text-white">(서비스수수료 : 2,000원)</span>
           </div>
           <!-- //배너형식 -->
         </div>

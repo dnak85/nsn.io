@@ -107,21 +107,46 @@
         <!-- // 탑 배너 -->
 
         <div class="mt-[40px] flex w-full flex-col flex-wrap gap-[48px] px-4">
+
           <div class="flex flex-col flex-wrap w-full">
-            <div class="w-full leading-6 text-center">
-              <span class="font-ptnd text-[24px] font-semibold text-white xsm:text-[16px]">약속이 지켜지면 보증금은 <br />어떻게 가져갈까요?</span>
+            <div class="w-full relative text-[24px] font-semibold text-center text-white leading-6">
+              약속보증금 반환방법을 설정하세요.
+              <br>
+              <svg fill="none" class="inline-block mt-4 ml-1 gswitch" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#F97316" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+
+              <div class="g-txt top-[80px] z-10 text-left">
+                응답에 따라 수수료를 제외한 약속보증금을 누구에게 돌려줄 지 설정할 수 있어요. <br>
+                약속당일 약속금은 호스트와 게스트의 응답이 일치할 때까지 노쇼노에서 안전하게 보관해요.
+              </div>
+              <!-- // -->
+
+              <script>
+                const gswitch = document.querySelectorAll('.gswitch');
+                gswitch.forEach(i => {
+                  i.addEventListener('click', () => {
+                    i.nextElementSibling.classList.toggle('active');
+                  });
+
+                })
+              </script>
+            </div>
+            <!-- //202305 수정사항 -->
+            <div class="w-full mt-6 leading-6 text-center">
+              <span class="font-ptnd text-[20px] font-semibold text-white xsm:text-[16px]">약속이 지켜지면 보증금은 <br />어떻게 가져갈까요?</span>
             </div>
             <!-- //text -->
 
             <div class="relative w-full px-4 mt-8">
               <input type="radio" name="returnCase01" id="rc0101" class="peer/rc0101 absolute top-0 left-[-9999em]" checked />
               <label for="rc0101" class="relative float-left flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0101:border-[1px] peer-checked/rc0101:border-white peer-checked/rc0101:bg-[#1A1D2D]">
-                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각 멤버 돌려받기</span>
+                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각자 돌려받기</span>
               </label>
               <!-- //각멤버 -->
               <input type="radio" name="returnCase01" id="rc0102" class="peer/rc0102 absolute top-0 left-[-9999em]" />
               <label for="rc0102" class="relative float-left ml-[6%] flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0102:border-[1px] peer-checked/rc0102:border-white peer-checked/rc0102:bg-[#1A1D2D]">
-                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 몰아주기</span>
+                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 모아주기</span>
               </label>
               <!-- //한명 -->
 
@@ -150,20 +175,20 @@
 
           <div class="flex flex-col flex-wrap w-full">
             <div class="w-full leading-6 text-center">
-              <span class="font-ptnd text-[24px] font-semibold text-white xsm:text-[16px]">약속이 깨지면 보증금은 <br />어떻게 가져갈까요?</span>
+              <span class="font-ptnd text-[20px] font-semibold text-white xsm:text-[16px]">약속이 깨지면 보증금은 <br />어떻게 가져갈까요?</span>
             </div>
             <!-- //text -->
 
             <div class="relative w-full px-4 mt-8">
               <input type="radio" name="returnCase02" id="rc0201" class="peer/rc0201 absolute top-0 left-[-9999em]" checked />
               <label for="rc0201" class="relative float-left flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0201:border-[1px] peer-checked/rc0201:border-white peer-checked/rc0201:bg-[#1A1D2D]">
-                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각 멤버 돌려받기</span>
+                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">각자 돌려받기</span>
               </label>
               <!-- //생성자 -->
 
               <input type="radio" name="returnCase02" id="rc0202" class="peer/rc0202 absolute top-0 left-[-9999em]" />
               <label for="rc0202" class="relative float-left ml-[6%] flex h-9 w-[47%] items-center justify-center rounded-[32px] bg-[#252a41] focus:border-[1px] peer-checked/rc0202:border-[1px] peer-checked/rc0202:border-white peer-checked/rc0202:bg-[#1A1D2D]">
-                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 몰아주기</span>
+                <span class="font-ptnd text-[16px] font-semibold text-[#EDE9FE] xsm:text-[12px]">한명에게 모아주기</span>
               </label>
               <!-- //한명 -->
 

@@ -56,34 +56,57 @@
     <!-- //header -->
 
     <section id="container" class="">
-      <div class="prms-create flex w-full flex-wrap content-center items-center gap-[72px]">
-        <div class="relative flex justify-center w-full gap-4 text-white xsm:gap-2 xsm:px-2">
-          <input type="radio" name="typeCheck" id="tchk01" class="absolute top-0 left-[-9999em]" />
-          <label for="tchk01" class="flex h-[144px] w-[155px] flex-wrap content-center items-center justify-center gap-4 rounded-[24px] border-[2px] border-white bg-white focus:bg-violet-500 xsm:h-[124px] xsm:w-[135px]">
-            <span class="block h-14 w-14 rounded-full bg-[#48164c]"><img src="./img/create/single.png" alt="단독형" width="100%" /></span>
-            <span class="block w-full text-center font-semibold text-[#0F172A] focus:text-white">1:1</span>
-          </label>
-          <input type="radio" name="typeCheck" id="tchk02" class="absolute top-0 left-[-9999em]" checked />
-          <label for="tchk02" class="flex h-[144px] w-[155px] flex-wrap content-center items-center justify-center gap-4 rounded-[24px] border-[2px] border-white bg-white xsm:h-[124px] xsm:w-[135px]">
-            <span class="block h-14 w-14 rounded-full bg-[#48164c]"><img src="./img/create/multi.png" alt="모임형" width="100%" /></span>
-            <span class="block w-full text-center font-semibold text-[#0F172A] focus:text-white">모임형(다수형)</span>
-          </label>
-        </div>
-        <!-- //유형 선택 -->
 
-        <div class="flex flex-wrap items-center content-center justify-center w-full gap-2 text-white mt-18">
-          <span class="block w-full text-center font-gm text-[36px] font-light leading-[36px] text-white">몇 명이서 하는 <br />약속인가요?</span>
-          <span class="block w-full text-center text-[14px] font-light opacity-70">1:1 약속과 단체약속을 선택할 수 있어요~</span>
+      <div class="relative block w-full px-6 calc-height">
+        <div class="pt-[44px] w-full text-center text-white leading-9 text-[36px]">
+          <span class="font-light font-gm">약속유형을<br>선택해주세요.</span>
         </div>
-        <!-- //텍스트 -->
+        <!-- text -->
 
-        <div class="w-full px-[40px] pt-[30px]">
-          <button class="h-[48px] w-full rounded-[10px] bg-violet-500 text-[16px] font-bold leading-5 text-white shadow-cs1">
-            다 음
-          </button>
+        <div class="w-full pt-[40px] flex flex-wrap justify-center gap-4">
+
+          <input type="radio" name="prmschr" id="prmsch01" class="absolute hidden left-[-9999em] peer/prmsch01">
+          <label for="prmsch01" class="prmschr prmschr1">
+            <img src="./img/chprms11.png" alt="">
+          </label>
+
+          <input type="radio" name="prmschr" id="prmsch02" class=" absolute hidden left-[-9999em] peer/prmsch02">
+          <label for="prmsch02" class="prmschr2 prmschr">
+            <img src="./img/chprms12.png" alt="">
+          </label>
+
+          <div class="hidden w-full mt-8 peer-checked/prmsch01:block">
+            <div class="border-[3px] border-[#7B61FF] rounded-[24px] py-4 px-4 w-full flex flex-wrap gap-3">
+              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">두명이서 하는 약속에 사용해요.</span>
+              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">모인 약속보증금은 결제한 멤버들이 돌려받거나 한명에게 몰아줄 수 있어요.</span>
+              <span class="pl-2.5 block text-[#a18eff] text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 개인거래, 개인약속</span>
+            </div>
+            <!--  -->
+
+            <button class="h-[48px] w-[calc(100%-24px)] mx-3 rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1 mt-[44px] mb-[105px]">다음</button>
+          </div>
+          <!-- 1:1 hidden box -->
+
+
+
+          <div class="hidden w-full mt-8 peer-checked/prmsch02:block">
+            <div class="border-[3px] border-[#7B61FF] rounded-[24px] py-4 px-4 w-full flex flex-wrap gap-3">
+              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">호스트가 멤버 별 약속지킴여부를 체크해요. <br>(호스트는 약속금을 부담하지 않아요)</span>
+              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">약속보증금은 결제한 멤버들이 돌려받거나 호스트에게 보내줄 수 있어요.</span>
+              <span class="pl-2.5 block text-[#a18eff] text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 총무가 있는 동호회, 모임, 산악회 등</span>
+            </div>
+            <!--  -->
+
+            <button class="h-[48px] w-[calc(100%-24px)] mx-3 rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1 mt-[44px]">다음</button>
+          </div>
+          <!-- 모임형 hidden box -->
+
         </div>
+        <!-- choice -->
+
+
+
       </div>
-      <!-- // -->
 
       <footer id="footer" class="">
         <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mx-auto">
