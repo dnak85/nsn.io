@@ -842,12 +842,12 @@ button svg {
   margin-bottom: 1.5rem;
 }
 
-.mb-\[105px\] {
-  margin-bottom: 105px;
-}
-
 .mb-\[45px\] {
   margin-bottom: 45px;
+}
+
+.mb-\[50px\] {
+  margin-bottom: 50px;
 }
 
 .ml-1 {
@@ -1060,10 +1060,6 @@ button svg {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-\[50px\] {
-  margin-bottom: 50px;
 }
 
 .block {
@@ -2314,10 +2310,6 @@ button svg {
   padding-left: 0.625rem;
 }
 
-.pl-3 {
-  padding-left: 0.75rem;
-}
-
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2414,10 +2406,6 @@ button svg {
   padding-top: 72px;
 }
 
-.pb-\[50px\] {
-  padding-bottom: 50px;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2444,10 +2432,6 @@ button svg {
 
 .font-ptnd {
   font-family: Pretendard;
-}
-
-.font-\[semibold\] {
-  font-family: semibold;
 }
 
 .text-\[0\.625rem\] {
@@ -3010,7 +2994,7 @@ input[type="radio"] + label.prmschr1:after {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
+  border-radius: 23px;
   background-color: #191a32;
   background-image: url(../src/img/chprms11.png);
   background-repeat: no-repeat;
@@ -3027,7 +3011,7 @@ input[type="radio"] + label.prmschr2:after {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
+  border-radius: 23px;
   background-color: #191a32;
   background-image: url(../src/img/chprms12.png);
   background-repeat: no-repeat;
@@ -5106,10 +5090,6 @@ input[type="number"]::-webkit-inner-spin-button {
   .xsm\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-
-  .xsm\:pl-1 {
-    padding-left: 0.25rem;
   }
 
   .xsm\:text-\[12px\] {
