@@ -23,7 +23,6 @@
     margin: 0 auto;
   }
 }
-
 #wrap {
   @apply relative mx-auto h-full w-full max-w-[720px] overflow-auto bg-[#191A32];
 }
@@ -404,9 +403,15 @@ textarea:focus {
 .modal__overlay {
   @apply fixed inset-0 z-30 flex items-center justify-center bg-[#191A32] px-4;
 }
+.checking .modal__overlay {
+  @apply bg-opacity-80;
+}
 
 .modal__container {
   @apply relative w-full rounded-[12px] bg-[#252A41] px-5 py-8;
+}
+.checking .modal__container {
+  @apply bg-white;
 }
 
 .modal__header {

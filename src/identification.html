@@ -153,7 +153,7 @@
 
                 <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white flex">
                     <input type="text" class="w-[calc(100%-72px)] h-full text-[16px] text-slate-900 pl-4 pr-[100px]" placeholder="000000">
-                    <button class="w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]" data-dn-toggle="modal" data-dn-target="#dupl">인증하기</button>
+                    <button class="w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]" onclick="MicroModal.show('dupl')">인증하기</button>
                     <em class="absolute top-4 time right-[96px] text-[16px] text-slate-900 leading-5 block">05:00</em>
                 </div>
                 <!-- 인증하기 -->
@@ -165,61 +165,80 @@
             </div>
             <!-- 휴대전화인증 -->
 
-            <div id="age" class="modal">
-                <div class="modal-dialog centered alert">
-                    <div class="modal-content">
-                        <div id="before" class="flex flex-col w-full">
-                            <div class="w-full text-center mt-5 text-[24px] text-slate-900 font-semibold leading-[30px]">
-                                14세 미만은 <br>
-                                서비스 이용이 불가합니다.
+            
+            <!-- 
+                백그라운드 클릭 닫힘효과를 없앨경우 overlay 에서 close 를 삭제하면 됨
+             -->
+            <div class="modal micromodal-slide checking" id="age" aria-hidden="true">
+                <div class="modal__overlay" tabindex="-1" data-micromodal-close><!-- 이부분에서 close부분을 삭제하면 배경닫힘효과 사라짐  -->
+                    <div class="modal__container checking" role="dialog" aria-modal="true" aria-labelledby="14세미만">
+                        <main class="modal__content">
+                            <div id="before" class="flex flex-col w-full">
+                                <div class="w-full text-center mt-5 text-[24px] text-slate-900 font-semibold leading-[30px]">
+                                    14세 미만은 <br>
+                                    서비스 이용이 불가합니다.
+                                </div>
+                                <div class="w-full mt-10">
+                                    <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">다음에 이용하기</button>
+                                </div>
                             </div>
-                            <div class="w-full mt-10">
-                                <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">다음에 이용하기</button>
-                            </div>
-                        </div>
-                        <!-- before -->
+                        </main>
+                        <!-- //main -->
                     </div>
+                    <!-- //modal__container -->
                 </div>
+                <!-- //modal__overlay -->
             </div>
             <!-- modal -->
 
-            <div id="dupl" class="modal">
-                <div class="modal-dialog centered alert">
-                    <div class="modal-content">
-                        <div id="after" class="flex flex-col w-full h-full">
-                            <div class="w-full px-[33px] mt-5 text-center">
-                                <span class="block w-full pb-4 border-b-[1px] border-[#cdc4ff] text-[18px] text-slate-900 font-semibold leading-[22px]">
-                                    같은 번호로 가입한 계정이 있습니다. <br>
-                                    가입한 이전 계정으로 로그인하세요
-                                </span>
-                            </div>
-                            <!--  -->
-                        
-                            <div class="w-full mt-4 text-center">
-                                <div class="inline-block text-left">
-                                    <div class="text-[16px] leading-[20px] text-slate-900">
-                                        이메일: <em class="text-violet-500">kkk***@naver.com</em>
-                                    </div>
-                                    <div class="text-[16px] leading-[20px] text-slate-900">
-                                        연락처: 0107****75
-                                    </div>
-                                    <div class="text-[16px] leading-[20px] text-slate-900">
-                                        SNS연동: 네이버
+            
+
+            <div class="modal micromodal-slide checking" id="dupl" aria-hidden="true">
+                <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="중복가입">
+                        <main class="modal__content">
+                            <div id="after" class="flex flex-col w-full h-full">
+                                <div class="w-full mt-5 text-center">
+                                    <span class="block w-full pb-4 border-b-[1px] border-[#cdc4ff] text-[18px] text-slate-900 font-semibold leading-[22px]">
+                                        같은 번호로 가입한 계정이 있습니다. <br>
+                                        가입한 이전 계정으로 로그인하세요
+                                    </span>
+                                </div>
+                                <!--  -->
+
+                                <div class="w-full mt-4 text-center">
+                                    <div class="inline-block text-left">
+                                        <div class="text-[16px] leading-[20px] text-slate-900">
+                                            이메일: <em class="text-violet-500">kkk***@naver.com</em>
+                                        </div>
+                                        <div class="text-[16px] leading-[20px] text-slate-900">
+                                            연락처: 0107****75
+                                        </div>
+                                        <div class="text-[16px] leading-[20px] text-slate-900">
+                                            SNS연동: 네이버
+                                        </div>
                                     </div>
                                 </div>
+                                <!--  -->
+
+                                <div class="w-full mt-10">
+                                    <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">로그인 화면 돌아가기</button>
+                                </div>
+                                <!--  -->
                             </div>
-                            <!--  -->
-                        
-                            <div class="w-full mt-10">
-                                <button class="w-full h-[48px] shadow-cs1 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">로그인 화면 돌아가기</button>
-                            </div>
-                            <!--  -->
-                        </div>
-                        <!-- // -->
+                            <!-- // -->
+                        </main>
+                        <!-- //main -->
                     </div>
+                    <!-- //modal__container -->
                 </div>
+                <!-- //modal__overlay -->
             </div>
             <!-- modal -->
+            <script>
+                MicroModal.init();
+                
+            </script>
 
             <div class="w-full h-[40px]"></div>
 
