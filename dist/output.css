@@ -702,6 +702,10 @@ button svg {
   top: 120px;
 }
 
+.top-\[139px\] {
+  top: 139px;
+}
+
 .top-\[13px\] {
   top: 13px;
 }
@@ -710,12 +714,40 @@ button svg {
   top: 16px;
 }
 
+.top-\[174px\] {
+  top: 174px;
+}
+
 .top-\[1px\] {
   top: 1px;
 }
 
+.top-\[209px\] {
+  top: 209px;
+}
+
+.top-\[249px\] {
+  top: 249px;
+}
+
+.top-\[24px\] {
+  top: 24px;
+}
+
 .top-\[25px\] {
   top: 25px;
+}
+
+.top-\[284px\] {
+  top: 284px;
+}
+
+.top-\[319px\] {
+  top: 319px;
+}
+
+.top-\[354px\] {
+  top: 354px;
 }
 
 .top-\[3px\] {
@@ -726,8 +758,28 @@ button svg {
   top: 40px;
 }
 
+.top-\[59px\] {
+  top: 59px;
+}
+
 .top-\[80px\] {
   top: 80px;
+}
+
+.top-\[99px\] {
+  top: 99px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[74px\] {
+  top: 74px;
+}
+
+.top-\[75px\] {
+  top: 75px;
 }
 
 .z-10 {
@@ -1006,6 +1058,10 @@ button svg {
   margin-top: 52px;
 }
 
+.mt-\[55px\] {
+  margin-top: 55px;
+}
+
 .mt-\[56px\] {
   margin-top: 56px;
 }
@@ -1194,6 +1250,10 @@ button svg {
   height: 264px;
 }
 
+.h-\[29px\] {
+  height: 29px;
+}
+
 .h-\[30px\] {
   height: 30px;
 }
@@ -1204,6 +1264,10 @@ button svg {
 
 .h-\[38px\] {
   height: 38px;
+}
+
+.h-\[390px\] {
+  height: 390px;
 }
 
 .h-\[40px\] {
@@ -1274,6 +1338,10 @@ button svg {
   height: calc(100% - 25px);
 }
 
+.h-\[calc\(100\%-84px\)\] {
+  height: calc(100% - 84px);
+}
+
 .h-auto {
   height: auto;
 }
@@ -1315,12 +1383,20 @@ button svg {
   min-height: 522px;
 }
 
+.min-h-\[550px\] {
+  min-height: 550px;
+}
+
 .min-h-\[calc\(100\%-53px\)\] {
   min-height: calc(100% - 53px);
 }
 
 .min-h-full {
   min-height: 100%;
+}
+
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .w-2 {
@@ -1945,6 +2021,11 @@ button svg {
   background-color: rgb(26 29 45 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1E2235\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 34 53 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#252A41\] {
   --tw-bg-opacity: 1;
   background-color: rgb(37 42 65 / var(--tw-bg-opacity));
@@ -2091,6 +2172,23 @@ button svg {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#1\] {
+  background-color: #1;
+}
+
+.bg-\[\#1e22\] {
+  background-color: #1e22;
+}
+
+.bg-\[\#1e2235\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 34 53 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
@@ -2278,11 +2376,6 @@ button svg {
   padding-bottom: 3px;
 }
 
-.px-\[23px\] {
-  padding-left: 23px;
-  padding-right: 23px;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -2307,6 +2400,10 @@ button svg {
   padding-bottom: 2rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -2321,6 +2418,14 @@ button svg {
 
 .pl-5 {
   padding-left: 1.25rem;
+}
+
+.pl-\[14px\] {
+  padding-left: 14px;
+}
+
+.pl-\[44px\] {
+  padding-left: 44px;
 }
 
 .pr-2 {
@@ -2373,6 +2478,10 @@ button svg {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pt-\[11px\] {
+  padding-top: 11px;
 }
 
 .pt-\[24px\] {
@@ -2778,6 +2887,11 @@ button svg {
 .text-\[\#ec4899\] {
   --tw-text-opacity: 1;
   color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.text-\[\#ff5ab3\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 90 179 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -4306,6 +4420,42 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
+@keyframes sliding-left{
+  0% {
+    left:0;
+  }
+
+  30% {
+    left:5px;
+  }
+
+  100% {
+    left:-110%;
+  }
+}
+
+@keyframes sliding-left-reverse{
+  0% {
+    left:-110%;
+  }
+
+  70% {
+    left:5px;
+  }
+
+  100% {
+    left:0;
+  }
+}
+
+.sliding-left{
+  animation: sliding-left 1s ease-in-out;
+}
+
+.sliding-left-reverse{
+  animation: sliding-left-reverse 1s ease-in-out;
+}
+
 .offcanvas.offcanvas-bottom {
   position: absolute;
   width: 100%;
@@ -4331,15 +4481,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .offcanvas.left {
   position: fixed;
-  width: 80%;
+  width: 264px;
   height: 100%;
   top: 0;
-  left: -110%;
+  left: -264px;
   z-index: 10015;
   border-radius: 0 !important;
   color: #fff;
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  overflow:auto;
 }
 
 .offcanvas.left.active {
@@ -4584,6 +4733,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .before\:w-5::before {
   content: var(--tw-content);
   width: 1.25rem;
+}
+
+.before\:w-6::before {
+  content: var(--tw-content);
+  width: 1.5rem;
 }
 
 .before\:w-fit::before {

@@ -1070,6 +1070,34 @@ input[type="number"]::-webkit-inner-spin-button {
     left: -110%;
   }
 }
+@keyframes sliding-left{
+  0% {
+    left:0;
+  }
+  30% {
+    left:5px;
+  }
+  100% {
+    left:-110%;
+  }
+}
+@keyframes sliding-left-reverse{
+  0% {
+    left:-110%;
+  }
+  70% {
+    left:5px;
+  }
+  100% {
+    left:0;
+  }
+}
+.sliding-left{
+  animation: sliding-left 1s ease-in-out;
+}
+.sliding-left-reverse{
+  animation: sliding-left-reverse 1s ease-in-out;
+}
 
 .offcanvas.offcanvas-bottom {
   position: absolute;
@@ -1092,14 +1120,14 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .offcanvas.left {
   position: fixed;
-  width: 80%;
+  width: 264px;
   height: 100%;
   top: 0;
-  left: -110%;
+  left: -264px;
   z-index: 10015;
   border-radius: 0 !important;
   color: #fff;
-  @apply bg-gray-900;
+  overflow:auto;
 }
 .offcanvas.left.active {
   left: 0;
