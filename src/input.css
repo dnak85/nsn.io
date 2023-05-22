@@ -1070,32 +1070,32 @@ input[type="number"]::-webkit-inner-spin-button {
     left: -110%;
   }
 }
-@keyframes sliding-left{
+@keyframes sliding-left {
   0% {
-    left:0;
+    left: 0;
   }
   30% {
-    left:5px;
+    left: 5px;
   }
   100% {
-    left:-110%;
+    left: -110%;
   }
 }
-@keyframes sliding-left-reverse{
+@keyframes sliding-left-reverse {
   0% {
-    left:-110%;
+    left: -110%;
   }
   70% {
-    left:5px;
+    left: 5px;
   }
   100% {
-    left:0;
+    left: 0;
   }
 }
-.sliding-left{
+.sliding-left {
   animation: sliding-left 1s ease-in-out;
 }
-.sliding-left-reverse{
+.sliding-left-reverse {
   animation: sliding-left-reverse 1s ease-in-out;
 }
 
@@ -1127,7 +1127,7 @@ input[type="number"]::-webkit-inner-spin-button {
   z-index: 10015;
   border-radius: 0 !important;
   color: #fff;
-  overflow:auto;
+  overflow: auto;
 }
 .offcanvas.left.active {
   left: 0;
@@ -1202,4 +1202,72 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 50%;
   margin-left: -12px;
   top: -11px;
+}
+
+@keyframes loading {
+  /*loading이라는 keyframe 애니메이션*/
+  0% {
+    opacity: .8; /* 안보였다가 */
+    background: #6339da;
+    transform: scale(1.5);
+  }
+  50% {
+    opacity: 1; /* 보였다가 */
+    background: #fff;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: .8;
+    background: #6339da;
+    transform: scale(0.3);
+  }
+}
+
+.loading {
+  display: flex;
+  width: 100%;
+  gap:10px;
+}
+.loading div {
+  display: inline-block;
+  width: auto;
+  height: 10px;
+}
+.loading div em {
+  display: inline-block;
+  width: 3px;
+  height: 12px;
+  animation: loading 3s linear 0s infinite;
+  background: #6339da;
+}
+.loading div em:nth-child(1) {
+  /*loading의 자식 중 첫번째 span*/
+  /*nth-child : 형제 사이에서의 순서*/
+  animation-delay: 0s;
+}
+
+.loading div em:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading em:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loading em:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.indfipw{
+  height:46px;
+  -webkit-text-security: disc;
+  font:small-caption;
+  font-size:50px;
+  background:transparent;
+  padding-top:1px;
+  color:#0F172A;
+}
+.indfipw::placeholder{
+  -webkit-text-security: disc;
+  font:small-caption;
+  font-size:50px;
+  background:transparent;
 }

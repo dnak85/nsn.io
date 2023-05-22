@@ -702,10 +702,6 @@ button svg {
   top: 120px;
 }
 
-.top-\[139px\] {
-  top: 139px;
-}
-
 .top-\[13px\] {
   top: 13px;
 }
@@ -714,40 +710,12 @@ button svg {
   top: 16px;
 }
 
-.top-\[174px\] {
-  top: 174px;
-}
-
 .top-\[1px\] {
   top: 1px;
 }
 
-.top-\[209px\] {
-  top: 209px;
-}
-
-.top-\[249px\] {
-  top: 249px;
-}
-
-.top-\[24px\] {
-  top: 24px;
-}
-
 .top-\[25px\] {
   top: 25px;
-}
-
-.top-\[284px\] {
-  top: 284px;
-}
-
-.top-\[319px\] {
-  top: 319px;
-}
-
-.top-\[354px\] {
-  top: 354px;
 }
 
 .top-\[3px\] {
@@ -758,28 +726,8 @@ button svg {
   top: 40px;
 }
 
-.top-\[59px\] {
-  top: 59px;
-}
-
 .top-\[80px\] {
   top: 80px;
-}
-
-.top-\[99px\] {
-  top: 99px;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[74px\] {
-  top: 74px;
-}
-
-.top-\[75px\] {
-  top: 75px;
 }
 
 .z-10 {
@@ -996,6 +944,10 @@ button svg {
 
 .mt-\[-3px\] {
   margin-top: -3px;
+}
+
+.mt-\[104px\] {
+  margin-top: 104px;
 }
 
 .mt-\[108px\] {
@@ -1355,8 +1307,16 @@ button svg {
   height: 100%;
 }
 
+.h-\[fit\] {
+  height: fit;
+}
+
 .min-h-\[140px\] {
   min-height: 140px;
+}
+
+.min-h-\[180px\] {
+  min-height: 180px;
 }
 
 .min-h-\[205px\] {
@@ -1379,12 +1339,12 @@ button svg {
   min-height: 360px;
 }
 
-.min-h-\[522px\] {
-  min-height: 522px;
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
-.min-h-\[550px\] {
-  min-height: 550px;
+.min-h-\[522px\] {
+  min-height: 522px;
 }
 
 .min-h-\[calc\(100\%-53px\)\] {
@@ -1393,10 +1353,6 @@ button svg {
 
 .min-h-full {
   min-height: 100%;
-}
-
-.min-h-\[500px\] {
-  min-height: 500px;
 }
 
 .w-2 {
@@ -1421,6 +1377,10 @@ button svg {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-\[102px\] {
@@ -1453,6 +1413,10 @@ button svg {
 
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-\[21px\] {
+  width: 21px;
 }
 
 .w-\[240px\] {
@@ -1535,16 +1499,12 @@ button svg {
   width: 90px;
 }
 
-.w-\[94px\] {
-  width: 94px;
+.w-\[98px\] {
+  width: 98px;
 }
 
 .w-\[calc\(\(100\%-10px\)\/2\)\] {
   width: calc((100% - 10px) / 2);
-}
-
-.w-\[calc\(\(100\%-10px\)\/2-94px\)\] {
-  width: calc((100% - 10px) / 2 - 94px);
 }
 
 .w-\[calc\(\(100\%-36px\)\/4\)\] {
@@ -1553,6 +1513,10 @@ button svg {
 
 .w-\[calc\(100\%-100px\)\] {
   width: calc(100% - 100px);
+}
+
+.w-\[calc\(100\%-102px\)\] {
+  width: calc(100% - 102px);
 }
 
 .w-\[calc\(100\%-105px\)\] {
@@ -1571,12 +1535,12 @@ button svg {
   width: calc(100% - 135px);
 }
 
-.w-\[calc\(100\%-157px\)\] {
-  width: calc(100% - 157px);
+.w-\[calc\(100\%-150px\)\] {
+  width: calc(100% - 150px);
 }
 
-.w-\[calc\(100\%-160px\)\] {
-  width: calc(100% - 160px);
+.w-\[calc\(100\%-157px\)\] {
+  width: calc(100% - 157px);
 }
 
 .w-\[calc\(100\%-163px\)\] {
@@ -1601,6 +1565,10 @@ button svg {
 
 .w-\[calc\(100\%-38px\)\] {
   width: calc(100% - 38px);
+}
+
+.w-\[calc\(100\%-56px\)\] {
+  width: calc(100% - 56px);
 }
 
 .w-\[calc\(100\%-72px\)\] {
@@ -1632,6 +1600,22 @@ button svg {
   width: 100%;
 }
 
+.w-\[calc\(100\%-1px\)\] {
+  width: calc(100% - 1px);
+}
+
+.w-\[calc\(100\%-12px\)\] {
+  width: calc(100% - 12px);
+}
+
+.w-\[calc\(100\%-122px\)\] {
+  width: calc(100% - 122px);
+}
+
+.w-\[calc\(100\%-132px\)\] {
+  width: calc(100% - 132px);
+}
+
 .min-w-\[375px\] {
   min-width: 375px;
 }
@@ -1651,6 +1635,10 @@ button svg {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.max-w-\[106px\] {
+  max-width: 106px;
 }
 
 .flex-1 {
@@ -1678,6 +1666,16 @@ button svg {
 
 .animate-ping {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
 }
 
 .flex-col {
@@ -1783,6 +1781,19 @@ button svg {
        column-gap: 1rem;
 }
 
+.gap-x-\[44px\] {
+  -moz-column-gap: 44px;
+       column-gap: 44px;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-y-2\.5 {
+  row-gap: 0.625rem;
+}
+
 .gap-y-3 {
   row-gap: 0.75rem;
 }
@@ -1801,6 +1812,11 @@ button svg {
 
 .gap-y-7 {
   row-gap: 1.75rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1915,6 +1931,11 @@ button svg {
   border-width: 3px;
 }
 
+.border-y-\[2px\] {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
 .border-b-\[1px\] {
   border-bottom-width: 1px;
 }
@@ -2022,6 +2043,11 @@ button svg {
 }
 
 .bg-\[\#1E2235\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 34 53 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1e2235\] {
   --tw-bg-opacity: 1;
   background-color: rgb(30 34 53 / var(--tw-bg-opacity));
 }
@@ -2174,23 +2200,6 @@ button svg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#1\] {
-  background-color: #1;
-}
-
-.bg-\[\#1e22\] {
-  background-color: #1e22;
-}
-
-.bg-\[\#1e2235\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 34 53 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -2291,6 +2300,11 @@ button svg {
   padding-right: 33px;
 }
 
+.px-\[35px\] {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .px-\[3px\] {
   padding-left: 3px;
   padding-right: 3px;
@@ -2354,6 +2368,16 @@ button svg {
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-\[100px\] {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .py-\[13px\] {
@@ -2428,16 +2452,8 @@ button svg {
   padding-left: 44px;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
 .pr-3 {
   padding-right: 0.75rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .pr-\[100px\] {
@@ -2722,6 +2738,10 @@ button svg {
   line-height: 22px;
 }
 
+.leading-\[24px\] {
+  line-height: 24px;
+}
+
 .leading-\[25px\] {
   line-height: 25px;
 }
@@ -2738,6 +2758,10 @@ button svg {
   line-height: 40px;
 }
 
+.leading-\[43px\] {
+  line-height: 43px;
+}
+
 .leading-\[48px\] {
   line-height: 48px;
 }
@@ -2752,6 +2776,15 @@ button svg {
 
 .leading-\[80px\] {
   line-height: 80px;
+}
+
+.tracking-\[-2px\] {
+  letter-spacing: -2px;
+}
+
+.text-\[\#0f172a\] {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .text-\[\#191919\] {
@@ -2877,11 +2910,6 @@ button svg {
 .text-\[\#e2e4ef\] {
   --tw-text-opacity: 1;
   color: rgb(226 228 239 / var(--tw-text-opacity));
-}
-
-.text-\[\#e2e4ff\] {
-  --tw-text-opacity: 1;
-  color: rgb(226 228 255 / var(--tw-text-opacity));
 }
 
 .text-\[\#ec4899\] {
@@ -4420,39 +4448,39 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-@keyframes sliding-left{
+@keyframes sliding-left {
   0% {
-    left:0;
+    left: 0;
   }
 
   30% {
-    left:5px;
+    left: 5px;
   }
 
   100% {
-    left:-110%;
+    left: -110%;
   }
 }
 
-@keyframes sliding-left-reverse{
+@keyframes sliding-left-reverse {
   0% {
-    left:-110%;
+    left: -110%;
   }
 
   70% {
-    left:5px;
+    left: 5px;
   }
 
   100% {
-    left:0;
+    left: 0;
   }
 }
 
-.sliding-left{
+.sliding-left {
   animation: sliding-left 1s ease-in-out;
 }
 
-.sliding-left-reverse{
+.sliding-left-reverse {
   animation: sliding-left-reverse 1s ease-in-out;
 }
 
@@ -4488,7 +4516,7 @@ input[type="number"]::-webkit-inner-spin-button {
   z-index: 10015;
   border-radius: 0 !important;
   color: #fff;
-  overflow:auto;
+  overflow: auto;
 }
 
 .offcanvas.left.active {
@@ -4579,6 +4607,92 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 50%;
   margin-left: -12px;
   top: -11px;
+}
+
+@keyframes loading {
+  /*loading이라는 keyframe 애니메이션*/
+
+  0% {
+    opacity: .8;
+    /* 안보였다가 */
+    background: #6339da;
+    transform: scale(1.5);
+  }
+
+  50% {
+    opacity: 1;
+    /* 보였다가 */
+    background: #fff;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: .8;
+    background: #6339da;
+    transform: scale(0.3);
+  }
+}
+
+.loading {
+  display: flex;
+  width: 100%;
+  gap:10px;
+}
+
+.loading div {
+  display: inline-block;
+  width: auto;
+  height: 10px;
+}
+
+.loading div em {
+  display: inline-block;
+  width: 3px;
+  height: 12px;
+  animation: loading 3s linear 0s infinite;
+  background: #6339da;
+}
+
+.loading div em:nth-child(1) {
+  /*loading의 자식 중 첫번째 span*/
+  /*nth-child : 형제 사이에서의 순서*/
+  animation-delay: 0s;
+}
+
+.loading div em:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading em:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading em:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.indfipw{
+  height:46px;
+  -webkit-text-security: disc;
+  font:small-caption;
+  font-size:50px;
+  background:transparent;
+  padding-top:1px;
+  color:#0F172A;
+}
+
+.indfipw::-moz-placeholder{
+  -webkit-text-security: disc;
+  font:small-caption;
+  font-size:50px;
+  background:transparent;
+}
+
+.indfipw::placeholder{
+  -webkit-text-security: disc;
+  font:small-caption;
+  font-size:50px;
+  background:transparent;
 }
 
 .placeholder\:text-center::-moz-placeholder {
@@ -4720,11 +4834,6 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-.before\:w-3::before {
-  content: var(--tw-content);
-  width: 0.75rem;
-}
-
 .before\:w-4::before {
   content: var(--tw-content);
   width: 1rem;
@@ -4827,6 +4936,11 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 0px;
 }
 
+.after\:z-\[-1\]::after {
+  content: var(--tw-content);
+  z-index: -1;
+}
+
 .after\:z-\[0\]::after {
   content: var(--tw-content);
   z-index: 0;
@@ -4886,6 +5000,12 @@ input[type="number"]::-webkit-inner-spin-button {
 .after\:border-\[\#ABADC6\;\]::after {
   content: var(--tw-content);
   border-color: #ABADC6;;
+}
+
+.after\:bg-\[\#cdc3ff\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 195 255 / var(--tw-bg-opacity));
 }
 
 .after\:bg-\[\#cdc4ff\]::after {
@@ -5044,36 +5164,6 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.peer\/gst0101:checked ~ .peer-checked\/gst0101\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
-.peer\/gst0102:checked ~ .peer-checked\/gst0102\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
-.peer\/gst0201:checked ~ .peer-checked\/gst0201\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
-.peer\/gst0202:checked ~ .peer-checked\/gst0202\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
-.peer\/gst0301:checked ~ .peer-checked\/gst0301\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
-.peer\/gst0302:checked ~ .peer-checked\/gst0302\:bg-\[\#252a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
-}
-
 .peer\/rc0101:checked ~ .peer-checked\/rc0101\:bg-\[\#1A1D2D\] {
   --tw-bg-opacity: 1;
   background-color: rgb(26 29 45 / var(--tw-bg-opacity));
@@ -5114,42 +5204,42 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: rgb(26 29 45 / var(--tw-bg-opacity));
 }
 
+.peer\/sgl011:checked ~ .peer-checked\/sgl011\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
+.peer\/sgl021:checked ~ .peer-checked\/sgl021\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
+.peer\/sgl012:checked ~ .peer-checked\/sgl012\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
+.peer\/sgl022:checked ~ .peer-checked\/sgl022\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
+.peer\/sgl013:checked ~ .peer-checked\/sgl013\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
+.peer\/sgl023:checked ~ .peer-checked\/sgl023\:bg-\[\#252a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 65 / var(--tw-bg-opacity));
+}
+
 .peer\/at01:checked ~ .peer-checked\/at01\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .peer\/at02:checked ~ .peer-checked\/at02\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0101:checked ~ .peer-checked\/gst0101\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0102:checked ~ .peer-checked\/gst0102\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0201:checked ~ .peer-checked\/gst0201\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0202:checked ~ .peer-checked\/gst0202\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0301:checked ~ .peer-checked\/gst0301\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer\/gst0302:checked ~ .peer-checked\/gst0302\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -5164,40 +5254,34 @@ input[type="number"]::-webkit-inner-spin-button {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0101:checked ~ .peer-checked\/gst0101\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl011:checked ~ .peer-checked\/sgl011\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0102:checked ~ .peer-checked\/gst0102\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl021:checked ~ .peer-checked\/sgl021\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0201:checked ~ .peer-checked\/gst0201\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl012:checked ~ .peer-checked\/sgl012\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0202:checked ~ .peer-checked\/gst0202\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl022:checked ~ .peer-checked\/sgl022\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0301:checked ~ .peer-checked\/gst0301\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl013:checked ~ .peer-checked\/sgl013\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.peer\/gst0302:checked ~ .peer-checked\/gst0302\:shadow-cs2 {
-  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/sgl023:checked ~ .peer-checked\/sgl023\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .peer\/sgl01:checked ~ .peer-checked\/sgl01\:shadow-cs2 {
@@ -5219,6 +5303,42 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .peer\/who022:checked ~ .peer-checked\/who022\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl012:checked ~ .peer-checked\/sgl012\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl022:checked ~ .peer-checked\/sgl022\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl011:checked ~ .peer-checked\/sgl011\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl021:checked ~ .peer-checked\/sgl021\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl013:checked ~ .peer-checked\/sgl013\:shadow-cs2 {
+  --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.peer\/sgl023:checked ~ .peer-checked\/sgl023\:shadow-cs2 {
   --tw-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.8);
   --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
