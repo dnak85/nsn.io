@@ -189,14 +189,23 @@
         <!-- 안내문 -->
 
         <div class="mt-8 block px-[40px] text-center">
-          <button data-custom-open="returnComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">일괄 반환받기</button>
+          <button data-custom-open="returnComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속반환 확정 팝업(기존)</button>
           <!-- 약속반환확정 -->
-          <button data-custom-open="returnBank" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">일괄 반환받기</button>
+          <button data-custom-open="returnBank" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">반환받기 팝업</button>
           <!-- 반환계좌반환 -->
-          <button data-custom-open="returnBankCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">일괄 반환받기</button>
+          <button data-custom-open="returnBankCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">계좌연결팝업</button>
           <!-- 다른계좌연결 -->
-          <button data-custom-open="prmsComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">일괄 반환받기</button>
+          <button data-custom-open="prmsComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속달성팝업</button>
           <!-- 약속완료반환 -->
+
+          <button data-custom-open="qprmsComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속반환 확정(신규)</button>
+
+          <!-- 약속반환확정 -->
+          <button data-custom-open="returnBankNoCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">반환계좌 미입력 팝업</button>
+          <!-- 계좌미연결 -->
+
+          <button data-custom-open="noCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">잘못된 계좌번호 팝업</button>
+          <!-- 잘못된계좌 -->
 
           <!--
               !
@@ -230,6 +239,41 @@
                   <div class="mt-[56px] flex w-full flex-col gap-6">
                     <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속 확정</button>
                     <button data-custom-close class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
+                  </div>
+                  <!-- button -->
+                </div>
+              </main>
+              <!-- //main -->
+            </div>
+            <!-- //modal__container -->
+          </div>
+          <!-- //modal__overlay -->
+        </div>
+        <!-- //modal -->
+
+        <!-- modal 반환확정팝업 -->
+        <div class="modal micromodal-slide" id="noCount" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+              <main class="modal__content" id="modal-1-content">
+                <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                <div class="w-full px-1 pt-[72px]">
+                  <div class="flex flex-col w-full gap-3 text-center text-white">
+                    <strong class="block font-gm text-[20px] font-[400] leading-5">잘못된 계좌번호 입니다.</strong>
+                    <span class="block text-[16px] leading-5">계좌번호를 확인해주세요.</span>
+                  </div>
+                  <!-- text -->
+
+                  <div class="mt-[40px] w-full text-center">
+                    <svg class="inline-block" width="125" height="100" viewBox="0 0 125 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M112.5 50V18.75H125V56.25H112.5M112.5 81.25H125V68.75H112.5M50 56.25C66.6875 56.25 100 64.625 100 81.25V100H0V81.25C0 64.625 33.3125 56.25 50 56.25ZM50 0C56.6304 0 62.9893 2.63392 67.6777 7.32233C72.3661 12.0107 75 18.3696 75 25C75 31.6304 72.3661 37.9893 67.6777 42.6777C62.9893 47.3661 56.6304 50 50 50C43.3696 50 37.0107 47.3661 32.3223 42.6777C27.6339 37.9893 25 31.6304 25 25C25 18.3696 27.6339 12.0107 32.3223 7.32233C37.0107 2.63392 43.3696 0 50 0ZM50 68.125C31.4375 68.125 11.875 77.25 11.875 81.25V88.125H88.125V81.25C88.125 77.25 68.5625 68.125 50 68.125ZM50 11.875C46.519 11.875 43.1806 13.2578 40.7192 15.7192C38.2578 18.1806 36.875 21.519 36.875 25C36.875 28.481 38.2578 31.8194 40.7192 34.2808C43.1806 36.7422 46.519 38.125 50 38.125C53.481 38.125 56.8194 36.7422 59.2808 34.2808C61.7422 31.8194 63.125 28.481 63.125 25C63.125 21.519 61.7422 18.1806 59.2808 15.7192C56.8194 13.2578 53.481 11.875 50 11.875Z" fill="#8B5CF6" />
+                    </svg>
+                  </div>
+                  <!-- visual -->
+
+                  <div class="mt-[56px] flex w-full flex-col gap-6">
+                    <button data-custom-close class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 입력하기</button>
                   </div>
                   <!-- button -->
                 </div>
@@ -311,6 +355,32 @@
           <!-- //modal__overlay -->
         </div>
         <!-- //modal -->
+
+        <div class="modal micromodal-slide" id="returnBankNoCount" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="반환계좌">
+              <main class="modal__content" id="modal-1-content">
+                <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                <div class="w-full pt-[64px]">
+                  <div class="w-full text-center">
+                    <strong class="block font-gm text-[20px] font-[400] leading-5 text-white">내 반환계좌로 돈이 입금됩니다.</strong>
+                  </div>
+                  <!-- //text -->
+
+                  <div class="flex flex-col w-full gap-6 mt-[84px] mb-10">
+                    <button data-custom-open="returnBankCount" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">계좌 연결하기</button>
+                  </div>
+                  <!-- //button -->
+                </div>
+                <!-- // -->
+              </main>
+              <!-- //main -->
+            </div>
+            <!-- //modal__container -->
+          </div>
+          <!-- //modal__overlay -->
+        </div>
 
         <!-- modal 반환계좌팝업 -->
         <div class="modal micromodal-slide" id="returnBankCount" aria-hidden="true">
@@ -454,6 +524,58 @@
 
                   <div class="flex flex-col w-full gap-6 mt-5">
                     <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">확 인</button>
+                  </div>
+                  <!-- //button -->
+                </div>
+                <!-- // -->
+              </main>
+              <!-- //main -->
+            </div>
+            <!-- //modal__container -->
+          </div>
+          <!-- //modal__overlay -->
+        </div>
+        <!-- //modal -->
+
+        <!-- modal 약속완료 -->
+        <div class="modal micromodal-slide" id="qprmsComplete" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속완료반환">
+              <main class="modal__content" id="modal-1-content">
+                <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                <div class="w-full pt-[25px]">
+                  <div class="w-full leading-5 text-center text-white">
+                    <span class="font-gm text-[20px] font-[400]">약속반환을 확정 하시겠습니까?</span>
+                  </div>
+
+                  <div class="w-full mt-10">
+                    <div class="w-full border-t-[1px] border-b-[1px] border-[#CDC3FF] py-4">
+                      <dl class="flex flex-wrap justify-start w-full gap-y-4 px-7">
+                        <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                          <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">반환금</span>
+                        </dt>
+                        <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                          <span>10,000원</span>
+                        </dd>
+                        <!-- 반환금 -->
+
+                        <dt class="h-5 w-[80px] text-[16px] font-semibold leading-5 text-[#CDC3FF]">
+                          <span class="before:inline-block before:w-5 before:text-center before:content-['\00b7']">반환계좌</span>
+                        </dt>
+                        <dd class="h-5 w-[calc(100%-80px)] text-right text-[16px] leading-5 text-white">
+                          <span>참가자 01</span>
+                        </dd>
+                        <!-- 은행명 -->
+                      </dl>
+                    </div>
+                  </div>
+                  <!-- //약속달성 -->
+                  <!-- 약속달성 -->
+
+                  <div class="flex flex-col w-full gap-6 mt-10">
+                    <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">약속확정</button>
+                    <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1">다시 선택하기</button>
                   </div>
                   <!-- //button -->
                 </div>

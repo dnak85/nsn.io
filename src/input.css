@@ -1207,7 +1207,7 @@ input[type="number"]::-webkit-inner-spin-button {
 @keyframes loading {
   /*loading이라는 keyframe 애니메이션*/
   0% {
-    opacity: .8; /* 안보였다가 */
+    opacity: 0.8; /* 안보였다가 */
     background: #6339da;
     transform: scale(1.5);
   }
@@ -1217,7 +1217,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.6);
   }
   100% {
-    opacity: .8;
+    opacity: 0.8;
     background: #6339da;
     transform: scale(0.3);
   }
@@ -1226,7 +1226,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .loading {
   display: flex;
   width: 100%;
-  gap:10px;
+  gap: 10px;
 }
 .loading div {
   display: inline-block;
@@ -1256,18 +1256,106 @@ input[type="number"]::-webkit-inner-spin-button {
 .loading em:nth-child(4) {
   animation-delay: 0.6s;
 }
-.indfipw{
-  height:46px;
+.indfipw {
+  height: 46px;
   -webkit-text-security: disc;
-  font:small-caption;
-  font-size:50px;
-  background:transparent;
-  padding-top:1px;
-  color:#0F172A;
+  font: small-caption;
+  font-size: 50px;
+  background: transparent;
+  padding-top: 1px;
+  color: #0f172a;
 }
-.indfipw::placeholder{
+.indfipw::placeholder {
   -webkit-text-security: disc;
-  font:small-caption;
-  font-size:50px;
-  background:transparent;
+  font: small-caption;
+  font-size: 50px;
+  background: transparent;
+}
+
+.toastjs-container {
+  position: absolute; /* Fallback */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: calc(100% - 56px);
+  min-width: 320px;
+  margin-left: calc(((100% - 56px) / 2) * -1);
+  transform: translateY(70%);
+  transition: transform 2s;
+  opacity: 0;
+  z-index: 100; /* */
+}
+
+.toastjs-container[aria-hidden="false"] {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.toastjs {
+  background: #7b61ff;
+  width: 100%;
+  border-radius: 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 49px;
+  line-height: 43px;
+  border: 3px solid #f4f2ff;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: Center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.toastjs p {
+  display: block;
+  width: calc(100% - 20px);
+  text-align: center;
+  text-indent: 20px;
+}
+
+.toastjs.default {
+  border-color: #fff;
+}
+
+.toastjs.success {
+  @apply bg-green-500;
+}
+.toastjs.warning {
+  @apply bg-orange-500;
+}
+.toastjs.danger {
+  @apply bg-red-500;
+}
+
+.toastjs-btn,
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  text-indent: -9999em;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border: 0;
+}
+.toastjs-btn:after {
+  content: "x";
+  color: #fff;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  border: 0;
+  width: 20px;
+  height: 49px;
+  text-align: center;
+}
+
+.toastjs-btn--custom {
+}
+
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  outline: none;
 }

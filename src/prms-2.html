@@ -19,6 +19,19 @@
   <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
   <!-- Plugin JS -->
   <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+
+  <script src="./js/toast.js"></script>
+  <script>
+    const nextPage = document.querySelector('.nextButton');
+    const msgtext = "날짜를 선택해주세요."
+
+    function toastAlert() {
+      new Toast({
+        message: msgtext,
+        type: 'default'
+      });
+    }
+  </script>
 </head>
 
 <body class="h-full">
@@ -187,7 +200,7 @@
           <button class="h-[48px] w-[140px] rounded-[10px] bg-[#cbc2f4]/40 text-[16px] font-bold text-white xsm:w-[120px]">
             이 전
           </button>
-          <button class="h-[48px] w-[140px] rounded-[10px] bg-violet-500 text-[16px] font-bold text-white xsm:w-[120px]">
+          <button onclick="toastAlert();" class="h-[48px] w-[140px] rounded-[10px] bg-violet-500 text-[16px] font-bold text-white xsm:w-[120px] nextButton">
             다 음
           </button>
         </div>
@@ -195,6 +208,7 @@
 
         <div class="h-[64px] w-full"></div>
         <!-- // 하단여백 -->
+
       </div>
       <!-- // -->
 
