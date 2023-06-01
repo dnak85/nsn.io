@@ -1,8 +1,8 @@
 "use strict";
-// Toast 생성자 함수
+
 function Toast(options) {
   if (!options.message) {
-    throw new Error("Toast.js - 표시할 메시지를 설정해야합니다.");
+    throw new Error("Toast.js - You need to set a message to display");
     return;
   }
 
@@ -14,7 +14,7 @@ function Toast(options) {
 
   this._init();
 }
-// 요소 생성 메서드
+
 Toast.prototype._createElements = function () {
   var _this = this;
 
@@ -35,7 +35,7 @@ Toast.prototype._createElements = function () {
     }, 100);
   });
 };
-// 이벤트 리스너 추가 메서드
+
 Toast.prototype._addEventListeners = function () {
   var _this2 = this;
 
@@ -57,7 +57,6 @@ Toast.prototype._addEventListeners = function () {
   }
 };
 
-// 토스트 닫기 메서드
 Toast.prototype._close = function () {
   var _this3 = this;
 
@@ -81,7 +80,6 @@ Toast.prototype._close = function () {
   });
 };
 
-// 토스트 열기 메서드
 Toast.prototype._open = function () {
   this.toastEl.classList.add(this.options.type);
   this.toastContainerEl.setAttribute("aria-hidden", false);
@@ -104,14 +102,14 @@ Toast.prototype._open = function () {
   this.toastEl.innerHTML =
     "\n        <p>" +
     this.options.message +
-    '</p>\n          < button button type = "button" class="toastjs-btn toastjs-btn--close" > Close</ >\n        ' +
+    '</p>\n        <button type="button" class="toastjs-btn toastjs-btn--close">Close</button>\n        ' +
     customButtons +
     "\n    ";
 
   this.focusedElBeforeOpen = document.activeElement;
   document.querySelector(".toastjs-btn--close").focus();
 
-  // 5초 후에 aria-hidden 속성을 true로 변경
+  // 2초 후에 aria-hidden 속성을 true로 변경
   setTimeout(function () {
     document
       .querySelector(".toastjs-container")
@@ -119,7 +117,6 @@ Toast.prototype._open = function () {
   }, 5000);
 };
 
-// 초기화 메서드
 Toast.prototype._init = function () {
   var _this4 = this;
 
@@ -141,6 +138,3 @@ Toast.prototype._init = function () {
       _this4._addEventListeners();
     });
 };
-
-
-// Toast 객체 생성
