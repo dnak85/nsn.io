@@ -1078,6 +1078,14 @@ button svg {
   margin-top: auto;
 }
 
+.mt-\[-\] {
+  margin-top: -;
+}
+
+.mt-\[-4px\] {
+  margin-top: -4px;
+}
+
 .block {
   display: block;
 }
@@ -1313,6 +1321,10 @@ button svg {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[26px\] {
+  height: 26px;
 }
 
 .min-h-\[140px\] {
@@ -1602,6 +1614,22 @@ button svg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[calc\(100\%-120px\)\] {
+  width: calc(100% - 120px);
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[46px\] {
+  width: 46px;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .min-w-\[375px\] {
@@ -1931,6 +1959,14 @@ button svg {
   border-top-width: 1px;
 }
 
+.border-l {
+  border-left-width: 1px;
+}
+
+.border-l-0 {
+  border-left-width: 0px;
+}
+
 .border-dashed {
   border-style: dashed;
 }
@@ -2013,6 +2049,10 @@ button svg {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-\[\#\] {
+  border-color: #;
 }
 
 .bg-\[\#03C75A\] {
@@ -2523,6 +2563,30 @@ button svg {
   padding-top: 72px;
 }
 
+.pt-\[48px\] {
+  padding-top: 48px;
+}
+
+.pt-\[\] {
+  padding-top: ;
+}
+
+.pt-\[50\] {
+  padding-top: 50;
+}
+
+.pt-\[px\] {
+  padding-top: px;
+}
+
+.pt-\[0\] {
+  padding-top: 0;
+}
+
+.pt-\[-\] {
+  padding-top: -;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2549,6 +2613,10 @@ button svg {
 
 .font-ptnd {
   font-family: Pretendard;
+}
+
+.font-\[\] {
+  font-family: ;
 }
 
 .text-\[0\.625rem\] {
@@ -2765,6 +2833,10 @@ button svg {
   line-height: 80px;
 }
 
+.leading-\[26px\] {
+  line-height: 26px;
+}
+
 .tracking-\[-2px\] {
   letter-spacing: -2px;
 }
@@ -2947,6 +3019,10 @@ button svg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .underline {
@@ -4938,9 +5014,24 @@ input[type="number"]::-webkit-inner-spin-button {
   width: fit-content;
 }
 
+.before\:w-2::before {
+  content: var(--tw-content);
+  width: 0.5rem;
+}
+
+.before\:w-2\.5::before {
+  content: var(--tw-content);
+  width: 0.625rem;
+}
+
 .before\:pr-2::before {
   content: var(--tw-content);
   padding-right: 0.5rem;
+}
+
+.before\:text-left::before {
+  content: var(--tw-content);
+  text-align: left;
 }
 
 .before\:text-center::before {
@@ -4987,6 +5078,11 @@ input[type="number"]::-webkit-inner-spin-button {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(205 195 255 / var(--tw-text-opacity));
+}
+
+.before\:text-\[\]::before {
+  content: var(--tw-content);
+  color: ;
 }
 
 .before\:content-\[\'1\.\'\]::before {
