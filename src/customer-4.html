@@ -123,22 +123,28 @@
                     </div>
                     <div class="flex items-center justify-between mb-4">
                         <label for="select" class="font-normal text-[16px] text-white">분류</label>
-                        <div class="border-[2px] w-[calc(100%-87px)] border-[#7a749a] h-fit rounded-[15px] selectbox hover:cursor-pointer relative">
-                            <div class="w-full h-[38px] leading-[38px] selected-txt text-center px-4 font-semibold text-white text-[16px]">
-                                분류텍스트
-                            </div>
+                        <!-- 230627 변경 -->
+                        <div class="relative w-[calc(100%-87px)] h-10">
+                            <div class="border-[2px] w-full border-[#7a749a] h-fit rounded-[15px] selectbox hover:cursor-pointer absolute inset-0 bg-[#191A32]">
+                                <div class="w-full h-[38px] leading-[38px] selected-txt text-center px-4 font-semibold text-white text-[16px]">
+                                    분류텍스트
+                                </div>
+                                <div class="hidden w-full max-h-[224px] pt-3 pb-3 overflow-y-auto options">
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 1</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 2</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 3</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 4</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 4</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 4</span>
+                                    <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 4</span>
+                                </div>
 
-                            <div class="hidden w-full pt-3 pb-3 overflow-hidden options">
-                                <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 1</span>
-                                <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 2</span>
-                                <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 3</span>
-                                <span class="block w-full option-txt h-[30px] leading-[30px] text-white text-[16px] px-4">뷴류텍스트 4</span>
+                                <svg class="absolute top-[16px] right-[15px] z-10" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 1L8 8L1 1" stroke="#ABADC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </div>
-
-                            <svg class="absolute top-[16px] right-[15px] z-10" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 1L8 8L1 1" stroke="#ABADC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
                         </div>
+                        <!-- 230627 변경 -->
                         <script>
                             const viewSelect = document.querySelector('.selected-txt');
                             const optionCase = document.querySelectorAll('.option-txt');

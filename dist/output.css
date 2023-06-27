@@ -1395,6 +1395,22 @@ button svg {
   max-height: 230px;
 }
 
+.max-h-\[186px\] {
+  max-height: 186px;
+}
+
+.max-h-\[144px\] {
+  max-height: 144px;
+}
+
+.max-h-\[184px\] {
+  max-height: 184px;
+}
+
+.max-h-\[224px\] {
+  max-height: 224px;
+}
+
 .min-h-\[140px\] {
   min-height: 140px;
 }
@@ -2328,6 +2344,15 @@ button svg {
 .bg-\[\#252\] {
   --tw-bg-opacity: 1;
   background-color: rgb(34 85 34 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#25\] {
+  background-color: #25;
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
