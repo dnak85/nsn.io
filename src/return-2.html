@@ -400,19 +400,28 @@
                         <span class="font-semibold">은행선택</span>
                       </dt>
                       <dd class="w-full mt-2">
-                        <div class="w-full selectbox relative h-fit border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-white bg-transparent px-5">
-                          <!-- <input type="text" name="" id="" value="" class="w-full h-[58px] border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-violet-400 bg-transparent px-5" placeholder="은행명"> -->
-                          <div class="selected-txt w-full h-[58px] leading-[58px]">은행명</div>
-                          <div class="hidden w-full pt-3 pb-3 overflow-hidden options">
-                            <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명1</span>
-                            <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명2</span>
-                            <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명3</span>
-                            <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                        <!-- 230627 변경 -->
+                        <div class="relative h-[58px] w-full">
+                          <div class="absolute inset-0 w-full selectbox h-fit border-[1px] border-[#7a7a9a] rounded-[15px] text-[16px] font-semibold text-white px-5 bg-[#252a41]">
+                            <!-- <input type="text" name="" id="" value="" class="w-full h-[58px] border-[2px] border-[#7a749a] rounded-[15px] text-[16px] font-semibold text-violet-400 bg-transparent px-5" placeholder="은행명"> -->
+                            <div class="selected-txt w-full h-[58px] leading-[58px]">은행명</div>
+                            <div class="hidden w-full max-h-[230px] overflow-y-auto pt-3 pb-3 overflow-hidden options">
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명1</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명2</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명3</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                              <span class="block w-full option-txt h-[50px] leading-[50px] text-white text-[16px]">은행명4</span>
+                            </div>
+                            <svg class="absolute top-[25px] right-[15px] z-10" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 1L8 8L1 1" stroke="#ABADC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                           </div>
-                          <svg class="absolute top-[25px] right-[15px] z-10" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 1L8 8L1 1" stroke="#ABADC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
                         </div>
+                        <!-- 230627 변경 -->
                         <script>
                           const viewSelect = document.querySelector('.selected-txt');
                           const optionCase = document.querySelectorAll('.option-txt');

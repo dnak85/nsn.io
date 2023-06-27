@@ -1367,6 +1367,34 @@ button svg {
   height: 100%;
 }
 
+.max-h-\[318px\] {
+  max-height: 318px;
+}
+
+.max-h-\[280px\] {
+  max-height: 280px;
+}
+
+.max-h-\[260px\] {
+  max-height: 260px;
+}
+
+.max-h-\[250px\] {
+  max-height: 250px;
+}
+
+.max-h-\[240px\] {
+  max-height: 240px;
+}
+
+.max-h-\[235px\] {
+  max-height: 235px;
+}
+
+.max-h-\[230px\] {
+  max-height: 230px;
+}
+
 .min-h-\[140px\] {
   min-height: 140px;
 }
@@ -1397,6 +1425,10 @@ button svg {
 
 .min-h-\[360px\] {
   min-height: 360px;
+}
+
+.min-h-\[40px\] {
+  min-height: 40px;
 }
 
 .min-h-\[500px\] {
@@ -2017,6 +2049,11 @@ button svg {
   border-color: rgb(66 72 103 / var(--tw-border-opacity));
 }
 
+.border-\[\#7A749A\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(122 116 154 / var(--tw-border-opacity));
+}
+
 .border-\[\#7B61FF\] {
   --tw-border-opacity: 1;
   border-color: rgb(123 97 255 / var(--tw-border-opacity));
@@ -2090,6 +2127,11 @@ button svg {
 .bg-\[\#03C75A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(3 199 90 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#191A32\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 26 50 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#1A1D2D\] {
@@ -2251,6 +2293,11 @@ button svg {
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -2265,6 +2312,24 @@ button svg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#252a\] {
+  background-color: #252a;
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#252\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 85 34 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -2275,6 +2340,14 @@ button svg {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-100 {
+  --tw-bg-opacity: 1;
+}
+
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
 }
 
 .p-0 {
