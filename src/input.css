@@ -39,7 +39,7 @@ button {
 }
 
 #wrap {
-  @apply relative mx-auto h-full w-full max-w-[475px] bg-[#191A32] lg:left-[293px] lg:border-x-2 lg:border-white lg:overflow-hidden;
+  @apply relative mx-auto h-full w-full max-w-[475px] bg-[#191A32] lg:left-[293px] lg:overflow-hidden lg:border-x-2 lg:border-white;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -1414,4 +1414,28 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 #join #footer address {
   @apply text-white;
+}
+
+.cloud {
+  animation: float 5s linear infinite, drift 5s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

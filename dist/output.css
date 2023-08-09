@@ -1252,6 +1252,10 @@ button svg {
   height: 2.25rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[116\.31px\] {
   height: 116.31px;
 }
@@ -1270,6 +1274,10 @@ button svg {
 
 .h-\[14px\] {
   height: 14px;
+}
+
+.h-\[150px\] {
+  height: 150px;
 }
 
 .h-\[160px\] {
@@ -1966,6 +1974,10 @@ button svg {
 
 .rounded-\[32px\] {
   border-radius: 32px;
+}
+
+.rounded-\[50px\] {
+  border-radius: 50px;
 }
 
 .rounded-\[6px\] {
@@ -3060,6 +3072,10 @@ button svg {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .opacity-70 {
@@ -4998,6 +5014,32 @@ input[type="number"]::-webkit-inner-spin-button {
 #join #footer address {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.cloud {
+  animation: float 5s linear infinite, drift 5s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .placeholder\:text-center::-moz-placeholder {
