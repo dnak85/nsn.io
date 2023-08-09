@@ -31,7 +31,7 @@ button {
 
 /*웹 화면 추가 변경 */
 #only_web {
-  @apply fixed left-1/2 ml-[-293px] hidden h-full w-[585px] flex-col justify-center pl-[65px] lg:flex;
+  @apply fixed left-1/2 ml-[-585px] hidden h-full w-[585px] flex-col justify-center pl-[65px] lg:flex;
 }
 
 #only_web img {
@@ -39,7 +39,7 @@ button {
 }
 
 #wrap {
-  @apply relative mx-auto h-full w-full max-w-[475px] bg-[#191A32] lg:left-[520px] lg:border-x-2 lg:border-white lg:overflow-hidden;
+  @apply relative mx-auto h-full w-full max-w-[475px] bg-[#191A32] lg:left-[293px] lg:border-x-2 lg:border-white lg:overflow-hidden;
 }
 *::-webkit-scrollbar {
   display: none;

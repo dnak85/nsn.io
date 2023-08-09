@@ -3114,7 +3114,7 @@ button {
 #only_web {
   position: fixed;
   left: 50%;
-  margin-left: -293px;
+  margin-left: -585px;
   display: none;
   height: 100%;
   width: 585px;
@@ -3146,7 +3146,7 @@ button {
 
 @media (min-width: 950px) {
   #wrap {
-    left: 520px;
+    left: 293px;
     overflow: hidden;
     border-left-width: 2px;
     border-right-width: 2px;
