@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
   * {
@@ -14,7 +13,7 @@
   }
   html,
   body {
-    @apply fixed h-full w-full overflow-hidden bg-[#191A32];
+    @apply h-full w-full bg-[#191A32] lg:bg-[#EEE7FF];
   }
   img {
     @apply w-full;
@@ -23,11 +22,28 @@
     margin: 0 auto;
   }
 }
+input,
+label,
+select,
+button {
+  cursor: pointer;
+}
+#only_web {
+  @apply fixed left-1/2 ml-[-293px] hidden h-full w-[585px] flex-col justify-center pl-[65px] lg:flex;
+}
+
+#only_web img {
+  width: auto !important;
+}
+
 #wrap {
-  @apply relative mx-auto h-full w-full max-w-[720px] overflow-auto bg-[#191A32];
+  @apply relative mx-auto h-full w-full max-w-[475px] bg-[#191A32] lg:left-[520px] lg:border-x-2 lg:border-white lg:overflow-hidden;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 #header {
-  @apply fixed inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6 font-gm xsm:h-[60px] xsm:px-2 xsm:py-4;
+  @apply sticky inset-0 z-20 flex h-[80px] w-full justify-center bg-[#191A32] px-4 py-6 font-gm xsm:h-[60px] xsm:px-2 xsm:py-4;
 }
 #header .backButton {
   @apply xsm:top-4;
@@ -40,10 +56,39 @@
 }
 
 #container {
-  @apply h-full w-full pt-[80px] xsm:pt-[60px];
+  @apply relative min-h-[calc(100%-80px)] w-full pb-[144px] xsm:pt-[60px];
+}
+.container {
+  width: 250px;
+  height: 140px;
+  overflow: auto;
+}
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.container::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
 }
 #footer {
-  @apply w-full pb-6;
+  @apply absolute bottom-0 left-0 w-full pb-6;
+}
+
+#footer .fnb {
+  @apply mt-[17px] flex justify-center gap-2;
+}
+#footer .fnb a {
+  @apply block text-[12px] leading-[14px] text-[#8994a4];
+}
+address {
+  @apply mt-2 block w-full text-center text-[11px] not-italic leading-[13px] text-[#8994a4];
 }
 
 input[name="typeCheck"] + label {
@@ -274,11 +319,12 @@ textarea:focus {
 .vanilla-calendar-day__btn_holiday {
   @apply text-[#FC5185] !important;
 }
-.vanilla-calendar-day__btn_selected {
-  @apply bg-violet-500  text-white !important;
-}
+
 .vanilla-calendar-day__btn_today {
   @apply bg-sky-100 text-gray-500 !important;
+}
+.vanilla-calendar-day__btn_selected {
+  @apply bg-violet-500  text-white !important;
 }
 .tab button.active {
   @apply rounded-[20px] bg-violet-500  text-[16px] font-semibold text-white;
@@ -295,6 +341,9 @@ textarea:focus {
 #mainCalendar {
   @apply p-0 !important;
 }
+#mainCalendar .vanilla-calendar-day__btn_today {
+  @apply bg-transparent font-dm font-bold text-[#7b61ff] !important;
+}
 #mainCalendar .vanilla-calendar-day__btn_selected {
   @apply bg-[#ffd500] text-white !important;
 }
@@ -303,9 +352,6 @@ textarea:focus {
   @apply font-medium !important;
 }
 
-#mainCalendar .vanilla-calendar-day__btn_today {
-  @apply bg-transparent font-dm font-bold text-[#7b61ff] !important;
-}
 #mainCalendar .vanilla-calendar-wrapper {
   @apply mt-6 !important;
 }
@@ -401,7 +447,7 @@ textarea:focus {
 /* modal css */
 
 .modal__overlay {
-  @apply fixed inset-0 z-30 flex items-center justify-center bg-[#191A32] px-4;
+  @apply fixed inset-0 z-30 flex items-center justify-center bg-[#191A32] px-4 lg:absolute;
 }
 .checking .modal__overlay {
   @apply bg-opacity-80;
@@ -595,7 +641,7 @@ textarea:focus {
 }
 
 #mainHeader {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -612,10 +658,12 @@ textarea:focus {
   height: 74px;
 }
 #mainSection {
-  padding-top: 144px;
+  padding-top: 50px;
+  margin-top: -50px;
   transition: 1s all ease-in;
   overflow-style: initial;
   scrollbar-width: none;
+  min-height: calc(100% - 94px) !important;
 }
 #mainSection.scrolling {
   padding-top: 74px;
@@ -628,6 +676,13 @@ textarea:focus {
   -webkit-appearance: none;
 }
 
+#mainSection #footer {
+  @apply bg-white bg-opacity-50 pt-3 pb-2;
+}
+
+#mainSection #footer .fnb {
+  @apply mt-0;
+}
 .alarm span {
   display: none;
 }
@@ -665,6 +720,8 @@ textarea:focus {
   height: 100%;
   z-index: 10014;
   display: none;
+
+  @apply lg:absolute;
 }
 .modal.active {
   display: block;
@@ -787,10 +844,10 @@ textarea:focus {
   @apply bg-[#7b61ff] bg-opacity-100;
 }
 .msg {
-  @apply relative flex h-[80px] w-full flex-col justify-center rounded-[12px] bg-white bg-opacity-10;
+  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px] bg-white bg-opacity-10 py-[30px];
 }
 .msg span {
-  @apply block h-5 pl-[25px] text-[16px] leading-5 text-white;
+  @apply block min-h-[20px] pl-[25px] text-[16px] leading-5 text-white;
 }
 .msg .bullet {
   @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
@@ -1101,7 +1158,7 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: offcanvas-bottom-reverse 0.45s ease-in-out;
 }
 .offcanvas.left {
-  position: fixed;
+  position: absolute;
   width: 264px;
   height: 100%;
   top: 0;
@@ -1110,8 +1167,10 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 0 !important;
   color: #fff;
   overflow: auto;
+  display: none;
 }
 .offcanvas.left.active {
+  display: block;
   left: 0;
   animation: offcanvas-left 0.45s ease-in-out;
 }
@@ -1340,4 +1399,17 @@ input[type="number"]::-webkit-inner-spin-button {
 .toastjs-btn:hover,
 .toastjs-btn:focus {
   outline: none;
+}
+
+#identification {
+  @apply pb-[144px];
+}
+#login {
+  @apply relative pb-[144px];
+}
+#join #footer .fnb a {
+  @apply text-white;
+}
+#join #footer address {
+  @apply text-white;
 }

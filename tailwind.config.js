@@ -21,6 +21,7 @@ module.exports = {
     },
     screens: {
       xsm: { raw: "(max-width: 280px)" },
+      lg: "950px",
     },
   },
   plugins: [],

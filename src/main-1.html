@@ -22,6 +22,123 @@
 </head>
 
 <body class="h-full">
+  <div id="only_web">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <div class="relative z-40 text">
+      <em class="block text-pink-500 text-[20px] font-black leading-6 vi_title animate__animated animate__bounceInDown">Make appointments fun</em>
+
+      <span class="block w-full mt-5 text-[#271651] text-[40px] font-gm tracking-[-2px] leading-[40px]">
+        <em class="block font-[800] text-[#844EFF] text-[48px] tracking-[-2.4px] leading-[48px] font-gm">노쇼노</em>
+        안전하게 약속하세요
+      </span>
+    </div>
+
+    <div class="relative block w-full mt-5 h-[600px] visual">
+      <div class="absolute z-20 text top-[68px] left-[50px] text-[#eae0ff] text-[16px] font-medium leading-5 ">
+        모르는 타인과의 약속, <br>
+        노쇼노 서비스로 맺어보세요. <br>
+        약속 당일, 맡긴 약속보증금을 <br>
+        안전하게 돌려드립니다.
+      </div>
+      <!-- // -->
+
+      <div class="absolute vi left-[-65px] top-[37px] z-20 inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
+          <circle cx="47" cy="47" r="47" fill="#FF59A9" fill-opacity="0.5" />
+        </svg>
+      </div>
+      <!-- // -->
+      <div class="absolute inset-0 z-10 inline-block vi">
+        <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="140" cy="140" r="140" fill="#8B5CF6" />
+        </svg>
+      </div>
+      <!-- // -->
+      <div class="absolute top-[145px] vi left-0 z-30 inline-block">
+        <img class="w-[116.31px] h-[116.31px]" src="./img/vi__calendar.png" alt="비주얼이미지">
+      </div>
+      <!-- // -->
+      <div class=" absolute top-[135px] vi left-[55px] z-30 inline-block">
+        <img src="./img/vi__diary.png" alt="비주얼이미지">
+      </div>
+      <!-- // -->
+      <div class="absolute top-[27px] left-[372px] vi inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="20" fill="#FFBB8A" fill-opacity="0.5" />
+        </svg>
+      </div>
+      <!-- // -->
+      <div class="absolute top-[300px] left-[45px] vi inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewBox="0 0 156 156" fill="none">
+          <path d="M77.9475 136.493C29.541 133.452 30.6908 111.95 25.9728 99.1936C22.4551 91.8695 23.8805 49.008 28.1769 40.685C30.8463 35.4908 42.5791 25.3176 68.1557 26.1786C124.228 23.2849 136.036 58.3626 134.931 76.2633C136.782 94.7787 127.976 132.746 77.9475 136.493Z" fill="#FB2E86" fill-opacity="0.3" />
+        </svg>
+      </div>
+      <!-- // -->
+      <div class="vi absolute top-[172px] left-[132px] z-20 inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="297" height="295" viewBox="0 0 297 295" fill="none">
+          <path d="M296.338 147.292C296.338 228.531 230.171 294.389 148.549 294.389C66.9267 294.389 0.759033 228.531 0.759033 147.292C0.759033 66.0526 66.9267 0.195068 148.549 0.195068C230.171 0.195068 296.338 66.0526 296.338 147.292Z" fill="#B796FF" fill-opacity="0.5" />
+        </svg>
+      </div>
+      <!-- // -->
+      <div class="absolute top-[123px] left-[298px] vi inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
+          <path d="M12.7455 50.1389C13.3101 20.3086 26.5552 20.4358 34.2677 17.1926C38.674 14.8335 65.0531 14.5545 70.2838 16.9706C73.5478 18.4711 80.1159 25.4075 80.276 41.1489C83.5652 75.5301 62.3262 83.7321 51.2956 83.5355C39.9667 85.1717 16.3962 80.7832 12.7455 50.1389Z" fill="#FEC600" fill-opacity="0.5" />
+        </svg>
+      </div>
+      <!-- // -->
+    </div>
+
+    <script>
+      // 이미지 요소들을 선택합니다.
+      const images = document.querySelectorAll('.vi');
+      // 마우스 움직임에 따른 이미지 이동 감도를 조절하는 상수입니다.
+      const sensitivity = 0.005;
+
+      // 이미지마다 랜덤한 이동 방향을 설정하는 함수
+      function setRandomDirection(image) {
+        // 랜덤한 각도 값을 생성합니다.
+        const angle = Math.random() * 2 * Math.PI;
+        // 랜덤한 거리 값을 생성합니다.
+        const distance = Math.random() * 50 + 10; // 최소 10, 최대 60의 거리로 설정
+
+        // 랜덤한 각도와 거리를 이용하여 이미지의 초기 위치를 설정합니다.
+        // const initialX = Math.cos(angle) * distance;
+        // const initialY = Math.sin(angle) * distance;
+
+        // 이미지에 초기 위치를 적용합니다.
+        // image.style.transform = `translate(${initialX}px, ${initialY}px)`;
+      }
+
+      // 초기 이미지 위치 설정
+      images.forEach((image) => {
+        setRandomDirection(image);
+      });
+
+      // 마우스 움직임 이벤트 리스너를 추가합니다.
+      document.addEventListener('mousemove', (event) => {
+        // 마우스의 X, Y 좌표를 가져옵니다.
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        // 각 이미지마다 마우스와의 상대적인 거리를 계산하여 이동량을 조절합니다.
+        images.forEach((image, index) => {
+          const imageRect = image.getBoundingClientRect();
+          const imageCenterX = imageRect.left + imageRect.width / 2;
+          const imageCenterY = imageRect.top + imageRect.height / 2;
+
+          const deltaX = mouseX - imageCenterX;
+          const deltaY = mouseY - imageCenterY;
+
+          const translateY = deltaY * (index + 1) * sensitivity;
+          const translateX = deltaX * (index + 1) * sensitivity;
+
+          image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+      });
+
+    </script>
+  </div>
+  <!-- // -->
   <div id="wrap" class="">
     <header id="mainHeader">
       <div class="flex flex-wrap items-center content-center justify-between px-4 pt-4">
@@ -70,7 +187,7 @@
     </header>
     <!-- //main header -->
 
-    <section id="mainSection" class="h-full w-full bg-[#EDE9FE]">
+    <section id="mainSection" class="w-full bg-[#EDE9FE]">
       <div class="w-full p-10">
         <button class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] shadow-cs1">
           <span class="inline-block h-5 text-[16px] font-bold leading-5 text-white">약속 만들기 +</span>
@@ -257,29 +374,23 @@
       <div class="h-[128px] w-full"></div>
       <!-- 푸터 여백 -->
 
-      <div id="mainFooter" class="absolute bottom-0 left-0 flex flex-wrap justify-center gap-2 pt-3 pb-2 bg-white bg-opacity-50">
-        <div class="flex justify-center gap-2">
-          <button class="text-[12px] leading-[14px] text-[#50555c]">
-            이용약관
-          </button>
-          <button class="text-[12px] leading-[14px] text-[#50555c]">
-            개인정보처리방침
-          </button>
-        </div>
-        <!-- 이용약관 / 개인정보 -->
+      <footer class="" id="footer">
 
-        <address class="text-[11px] not-italic leading-[13px] text-[#50555c]">
-          (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩)
-          <br />
+        <div class="fnb">
+          <a href="#">이용약관</a>
+          <a href="#" class="font-bold">개인정보처리방침</a>
+        </div>
+        <!-- 하단 메뉴 -->
+
+        <address>
+          (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
           고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
-        </address>
-        <!-- address -->
-
-        <div class="text-[11px] leading-[13px] text-[#8994a4]">
+          <br><br>
           Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
-        </div>
-        <!-- copy -->
-      </div>
+        </address>
+      </footer>
+      <!-- //footer -->
+
     </section>
     <!-- mainSection -->
 

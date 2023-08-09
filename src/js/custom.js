@@ -12,7 +12,7 @@ for (let i = 0; i < dnToggle.length; i++) {
     const dnTarget = document.querySelector(
       _this.getAttribute("data-dn-target")
     );
-    document.body.appendChild(newDiv);
+    document.querySelector('#wrap').appendChild(newDiv);
 
     if (dnTarget.classList.contains("modal")) {
       // modal
