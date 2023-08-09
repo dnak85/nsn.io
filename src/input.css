@@ -28,6 +28,8 @@ select,
 button {
   cursor: pointer;
 }
+
+/*웹 화면 추가 변경 */
 #only_web {
   @apply fixed left-1/2 ml-[-293px] hidden h-full w-[585px] flex-col justify-center pl-[65px] lg:flex;
 }
