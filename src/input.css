@@ -28,13 +28,19 @@ select,
 button {
   cursor: pointer;
 }
-
+* {
+  scroll-behavior: smooth;
+}
 /*웹 화면 추가 변경 */
 #only_web {
   @apply fixed left-1/2 ml-[-585px] hidden h-full w-[585px] flex-col justify-center pl-[65px] lg:flex;
 }
 
 #only_web img {
+  width: auto !important;
+}
+
+#web img {
   width: auto !important;
 }
 
@@ -691,13 +697,13 @@ textarea:focus {
 .alarm.active span {
   display: inline-flex;
 }
-.swiper {
+.swiper.mySwiper {
   width: 100%;
   height: 100%;
   padding-left: 24px;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -707,7 +713,7 @@ textarea:focus {
   width: 104px !important;
 }
 
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1416,26 +1422,135 @@ input[type="number"]::-webkit-inner-spin-button {
   @apply text-white;
 }
 
-.cloud {
-  animation: float 5s linear infinite, drift 5s linear infinite;
+.cloudP {
+  animation: cloudP 10s linear infinite;
+}
+.cloudM {
+  animation: cloudM 10s linear infinite;
 }
 
-@keyframes float {
+.cloudP2 {
+  animation: cloudP 5s linear infinite;
+}
+.cloudM2 {
+  animation: cloudM 5s linear infinite;
+}
+
+@keyframes cloudP {
   0%,
   100% {
-    transform: translateX(-10%);
+    transform: translateX(-1%) translateY(-1%);
   }
   50% {
-    transform: translateX(10%);
+    transform: translateX(1%) translateY(1%);
   }
 }
 
-@keyframes drift {
+@keyframes cloudM {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(1%) translateY(1%);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateX(-1%) translateY(-1%);
   }
+}
+#web_header {
+  @apply fixed inset-0 z-50 flex min-h-[78px] h-fit w-full flex-col items-center justify-center bg-white;
+}
+#web_header nav a {
+  @apply /* hover */ 
+  /* active */
+  /* focus */ relative 
+  h-[40px] px-2 font-lato text-[16px] 
+  leading-[40px] text-[#0D0E43] hover:after:absolute
+  hover:after:bottom-0 hover:after:left-0 hover:after:h-1 hover:after:w-full 
+  hover:after:bg-[#7e33e0] hover:after:content-[''] focus:after:absolute 
+  focus:after:bottom-0 focus:after:left-0 focus:after:h-1
+  focus:after:w-full focus:after:bg-[#7e33e0] focus:after:content-[''] active:after:absolute 
+  active:after:bottom-0 active:after:left-0 active:after:h-1 
+  active:after:w-full active:after:bg-[#7e33e0] active:after:content-[''];
+}
+#web_header nav a:first-child {
+  @apply text-[#FB2E86];
+}
+#web_header nav a.active {
+  @apply after:absolute after:bottom-0 after:left-0 after:block 
+  after:h-1 after:w-full after:bg-[#7e33e0] after:content-[''];
+}
+
+.web_container {
+  @apply relative flex h-full min-h-[860px] w-full items-center justify-center pt-[78px];
+}
+
+.section-container {
+  @apply relative w-[1200px];
+}
+#web_s01 {
+  @apply bg-[#f2f0ff];
+}
+#web_s02 {
+  @apply min-h-[1451px] items-start bg-white pt-0;
+}
+.ws01 {
+  @apply bg-[#A55FFF];
+}
+.ws02 {
+  @apply bg-[#FF4595];
+}
+.ws03 {
+  @apply bg-[#FF8754];
+}
+#web_s04 {
+  @apply h-[calc(100%-187px)] min-h-[946px] bg-[#FF99C5];
+}
+#web_footer {
+  @apply flex h-[187px] w-full flex-col items-center justify-center gap-6 bg-[#151515];
+}
+#web {
+  @apply h-full w-full overflow-y-auto;
+}
+
+.ws_s {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.ws_s .swiper-slide {
+  @apply flex items-center justify-center pt-[78px];
+}
+
+.ws_s .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  @apply bg-gradient-to-r from-[#A55FFF] via-[#FF4595] to-[#FF8754];
+}
+
+.ws_s .swiper-pagination {
+  @apply absolute bottom-[31px] left-1/2 ml-[-542px] inline-flex w-auto items-center gap-[18px] !important;
+}
+.ws_s .swiper-pagination .swiper-pagination-bullet {
+  @apply h-[14px] w-[14px] bg-white opacity-50 !important;
+}
+.ws_s .swiper-pagination .swiper-pagination-bullet-active {
+  @apply h-[14px] w-[34px] rounded-[14px] opacity-100 !important;
+}
+
+.ws_s .swiper-button-next {
+  @apply right-1/2 bottom-[18px] top-auto mr-[364px] h-10 w-10;
+}
+.ws_s .swiper-button-next::after {
+  display: none;
+}
+.ws_s .swiper-button-prev {
+  @apply left-auto right-1/2 bottom-[18px] top-auto mr-[560px] h-10 w-10;
+}
+.ws_s .swiper-button-prev::after {
+  display: none;
 }

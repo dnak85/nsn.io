@@ -18,6 +18,7 @@ module.exports = {
       dm: ["DM Sans"],
       gm: ["GmarketSans"],
       inter: ["Inter"],
+      lato:["Lato"]
     },
     screens: {
       xsm: { raw: "(max-width: 280px)" },
