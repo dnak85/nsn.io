@@ -854,10 +854,6 @@ button svg {
   top: 25px;
 }
 
-.top-\[260px\] {
-  top: 260px;
-}
-
 .top-\[27px\] {
   top: 27px;
 }
@@ -886,6 +882,10 @@ button svg {
   top: 40px;
 }
 
+.top-\[448px\] {
+  top: 448px;
+}
+
 .top-\[580px\] {
   top: 580px;
 }
@@ -908,6 +908,18 @@ button svg {
 
 .top-\[86px\] {
   top: 86px;
+}
+
+.top-\[338px\] {
+  top: 338px;
+}
+
+.top-\[558px\] {
+  top: 558px;
+}
+
+.top-\[658px\] {
+  top: 658px;
 }
 
 .z-10 {
@@ -1540,6 +1552,10 @@ button svg {
   height: 72px;
 }
 
+.h-\[78px\] {
+  height: 78px;
+}
+
 .h-\[80px\] {
   height: 80px;
 }
@@ -1567,18 +1583,6 @@ button svg {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[px\] {
-  height: px;
-}
-
-.h-\[78px\] {
-  height: 78px;
-}
-
-.h-\[\] {
-  height: ;
 }
 
 .max-h-\[224px\] {

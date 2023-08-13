@@ -24,9 +24,11 @@
 <body id="web_w" class="h-full">
 
     <div id="web" class="">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <header id="web_header">
             <div id="floating-pop" class="h-[44px] bg-violet-600 w-full flex justify-center relative items-center">
                 <div class="relative inline-block w-[1200px] h-[44px] leading-[44px] text-center text-[14px] text-white">
@@ -127,17 +129,13 @@
         <!-- // -->
 
 
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+
         <section id="web_s01" class="web_container">
             <div class="flex section-wrap w-[1200px] h-[720px]">
                 <div class="section-content w-[50%] h-full flex flex-col justify-center gap-[86px]">
                     <div class="flex flex-col w-full gap-5">
-                        <strong class="text-[26px] font-[800] text-[#ff519c] block " data-aos="zoom-out-down" data-aos-easing="linear" data-aos-duration="400">Make appointments fun</strong>
-                        <span class="text-black font-gm text-[54px] leading-[54px] tracking-[-2.7px] block w-full">
+                        <strong class="text-[26px] font-[800] text-[#ff519c] block w-full animate__animated animate__lightSpeedInRight">Make appointments fun</strong>
+                        <span class="text-black font-gm text-[54px] leading-[54px] tracking-[-2.7px] block w-full animate__animated animate__lightSpeedInRight animate__delay-1s">
                             노쇼노<br>
                             안전하게 약속하세요
                         </span>
@@ -148,7 +146,7 @@
                         </span>
                     </div>
                     <div>
-                        <button class="px-[48px] h-[50px] rounded-[50px] bg-[#FB2E86] text-white font-bold leading-6 text-[18px]">서비스 둘러보기</button>
+                        <a href="#web_s02" class="block px-[48px] h-[50px] rounded-[50px] bg-[#FB2E86] text-white font-bold leading-[50px] w-fit text-[18px]">서비스 둘러보기</a>
                     </div>
                 </div>
                 <div class="relative w-[50%] h-full section-visual z-10">
@@ -320,13 +318,13 @@
                     </div>
                     <!-- // -->
 
-                    <div class="absolute top-[260px] right-0 flex gap-[22px]">
+                    <div class="absolute top-[338px] right-0 flex gap-[22px]">
                         <div class=""><img src="./img/ws0301.png" alt="골프약속에대한 이미지"></div>
                         <div class=""><img src="./img/ws0302.png" alt="식사약속에대한 이미지"></div>
                     </div>
                     <!--  -->
 
-                    <div class="absolute top-[580px] right-0">
+                    <div class="absolute top-[658px] right-0">
                         <button class="bg-opacity-10 px-[42px] h-[45px] border-[1px] border-[#ff4595] bg-[#fb2e86] rounded-[45px] text-[16px] text-[#ff4595] font-[800]">
                             약속 만들기 →
                         </button>
