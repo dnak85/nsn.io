@@ -1456,41 +1456,40 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 #web_header {
-  @apply fixed inset-0 z-50 flex min-h-[78px] h-fit w-full flex-col items-center justify-center bg-white;
+  @apply fixed inset-0 z-50 flex h-fit min-h-[78px] w-full flex-col items-center justify-center bg-white;
 }
-#web_header nav a {
+#web_header nav button {
   @apply /* hover */ 
   /* active */
   /* focus */ relative 
   h-[40px] px-2 font-lato text-[16px] 
   leading-[40px] text-[#0D0E43] hover:after:absolute
   hover:after:bottom-0 hover:after:left-0 hover:after:h-1 hover:after:w-full 
-  hover:after:bg-[#7e33e0] hover:after:content-[''] focus:after:absolute 
-  focus:after:bottom-0 focus:after:left-0 focus:after:h-1
-  focus:after:w-full focus:after:bg-[#7e33e0] focus:after:content-[''] active:after:absolute 
-  active:after:bottom-0 active:after:left-0 active:after:h-1 
-  active:after:w-full active:after:bg-[#7e33e0] active:after:content-[''];
+  hover:after:bg-[#7e33e0] hover:after:content-[''];
 }
-#web_header nav a:first-child {
+#web_header nav button:first-child {
   @apply text-[#FB2E86];
 }
-#web_header nav a.active {
+#web_header nav button.active {
   @apply after:absolute after:bottom-0 after:left-0 after:block 
   after:h-1 after:w-full after:bg-[#7e33e0] after:content-[''];
 }
 
 .web_container {
-  @apply relative flex h-full min-h-[860px] w-full items-center justify-center pt-[78px];
+  @apply relative flex w-full items-center justify-center pt-[78px];
 }
 
 .section-container {
   @apply relative w-[1200px];
 }
 #web_s01 {
-  @apply bg-[#f2f0ff];
+  @apply h-[100vh] min-h-[860px] bg-[#f2f0ff];
 }
 #web_s02 {
-  @apply min-h-[1451px] items-start bg-white pt-0;
+  @apply flex h-[678px] items-center pt-0;
+}
+#web_s03 {
+  @apply h-[769px] items-start bg-white pt-0;
 }
 .ws01 {
   @apply bg-[#A55FFF];
@@ -1502,7 +1501,7 @@ input[type="number"]::-webkit-inner-spin-button {
   @apply bg-[#FF8754];
 }
 #web_s04 {
-  @apply h-[calc(100%-187px)] min-h-[946px] bg-[#FF99C5];
+  @apply h-[calc(100vh-187px)] min-h-[946px] bg-[#FF99C5];
 }
 #web_footer {
   @apply flex h-[187px] w-full flex-col items-center justify-center gap-6 bg-[#151515];
@@ -1553,4 +1552,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .ws_s .swiper-button-prev::after {
   display: none;
+}
+
+.ws_v .swiper-wrapper {
+  display: block !important;
+  height: 100% !important;
+}
+.ws_v .swiper-wrapper .swiper-slide {
+  height: auto !important;
 }
