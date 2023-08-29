@@ -53,29 +53,33 @@
                         <label for="" class="hidden">주민등록번호</label>
                         <input type="text" class="h-[46px] w-[calc((100%-10px)/2)] px-4 text-[16px] leading-5 text-slate-900" placeholder="940831">
                         <span class="w-2.5">-</span>
+                        <!-- 2023.08.18 수정 -->
                         <div class="relative w-[calc((100%-10px)/2)] px-4 flex gap-1 items-center">
-                            <input type="password" id="pswd" class="w-[calc(100%-102px)] text-slate-900 text-right indfipw" placeholder="●" maxlength="1">
+                            <input type="text" id="pswd" class="w-[calc(100%-102px)] text-slate-900 text-right indfipw" maxlength="1" onInput='toggleLabel()'>
+                            <label for="pswd" id="dummyPw" class="pws-dum">●</label>
                             <label for="pswd" class="flex gap-1 w-[98px]">
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
-                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#0F172A" />
-                                </svg>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
                             </label>
+
+                            <script>
+                                function toggleLabel() {
+                                    const inputField = document.getElementById('pswd');
+                                    const label = document.getElementById('dummyPw');
+
+                                    if (inputField.value) {
+                                        label.style.display = 'none';
+                                    } else {
+                                        label.style.display = 'block';
+                                    }
+                                }
+                            </script>
                         </div>
+                        <!-- 2023.08.18 수정 -->
                     </div>
                 </div>
                 <!--  -->
@@ -95,7 +99,7 @@
                         <label for="chk01">
                             (필수) 본인확인서비스 이용약관
                         </label>
-                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
                     </div>
                     <!--  -->
                     <div class="relative flex justify-between clear-both w-full">
@@ -103,7 +107,7 @@
                         <label for="chk02">
                             (필수) 개인정보 수집/이용동의
                         </label>
-                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
                     </div>
                     <!--  -->
                     <div class="relative flex justify-between clear-both w-full">
@@ -111,7 +115,7 @@
                         <label for="chk03">
                             (필수) 고유식별정보처리 동의
                         </label>
-                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
                     </div>
                     <!--  -->
                     <div class="relative flex justify-between clear-both w-full">
@@ -119,7 +123,7 @@
                         <label for="chk04">
                             (필수) 통신사 이용약관
                         </label>
-                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
                     </div>
                     <!--  -->
                     <div class="relative flex justify-between clear-both w-full">
@@ -127,11 +131,12 @@
                         <label for="chk05">
                             (알뜰폰) 개인정보 제3자 제공 동의
                         </label>
-                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                        <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
                     </div>
                     <!--  -->
                 </div>
-                <!-- 각개 -->
+                <!-- 개편 : 보기버튼 보더 변경
+                 -->
 
                 <script>
                     // vue 대신 스크립트로 전체동의를 해야할 경우 말해주세요. 
@@ -149,13 +154,15 @@
                         </optgroup>
                     </select>
                     <input type="text" placeholder="휴대폰 번호 - 없이 입력" class="text-[16px] text-slate-900 h-full w-[calc(100%-157px)] px-1">
-                    <button class="absolute top-[-1px] right-0 w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px]">인증요청</button>
+                    <button class="shadow-none absolute top-[-1px] right-0 w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px]">인증요청</button>
+                    <!-- 개편 : 버튼 shadow-none 추가 -->
                 </div>
                 <!-- 인증요청 -->
 
                 <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white flex">
                     <input type="text" class="w-[calc(100%-72px)] h-full text-[16px] text-slate-900 pl-4 pr-[100px]" placeholder="000000">
-                    <button class="w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]" onclick="MicroModal.show('dupl')">인증하기</button>
+                    <button class="shadow-none w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]" onclick="MicroModal.show('dupl')">인증하기</button>
+                    <!-- 개편 : 버튼 shadow-none 추가 -->
                     <em class="absolute top-4 time right-[96px] text-[16px] text-slate-900 leading-5 block">05:00</em>
                 </div>
                 <!-- 인증하기 -->
@@ -245,13 +252,13 @@
             <div class="w-full h-[40px]"></div>
 
             <footer id="footer" class="">
-            
+
                 <div class="fnb">
                     <a href="#">이용약관</a>
                     <a href="#" class="font-bold">개인정보처리방침</a>
                 </div>
                 <!-- 하단 메뉴 -->
-            
+
                 <address>
                     (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
                     고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진

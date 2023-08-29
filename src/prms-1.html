@@ -143,22 +143,28 @@
     <header id="header" class="">
       <div class="menu absolute top-6 left-4 flex h-8 flex-wrap content-center text-[24px] text-white">
         <button class="w-6 h-6" data-dn-target="#sideContent" data-dn-toggle="offcanvas">
-          <span class="iconify" data-icon="ri:menu-2-fill"></span>
+          <!-- 개편 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M0 0H24V3H0V0ZM0 10.5H16V13.5H0V10.5ZM0 21H24V24H0V21Z" fill="#0F172A" />
+          </svg>
+          <!-- 개편 -->
         </button>
       </div>
       <!-- //menu -->
 
       <div class="leading-9 title">
-        <span class="text-[24px] text-white">약속 생성</span>
+        <span class="text-[24px] text-slate-900">약속 생성</span>
       </div>
       <!-- //title -->
 
       <div class="absolute flex flex-wrap items-center content-center justify-between gap-3 userable top-6 right-4">
         <div class="inline-block h-6 alarm">
           <a href="">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- 개편 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+            <!-- //개편 -->
           </a>
         </div>
         <!-- //alarm -->
@@ -169,10 +175,11 @@
           </a>
         </div> -->
 
-        <button class="h-8 w-8 rounded-full border-[2px] border-white text-center text-[14px] font-bold text-white">
+        <!-- 개편 -->
+        <button class="h-8 w-8 rounded-full border-[2px] border-slate-900 text-center text-[14px] font-bold text-slate-900 shadow-none">
           My
         </button>
-        <!-- //my -->
+        <!-- //개편 -->
 
 
       </div>
@@ -183,10 +190,11 @@
     <section id="container" class="">
 
       <div class="relative block w-full px-6 calc-height">
-        <div class="pt-[44px] w-full text-center text-white leading-9 text-[36px]">
-          <span class="font-light font-gm">약속유형을<br>선택해주세요.</span>
+        <!-- 개편 -->
+        <div class="pt-[44px] w-full text-center text-indigo-900 leading-9 text-[36px]">
+          <span class="font-gm">약속유형을<br>선택해주세요.</span>
         </div>
-        <!-- text -->
+        <!-- //개편 -->
 
         <div class="w-full pt-[40px] flex flex-wrap justify-center gap-4">
 
@@ -200,11 +208,17 @@
             <img src="./img/chprms12.png" alt="">
           </label>
 
+          <!-- 개편 -->
+          <div class="flex w-full gap-4">
+            <div class="block w-1/2 text-center text-[18px] font-semibold text-black">1:1</div>
+            <div class="block w-1/2 text-center text-[18px] font-semibold text-black">다수형</div>
+          </div>
+
           <div class="hidden w-full mt-8 peer-checked/prmsch01:block">
             <div class="border-[3px] border-[#7B61FF] rounded-[24px] py-4 px-4 w-full flex flex-wrap gap-3">
-              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">두명이서 하는 약속에 사용해요.</span>
-              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">모인 약속보증금은 결제한 멤버들이 돌려받거나 한명에게 몰아줄 수 있어요.</span>
-              <span class="pl-2.5 block text-[#a18eff] text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 개인거래, 개인약속</span>
+              <span class="text-slate-900 before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">두명이서 하는 약속에 사용해요.</span>
+              <span class="text-slate-900 before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">모인 약속보증금은 결제한 멤버들이 돌려받거나 한명에게 몰아줄 수 있어요.</span>
+              <span class="pl-2.5 block text-violet-900 text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 개인거래, 개인약속</span>
             </div>
             <!--  -->
           </div>
@@ -214,16 +228,20 @@
 
           <div class="hidden w-full mt-8 peer-checked/prmsch02:block">
             <div class="border-[3px] border-[#7B61FF] rounded-[24px] py-4 px-4 w-full flex flex-wrap gap-3">
-              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">호스트가 멤버 별 약속지킴여부를 체크해요. <br>(호스트는 약속금을 부담하지 않아요)</span>
-              <span class="text-white before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">약속보증금은 결제한 멤버들이 돌려받거나 호스트에게 보내줄 수 있어요.</span>
-              <span class="pl-2.5 block text-[#a18eff] text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 총무가 있는 동호회, 모임, 산악회 등</span>
+              <span class="text-slate-900 before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">호스트가 멤버 별 약속지킴여부를 체크해요. <br>(호스트는 약속금을 부담하지 않아요)</span>
+              <span class="text-slate-900 before:content-['\00b7'] before:absolute pl-2.5 before:inset-0 before:text-[16px] before:leading-5 before:font-bold text-[16px] leading-5 block relative">약속보증금은 결제한 멤버들이 돌려받거나 호스트에게 보내줄 수 있어요.</span>
+              <span class="pl-2.5 block text-violet-900 text-[14px] leading-4 opacity-70 font-semibold">이럴 때 사용하세요! <br>Ex) 총무가 있는 동호회, 모임, 산악회 등</span>
             </div>
             <!--  -->
+
+            <!-- //개편 -->
 
           </div>
           <!-- 모임형 hidden box -->
 
           <button class="hidden h-[48px] w-[calc(100%-24px)] mx-3 rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs1 mt-[44px] peer-checked/prmsch01:block peer-checked/prmsch02:block mb-[50px]">다음</button>
+
+
         </div>
         <!-- choice -->
 

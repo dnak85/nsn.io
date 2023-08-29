@@ -18,11 +18,14 @@ module.exports = {
       dm: ["DM Sans"],
       gm: ["GmarketSans"],
       inter: ["Inter"],
-      lato:["Lato"]
+      lato: ["Lato"],
     },
     screens: {
       xsm: { raw: "(max-width: 280px)" },
       lg: "950px",
+    },
+    animation: {
+      "spin-slow": "spin 3s linear infinite",
     },
   },
   plugins: [],

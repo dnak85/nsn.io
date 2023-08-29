@@ -12,7 +12,7 @@ for (let i = 0; i < dnToggle.length; i++) {
     const dnTarget = document.querySelector(
       _this.getAttribute("data-dn-target")
     );
-    document.querySelector('#wrap').appendChild(newDiv);
+    document.querySelector("#wrap").appendChild(newDiv);
 
     if (dnTarget.classList.contains("modal")) {
       // modal
@@ -45,8 +45,10 @@ for (let i = 0; i < dnToggle.length; i++) {
       );
     } else if (dnTarget.classList.contains("offcanvas")) {
       //offcanvas
+      document.body.classList.add("overflow-hidden");
       dnTarget.classList.add("active");
       newDiv.classList.add("active");
+
       newDiv.animate(
         [
           {
@@ -90,8 +92,11 @@ for (let i = 0; i < dnToggle.length; i++) {
     newDiv.addEventListener("click", () => {
       if (dnTarget.classList.contains("offcanvas")) {
         // offcanvas clos
-        
-        dnTarget.animate([{ left: 0 }, { left: '-' + dnTarget.offsetWidth + 'px' }], 250);
+        document.body.classList.remove("overflow-hidden");
+        // dnTarget.animate(
+        //   [{ left: 0 }, { left: "-" + dnTarget.offsetWidth + "px" }],
+        //   250
+        // );
         setTimeout(() => {
           dnTarget.classList.remove("active");
         }, 200);
@@ -213,6 +218,7 @@ for (let i = 0; i < btnClose.length; i++) {
         newDiv.classList.remove("active");
       }, 350);
     } else if (eventTarget.classList.contains("dropdown")) {
+      document.body.classList.remove("overflow-hidden");
       eventTarget.animate(
         [
           { opacity: 1, height: "104px" },
@@ -226,10 +232,11 @@ for (let i = 0; i < btnClose.length; i++) {
         eventTarget.classList.add("hidden");
       }, 250);
     } else if (eventTarget.classList.contains("offcanvas")) {
-      eventTarget.animate(
-        [{ left: 0 }, { left: "-" + eventTarget.offsetWidth + "px" }],
-        250
-      );
+      document.body.classList.remove("overflow-hidden");
+      // eventTarget.animate(
+      //   [{ left: 0 }, { left: "-" + eventTarget.offsetWidth + "px" }],
+      //   250
+      // );
       setTimeout(() => {
         eventTarget.classList.remove("active");
       }, 200);
