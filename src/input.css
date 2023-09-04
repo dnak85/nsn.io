@@ -66,7 +66,7 @@ body.overflow-hidden #wrap {
   @apply font-gm xsm:text-[18px];
 }
 #header .userable {
-  @apply xsm:top-4 xsm:right-2.5 xsm:gap-1;
+  @apply xsm:right-2.5 xsm:top-4 xsm:gap-1;
 }
 
 #container {
@@ -293,7 +293,6 @@ textarea:focus {
   width: calc(100% - 39px);
 }
 
-
 .vanilla-calendar-week__day {
   @apply text-[16px] font-normal text-[#7B61FF] !important;
 }
@@ -472,7 +471,7 @@ textarea:focus {
 }
 
 .modal__container {
-  @apply relative w-full rounded-[12px] bg-[#252A41] py-8 px-5;
+  @apply relative w-full rounded-[12px] bg-[#252A41] px-5 py-8;
 }
 .cancel .modal__container {
   @apply px-0;
@@ -490,7 +489,7 @@ textarea:focus {
 }
 
 .modal__close {
-  @apply absolute top-5 right-4 block h-5 w-5;
+  @apply absolute right-4 top-5 block h-5 w-5;
 }
 .modal__close:focus,
 .modal__close:active {
@@ -709,7 +708,7 @@ textarea:focus {
 }
 
 #mainSection #footer {
-  @apply bg-white bg-opacity-50 pt-3 pb-2;
+  @apply bg-white bg-opacity-50 pb-2 pt-3;
 }
 
 #mainSection #footer .fnb {
@@ -853,7 +852,7 @@ textarea:focus {
 .state-box.waitC .icon::after,
 .state-box.waitR .icon::after,
 .state-box.waitP .icon::after {
-  @apply absolute top-2 left-2 h-2 w-2 rounded-full content-[''];
+  @apply absolute left-2 top-2 h-2 w-2 rounded-full content-[''];
 }
 .state-box.waitA .icon::after {
   @apply bg-[#72ffcc];
@@ -878,11 +877,11 @@ textarea:focus {
 .msg.bgmsg {
   @apply bg-[#5742C3] bg-opacity-100;
 }
-.msg.bgmsg span{
-  @apply text-white
+.msg.bgmsg span {
+  @apply text-white;
 }
 .msg {
-  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px] py-[30px] bg-white;
+  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px] bg-white py-[30px];
 }
 .msg span {
   @apply block min-h-[20px] pl-[25px] text-[16px] leading-5 text-slate-900;
@@ -891,7 +890,7 @@ textarea:focus {
   @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
 }
 .msg .time {
-  @apply absolute bottom-[10px] right-4 text-[12px] text-black font-bold;
+  @apply absolute bottom-[10px] right-4 text-[12px] font-bold text-black;
 }
 .msg.bgmsg .time {
   @apply text-white;
@@ -941,7 +940,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .next {
-  @apply relative h-[42px] pr-[6px] pl-[16px];
+  @apply relative h-[42px] pl-[16px] pr-[6px];
 }
 .next-1:before {
   @apply absolute left-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
@@ -1221,7 +1220,8 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0;
 }
 .offcanvas.left.active {
-  width: 264px;
+  width: 100%;
+  max-width: 471px;
   padding: 0 16px;
   opacity: 1;
 
@@ -1286,6 +1286,9 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: fadeout 0.5s;
   font-weight: normal;
 }
+.g-txt.inbgBox {
+  @apply border-[1px] border-violet-100;
+}
 .g-txt.active {
   display: block;
   animation: fadein 0.5s;
@@ -1300,6 +1303,9 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 50%;
   margin-left: -12px;
   top: -11px;
+}
+.g-txt.inbgBox:after {
+  display:none;
 }
 
 @keyframes loading {
@@ -1600,13 +1606,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .ws_s .swiper-button-next {
-  @apply right-1/2 bottom-[18px] top-auto mr-[364px] h-10 w-10;
+  @apply bottom-[18px] right-1/2 top-auto mr-[364px] h-10 w-10;
 }
 .ws_s .swiper-button-next::after {
   display: none;
 }
 .ws_s .swiper-button-prev {
-  @apply left-auto right-1/2 bottom-[18px] top-auto mr-[560px] h-10 w-10;
+  @apply bottom-[18px] left-auto right-1/2 top-auto mr-[560px] h-10 w-10;
 }
 .ws_s .swiper-button-prev::after {
   display: none;
@@ -1641,13 +1647,12 @@ input[type="number"]::-webkit-inner-spin-button {
   @apply shadow-none;
 }
 
-
 .loader {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   display: block;
-  margin:0 auto;
+  margin: 0 auto;
   position: relative;
   color: black;
   left: -100px;
@@ -1657,69 +1662,43 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @keyframes shadowRolling {
   0% {
-    box-shadow: 
-    0px 0 rgba(209, 69, 255, 0), 
-    0px 0 rgba(209, 69, 255, 0), 
-    0px 0 rgba(209, 69, 255, 0), 
-    0px 0 rgba(209, 69, 255, 0);
+    box-shadow: 0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0);
   }
   12% {
-    box-shadow: 
-    100px 0 #D145FF, 
-    0px 0 rgba(209, 69, 255, 0),
-    0px 0 rgba(209, 69, 255, 0), 
-    0px 0 rgba(209, 69, 255, 0);
+    box-shadow: 100px 0 #d145ff, 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0);
   }
   25% {
-    box-shadow: 
-    120px 0 #D145FF, 
-    100px 0 #D145FF, 
-    0px 0 rgba(209, 69, 255, 0),
-    0px 0 rgba(209, 69, 255, 0);
+    box-shadow: 120px 0 #d145ff, 100px 0 #d145ff, 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0);
   }
   36% {
-    box-shadow: 
-    140px 0 #D145FF, 
-    120px 0 #D145FF, 
-    100px 0 #D145FF, 
-    0px 0 rgba(209, 69, 255, 0);
+    box-shadow: 140px 0 #d145ff, 120px 0 #d145ff, 100px 0 #d145ff,
+      0px 0 rgba(209, 69, 255, 0);
   }
   50% {
-    box-shadow: 
-    160px 0 #D145FF, 
-    140px 0 #D145FF, 
-    120px 0 #D145FF, 
-    100px 0 #D145FF;
+    box-shadow: 160px 0 #d145ff, 140px 0 #d145ff, 120px 0 #d145ff,
+      100px 0 #d145ff;
   }
   62% {
-    box-shadow: 
-    180px 0 rgba(209, 69, 255, 0),
-    160px 0 #D145FF, 
-    140px 0 #D145FF, 
-    120px 0 #D145FF;
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 160px 0 #d145ff, 140px 0 #d145ff,
+      120px 0 #d145ff;
   }
   75% {
-    box-shadow: 
-    180px 0 rgba(209, 69, 255, 0),
-    180px 0 rgba(209, 69, 255, 0),
-    160px 0 #D145FF, 120px 0 #D145FF;
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      160px 0 #d145ff, 120px 0 #d145ff;
   }
   87% {
-    box-shadow:
-    180px 0 rgba(209, 69, 255, 0),
-    180px 0 rgba(209, 69, 255, 0),
-    180px 0 rgba(209, 69, 255, 0),
-    160px 0 #D145FF;
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      180px 0 rgba(209, 69, 255, 0), 160px 0 #d145ff;
   }
   100% {
-    box-shadow: 
-    180px 0 rgba(209, 69, 255, 0), 
-    180px 0 rgba(209, 69, 255, 0),
-    180px 0 rgba(209, 69, 255, 0), 
-    180px 0 rgba(209, 69, 255, 0);
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0);
   }
 }
 
-.avataIcon{
-  @apply border-[2px] border-violet-100
+.avataIcon {
+  @apply border-[2px] border-violet-100;
 }

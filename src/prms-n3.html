@@ -78,63 +78,28 @@
                 <!-- 모임형 약속 -->
                 <div class="flex flex-wrap w-full mt-8">
                     <div class="flex justify-center w-full">
-                        <strong class="text-[36px] font-gm text-indigo-900 font-medium">모임형 약속</strong>
+                        <strong class="text-[36px] font-gm text-indigo-900 font-medium">1:1약속-선입금형</strong>
                     </div>
 
                     <!-- 돌려받기 선택 -->
-                    <div class="block w-full mt-8  min-h-[470px]">
-                        <div class="flex flex-wrap justify-center w-full gap-5">
+                    <div class="block w-full mt-[50px] min-h-[470px] ">
+                        <p class="text-[24px] font-semibold text-slate-900 w-full text-center">약속보증금은 누가 결제하나요?</p>
+                        <div class="flex flex-wrap justify-center w-full gap-5 mt-6">
                             <input type="radio" name="returnCheck" id="r_member" class="hidden peer/member" checked>
                             <label for="r_member" class="
                           peer-checked/member:bg-[#7B61FF] peer-checked/member:text-white
-                            px-4 h-[51px] flex items-center min-w-[115px] font-semibold text-[16px] text-[#4C1D95] border-[2px] border-[#7B61FF] rounded-[32px] shadow-cs4">
-                                참석멤버 돌려받기
+                            h-[99px] flex items-center min-w-[160px] font-semibold text-[16px] text-[#4C1D95] border-[2px] border-[#7B61FF] rounded-[32px] shadow-cs4 justify-center">
+                                호스트 본인
                             </label>
                             <input type="radio" name="returnCheck" id="r_host" class="hidden peer/host">
                             <label for="r_host" class="
                             peer-checked/host:bg-[#7B61FF] peer-checked/host:text-white 
-                            px-4 h-[51px] flex items-center min-w-[115px] font-semibold text-[16px] text-[#4C1D95] border-[2px] border-[#7B61FF] rounded-[32px] shadow-cs4">
-                                호스트가 모아 받기
+                            h-[99px] flex items-center min-w-[160px] font-semibold text-[16px] text-[#4C1D95] border-[2px] border-[#7B61FF] rounded-[32px] shadow-cs4 justify-center">
+                                게스트(약속상대)
                             </label>
-
-                            <div class="hidden w-full px-3 py-6 peer-checked/member:block border-[3px] border-[#7b61ff] rounded-[24px] mt-7 mx-4">
-                                <div class="w-full text-[16px] text-slate-900">
-                                    선택하신 ‘모임형_보증금’ 조건은 아래와 같습니다.
-                                    약속 만들기 전 숙지하시기 바랍니다.
-                                </div>
-
-                                <div class="w-full mt-4">
-                                    <strong class="block w-full text-[16px] text-[#4c1d95] font-[800]">알아두세요!</strong>
-                                    <span class="block w-full text-[14px] leading-[17px] text-[#4c1d95] font-semibold">
-                                        ①약속을 지킨 것으로 확인된 멤버들의 보증금을 돌려줍니다. <br>
-                                        ②불참멤버의 보증금은 호스트에게 입금됩니다. <br>
-                                        ③호스트의 노쇼 또는 천재지변 등에 의해 약속 자체가 취소되면 결제했던 금액은 돌려받습니다. <br>
-                                        ④양쪽이 동일한 응답을 해야 입금이 진행되며, 서로 다른 응답 시 입금이 보류됩니다.
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="hidden w-full px-3 py-6 peer-checked/host:block border-[3px] border-[#7b61ff] rounded-[24px] mt-7 mx-4">
-                                <div class="w-full text-[16px] text-slate-900">
-                                    선택하신 ‘모임형_집금형’ 조건은 아래와 같습니다.
-                                    약속 만들기 전 숙지하시기 바랍니다.
-                                </div>
-
-                                <div class="w-full mt-4">
-                                    <strong class="block w-full text-[16px] text-[#4c1d95] font-[800]">알아두세요!</strong>
-                                    <span class="block w-full text-[14px] leading-[17px] text-[#4c1d95] font-semibold">
-                                        ①약속이 진행되면 모여진 보증금은 모두 호스트에게 입금됩니다. <br>
-                                        ②각 멤버들의 참석 여부와 무관하게 호스트에게 입금됩니다. <br>
-                                        ③다만, 호스트의 책임 또는 천재지변 등에 의해 약속 자체가 취소되면 멤버들에게 입금했던 금액을 돌려줍니다. <br>
-                                        ④양쪽이 동일한 응답을 해야 입금이 진행되며, 서로 다른 응답 시 입금이 보류됩니다.
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- // -->
                         </div>
 
-                        <div class="relative flex justify-center w-full mt-4 mb-6">
+                        <div class="relative flex justify-center w-full mt-8 mb-6">
                             <input type="checkbox" name="" id="prmAgree" class="indv absolute top-0 left-[-9999em]">
                             <label for="prmAgree" class="flex flex-wrap content-center items-center gap-2 font-ptnd text-[16px] leading-7 text-slate-900 xsm:gap-1 xsm:text-[12px]">위 내용을 숙지하였으며 동의합니다.</label> <!-- 개편: 텍스트 색상변경 -->
                         </div>
