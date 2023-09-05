@@ -471,7 +471,7 @@ textarea:focus {
 }
 
 .modal__container {
-  @apply relative w-full rounded-[12px] bg-[#252A41] px-5 py-8;
+  @apply relative w-full rounded-[12px] bg-[#5742C3] px-5 py-8;
 }
 .cancel .modal__container {
   @apply px-0;
@@ -1287,7 +1287,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: normal;
 }
 .g-txt.inbgBox {
-  @apply border-[1px] border-violet-100;
+  @apply bg-[#CDC3FF] text-violet-900;
 }
 .g-txt.active {
   display: block;
@@ -1304,8 +1304,19 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-left: -12px;
   top: -11px;
 }
+.g-txt.inbgBox span {
+  display: block;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid #cdc3ff;
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 16px);
+  z-index: 20;
+}
 .g-txt.inbgBox:after {
-  display:none;
+  display: none;
 }
 
 @keyframes loading {

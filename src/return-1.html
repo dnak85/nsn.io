@@ -74,16 +74,16 @@
 
     <section id="container" class="">
       <div class="block w-full">
-        <div class="block w-full px-7"> <!-- 개편 px-4 ->7 -->
+        <div class="block w-full mt-10 px-7"> <!-- 개편 px-4 ->7 -->
           <div class="block w-full inputName">
-            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full border-b-[3px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900" disabled>
+            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900">
           </div>
           <!-- // 입력  개편 -->
         </div>
         <!-- // 약속명 -->
 
         <!-- 반환금 정보 -->
-        <div class="w-full px-4 mt-8">
+        <div class="w-full px-4 mt-[25px]">
 
           <!-- 
             개편 내용 
@@ -92,7 +92,7 @@
             dt =  pl추가 text-white span 폰트굵기 변경
            -->
           <!-- dl -->
-          <dl class="flex h-fit w-full flex-wrap justify-start gap-x-3 gap-y-3 overflow-hidden rounded-[12px] bg-[#5742C3] px-3 py-6 xsm:px-2 xsm:py-3">
+          <dl class="flex h-fit w-full flex-wrap justify-start gap-x-3 gap-y-3 overflow-hidden rounded-[12px] bg-[#5742C3] px-3 py-6 xsm:px-2 xsm:py-3 shadow-cs4">
             <!-- start -->
 
             <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
@@ -119,7 +119,7 @@
               <span class="flex font-inter h-[40px] w-fit min-w-[82px] flex-wrap content-center items-center gap-6 rounded-[8px] 
               px-4 text-[20px] font-semibold leading-[40px] after:mt-[-4px] after:block after:h-2 after:w-2 after:rotate-45 after:border-[.106em] 
               after:border-l-0 after:border-t-0 after:border-[#ABADC6;] after:content-['']">3</span>
-              <span>
+              <span class="gswitch">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -129,7 +129,23 @@
 
 
             <dd class="w-full h-fit">
-              <span class="mt-1 block h-[14px] w-full text-[14px] leading-[17px] text-[#F472B6] pl-1 font-[800]">* 약속을 맺지 않은 멤버가 있습니다.</span>
+              <div class="top-[-10px] g-txt inbgBox">
+                체결대기중인 멤버명을 클릭해 약속링크를 복사할 수 있어요
+              
+                <span></span>
+              </div>
+              <!-- // -->
+              
+              <script>
+                const gswitch = document.querySelectorAll('.gswitch');
+                gswitch.forEach(i => {
+                  i.addEventListener('click', () => {
+                    document.querySelector('.g-txt').classList.toggle('active');
+                  });
+
+                })
+              </script>
+              <span class="mt-1 block h-[14px] w-full text-[14px] leading-[17px] text-[#FF8AC7] pl-1 font-[800]">* 약속을 맺지 않은 멤버가 있습니다.</span>
 
               <!-- start -->
               <div class="mt-7 mb-3 min-h-[140px] w-full rounded-[10px] border-[2px] border-dashed border-[#CDC3FF] p-6">
