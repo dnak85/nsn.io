@@ -710,6 +710,10 @@ button svg {
   left: 55px;
 }
 
+.left-\[75\%\] {
+  left: 75%;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -764,6 +768,10 @@ button svg {
 
 .right-\[15px\] {
   right: 15px;
+}
+
+.right-\[75\%\] {
+  right: 75%;
 }
 
 .right-\[8px\] {
@@ -926,6 +934,10 @@ button svg {
   top: 40px;
 }
 
+.top-\[45px\] {
+  top: 45px;
+}
+
 .top-\[626px\] {
   top: 626px;
 }
@@ -952,62 +964,6 @@ button svg {
 
 .top-\[86px\] {
   top: 86px;
-}
-
-.top-\[50\] {
-  top: 50;
-}
-
-.top-\[50px\] {
-  top: 50px;
-}
-
-.top-\[0\] {
-  top: 0;
-}
-
-.left-\[25\%\] {
-  left: 25%;
-}
-
-.left-\[23\%\] {
-  left: 23%;
-}
-
-.right-\[23\%\] {
-  right: 23%;
-}
-
-.right-\[2\%\] {
-  right: 2%;
-}
-
-.right-\[20\%\] {
-  right: 20%;
-}
-
-.left-\[20\%\] {
-  left: 20%;
-}
-
-.left-\[75\%\] {
-  left: 75%;
-}
-
-.right-\[75\%\] {
-  right: 75%;
-}
-
-.top-\[43px\] {
-  top: 43px;
-}
-
-.top-\[4px\] {
-  top: 4px;
-}
-
-.top-\[45px\] {
-  top: 45px;
 }
 
 .z-10 {
@@ -2504,10 +2460,6 @@ button svg {
 
 .border-double {
   border-style: double;
-}
-
-.border-none {
-  border-style: none;
 }
 
 .border-\[\#3E335F\] {
@@ -4019,7 +3971,7 @@ input[type="radio"] + label.prmschr1:after {
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  background-color: #DDD9F1;
+  background-color: #ddd9f1;
   background-image: url(../src/img/chprms11.png);
   background-repeat: no-repeat;
   background-size: 70% auto;
@@ -4036,7 +3988,7 @@ input[type="radio"] + label.prmschr2:after {
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  background-color: #DDD9F1;
+  background-color: #ddd9f1;
   background-image: url(../src/img/chprms12.png);
   background-repeat: no-repeat;
   background-size: 70% auto;
@@ -4066,6 +4018,17 @@ input[type="radio"] + label.prmschr:before {
   );
   z-index: 1;
   box-shadow: 0px 8px 8px 0px #ccbaf4;
+}
+
+input.prmschrdo:after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background: #fff;
+  display: block;
+  position: absolute;
+  z-index: 20;
 }
 
 .progress {
@@ -6569,6 +6532,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.checked\:block:checked {
+  display: block;
 }
 
 .hover\:cursor-pointer:hover {
