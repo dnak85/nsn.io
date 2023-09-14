@@ -2061,6 +2061,30 @@ button svg {
   width: 100%;
 }
 
+.w-\[5px\] {
+  width: 5px;
+}
+
+.w-\[105px\] {
+  width: 105px;
+}
+
+.w-\[calc\(100\%-187px\)\] {
+  width: calc(100% - 187px);
+}
+
+.w-\[95px\] {
+  width: 95px;
+}
+
+.w-\[calc\(100\%-17px\)\] {
+  width: calc(100% - 17px);
+}
+
+.w-\[calc\(100\%-177px\)\] {
+  width: calc(100% - 177px);
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
