@@ -129,7 +129,7 @@ input[type="radio"] + label.prmschr1:after {
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  background-color: #ede9fe;
+  background-color: #DDD9F1;
   background-image: url(../src/img/chprms11.png);
   background-repeat: no-repeat;
   background-size: 70% auto;
@@ -145,7 +145,7 @@ input[type="radio"] + label.prmschr2:after {
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  background-color: #ede9fe;
+  background-color: #DDD9F1;
   background-image: url(../src/img/chprms12.png);
   background-repeat: no-repeat;
   background-size: 70% auto;
@@ -161,10 +161,10 @@ input[type="radio"]:checked + label.prmschr:after {
 input[type="radio"] + label.prmschr:before {
   position: absolute;
   content: "";
-  top: -3px;
-  left: -3px;
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
+  top: -0px;
+  left: -0px;
+  width: calc(100%);
+  height: calc(100%);
   border-radius: 24px;
   background: rgb(252, 81, 133);
   background: linear-gradient(
@@ -875,22 +875,22 @@ textarea:focus {
   @apply block;
 }
 .msg.bgmsg {
-  @apply bg-[#5742C3] bg-opacity-100;
+  @apply bg-[#7B61FF];
 }
 .msg.bgmsg span {
   @apply text-white;
 }
 .msg {
-  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px] bg-white py-[30px];
+  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px]  border-[2px] border-[#7b61ff] px-[25px] py-[30px] shadow-cs4;
 }
 .msg span {
-  @apply block min-h-[20px] pl-[25px] text-[16px] leading-5 text-slate-900;
+  @apply block min-h-[20px] text-[16px] leading-5 text-violet-900;
 }
 .msg .bullet {
   @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
 }
 .msg .time {
-  @apply absolute bottom-[10px] right-4 text-[12px] font-bold text-black;
+  @apply absolute bottom-[10px] right-4 text-[12px] text-violet-900;
 }
 .msg.bgmsg .time {
   @apply text-white;
@@ -1715,8 +1715,4 @@ input[type="number"]::-webkit-inner-spin-button {
     box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
       180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0);
   }
-}
-
-.avataIcon {
-  @apply border-[2px] border-violet-100;
 }

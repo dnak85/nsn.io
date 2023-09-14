@@ -192,12 +192,30 @@
 
             <script>
               const gswitch = document.querySelectorAll('.gswitch');
-              gswitch.forEach(i => {
-                i.addEventListener('click', () => {
-                  i.nextElementSibling.classList.toggle('active');
+
+                // 문서 전체에 클릭 이벤트 리스너를 추가
+                document.addEventListener('click', (event) => {
+                  // 클릭된 요소가 .gswitch 또는 .gswitch의 자식 요소인지 확인
+                  const isGswitchOrChild = Array.from(gswitch).some((element) =>
+                    element.contains(event.target)
+                  );
+
+                  // 클릭된 요소가 .gswitch 이외의 부분이고 .gswitch 요소의 자식 요소가 아니면 active 클래스 제거
+                  if (!isGswitchOrChild) {
+                    gswitch.forEach((i) => {
+                      i.nextElementSibling.classList.remove('active');
+                    });
+                  }
                 });
 
-              })
+                // .gswitch 요소에 대한 클릭 이벤트 처리
+                gswitch.forEach((i) => {
+                  i.addEventListener('click', () => {
+                    i.nextElementSibling.classList.toggle('active');
+                  });
+                });
+
+              
             </script>
           </div>
           <!-- //check -->
