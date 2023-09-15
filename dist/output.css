@@ -1936,10 +1936,6 @@ button svg {
   width: 75%;
 }
 
-.w-\[75px\] {
-  width: 75px;
-}
-
 .w-\[80px\] {
   width: 80px;
 }
@@ -1954,6 +1950,10 @@ button svg {
 
 .w-\[90px\] {
   width: 90px;
+}
+
+.w-\[95px\] {
+  width: 95px;
 }
 
 .w-\[98px\] {
@@ -2000,8 +2000,8 @@ button svg {
   width: calc(100% - 155px);
 }
 
-.w-\[calc\(100\%-157px\)\] {
-  width: calc(100% - 157px);
+.w-\[calc\(100\%-177px\)\] {
+  width: calc(100% - 177px);
 }
 
 .w-\[calc\(100\%-240px\)\] {
@@ -2059,30 +2059,6 @@ button svg {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[5px\] {
-  width: 5px;
-}
-
-.w-\[105px\] {
-  width: 105px;
-}
-
-.w-\[calc\(100\%-187px\)\] {
-  width: calc(100% - 187px);
-}
-
-.w-\[95px\] {
-  width: 95px;
-}
-
-.w-\[calc\(100\%-17px\)\] {
-  width: calc(100% - 17px);
-}
-
-.w-\[calc\(100\%-177px\)\] {
-  width: calc(100% - 177px);
 }
 
 .min-w-\[100px\] {

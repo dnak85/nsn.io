@@ -63,20 +63,11 @@ for (let i = 0; i < dnToggle.length; i++) {
     } else if (dnTarget.classList.contains("dropdown")) {
       //dropdown
       if (dnTarget.classList.contains("show")) {
-        dnTarget.animate(
-          [
-            { opacity: 1, height: "104px" },
-            { opacity: 0, height: 0 },
-          ],
-          200
-        );
-        dnTarget.classList.add("h-0");
         dnTarget.classList.remove("show");
-        setTimeout(() => {
-          dnTarget.classList.add("hidden");
-        }, 250);
+        dnTarget.classList.add("hidden");
       } else {
         dnTarget.classList.remove("hidden");
+        dnTarget.classList.add("show");
         dnTarget.animate(
           [
             { opacity: 0, height: 0 },
@@ -84,8 +75,8 @@ for (let i = 0; i < dnToggle.length; i++) {
           ],
           200
         );
-        dnTarget.classList.remove("h-0");
-        dnTarget.classList.add("show");
+        dnTarget.style.opacity = "1";
+        dnTarget.style.height = "104px";
       }
     }
 
