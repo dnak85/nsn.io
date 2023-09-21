@@ -12,7 +12,7 @@
   }
   html,
   body {
-    @apply h-full w-full bg-[#EDE9FE] lg:bg-[#EEE7FF];
+    @apply h-full w-full bg-[#EDE9FE];
   }
   img {
     @apply w-full;
@@ -34,6 +34,10 @@ button {
 
 button {
   box-shadow: 0px 8px 8px 0px rgba(57, 66, 106, 0.2);
+  cursor:pointer;
+}
+a{
+  cursor:pointer;
 }
 /*웹 화면 추가 변경 */
 #only_web {
@@ -913,31 +917,32 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .cs-banner {
-  background: linear-gradient(
-    278.31deg,
-    #563dd9 0.03%,
-    #af2bd2 47.9%,
-    #bd355e 97.82%
+  background: var(
+    --mg-violet-01,
+    linear-gradient(278deg, #7b61ff 0.03%, #d665f4 47.9%, #fc5185 97.82%),
+    #1c1c1c
   );
+  /* shadow-btn-light */
+  box-shadow: 0px 8px 8px 0px #ccbaf4;
 }
 
 .board-tabs button {
   @apply shadow-none;
 }
 .board-tabs button.active {
-  @apply rounded-[99px] bg-slate-900 text-white;
+  @apply rounded-[99px] bg-[#7B61FF] font-semibold text-white;
 }
 .collapse-box {
 }
 .pagingNum {
-  @apply h-[42px] w-[42px] text-[14px] font-semibold leading-[17px] text-slate-900;
+  @apply h-[44px] w-[44px] text-[14px] font-semibold leading-[17px] text-[#6D6C95];
 }
 
 .pagingNum.active {
-  @apply bg-violet-600 text-white;
+  @apply bg-[#7B61FF] text-white;
 }
 .prev {
-  @apply relative h-[42px] pl-[6px] pr-[16px];
+  @apply relative h-[38px] pl-[6px] pr-[16px];
 }
 .prev-1:after {
   @apply absolute right-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
@@ -951,7 +956,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .next {
-  @apply relative h-[42px] pl-[16px] pr-[6px];
+  @apply relative h-[38px] pl-[16px] pr-[6px];
 }
 .next-1:before {
   @apply absolute left-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
