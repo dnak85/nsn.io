@@ -984,21 +984,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 @keyframes move-right {
   from {
-    left: -90px;
+    left: -115px;
     opacity: 0;
   }
   to {
-    left: 90px;
+    left: 115px;
     opacity: 1;
   }
 }
 @keyframes move-left {
   from {
-    left: 90px;
+    left: 115px;
     opacity: 0;
   }
   to {
-    left: 87px;
+    left: 112px;
     opacity: 1;
   }
 }
@@ -1007,24 +1007,24 @@ input[type="number"]::-webkit-inner-spin-button {
     height: 0;
   }
   50% {
-    height: 170px;
+    height: 150px;
   }
   100% {
-    height: 150px;
+    height: 123px;
   }
 }
 @keyframes bounce2 {
   0% {
-    left: -40px;
-    bottom: -105px;
+    left: -90px;
+    bottom: -95px;
   }
-  50% {
-    left: 50px;
-    bottom: 115px;
+  40% {
+    left: 95px;
+    bottom: 100px;
   }
   100% {
-    left: 40px;
-    bottom: 105px;
+    left: 90px;
+    bottom: 95px;
   }
 }
 @keyframes bounce3 {
@@ -1078,11 +1078,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 #image1 {
-  left: 90px;
+  left: 115px;
   bottom: 0;
   animation: move-right 1.5s ease-in-out;
-  width: 395px;
-  height: 241px;
+  width: 342px;
+  height: 208px;
   background-image: url("../src/img/login/vector2.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1090,10 +1090,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 #image2 {
   opacity: 0;
-  left: 87px;
+  left: 112px;
   bottom: 0;
-  width: 395px;
-  height: 241px;
+  width: 342px;
+  height: 208px;
   background-image: url("../src/img/login/vector1.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1104,29 +1104,30 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: move-left 3s ease-in-out;
 }
 #image3 {
-  width: 356px;
+  width: 293px;
   height: 0;
-  bottom: -50px;
-  left: -52px;
+  bottom: -35px;
+  left: -22px;
   background-image: url("../src/img/login/vector3.svg");
-  background-size: 356px 150px;
+  background-size: 293px 123px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 #image3.active {
-  height: 150px;
+  height: 123px;
   animation: bounce1 0.5s ease-in-out;
 }
 #image4 {
-  left: -40px;
-  bottom: -85px;
+  left: -20px;
+  bottom: -55px;
   background: url("../src/img/login/vector4.svg");
-  width: 173px;
-  height: 92px;
+  background-size: cover;
+  width: 139px;
+  height: 74px;
 }
 #image4.active {
-  left: 40px;
-  bottom: 85px;
+  left: 90px;
+  bottom: 95px;
   animation: bounce2 0.6s ease-in-out;
 }
 #image5 {
