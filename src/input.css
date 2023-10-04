@@ -307,10 +307,25 @@ textarea:focus {
 .urlinput {
   width: calc(100% - 39px);
 }
+.vanilla-calendar-year:hover,
+.vanilla-calendar-month:hover {
+  @apply text-[#7b61ff] !important;
+}
 
 .vanilla-calendar-week__day {
   @apply text-[16px] font-normal text-[#7B61FF] !important;
 }
+
+.vanilla-calendar-months__month,
+.vanilla-calendar-years__year {
+  @apply text-[16px] text-violet-900 !important;
+}
+.vanilla-calendar-months__month_selected,
+.vanilla-calendar-years__year_selected {
+  background-color: #7b61ff !important;
+  color: #fff !important;
+}
+
 #customCalendar {
   padding: 20px 0 0 0 !important;
   grid-gap: 20px !important;
@@ -337,6 +352,12 @@ textarea:focus {
 }
 .vanilla-calendar-arrow.vanilla-calendar-arrow_next {
   right: 0 !important;
+}
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev::before:hover,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev::after:hover,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next::before:hover,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next::after:hover {
+  @apply h-[2px] bg-violet-900 !important;
 }
 .vanilla-calendar-content {
   @apply gap-2;

@@ -151,47 +151,55 @@
                                         },
                                         DOMTemplates: {
                                             default: `
-                                                    <div class="${classes.header}">
-                                                        <div class="${classes.headerContent}">
-                                                            <#Year />
-                                                            <#Month />
-                                                        </div>
-                                                        <#ArrowPrev />
-                                                        <#ArrowNext />
-                                                    </div>
-                                                    <div class="${classes.wrapper}">
-                                                        <div class="${classes.content}">
-                                                            <#Week />
-                                                            <#Days />
-                                                        </div>
-                                                    </div>
-                                                `,
+                      <div class="${classes.header}">
+                        <div class="${classes.headerContent}">
+                          <#Year/>
+                          <#Month />
+                        </div>
+                        <#ArrowPrev />
+                        <#ArrowNext />
+                      </div>
+                      <div class="${classes.wrapper}">
+                        <div class="${classes.content}">
+                          <#Week />
+                          <#Days />
+                        </div>
+                      </div>
+                      `,
+                                            month: `
+                      <div class="${classes.header}">
+                        <div class="${classes.headerContent}">
+                          <#Year/>
+                          <#Month />
+                        </div>
+                        <#ArrowPrev />
+                        <#ArrowNext />
+                      </div>
+                      <div class="${classes.wrapper}">
+                        <div class="${classes.content}">
+                          <#Months />
+                        </div>
+                      </div>
+                      `,
+                                            year: `
+                      <div class="${classes.header}">
+                        <div class="${classes.headerContent}">
+                          <#Year/>
+                          <#Month />
+                        </div>
+                        <#ArrowPrev />
+                        <#ArrowNext />
+                      </div>
+                      <div class="${classes.wrapper}">
+                        <div class="${classes.content}">
+                          <#Years />
+                        </div>
+                      </div>
+                      `,
                                         },
                                     });
                                     calendar.init();
                                 });
-
-                                //tabs
-                                // function tabButton() {
-                                //     const tabContentid = event.target.getAttribute('data-tabs-id');
-                                //     const tabContent = document.getElementById(tabContentid);
-                                //     const tcAll = document.querySelectorAll('.tabCont');
-                                //     const tabBtn = document.querySelectorAll('.tab button');
-
-                                //     for (i = 0; i < tabBtn.length; i++) {
-                                //         tabBtn[i].classList.remove('active');
-                                //     }
-                                //     event.target.classList.add('active');
-
-                                //     for (i = 0; i < tcAll.length; i++) {
-                                //         tcAll[i].classList.remove('active');
-                                //     }
-                                //     if (tabContent.classList.contains('active')) {
-                                //         //
-                                //     } else {
-                                //         tabContent.classList.add('active');
-                                //     }
-                                // }
                             </script>
                         </div>
                         <!-- //달력 -->

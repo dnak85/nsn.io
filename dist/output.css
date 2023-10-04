@@ -4144,11 +4144,30 @@ textarea:focus {
   width: calc(100% - 39px);
 }
 
+.vanilla-calendar-year:hover,
+.vanilla-calendar-month:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
+}
+
 .vanilla-calendar-week__day {
   font-size: 16px !important;
   font-weight: 400 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
+}
+
+.vanilla-calendar-months__month,
+.vanilla-calendar-years__year {
+  font-size: 16px !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(76 29 149 / var(--tw-text-opacity)) !important;
+}
+
+.vanilla-calendar-months__month_selected,
+.vanilla-calendar-years__year_selected {
+  background-color: #7b61ff !important;
+  color: #fff !important;
 }
 
 #customCalendar {
@@ -4190,6 +4209,15 @@ textarea:focus {
 
 .vanilla-calendar-arrow.vanilla-calendar-arrow_next {
   right: 0 !important;
+}
+
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev:hover::before,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev:hover::after,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next:hover::before,
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next:hover::after {
+  height: 2px !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(76 29 149 / var(--tw-bg-opacity)) !important;
 }
 
 .vanilla-calendar-content {
