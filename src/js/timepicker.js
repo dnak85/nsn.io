@@ -235,7 +235,8 @@ function timepicker(element, args) {
 
     switch (method) {
       case "meridiem":
-        this.time.getHours() > 12
+        // Toggle between AM and PM
+        this.time.getHours() >= 12
           ? this.time.setHours(this.time.getHours() - 12)
           : this.time.setHours(this.time.getHours() + 12);
         break;
@@ -342,7 +343,7 @@ function timepicker(element, args) {
     //         this.updateInput();
     //     }
     //     this.updateBounds(this.timepicker, e.target);
-    //     this.active = true;
+    //     this active = true;
     // } else if (e.target.className.indexOf('timepicker__') == -1 && e.target.parentElement.className.indexOf('timepicker__') == -1) {
     //     this.active = false;
     // }
@@ -396,21 +397,21 @@ function timepicker(element, args) {
 
   this.getHour = function () {
     if (!this.settings.format) {
-      return this.time.getHours() < 10
-        ? "0" + this.time.getHours()
-        : this.time.getHours();
+      const hour = this.time.getHours();
+      return hour < 10 ? "0" + hour : hour;
     } else {
-      return this.time.getHours() > 12
-        ? this.time.getHours() % 12
-        : this.time.getHours() == 0
-        ? 12
-        : this.time.getHours();
+      const hour =
+        this.time.getHours() > 12
+          ? this.time.getHours() % 12
+          : this.time.getHours() === 0
+          ? 12
+          : this.time.getHours();
+      return hour < 10 ? "0" + hour : hour;
     }
   };
 
   this.getMinute = function () {
-    var minutes = this.time.getMinutes();
-
+    const minutes = this.time.getMinutes();
     return minutes < 10 ? "0" + minutes : minutes;
   };
 

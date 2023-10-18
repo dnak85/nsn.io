@@ -1767,6 +1767,10 @@ button svg {
   width: 0.625rem;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -1959,10 +1963,6 @@ button svg {
   width: calc((100% - 10px) / 2);
 }
 
-.w-\[calc\(100\%-102px\)\] {
-  width: calc(100% - 102px);
-}
-
 .w-\[calc\(100\%-105px\)\] {
   width: calc(100% - 105px);
 }
@@ -2058,6 +2058,10 @@ button svg {
 
 .min-w-\[115px\] {
   min-width: 115px;
+}
+
+.min-w-\[146px\] {
+  min-width: 146px;
 }
 
 .min-w-\[160px\] {
@@ -5168,7 +5172,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @keyframes bounce3 {
-  0% {
+  widt 0% {
     bottom: -100px;
   }
 
@@ -5206,7 +5210,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
   100% {
     margin-left: 0;
-    opacity: 1;
   }
 }
 
@@ -5643,8 +5646,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 13px;
   position: absolute;
   top: 0;
-  left: 16px;
-  width: 67px;
+  right: 120px;
   height: 46px;
   line-height: 47px;
   z-index: 30;
