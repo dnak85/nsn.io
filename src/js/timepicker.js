@@ -216,7 +216,8 @@ function timepicker(element, args) {
     }
 
     if (!this.validateTime()) {
-      var after = date.getTime() > this.settings.maxTime.getTime();
+      var after = date.getTime() > this.settings.maxTime.getTime;
+
       date = after
         ? new Date(this.settings.maxTime)
         : new Date(this.settings.minTime);
@@ -231,7 +232,7 @@ function timepicker(element, args) {
   };
 
   this.updateTime = function (method, add, amount) {
-    var amount = amount || 10; // 10분 단위로 조절
+    var amount = 1; // 10분 단위로 조절
 
     switch (method) {
       case "meridiem":
@@ -241,6 +242,7 @@ function timepicker(element, args) {
           : this.time.setHours(this.time.getHours() + 12);
         break;
       case "minute":
+        var amount = 10;
         if (add) {
           this.time.setMinutes(
             Math.floor(this.time.getMinutes() / 10) * 10 + amount
@@ -343,7 +345,7 @@ function timepicker(element, args) {
     //         this.updateInput();
     //     }
     //     this.updateBounds(this.timepicker, e.target);
-    //     this active = true;
+    //     this.active = true;
     // } else if (e.target.className.indexOf('timepicker__') == -1 && e.target.parentElement.className.indexOf('timepicker__') == -1) {
     //     this.active = false;
     // }
@@ -406,6 +408,7 @@ function timepicker(element, args) {
           : this.time.getHours() === 0
           ? 12
           : this.time.getHours();
+
       return hour < 10 ? "0" + hour : hour;
     }
   };
