@@ -434,10 +434,13 @@ video {
   display: none;
 }
 
+/* reset */
+
 * {
   font-family: "Pretendard", serif;
   box-zing: border-box;
   -webkit-tap-highlight-color: transparent;
+  font-feature-settings: "clig" off, "liga" off;
 }
 
 em {
@@ -1392,6 +1395,10 @@ button svg {
 
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -2436,6 +2443,10 @@ button svg {
   border-width: 3px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-y-\[2px\] {
   border-top-width: 2px;
   border-bottom-width: 2px;
@@ -3332,6 +3343,10 @@ button svg {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-10 {
   line-height: 2.5rem;
 }
@@ -3781,7 +3796,9 @@ button svg {
   }
 }
 
-#m_header {
+/* header */
+
+#m_header.main {
   position: relative;
   display: flex;
   height: 204px;
@@ -3797,11 +3814,22 @@ button svg {
     0px 0px 2px 0px rgba(184, 184, 184, 0.2);
 }
 
+#m_header.sub {
+  position: relative;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* container */
+
 #m_container {
   position: relative;
   width: 100%;
   padding-bottom: 76px;
 }
+
+/* footer */
 
 #m_footer {
   position: fixed;
@@ -3814,6 +3842,8 @@ button svg {
 
 /* header */
 
+/* header - 상단 */
+
 #m_header .top {
   display: flex;
   width: 100%;
@@ -3821,7 +3851,7 @@ button svg {
   justify-content: space-between;
 }
 
-#m_header .top .user {
+#m_header.main .top .user {
   display: block;
   font-size: 14px;
   font-weight: 600;
@@ -3830,12 +3860,12 @@ button svg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#m_header .info {
+#m_header .top .info {
   display: flex;
   gap: 0.75rem;
 }
 
-#m_header .info button.alm {
+#m_header.main .top .info button.alm {
   position: relative;
   display: flex;
   height: 33px;
@@ -3847,7 +3877,15 @@ button svg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-#m_header .info button.alm span {
+#m_header.sub .top .info button.alm {
+  background-color: transparent;
+}
+
+#m_header.sub .top .info button.alm svg > path {
+  fill: #0f172a;
+}
+
+#m_header.main .top .info button.alm span {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
@@ -3860,11 +3898,11 @@ button svg {
   background-color: rgb(255 101 101 / var(--tw-bg-opacity));
 }
 
-#m_header .info button.alm.active span {
+#m_header.main .top .info button.alm.active span {
   display: block;
 }
 
-#m_header .info button.stg {
+#m_header.main .top .info button.stg {
   display: flex;
   height: 33px;
   width: 33px;
@@ -3875,6 +3913,8 @@ button svg {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+
+/* header - 알림메시지 */
 
 #m_header .alm-msg {
   margin-top: 37px;
@@ -3887,6 +3927,12 @@ button svg {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+#m_header .alm-msg * {
+  font-family: GmarketSans;
+}
+
+/* header - 메인메뉴 */
 
 #m_header .mn {
   margin-top: 52px;
@@ -4180,6 +4226,8 @@ button svg {
   padding-bottom: 2.5rem;
 }
 
+/* 내약속목록 - 정렬 */
+
 .prms-my-list .sort {
   display: flex;
   width: 100%;
@@ -4218,6 +4266,8 @@ button svg {
   content: var(--tw-content);
 }
 
+/* 내약속목록 - 리스트 */
+
 .prms-my-list .list {
   display: flex;
   width: 100%;
@@ -4225,6 +4275,8 @@ button svg {
   gap: 1.5rem;
   padding-top: 2rem;
 }
+
+/* 내약속목록 - 리스트 - 요약박스 */
 
 .prms-my-list .list .summary {
   width: 100%;
@@ -4239,7 +4291,7 @@ button svg {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
-/* 내약속목록 - 상단 */
+/* 내약속목록 - 리스트 - 요약박스 - 상단 */
 
 .prms-my-list .list .summary .top {
   display: flex;
@@ -4269,11 +4321,13 @@ button svg {
 
 .prms-my-list .list .summary .top .bullet .bu_txt {
   display: block;
+  height: 1rem;
   width: calc(100% - 28px);
   text-align: center;
   font-family: GmarketSans;
   font-size: 16px;
   font-weight: 700;
+  line-height: 1rem;
 }
 
 .prms-my-list .list .summary .top .usr {
@@ -4281,7 +4335,7 @@ button svg {
   font-weight: 900;
 }
 
-/* 내약속목록 - 제목 */
+/* 내약속목록 - 리스트 - 요약박스 - 약속명 */
 
 .prms-my-list .list .summary .title {
   display: flex;
@@ -4307,7 +4361,7 @@ button svg {
   font-size: 12px;
 }
 
-/* 내약속목록 - 정보 */
+/* 내약속목록 - 리스트 - 요약박스 - 약속정보 */
 
 .prms-my-list .list .summary .info {
   display: block;
@@ -4361,7 +4415,7 @@ button svg {
   line-height: 18px;
 }
 
-/* 결제대기 */
+/* 내약속목록 - 리스트 - 결제대기 */
 
 .prms-my-list .list .summary.sum01 {
   --tw-border-opacity: 1;
@@ -4397,7 +4451,7 @@ button svg {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-/* 멤버초대중 */
+/* 내약속목록 - 리스트 - 멤버초대중 */
 
 .prms-my-list .list .summary.sum02 {
   --tw-border-opacity: 1;
@@ -4423,7 +4477,7 @@ button svg {
   border-color: rgb(255 75 97 / var(--tw-border-opacity));
 }
 
-/* d-00 */
+/* 내약속목록 - 리스트 - d-00 */
 
 .prms-my-list .list .summary.sum03 {
   --tw-border-opacity: 1;
@@ -4449,7 +4503,7 @@ button svg {
   border-color: rgb(123 97 255 / var(--tw-border-opacity));
 }
 
-/* d-day */
+/* 내약속목록 - 리스트 - d-day */
 
 .prms-my-list .list .summary.sum04 {
   --tw-border-opacity: 1;
@@ -4467,7 +4521,7 @@ button svg {
   color: rgb(255 72 182 / var(--tw-text-opacity));
 }
 
-/* 응답대기 */
+/* 내약속목록 - 리스트 - 응답대기 */
 
 .prms-my-list .list .summary.sum05 {
   --tw-border-opacity: 1;
@@ -4498,7 +4552,7 @@ button svg {
   content: var(--tw-content);
 }
 
-/* 취소약속 */
+/* 내약속목록 - 리스트 - 취소약속 */
 
 .prms-my-list .list .summary.sum06 {
   --tw-border-opacity: 1;
@@ -4516,7 +4570,7 @@ button svg {
   color: rgb(85 79 115 / var(--tw-text-opacity));
 }
 
-/* 취소대기 */
+/* 내약속목록 - 리스트 - 취소대기 */
 
 .prms-my-list .list .summary.sum07 {
   --tw-border-opacity: 1;
@@ -4555,7 +4609,7 @@ button svg {
   border-color: rgb(218 72 255 / var(--tw-border-opacity));
 }
 
-/* 입금대기 */
+/* 내약속목록 - 리스트 - 입금대기 */
 
 .prms-my-list .list .summary.sum08 {
   --tw-border-opacity: 1;
@@ -4586,7 +4640,7 @@ button svg {
   content: var(--tw-content);
 }
 
-/* 약속완료 */
+/* 내약속목록 - 리스트 - 약속완료 */
 
 .prms-my-list .list .summary.sum09 {
   --tw-border-opacity: 1;
@@ -4604,7 +4658,7 @@ button svg {
   color: rgb(142 137 169 / var(--tw-text-opacity));
 }
 
-/* 더보기버튼 */
+/* 내약속목록 - 리스트 - 더보기버튼 */
 
 .summary_more {
   margin-top: 0.5rem;
@@ -4622,7 +4676,7 @@ button svg {
   color: rgb(123 97 255 / var(--tw-text-opacity));
 }
 
-/* 달력으로 보기 */
+/* 내약속목록 - 달력으로 보기 */
 
 .prms-my-cal {
   display: block;
@@ -4631,6 +4685,8 @@ button svg {
   padding-right: 1rem;
   padding-top: 1rem;
 }
+
+/* 내약속목록 - 달력으로 보기 - 달력 */
 
 .prms-my-cal #customCalendar {
   border-radius: 10px !important;

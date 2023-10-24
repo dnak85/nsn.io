@@ -18,6 +18,7 @@ module.exports = {
       ptnd: ["Pretendard"],
       dm: ["DM Sans"],
       gm: ["GmarketSans"],
+      gsm: ["GmarketSansMedium"],
       inter: ["Inter"],
       lato: ["Lato"],
     },
