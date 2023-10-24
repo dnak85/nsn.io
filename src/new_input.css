@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Pretendard", serif;
+    box-zing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+  em {
+    font-style: normal;
+  }
+  html,
+  body {
+    @apply h-full w-full bg-[#EDE9FE];
+  }
+  img {
+    @apply w-full;
+  }
+  button svg {
+    margin: 0 auto;
+  }
+}
+/* layout */
+#wrap_w {
+  @apply relative h-full w-full;
+}
+#w_wrap {
+  @apply fixed left-[50%] ml-[585px] hidden h-full flex-col justify-center pl-[65px] lg:flex;
+}
+#m_wrap {
+  @apply relative mx-auto flex h-full w-full max-w-[475px] flex-col overflow-auto lg:left-[293px] lg:border-l-[2px] lg:border-r-[2px] lg:border-white;
+}
+#m_header {
+  @apply relative flex h-[204px] w-full flex-col rounded-br-[40px] pb-6 pl-6 pr-4 pt-4;
+  background: linear-gradient(279deg, #7b61ff 0%, #fc5185 100%);
+  box-shadow: 0px 4px 60px 0px rgba(143, 143, 143, 0.1),
+    0px 0px 2px 0px rgba(184, 184, 184, 0.2);
+}
+#m_container {
+  @apply relative w-full pb-[76px];
+}
+#m_footer {
+  @apply fixed bottom-0 flex h-[76px] w-full max-w-[475px];
+}
+
+/* header */
+#m_header .top {
+  @apply flex w-full items-center justify-between;
+}
+#m_header .top .user {
+  @apply block text-[14px] font-semibold leading-[17px] text-white;
+}
+#m_header .info {
+  @apply flex gap-3;
+}
+#m_header .info button.alm {
+  @apply relative flex h-[33px] w-[33px] items-center justify-center rounded-full bg-white;
+}
+#m_header .info button.alm span {
+  @apply absolute right-2 top-2 z-10 hidden h-[3px] w-[3px] rounded-full bg-[#ff6565];
+}
+#m_header .info button.alm.active span {
+  @apply block;
+}
+#m_header .info button.stg {
+  @apply flex h-[33px] w-[33px] items-center justify-center rounded-full border-[2px] border-white;
+}
+#m_header .alm-msg {
+  @apply mt-[37px] block w-full font-gm text-[22px] font-medium leading-[22px] text-white;
+}
+#m_header .mn {
+  @apply mt-[52px] flex w-full gap-6;
+}
+#m_header .mn button {
+  @apply text-[14px] font-[800] text-white;
+}
+
+/* footer */
+#m_footer .f_mnu {
+  @apply flex h-[76px] w-full items-center justify-center gap-8 bg-white;
+}
+#m_footer .f_mnu button {
+  @apply flex flex-col items-center gap-2;
+}
+#m_footer .f_mnu button svg {
+  @apply block;
+}
+#m_footer .f_mnu button span {
+  @apply block w-full text-center text-[11px] font-semibold text-[#847EA0];
+}
+#m_footer .f_mnu button.active svg path {
+  @apply fill-[#7B61FF];
+}
+#m_footer .f_mnu button.active span {
+  @apply text-[#7B61FF];
+}
+
+/* main */
+#m_main {
+  @apply relative z-10 mt-[-120px] h-full w-full px-4;
+}
+/* main-welcome */
+#m_main .welcome-box {
+  @apply flex w-full flex-col gap-[6px] rounded-[20px] border-[1px] border-[#7b61ff] bg-white px-[44px] pb-2 pt-[34px];
+}
+#m_main .welcome-box .welcome-txt {
+  @apply block w-full text-center font-gm text-[24px] font-bold text-[#2b2b2b];
+}
+/* main-notice */
+#m_main .notice-box {
+  @apply mt-8 flex w-full flex-col gap-6;
+}
+#m_main .notice-box .main-alm-box {
+  @apply relative flex items-center justify-between rounded-[20px] p-2;
+}
+#m_main .notice-box .main-alm-box .content {
+  @apply flex flex-col gap-[14px];
+}
+#m_main .notice-box .main-alm-box .bullet {
+  @apply flex h-[21px] w-[63px] items-center justify-center rounded-[99px] text-[12px] font-[900] text-white;
+}
+#m_main .notice-box .main-alm-box .text {
+  @apply flex w-full flex-col gap-[3px] px-4;
+}
+#m_main .notice-box .main-alm-box .text strong {
+  @apply block w-full text-[18px] font-[900] text-black;
+}
+#m_main .notice-box .main-alm-box .text span {
+  @apply block w-full text-[14px] font-semibold leading-[17px] text-[#3f366f];
+}
+#m_main .notice-box .main-alm-box .bg {
+  @apply block w-[120px] text-center;
+}
+#m_main .notice-box .main-alm-box.box-st-01 {
+  @apply border-[1px] border-[#7b61ff] bg-[#D1C6FF];
+}
+#m_main .notice-box .main-alm-box.box-st-02 {
+  @apply border-[1px] border-[#FF8761] bg-[#FED895];
+}
+#m_main .notice-box .main-alm-box.box-st-01 .bullet {
+  @apply bg-[#7B61FF];
+}
+#m_main .notice-box .main-alm-box.box-st-02 .bullet {
+  @apply bg-[#ff7628];
+}
+
+/* 약속만들기 */
+#create-prms {
+  @apply relative w-full;
+}
+.prms-category {
+  @apply sticky top-0 z-20 w-full bg-[#EDE9FE] px-4 pb-4 pt-6;
+}
+.prms-mnu .swiper-wrapper .swiper-slide {
+  @apply block h-10 w-auto px-2 text-[16px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-wrapper .swiper-slide.active {
+  @apply rounded-[99px] bg-[#7B61FF] px-4 text-white;
+}
+.prms-mnu .swiper-button-next {
+  @apply right-0 top-0 m-0 flex h-[40px] items-center justify-center bg-[#EDE9FE] text-[18px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-button-prev {
+  @apply left-0 top-0 m-0 flex h-[40px] items-center justify-center bg-[#EDE9FE] text-[18px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-button-next,
+.prms-mnu .swiper-button-prev {
+  @apply after:hidden;
+}
+.prms-mnu .swiper-button-disabled {
+  @apply hidden;
+}
+
+/* 내약속목록 */
+.prms-my-list {
+  @apply relative w-full overflow-hidden px-4 pb-10;
+}
+.prms-my-list .sort {
+  @apply flex w-full justify-end gap-6 pt-4;
+}
+.prms-my-list .sort button {
+  @apply relative flex h-5 items-center justify-center px-[3px] text-[16px] font-semibold text-[#9998c3];
+}
+.prms-my-list .sort button.active {
+  @apply text-slate-900 after:absolute after:bottom-[-3px] after:h-[1px] after:w-full after:bg-slate-900 after:content-[''];
+}
+
+.prms-my-list .list {
+  @apply flex w-full flex-col gap-6 pt-8;
+}
+.prms-my-list .list .summary {
+  @apply w-full rounded-[20px] bg-white px-4 pb-5 pt-3 text-slate-900;
+}
+
+/* 내약속목록 - 상단 */
+.prms-my-list .list .summary .top {
+  @apply flex w-full items-center justify-between;
+}
+.prms-my-list .list .summary .top .bullet {
+  @apply relative flex h-[33px] w-[138px] items-center justify-between rounded-[99px] bg-white pl-5 pr-2;
+}
+.prms-my-list .list .summary .top .bullet .ico {
+  @apply block w-[22px];
+}
+.prms-my-list .list .summary .top .bullet .bu_txt {
+  @apply block w-[calc(100%-28px)] text-center font-gm text-[16px] font-bold;
+}
+.prms-my-list .list .summary .top .usr {
+  @apply text-[14px] font-[900];
+}
+
+/* 내약속목록 - 제목 */
+.prms-my-list .list .summary .title {
+  @apply flex w-full flex-col gap-2.5 border-b-[1px] pb-3 pt-4;
+}
+.prms-my-list .list .summary .title .obj {
+  @apply block w-full font-gm text-[22px] font-bold;
+}
+.prms-my-list .list .summary .title .date_local {
+  @apply block w-full text-[12px];
+}
+
+/* 내약속목록 - 정보 */
+.prms-my-list .list .summary .info {
+  @apply block w-full pt-3;
+}
+.prms-my-list .list .summary .info dl {
+  @apply block w-full;
+}
+.prms-my-list .list .summary .info dl dt {
+  @apply float-left clear-left block h-[18px] text-[12px] font-[800] leading-[18px] after:float-left after:px-1 after:text-[12px] after:font-semibold after:content-[':'];
+}
+.prms-my-list .list .summary .info dl dt span {
+  @apply float-left block before:px-1 before:content-['\00b7'];
+}
+.prms-my-list .list .summary .info dl dd {
+  @apply float-left block h-[18px] text-[14px] font-semibold leading-[18px];
+}
+
+/* 결제대기 */
+.prms-my-list .list .summary.sum01 {
+  @apply border-[#cdc3ff] bg-[#FF4B61] text-white;
+}
+.prms-my-list .list .summary.sum01 .top .bullet {
+  @apply bg-white text-[#FF4B61];
+}
+.prms-my-list .list .summary.sum01 .top .bullet .ico {
+  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+}
+.prms-my-list .list .summary.sum01 .title {
+  @apply border-white;
+}
+
+/* 멤버초대중 */
+.prms-my-list .list .summary.sum02 {
+  @apply border-[#cdc3ff] bg-white;
+}
+.prms-my-list .list .summary.sum02 .top .bullet {
+  @apply bg-[#FF4B61] text-white;
+}
+.prms-my-list .list .summary.sum02 .top .usr {
+  @apply text-[#ff4b61];
+}
+.prms-my-list .list .summary.sum02 .title {
+  @apply border-[#ff4b61];
+}
+
+/* d-00 */
+.prms-my-list .list .summary.sum03 {
+  @apply border-[#CDC3FF] bg-white;
+}
+.prms-my-list .list .summary.sum03 .top .bullet {
+  @apply bg-[#7B61FF] text-white;
+}
+.prms-my-list .list .summary.sum03 .top .usr {
+  @apply text-[#7b61ff];
+}
+.prms-my-list .list .summary.sum03 .title {
+  @apply border-[#7b61ff];
+}
+
+/* d-day */
+.prms-my-list .list .summary.sum04 {
+  @apply border-[#cdc3ff] bg-[#FF48B6] text-white;
+}
+.prms-my-list .list .summary.sum04 .top .bullet {
+  @apply bg-white text-[#FF48B6];
+}
+
+/* 응답대기 */
+.prms-my-list .list .summary.sum05 {
+  @apply border-[#cdc3ff] bg-[#7B61FF] text-white;
+}
+.prms-my-list .list .summary.sum05 .top .bullet {
+  @apply bg-white text-[#7B61FF];
+}
+.prms-my-list .list .summary.sum05 .top .bullet .ico {
+  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+}
+
+/* 취소약속 */
+.prms-my-list .list .summary.sum06 {
+  @apply border-[#cdc3ff] bg-[#554F73] text-white;
+}
+.prms-my-list .list .summary.sum06 .top .bullet {
+  @apply bg-white text-[#554F73];
+}
+
+/* 취소대기 */
+.prms-my-list .list .summary.sum07 {
+  @apply border-[#cdc3ff] bg-white;
+}
+.prms-my-list .list .summary.sum07 .top .bullet {
+  @apply bg-[#DA48FF] text-white;
+}
+.prms-my-list .list .summary.sum07 .top .bullet .ico {
+  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+}
+.prms-my-list .list .summary.sum07 .top .usr {
+  @apply text-[#da48ff];
+}
+.prms-my-list .list .summary.sum07 .title {
+  @apply border-[#da48ff];
+}
+
+/* 입금대기 */
+.prms-my-list .list .summary.sum08 {
+  @apply border-[#cdc3ff] bg-[#3888FF] text-white;
+}
+.prms-my-list .list .summary.sum08 .top .bullet {
+  @apply bg-white text-[#3888FF];
+}
+.prms-my-list .list .summary.sum08 .top .bullet .ico {
+  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+}
+
+/* 약속완료 */
+.prms-my-list .list .summary.sum09 {
+  @apply border-[#cdc3ff] bg-[#8E89A9] text-white;
+}
+.prms-my-list .list .summary.sum09 .top .bullet {
+  @apply bg-white text-[#8E89A9];
+}
+
+/* 더보기버튼 */
+.summary_more {
+  @apply mt-2 flex h-[48px] w-full items-center justify-center rounded-[12px] bg-white text-[16px] font-semibold text-[#7b61ff];
+}
+
+/* 달력으로 보기 */
+.prms-my-cal {
+  @apply block w-full px-4 pt-4;
+}
+
+.prms-my-cal #customCalendar {
+  @apply rounded-[10px] border-[1px] border-[#cdc3ff] py-6 !important;
+}
+.prms-my-cal
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
+  @apply bg-[#FF3F02] !important;
+}
+.prms-my-cal
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_today {
+  @apply bg-transparent font-bold text-[#7b61ff] !important;
+}
