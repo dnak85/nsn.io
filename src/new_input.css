@@ -90,7 +90,7 @@
     0px 0px 2px 0px rgba(184, 184, 184, 0.2);
 }
 #m_header.sub {
-  @apply sticky top-0 w-full bg-[#EDE9FE] z-40 py-6;
+  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-6;
 }
 
 /* container */
@@ -300,13 +300,13 @@
   @apply flex w-full items-center justify-between;
 }
 .prms-my-list .list .summary .top .bullet {
-  @apply relative flex h-[34px] w-[138px] content-center items-center justify-between rounded-[99px] bg-white pl-5 pr-2;
+  @apply relative flex h-[34px] w-[138px] content-center items-center justify-between rounded-[99px] bg-white py-[5px] pl-5 pr-2;
 }
 .prms-my-list .list .summary .top .bullet .ico {
   @apply flex h-6 w-[22px] items-center;
 }
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  @apply flex items-center justify-center h-6 w-[calc(100%-28px)] font-gm text-[16px] font-bold;
+  @apply flex h-6 w-[calc(100%-28px)] items-center justify-center font-gm text-[16px] font-bold;
 }
 .prms-my-list .list .summary .top .usr {
   @apply text-[14px] font-[900];

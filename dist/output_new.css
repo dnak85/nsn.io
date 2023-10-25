@@ -4556,6 +4556,8 @@ button svg {
   border-radius: 99px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 1.25rem;
   padding-right: 0.5rem;
 }
