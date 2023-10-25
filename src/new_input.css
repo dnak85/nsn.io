@@ -92,7 +92,7 @@
     0px 0px 2px 0px rgba(184, 184, 184, 0.2);
 }
 #m_header.sub {
-  @apply relative w-full py-6;
+  @apply sticky top-0 w-full bg-[#EDE9FE] z-40 py-6;
 }
 
 /* container */
@@ -224,7 +224,7 @@
   @apply flex w-full flex-col gap-[3px] pl-4;
 }
 #m_main .notice-box .main-alm-box .text strong {
-  @apply block w-full text-[18px] h-[21px] leading-[21px] font-[900] text-black;
+  @apply block h-[21px] w-full text-[18px] font-[900] leading-[21px] text-black;
 }
 #m_main .notice-box .main-alm-box .text span {
   @apply block w-full text-[14px] font-semibold leading-[17px] text-[#3f366f];
@@ -302,13 +302,13 @@
   @apply flex w-full items-center justify-between;
 }
 .prms-my-list .list .summary .top .bullet {
-  @apply relative flex h-[33px] w-[138px] items-center justify-between rounded-[99px] bg-white pl-5 pr-2;
+  @apply relative flex h-[34px] w-[138px] content-center items-center justify-between rounded-[99px] bg-white pl-5 pr-2;
 }
 .prms-my-list .list .summary .top .bullet .ico {
-  @apply block w-[22px];
+  @apply flex h-6 w-[22px] items-center;
 }
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  @apply block h-4 w-[calc(100%-28px)] text-center font-gm text-[16px] font-bold leading-4;
+  @apply block h-6 w-[calc(100%-28px)] text-center font-gm text-[16px] font-bold leading-6;
 }
 .prms-my-list .list .summary .top .usr {
   @apply text-[14px] font-[900];
@@ -319,10 +319,10 @@
   @apply flex w-full flex-col gap-2.5 border-b-[1px] pb-3 pt-4 text-left;
 }
 .prms-my-list .list .summary .title .obj {
-  @apply block w-full font-gm text-[22px] font-bold;
+  @apply block h-[22px] w-full font-gm text-[22px] font-bold leading-[22px];
 }
 .prms-my-list .list .summary .title .date_local {
-  @apply block w-full text-[12px];
+  @apply block h-[14px] w-full text-[12px] leading-[14px];
 }
 
 /* 내약속목록 - 리스트 - 요약박스 - 약속정보 */
@@ -333,7 +333,7 @@
   @apply block w-full;
 }
 .prms-my-list .list .summary .info dl dt {
-  @apply float-left clear-left block h-[18px] text-[12px] font-[800] leading-[18px] after:float-left after:px-1 after:text-[12px] after:font-semibold after:content-[':'];
+  @apply float-left clear-left block h-[18px] text-[12px] font-[600] leading-[18px] after:float-left after:px-1 after:text-[12px] after:font-semibold after:content-[':'];
 }
 .prms-my-list .list .summary .info dl dt span {
   @apply float-left block before:px-1 before:content-['\00b7'];
