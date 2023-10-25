@@ -163,7 +163,7 @@
   @apply flex h-6 w-6 items-center justify-center;
 }
 #m_header.sub .top .pageTitle {
-  @apply flex h-6 w-[calc(100%-24px)] items-center justify-center;
+  @apply flex h-6 w-[calc(100%-24px)] items-center justify-center pr-6;
 }
 #m_header.sub .top .pageTitle strong {
   @apply font-gm text-[24px] font-medium text-slate-900;

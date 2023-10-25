@@ -4167,6 +4167,7 @@ button svg {
   width: calc(100% - 24px);
   align-items: center;
   justify-content: center;
+  padding-right: 1.5rem;
 }
 
 #m_header.sub .top .pageTitle strong {
