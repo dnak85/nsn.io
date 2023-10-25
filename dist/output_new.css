@@ -4570,7 +4570,7 @@ button svg {
 }
 
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  display: flex;
+  display: block;
   height: 1.5rem;
   width: calc(100% - 28px);
   text-align: center;
