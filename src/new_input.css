@@ -306,7 +306,7 @@
   @apply float-left ml-5 block h-fit w-fit text-center;
 }
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  @apply float-left ml-2 block h-6 w-fit text-center font-gm text-[16px] font-bold leading-6;
+  @apply float-left ml-2 block h-6 w-fit min-w-[70px] text-center font-gm text-[16px] font-bold leading-[25px];
 }
 .prms-my-list .list .summary .top .usr {
   @apply text-[14px] font-[900];
@@ -462,8 +462,8 @@
 .prms-my-list .list .summary.sum09 .top .bullet {
   @apply bg-white text-[#8E89A9];
 }
-.prms-my-list .list .summary.sum09 .top .bullet .ico svg{
-  @apply mt-[3px]
+.prms-my-list .list .summary.sum09 .top .bullet .ico svg {
+  @apply mt-[3px];
 }
 
 /* 내약속목록 - 리스트 - 더보기버튼 */

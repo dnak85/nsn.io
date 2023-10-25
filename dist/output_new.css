@@ -4576,11 +4576,12 @@ button svg {
   height: 1.5rem;
   width: -moz-fit-content;
   width: fit-content;
+  min-width: 70px;
   text-align: center;
   font-family: GmarketSans;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: 25px;
 }
 
 .prms-my-list .list .summary .top .usr {
