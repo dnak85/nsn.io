@@ -300,13 +300,13 @@
   @apply flex w-full items-center justify-between;
 }
 .prms-my-list .list .summary .top .bullet {
-  @apply relative flex h-[34px] w-[138px] content-center items-center justify-between rounded-[99px] bg-white py-[5px] pl-5 pr-2;
+  @apply relative block h-[34px] w-[138px] overflow-hidden rounded-[99px] bg-white py-[5px];
 }
 .prms-my-list .list .summary .top .bullet .ico {
-  @apply flex h-6 w-[22px] items-center;
+  @apply float-left ml-5 block h-fit w-fit text-center;
 }
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  @apply block h-6 w-[calc(100%-28px)] text-center font-gm text-[16px] font-bold leading-6;
+  @apply float-left ml-2 block h-6 w-fit text-center font-gm text-[16px] font-bold leading-6;
 }
 .prms-my-list .list .summary .top .usr {
   @apply text-[14px] font-[900];
@@ -348,7 +348,7 @@
   @apply bg-white text-[#FF4B61];
 }
 .prms-my-list .list .summary.sum01 .top .bullet .ico {
-  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
 }
 .prms-my-list .list .summary.sum01 .title {
   @apply border-white;
@@ -360,6 +360,9 @@
 }
 .prms-my-list .list .summary.sum02 .top .bullet {
   @apply bg-[#FF4B61] text-white;
+}
+.prms-my-list .list .summary.sum02 .top .bullet .ico svg {
+  @apply mt-[2px];
 }
 .prms-my-list .list .summary.sum02 .top .usr {
   @apply text-[#ff4b61];
@@ -389,6 +392,9 @@
 .prms-my-list .list .summary.sum04 .top .bullet {
   @apply bg-white text-[#FF48B6];
 }
+.prms-my-list .list .summary.sum04 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
 
 /* 내약속목록 - 리스트 - 응답대기 */
 .prms-my-list .list .summary.sum05 {
@@ -398,7 +404,10 @@
   @apply bg-white text-[#7B61FF];
 }
 .prms-my-list .list .summary.sum05 .top .bullet .ico {
-  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+}
+.prms-my-list .list .summary.sum05 .top .bullet .ico svg {
+  @apply mt-[2px];
 }
 
 /* 내약속목록 - 리스트 - 취소약속 */
@@ -407,6 +416,9 @@
 }
 .prms-my-list .list .summary.sum06 .top .bullet {
   @apply bg-white text-[#554F73];
+}
+.prms-my-list .list .summary.sum06 .top .bullet .ico svg {
+  @apply mt-[1px];
 }
 
 /* 내약속목록 - 리스트 - 취소대기 */
@@ -417,7 +429,10 @@
   @apply bg-[#DA48FF] text-white;
 }
 .prms-my-list .list .summary.sum07 .top .bullet .ico {
-  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+}
+.prms-my-list .list .summary.sum07 .top .bullet .ico svg {
+  @apply mt-[2px];
 }
 .prms-my-list .list .summary.sum07 .top .usr {
   @apply text-[#da48ff];
@@ -433,8 +448,11 @@
 .prms-my-list .list .summary.sum08 .top .bullet {
   @apply bg-white text-[#3888FF];
 }
+.prms-my-list .list .summary.sum08 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
 .prms-my-list .list .summary.sum08 .top .bullet .ico {
-  @apply before:absolute before:left-2 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
 }
 
 /* 내약속목록 - 리스트 - 약속완료 */
@@ -443,6 +461,9 @@
 }
 .prms-my-list .list .summary.sum09 .top .bullet {
   @apply bg-white text-[#8E89A9];
+}
+.prms-my-list .list .summary.sum09 .top .bullet .ico svg{
+  @apply mt-[3px]
 }
 
 /* 내약속목록 - 리스트 - 더보기버튼 */

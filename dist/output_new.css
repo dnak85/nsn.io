@@ -4547,32 +4547,35 @@ button svg {
 
 .prms-my-list .list .summary .top .bullet {
   position: relative;
-  display: flex;
+  display: block;
   height: 34px;
   width: 138px;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
   border-radius: 99px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 1.25rem;
-  padding-right: 0.5rem;
 }
 
 .prms-my-list .list .summary .top .bullet .ico {
-  display: flex;
-  height: 1.5rem;
-  width: 22px;
-  align-items: center;
+  float: left;
+  margin-left: 1.25rem;
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
 }
 
 .prms-my-list .list .summary .top .bullet .bu_txt {
+  float: left;
+  margin-left: 0.5rem;
   display: block;
   height: 1.5rem;
-  width: calc(100% - 28px);
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
   font-family: GmarketSans;
   font-size: 16px;
@@ -4688,10 +4691,16 @@ button svg {
   color: rgb(255 75 97 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum01 .top .bullet .ico {
+  margin-left: 0px;
+}
+
 .prms-my-list .list .summary.sum01 .top .bullet .ico::before {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  float: left;
+  margin-left: 0.5rem;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: block;
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 9999px;
@@ -4720,6 +4729,10 @@ button svg {
   background-color: rgb(255 75 97 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.prms-my-list .list .summary.sum02 .top .bullet .ico svg {
+  margin-top: 2px;
 }
 
 .prms-my-list .list .summary.sum02 .top .usr {
@@ -4776,6 +4789,10 @@ button svg {
   color: rgb(255 72 182 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum04 .top .bullet .ico svg {
+  margin-top: 2px;
+}
+
 /* 내약속목록 - 리스트 - 응답대기 */
 
 .prms-my-list .list .summary.sum05 {
@@ -4794,10 +4811,16 @@ button svg {
   color: rgb(123 97 255 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum05 .top .bullet .ico {
+  margin-left: 0px;
+}
+
 .prms-my-list .list .summary.sum05 .top .bullet .ico::before {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  float: left;
+  margin-left: 0.5rem;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: block;
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 9999px;
@@ -4805,6 +4828,10 @@ button svg {
   background-color: rgb(255 93 2 / var(--tw-bg-opacity));
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.prms-my-list .list .summary.sum05 .top .bullet .ico svg {
+  margin-top: 2px;
 }
 
 /* 내약속목록 - 리스트 - 취소약속 */
@@ -4825,6 +4852,10 @@ button svg {
   color: rgb(85 79 115 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum06 .top .bullet .ico svg {
+  margin-top: 1px;
+}
+
 /* 내약속목록 - 리스트 - 취소대기 */
 
 .prms-my-list .list .summary.sum07 {
@@ -4841,10 +4872,16 @@ button svg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum07 .top .bullet .ico {
+  margin-left: 0px;
+}
+
 .prms-my-list .list .summary.sum07 .top .bullet .ico::before {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  float: left;
+  margin-left: 0.5rem;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: block;
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 9999px;
@@ -4852,6 +4889,10 @@ button svg {
   background-color: rgb(72 222 255 / var(--tw-bg-opacity));
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.prms-my-list .list .summary.sum07 .top .bullet .ico svg {
+  margin-top: 2px;
 }
 
 .prms-my-list .list .summary.sum07 .top .usr {
@@ -4882,10 +4923,20 @@ button svg {
   color: rgb(56 136 255 / var(--tw-text-opacity));
 }
 
+.prms-my-list .list .summary.sum08 .top .bullet .ico svg {
+  margin-top: 2px;
+}
+
+.prms-my-list .list .summary.sum08 .top .bullet .ico {
+  margin-left: 0px;
+}
+
 .prms-my-list .list .summary.sum08 .top .bullet .ico::before {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  float: left;
+  margin-left: 0.5rem;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: block;
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 9999px;
@@ -4911,6 +4962,10 @@ button svg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(142 137 169 / var(--tw-text-opacity));
+}
+
+.prms-my-list .list .summary.sum09 .top .bullet .ico svg {
+  margin-top: 3px;
 }
 
 /* 내약속목록 - 리스트 - 더보기버튼 */
