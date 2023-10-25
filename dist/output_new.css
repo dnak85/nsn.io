@@ -438,8 +438,6 @@ video {
 
 * {
   font-family: "Pretendard", serif;
-  box-zing: border-box;
-  -webkit-tap-highlight-color: transparent;
   font-feature-settings: "clig" off, "liga" off;
 }
 
@@ -4570,14 +4568,14 @@ button svg {
 }
 
 .prms-my-list .list .summary .top .bullet .bu_txt {
-  display: block;
+  display: flex;
   height: 1.5rem;
   width: calc(100% - 28px);
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   font-family: GmarketSans;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.5rem;
 }
 
 .prms-my-list .list .summary .top .usr {
