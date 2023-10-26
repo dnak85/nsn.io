@@ -1,0 +1,276 @@
+/* 이동 우측을 위한 키프레임 */
+@keyframes move-right {
+  from {
+    left: -115px;
+    opacity: 0;
+  }
+  to {
+    left: 115px;
+    opacity: 1;
+  }
+}
+
+/* 이동 좌측을 위한 키프레임 */
+@keyframes move-left {
+  from {
+    left: 115px;
+    opacity: 0;
+  }
+  to {
+    left: 112px;
+    opacity: 1;
+  }
+}
+
+/* 바운스1을 위한 키프레임 */
+@keyframes bounce1 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 150px;
+  }
+  100% {
+    height: 123px;
+  }
+}
+
+/* 바운스2을 위한 키프레임 */
+@keyframes bounce2 {
+  0% {
+    left: -90px;
+    bottom: -95px;
+  }
+  40% {
+    left: 95px;
+    bottom: 100px;
+  }
+  100% {
+    left: 90px;
+    bottom: 95px;
+  }
+}
+
+/* 바운스3을 위한 키프레임 */
+@keyframes bounce3 {
+  0% {
+    bottom: -100px;
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+/* 하단 옵시디언 시각적 효과를 위한 키프레임 */
+@keyframes opc-btm {
+  from {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* 좌측 옵시디언 시각적 효과를 위한 키프레임 */
+@keyframes opc-left {
+  0% {
+    margin-left: -30px;
+    opacity: 0;
+  }
+  50% {
+    margin-left: 10px;
+    opacity: 0.7;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+/* 좌측 옵시디언2 시각적 효과를 위한 키프레임 */
+@keyframes opc-left2 {
+  0% {
+    margin-left: -30px;
+    opacity: 0;
+  }
+  50% {
+    margin-left: 10px;
+    opacity: 0.7;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+/* 하단 오프캔버스 열림 시각적 효과를 위한 키프레임 */
+@keyframes offcanvas-bottom {
+  from {
+    bottom: -324px; /* 오프캔버스 높이값과 동일 */
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+/* 좌측 오프캔버스 열림 시각적 효과를 위한 키프레임 */
+@keyframes offcanvas-left {
+  from {
+    left: -110%; /* 오프캔버스 높이값과 동일 */
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* 하단 오프캔버스 닫힘 시각적 효과를 위한 키프레임 */
+@keyframes offcanvas-bottom-reverse {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -324px; /* 오프캔버스 높이값과 동일 */
+  }
+}
+
+/* 좌측 오프캔버스 닫힘 시각적 효과를 위한 키프레임 */
+@keyframes offcanvas-left-reverse {
+  from {
+    left: 0; /* 오프캔버스 높이값과 동일 */
+  }
+  to {
+    left: -110%;
+  }
+}
+
+/* 좌측 슬라이딩을 위한 키프레임 */
+@keyframes sliding-left {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 5px;
+  }
+  100% {
+    left: -110%;
+  }
+}
+
+/* 좌측 슬라이딩 역방향을 위한 키프레임 */
+@keyframes sliding-left-reverse {
+  0% {
+    left: -110%;
+  }
+  70% {
+    left: 5px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* 로딩 시각적 효과를 위한 키프레임 */
+@keyframes loading {
+  0% {
+    opacity: 0.8;
+    background: #6339da;
+    transform: scale(1.5);
+  }
+  50% {
+    opacity: 1;
+    background: #fff;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0.8;
+    background: #6339da;
+    transform: scale(0.3);
+  }
+}
+
+/* 구름 이동 시각적 효과를 위한 키프레임 */
+@keyframes cloudP {
+  0%,
+  100% {
+    transform: translateX(-1%) translateY(-1%);
+  }
+  50% {
+    transform: translateX(1%) translateY(1%);
+  }
+}
+
+/* 구름 역방향 이동 시각적 효과를 위한 키프레임 */
+@keyframes cloudM {
+  0%,
+  100% {
+    transform: translateX(1%) translateY(1%);
+  }
+  50% {
+    transform: translateX(-1%) translateY(-1%);
+  }
+}
+
+/* 그림자 롤링 시각적 효과를 위한 키프레임 */
+@keyframes shadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0);
+  }
+  12% {
+    box-shadow: 100px 0 #d145ff, 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0), 0px 0 rgba(209, 69, 255, 0);
+  }
+  25% {
+    box-shadow: 120px 0 #d145ff, 100px 0 #d145ff, 0px 0 rgba(209, 69, 255, 0),
+      0px 0 rgba(209, 69, 255, 0);
+  }
+  36% {
+    box-shadow: 140px 0 #d145ff, 120px 0 #d145ff, 100px 0 #d145ff,
+      0px 0 rgba(209, 69, 255, 0);
+  }
+  50% {
+    box-shadow: 160px 0 #d145ff, 140px 0 #d145ff, 120px 0 #d145ff,
+      100px 0 #d145ff;
+  }
+  62% {
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 160px 0 #d145ff, 140px 0 #d145ff,
+      120px 0 #d145ff;
+  }
+  75% {
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      160px 0 #d145ff, 120px 0 #d145ff;
+  }
+  87% {
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      180px 0 rgba(209, 69, 255, 0), 160px 0 #d145ff;
+  }
+  100% {
+    box-shadow: 180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0),
+      180px 0 rgba(209, 69, 255, 0), 180px 0 rgba(209, 69, 255, 0);
+  }
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* 나타나는 시각적 효과를 위한 키프레임 */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 사라지는 시각적 효과를 위한 키프레임 */
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
