@@ -17,12 +17,12 @@
   bottom: -324px;
   z-index: 10015;
   border-radius: 25px 25px 0 0;
+  transition: all 0.45s ease-in-out;
 }
 
 /* 아래로 슬라이딩 오프캔버스 활성화 스타일 */
 .offcanvas-bottom.active {
   bottom: 0;
-  animation: offcanvas-bottom 0.45s ease-in-out;
 }
 
 /* 오프캔버스 활성화 스타일 */
@@ -31,8 +31,8 @@
 }
 
 /* 아래로 슬라이딩 오프캔버스 역방향 활성화 스타일 */
-.offcavas-bottom.active.reverse {
-  animation: offcanvas-bottom-reverse 0.45s ease-in-out;
+.offcanvas-bottom.active.reverse {
+  bottom: -324px;
 }
 
 /* 왼쪽으로 슬라이딩 오프캔버스 스타일 */
@@ -43,12 +43,10 @@
   height: 100%;
   top: 0;
   z-index: 10015;
-  border-radius: 0 !important;
   color: #fff;
   overflow: auto;
-  transition: linear 0.1s;
-  overflow: hidden;
   opacity: 0;
+  transition: all 0.1s linear;
 }
 
 /* 왼쪽으로 슬라이딩 오프캔버스 활성화 스타일 */

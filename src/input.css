@@ -22,6 +22,11 @@
   button svg {
     margin: 0 auto;
   }
+button:required{
+  background:none;
+  
+}
+  
 }
 
 input,

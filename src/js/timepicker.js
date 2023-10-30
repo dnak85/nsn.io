@@ -1,21 +1,21 @@
 /*
- *  Vanilla Javascript timepicker that allows setting of minTime and maxTime
+ *  minTime 및 maxTime을 설정할 수 있는 Vanilla Javascript 시간 선택기
  *
- *        View below code for a list of available methods
+ *        사용 가능한 메서드 목록을 보려면 아래 코드를 확인하세요
  *
- *  Developer: Lance Jernigan
- *  Version: 1.0.4
+ *  개발자: Lance Jernigan
+ *  버전: 1.0.4
  *
  */
 
 /*
- *  Setup our arguments to pass to our timepicker
+ *  시간 선택기에 전달할 인수 설정
  *
- *  @args - format (boolean) - Whether to format the input value or leave in 24 hour
- *          minTime (string) - Minimum time the timepicker should reach (any valid time string Javascript's Date() will accept)
- *          maxTime (string) - Maximum time the timepicker should reach (any valid time string Javascript's Date() will accept)
- *          meridiem (boolean) - Whether the timepicker should display the meridiem (defaults to true if format is true and false if format is false)
- *          arrowColor (string) - Any valid color (Hex, RGB, RGBA, etc.) to use for the arrows
+ *  @args - format (부울) - 입력 값의 형식을 지정할 것인지 여부 또는 24시간 형식으로 남길 것인지 (boolean)
+ *          minTime (문자열) - 시간 선택기가 도달해야 하는 최소 시간 (Javascript의 Date()가 수용하는 유효한 시간 문자열)
+ *          maxTime (문자열) - 시간 선택기가 도달해야 하는 최대 시간 (Javascript의 Date()가 수용하는 유효한 시간 문자열)
+ *          meridiem (부울) - 시간 선택기가 오전/오후를 표시할지 여부 (format이 true이면 기본값은 true이고 format이 false이면 기본값은 false)
+ *          arrowColor (문자열) - 화살표에 사용할 유효한 색상 (Hex, RGB, RGBA 등)
  *
  */
 
@@ -27,13 +27,13 @@ var args = {
 };
 
 /*
- *  Create a new timepicker for our input and pass it our args
+ *  입력 요소에 새로운 시간 선택기 생성 및 args를 전달합니다
  */
 
 var tpicker = new timepicker(document.querySelector("input.timepicker"), args);
 
 /*
- *  Starts our Timepicker Functionality
+ *  시간 선택기 기능 시작
  */
 
 function timepicker(element, args) {
@@ -236,7 +236,7 @@ function timepicker(element, args) {
 
     switch (method) {
       case "meridiem":
-        // Toggle between AM and PM
+        // AM과 PM을 토글
         this.time.getHours() >= 12
           ? this.time.setHours(this.time.getHours() - 12)
           : this.time.setHours(this.time.getHours() + 12);
@@ -429,7 +429,7 @@ function timepicker(element, args) {
   this.init = function () {
     if (element.length) {
       console.warn(
-        "Timepicker selector must be for a specific element, not a list of elements."
+        "시간 선택기 선택기는 특정 요소를 대상으로해야하며 요소 목록이 아니어야합니다."
       );
       return;
     }
@@ -446,67 +446,3 @@ function timepicker(element, args) {
 
   this.init();
 }
-
-/*
- *  Timepicker Methods
- *
- *  updateSettings()
- *
- *     Update the settings originally passed to your timepicker
- *
- *     @parameters - args (a list of available arguments is provided above the code)
- *
- *
- *  updateTime()
- *
- *     Update the time based on parameters passed
- *
- *     @parameters - method (string) - What method to affect ('hour', 'minute', 'meridiem')
- *                   add (boolean) - True to add amount, false to subtract amount
- *                   amount /optional/ (number) - Number to add or subtract from method (defaults to 1)
- *
- *
- *  add()
- *
- *     Add amount to selected method
- *
- *     @parameters - method (string) - What method to affect ('hour', 'minute')
- *                   amount /optional/ (number) - Number to add to method (defaults to 1)
- *
- *
- *  subtract()
- *
- *     subtract amount from selected method
- *
- *     @parameters - method (string) - What method to affect ('hour', 'minute')
- *                   amount /optional/ (number) - Number to subtract from method (defaults to 1)
- *
- *
- *  buildString()
- *
- *     Returns the string that will be sent to the input
- *
- *
- *  getTime()
- *
- *     Returns the date object for the current selected time
- *
- *
- *  getHour()
- *
- *     Returns the current hour for the timepicker
- *
- *
- *  getMinute()
- *
- *     Returns the current Minute for the timepicker
- *
- *
- *  getMeridiem()
- *
- *     Returns the current Meridiem for the timepicker
- *
- *
- *  get
- */
-tpicker.updateSettings({ minTime: "2:00 am" });

@@ -1,23 +1,26 @@
-/* 전반적인 스타일 */
+/* Overall style */
 .vanilla-calendar {
-  @apply w-full !important;
+  width: 100% !important;
 }
 
-/* 월 및 년도 스타일 */
+/* Month and year style */
 .vanilla-calendar-year:hover,
 .vanilla-calendar-month:hover {
-  @apply text-[#7b61ff] !important;
+  color: #7b61ff !important;
 }
 
-/* 주차 요일 스타일 */
+/* Calendar day style */
 .vanilla-calendar-week__day {
-  @apply text-[16px] font-normal text-[#7B61FF] !important;
+  font-size: 16px;
+  font-weight: normal;
+  color: #7b61ff !important;
 }
 
-/* 월 및 년도 스타일 */
+/* Month and year style */
 .vanilla-calendar-months__month,
 .vanilla-calendar-years__year {
-  @apply text-[16px] text-violet-900 !important;
+  font-size: 16px;
+  color: #7b61ff !important;
 }
 
 .vanilla-calendar-months__month_selected,
@@ -26,127 +29,159 @@
   color: #fff !important;
 }
 
-/* Custom Calendar 스타일 */
+/* Custom Calendar style */
 #customCalendar {
   padding: 20px 0 0 0 !important;
   grid-gap: 20px !important;
   gap: 20px !important;
+  border: none;
 }
 
 #customCalendar button {
   box-shadow: none;
 }
 
-/* 캘린더 헤더 스타일 */
+/* Calendar header style */
 .vanilla-calendar-header {
   justify-content: space-between !important;
   padding: 0 15px 0 10px !important;
 }
 
 .vanilla-calendar-header__content {
-  @apply justify-start px-0 leading-5 text-[#242731] !important;
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+  line-height: 1.25 !important;
+  color: #242731 !important;
 }
 
 .vanilla-calendar-header__content button {
-  @apply text-[18px] font-semibold !important;
+  font-size: 18px;
+  color: #242731 !important;
+  font-weight: 600 !important;
 }
 
-.vanilla-calendar-header__content button:first-child:after {
+.vanilla-calendar-header__content button:first-child::after {
   content: ".";
 }
 
 .vanilla-calendar-arrow.vanilla-calendar-arrow_prev {
-  left: -26px !important;
+  left: -32px;
 }
 
 .vanilla-calendar-arrow.vanilla-calendar-arrow_next {
   right: 0 !important;
 }
-
-/* 캘린더 화살표 스타일 */
-.vanilla-calendar-arrow.vanilla-calendar-arrow_prev::before:hover,
-.vanilla-calendar-arrow.vanilla-calendar-arrow_prev::after:hover,
-.vanilla-calendar-arrow.vanilla-calendar-arrow_next::before:hover,
-.vanilla-calendar-arrow.vanilla-calendar-arrow_next::after:hover {
-  @apply h-[2px] bg-violet-900 !important;
+.vanilla-calendar-arrow::before,
+.vanilla-calendar-arrow::after {
+  height: 2px;
+  border-radius: 99px;
+  background: #808191 !important;
 }
 
-/* 캘린더 콘텐츠 스타일 */
+/* Calendar arrow style */
+.vanilla-calendar-arrow::before:hover,
+.vanilla-calendar-arrow::after:hover {
+  height: 2px;
+  background-color: #7b61ff !important;
+}
+
+/* Calendar content style */
 .vanilla-calendar-content {
-  @apply gap-2;
+  gap: 2;
 }
 
-/* 캘린더 날짜 버튼 스타일 */
+/* Calendar date button style */
 .vanilla-calendar-day__btn {
-  @apply flex-wrap content-center font-dm text-[16px] font-medium leading-[30px] text-[#5f6165] !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: "dm sans";
+  font-size: 16px;
+  font-weight: medium;
+  line-height: 30px;
+  color: #5f6165 !important;
 }
 
 .vanilla-calendar-day__btn_weekend,
 .vanilla-calendar-day__btn_holiday {
-  @apply text-[#FC5185] !important;
+  color: #fc5185 !important;
 }
 
 .vanilla-calendar-day__btn_today {
-  @apply bg-sky-100 text-gray-500 !important;
+  background-color: #e5f7fd !important;
+  color: #657584 !important;
 }
 
 .vanilla-calendar-day__btn_selected {
-  @apply bg-violet-500 text-white !important;
+  background-color: #ffd500 !important;
+  color: #fff !important;
 }
 
-/* 탭 버튼 스타일 */
+/* Tab button style */
 .tab button.active {
-  @apply rounded-[20px] bg-violet-500 text-[16px] font-semibold text-white;
+  border-radius: 20px;
+  background-color: #7b61ff;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
-/* 시간 선택 스타일 */
+/* Time selection style */
 .vanilla-calendar-time__hours,
 .vanilla-calendar-time__minutes {
-  @apply w-[34px] !important;
+  width: 34px !important;
 }
 
 .vanilla-calendar-time__hours input,
 .vanilla-calendar-time__minutes input {
-  @apply font-ptnd text-[24px] !important;
+  font-family: "ptnd";
+  font-size: 24px !important;
 }
 
-/* Main Calendar 스타일 */
+/* Main Calendar style */
 #mainCalendar {
-  @apply p-0 !important;
+  padding: 0 !important;
 }
 
 #mainCalendar button {
-  @apply shadow-none;
+  box-shadow: none;
 }
 
 #mainCalendar .vanilla-calendar-day__btn_today {
-  @apply bg-transparent font-dm font-bold text-[#7b61ff] !important;
+  background: transparent;
+  font-family: "dm sans";
+  font-weight: bold;
+  color: #7b61ff !important;
 }
 
-#mainCalendar .vanilla-calendar-day__btn_selected {
-  @apply bg-[#ffd500] text-white !important;
+#mainCalendar.vanilla-calendar-day__btn_selected {
+  background-color: #ffd500 !important;
+  color: white !important;
 }
 
 #mainCalendar .vanilla-calendar-week__day {
-  @apply font-medium !important;
+  font-weight: medium !important;
 }
 
-#mainCalendar .vanilla-calendar-wrapper {
-  @apply mt-6 !important;
+#mainCalendar.vanilla-calendar-wrapper {
+  margin-top: 6px !important;
 }
 
-/* 주요 버튼 스타일 */
+/* Main button style */
 #week ol li div:first-child {
-  @apply w-[calc(100%-100px)];
+  width: calc(100% - 100px);
 }
 
-#mainCalendar .vanilla-calendar-arrow::after,
-#mainCalendar .vanilla-calendar-arrow::before {
-  @apply h-[2px] rounded-full bg-[#808191] !important;
+#mainCalendar .vanilla-calendar-arrow::before,
+#mainCalendar .vanilla-calendar-arrow::after {
+  height: 2px;
+  border-radius: 50%;
+  background-color: #808191 !important;
 }
 
-#mainCalendar .vanilla-calendar-day__btn.bg-red {
-  @apply bg-[#ff3f02] text-white !important;
+#mainCalendar.vanilla-calendar-day__btn.bg-red {
+  background-color: #ff3f02 !important;
+  color: white !important;
 }
 
 #week ol li div:first-child span:first-child {

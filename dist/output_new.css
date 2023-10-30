@@ -441,6 +441,10 @@ video {
   font-feature-settings: "clig" off, "liga" off;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 em {
   font-style: normal;
 }
@@ -459,6 +463,13 @@ img {
 
 button svg {
   margin: 0 auto;
+}
+
+button:hover,
+  button:active,
+  button:focus {
+  background: none;
+  outline: none;
 }
 
 *, ::before, ::after {
@@ -5187,6 +5198,663 @@ button svg {
 
 .modal-dialog.prms-sch-modal .modal-content .prms-my-cal {
   padding: 0px;
+}
+
+/* 약속만들기 */
+
+#create-prms {
+  position: relative;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.c_progress {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  height: 1.25rem;
+  width: calc(100% - 56px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.c_progress::before {
+  position: absolute;
+  left: 0px;
+  top: 9px;
+  z-index: 5;
+  height: 0.125rem;
+  width: 100%;
+  border-radius: 99px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 195 255 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.c_progress .pgrs-list {
+  display: flex;
+  height: 1.25rem;
+  width: 100%;
+  justify-content: space-between;
+  gap: calc((100% - 50px) / 5);
+}
+
+.c_progress button {
+  position: relative;
+  z-index: 20;
+  margin-top: 7px;
+  display: block;
+  height: 6px;
+  width: 6px;
+}
+
+.c_progress button::before {
+  position: absolute;
+  inset: 0px;
+  z-index: 20;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 195 255 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.c_progress button::after {
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 10;
+  display: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.c_progress button span {
+  position: absolute;
+  left: -33px;
+  top: 1.25rem;
+  display: none;
+  height: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 66px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.c_progress button.active::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.c_progress button.active::after {
+  content: var(--tw-content);
+  display: block;
+}
+
+.c_progress button.cmp::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+}
+
+.c_progress button.active span {
+  display: block;
+}
+
+/* 진행 바 */
+
+.c_progress .bar {
+  position: absolute;
+  left: 0px;
+  top: 9px;
+  z-index: 9;
+  height: 0.125rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+}
+
+.c_progress .bar.per0 {
+  width: calc((100% - 50px) * (0 / 5) + 24px);
+}
+
+.c_progress .bar.per1 {
+  width: calc((100% - 50px) * (1 / 5) + 24px);
+}
+
+.c_progress .bar.per2 {
+  width: calc((100% - 50px) * (2 / 5) + 24px);
+}
+
+.c_progress .bar.per3 {
+  width: calc((100% - 50px) * (3 / 5) + 24px);
+}
+
+.c_progress .bar.per4 {
+  width: calc((100% - 50px) * (4 / 5) + 24px);
+}
+
+.c_progress .bar.per5 {
+  width: calc((100% - 50px) + 24px);
+}
+
+.c_progress .bar.per6 {
+  width: 100%;
+}
+
+/* 진행 입력 */
+
+.create_usr_input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.progress_input {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 56px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
+  padding: 1rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.progress_input .title {
+  position: relative;
+  display: flex;
+  height: 1.5rem;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progress_input .title .bullet {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  font-family: GmarketSans;
+  font-size: 12px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input .title .obj {
+  display: block;
+  height: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 70px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.progress_input .title .obj-txt {
+  display: none;
+  width: calc(100% - 152px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input .title .obj-date {
+  display: none;
+  width: calc(100% - 152px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input .title .bg-arrow {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.progress_input .inputbox {
+  display: none;
+}
+
+.progress_input .inputbox .prms_obj {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+}
+
+.progress_input .inputbox .prms_obj strong {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input .inputbox .prms_obj input {
+  display: block;
+  height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.progress_input .inputbox .prms_obj input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.progress_input .inputbox .prms_obj input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.progress_input .inputbox .prms_obj input:focus {
+  outline-color: #5742c3;
+}
+
+.progress_input .inputbox .submitBtn {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input.cmp,
+.progress_input.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 66 195 / var(--tw-bg-opacity));
+}
+
+.progress_input.active {
+  --tw-shadow: 0px 8px 8px 0px #CCBAF4;
+  --tw-shadow-colored: 0px 8px 8px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.progress_input.cmp .title .bullet,
+.progress_input.active .title .bullet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.progress_input.cmp .title .obj,
+.progress_input.active .title .obj {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.progress_input.cmp .title .obj-txt {
+  display: block;
+}
+
+.progress_input.cmp .title .obj-date {
+  display: block;
+}
+
+.progress_input.active .title .bg-arrow svg {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.progress_input.cmp .title .bg-arrow svg path,
+.progress_input.active .title .bg-arrow svg path {
+  stroke: #fff;
+}
+
+.progress_input.active .inputbox {
+  display: block;
+  width: 100%;
+}
+
+.ch_return {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+}
+
+.ch_return label {
+  display: flex;
+  height: 44px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ch_return label span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.ch_return label svg {
+}
+
+.ch_return input:checked + label {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  background-color: transparent;
+}
+
+.ch_return input:checked + label svg path:first-child {
+  fill: #fff;
+  stroke: none;
+}
+
+.ch_return input:checked + label svg path:last-child {
+  stroke: #5742C3;
+}
+
+.ch_usr {
+  display: none;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.ch_usr label {
+  display: flex;
+  height: 31px;
+  width: calc((100% - 24px) / 2);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  background-color: transparent;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.ch_usr input:checked + label {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.peer\/rt02:checked ~ #ch_usr02 {
+  display: flex;
+}
+
+.returnGuide {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 1.25rem;
+}
+
+.returnGuide div {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.returnGuide div strong {
+  font-weight: 700;
+}
+
+.inputbox .btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.inputbox .btn button {
+  display: flex;
+  height: 48px;
+  width: calc((100% - 24px) / 2);
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.inputbox .btn button.on {
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+}
+
+.date-value {
+  margin-top: 1.25rem;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
+}
+
+.date-value .date {
+  font-size: 20px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.date-value .time {
+  font-size: 20px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.input-date {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.input-date #customCalendar {
+  border-radius: 10px !important;
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(205 195 255 / var(--tw-border-opacity)) !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.input-date
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 63 2 / var(--tw-bg-opacity)) !important;
+}
+
+.input-date
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_today {
+  background-color: transparent !important;
+  font-weight: 700 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(123 97 255 / var(--tw-text-opacity)) !important;
+}
+
+.input-date .time {
+  overflow: hidden;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.create_agree {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.customChk {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.customChk .bullet {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+}
+
+.customChk .bullet svg {
+  display: none;
+}
+
+input:checked + .customChk .bullet {
+  --tw-border-opacity: 1;
+  border-color: rgb(26 29 45 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+input:checked + .customChk .bullet svg {
+  display: block;
+}
+
+.page-btn {
+  display: block;
+  width: 100%;
+}
+
+.page-btn button {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+  font-size: 16px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-center::-moz-placeholder {

@@ -1,5 +1,3 @@
-/* Micromodal 스타일 */
-
 /* 모달 슬라이드 스타일 */
 .micromodal-slide {
   display: none;
@@ -11,22 +9,18 @@
 
 /* 모달 슬라이드 애니메이션 */
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
-  -webkit-animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
-  -webkit-animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
-  -webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
   animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__container {
-  -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -37,39 +31,61 @@
 
 /* 모달 오버레이 스타일 */
 .modal__overlay {
-  @apply fixed inset-0 z-30 flex items-center justify-center bg-violet-100 bg-opacity-100 px-4 lg:absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(87, 66, 195, 1);
+  padding: 4px;
+  @apply inset-0 bg-opacity-100 px-4 lg:absolute;
 }
 
 .checking .modal__overlay {
-  @apply bg-opacity-80;
+  background-color: rgba(87, 66, 195, 0.8);
 }
 
 /* 모달 컨테이너 스타일 */
 .modal__container {
-  @apply relative top-[-80px] w-full rounded-[12px] bg-[#5742C3] px-5 py-8 shadow-cs4;
+  position: relative;
+  top: -80px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #5742c3;
+  padding: 5px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .cancel .modal__container {
-  @apply px-0;
+  padding: 0;
 }
 
 .checking .modal__container {
-  @apply bg-white;
+  background-color: #fff;
 }
 
 /* 모달 헤더 스타일 */
 .modal__header {
-  @apply hidden;
+  display: none;
 }
 
 /* 모달 콘텐츠 스타일 */
 .modal__content {
-  @apply w-full;
+  width: 100%;
 }
 
 /* 모달 닫기 버튼 스타일 */
 .modal__close {
-  @apply absolute right-4 top-5 block h-5 w-5;
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+  display: block;
+  height: 5px;
+  width: 5px;
 }
 
 .modal__close:focus,
@@ -84,7 +100,6 @@
   width: 14px;
   height: 2px;
   background: #abadc6;
-  transform: rotate(45deg);
   display: block;
   position: absolute;
   top: 2px;
@@ -104,14 +119,12 @@
   border-style: none;
   border-width: 0;
   cursor: pointer;
-  -webkit-appearance: button;
+  appearance: button;
   text-transform: none;
   overflow: visible;
   line-height: 1.15;
   margin: 0;
   will-change: transform;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
