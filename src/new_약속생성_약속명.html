@@ -500,6 +500,7 @@
                             <div class="title">
                                 <div class="bullet">04</div>
                                 <div class="obj">약속장소</div>
+                                <div class="obj-txt">인천공항 제2터미널</div>
                                 <div class="bg-arrow">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
                                         <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
@@ -520,13 +521,135 @@
                             <div class="title">
                                 <div class="bullet">05</div>
                                 <div class="obj">인원/보증금</div>
+                                <div class="obj-price">2명/ 200,000원</div>
                                 <div class="bg-arrow">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
                                         <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
                             </div>
-                            <div class="inputbox"></div>
+                            <div class="inputbox">
+                                <div class="prms-price">
+                                    <div class="top-txt">
+                                        <span>약속보증금을 입력해주세요.</span>
+                                        <em>이름을 클릭해 약속에 쓸 닉네임을 설정할 수 있어요.</em>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="usr-price">
+                                        <!-- 게스트삭제 버튼은 입력폼 3번쨰 부터 활성화됨 -->
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="나">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="0" disabled>
+                                            </div>
+                                            <!-- //가격 -->
+                                            <div class="hidden del">
+                                                <button>-</button>
+                                            </div>
+                                            <!-- //삭제 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="hidden del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+
+                                        <div class="addUsr">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="sum-price">
+                                        <dl>
+                                            <dt>총 약속인원</dt>
+                                            <dd>
+                                                <em>2</em>명
+                                            </dd>
+
+                                            <dt>총 약속보증금</dt>
+                                            <dd>
+                                                <em>200,000</em>원
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <!-- 요약 -->
+
+                                    <div class="price-agree">
+                                        <input type="checkbox" name="" id="prmsallcheckagree" class="hidden">
+                                        <label for="prmsallcheckagree">
+                                            <span class="bullet">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 13L9 17L19 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="txt">
+                                                인원이 모두 모이지 않아도 약속진행
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="price-btn">
+                                        <button class="submitBtn">입력완료</button>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- //prms-price -->
+                            </div>
+                            <!-- //inputbox -->
                         </div>
                         <!-- // -->
 
@@ -541,13 +664,22 @@
                                 </div>
                             </div>
                             <div class="inputbox">
+                                <div class="prms-msg">
+                                    <div class="msg-txt">
+                                        <span><em>(선택)</em> 약속에 참여하는 모든 멤버들에게 공유할 내용을 적어주세요.</span>
+                                    </div>
+                                    <div class="msg-input">
+                                        <textarea name="" id="" cols="30" rows="10">클릭 시 결제페이지 or 공유페이지 이동클릭 시 결제페이지 or 공유페이지 이동클릭 시 결제페이지 or 공유페이지 이동 클릭 시 결제페이지 or 공유페이지 이동</textarea>
+                                        <button class="submitBtn">입 력</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- // -->
                     </div>
                     <!-- // 진행 입력 -->
 
-                    <!-- <div class="create_agree">
+                    <div class="create_agree">
                         <input type="checkbox" name="" id="prmschkagree" class="hidden">
                         <label for="prmschkagree" class="customChk">
                             <span class="bullet">
@@ -559,13 +691,14 @@
                                 모든 약속내용을 확인했으며 동의합니다.
                             </span>
                         </label>
-                    </div> -->
+                    </div>
                     <!-- //동의사항 -->
 
-                    <!-- <div class="px-10 pt-2.5 page-btn">
+                    <div class="px-10 pt-2.5 page-btn">
                         <button class="shadow-cs4">약속만들기</button>
-                    </div> -->
+                    </div>
                     <!-- //페이지 버튼 -->
+
 
                     <div class="h-10"></div>
                 </section>
