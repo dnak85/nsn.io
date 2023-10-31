@@ -696,7 +696,7 @@
   @apply flex w-full flex-col gap-5 pt-6;
 }
 .ch_return label {
-  @apply flex h-[44px] w-full items-center justify-between rounded-[10px] bg-[#7b61ff] px-4;
+  @apply flex h-[44px] w-full cursor-pointer items-center justify-between rounded-[10px] bg-[#7b61ff] px-4;
 }
 .ch_return label span {
   @apply block text-[16px] font-semibold text-white;
@@ -786,7 +786,7 @@
   @apply w-full p-6;
 }
 .customChk {
-  @apply flex items-center gap-5 text-[16px] text-slate-900;
+  @apply flex cursor-pointer items-center gap-5 text-[16px] text-slate-900;
 }
 .customChk .bullet {
   @apply flex h-6 w-6 items-center justify-center rounded-[3px] border-[1px] border-[#7b61ff];

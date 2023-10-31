@@ -5614,6 +5614,7 @@ button:hover,
   display: flex;
   height: 44px;
   width: 100%;
+  cursor: pointer;
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
@@ -5829,6 +5830,7 @@ button:hover,
 
 .customChk {
   display: flex;
+  cursor: pointer;
   align-items: center;
   gap: 1.25rem;
   font-size: 16px;
