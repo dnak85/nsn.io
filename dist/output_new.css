@@ -5572,7 +5572,14 @@ button:hover,
   color: rgb(87 66 195 / var(--tw-text-opacity));
 }
 
+.progress_input .inputbox .prms_obj input:hover {
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
+}
+
 .progress_input .inputbox .prms_obj input:focus {
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
   outline-color: #5742c3;
 }
 
@@ -5933,15 +5940,14 @@ input:checked + .customChk .bullet svg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.usr-price .usr .name input:hover {
+.usr-price .usr .name input:hover,
+.usr-price .usr .name input:focus {
   border-style: none;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(87 66 195 / var(--tw-text-opacity));
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
 }
 
 .usr-price .usr .input-price {
@@ -5968,8 +5974,13 @@ input:checked + .customChk .bullet svg {
 }
 
 .usr-price .usr .input-price input:hover {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
+}
+
+.usr-price .usr .input-price input:focus {
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
 }
 
 .usr-price .usr .input-price input:disabled {
@@ -6188,6 +6199,16 @@ input:checked + .customChk .bullet svg {
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.prms-msg .msg-input textarea:hover {
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
+}
+
+.prms-msg .msg-input textarea:focus {
+  --tw-text-opacity: 1;
+  color: rgb(118 96 224 / var(--tw-text-opacity));
 }
 
 /* 페이지 버튼 */

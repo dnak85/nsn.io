@@ -685,7 +685,7 @@
   @apply block w-full text-center text-[16px] font-normal text-white;
 }
 .progress_input .inputbox .prms_obj input {
-  @apply block h-[44px] w-full rounded-[10px] border-none bg-white text-center font-[800] text-[#5742c3] placeholder:text-[#5742c3] focus:outline-[#5742c3];
+  @apply block h-[44px] w-full rounded-[10px] border-none bg-white text-center font-[800] text-[#5742c3] placeholder:text-[#5742c3] hover:text-[#7660E0] focus:text-[#7660E0] focus:outline-[#5742c3];
 }
 .progress_input .inputbox .submitBtn {
   @apply flex h-[48px] w-full items-center justify-center rounded-[10px] border-[1px] border-white bg-transparent text-[16px] font-bold text-white;
@@ -827,14 +827,15 @@ input:checked + .customChk .bullet svg {
 .usr-price .usr .name input {
   @apply block h-[44px] w-[66px] rounded-[10px] border-none bg-transparent px-[5px] text-left text-[18px] font-[800] leading-5 text-white;
 }
-.usr-price .usr .name input:hover {
-  @apply border-none bg-white text-center text-[#5742C3] outline-none;
+.usr-price .usr .name input:hover,
+.usr-price .usr .name input:focus {
+  @apply border-none bg-white text-center text-[#7660E0];
 }
 .usr-price .usr .input-price {
   @apply flex w-[calc(100%-66px)] items-center justify-end gap-4;
 }
 .usr-price .usr .input-price input {
-  @apply block h-[44px] w-[calc(100%-64px)] rounded-[10px] border-none bg-white text-center text-[18px] font-[800] text-[#5742c3] hover:outline-none disabled:bg-transparent disabled:text-white;
+  @apply block h-[44px] w-[calc(100%-64px)] rounded-[10px] border-none bg-white text-center text-[18px] font-[800] text-[#5742c3] hover:text-[#7660E0]  focus:text-[#7660E0]  disabled:bg-transparent disabled:text-white;
 }
 .usr-price .usr .input-price .del {
   @apply h-[34px] w-[34px];
@@ -905,7 +906,7 @@ input:checked + .customChk .bullet svg {
   @apply flex w-full flex-col gap-4 px-1 pt-6;
 }
 .prms-msg .msg-input textarea {
-  @apply h-[120px] w-full rounded-[10px] px-5 py-3 text-[16px] font-medium text-[#5742c3];
+  @apply h-[120px] w-full rounded-[10px] px-5 py-3 text-[16px] font-medium text-[#5742c3] hover:text-[#7660E0] focus:text-[#7660E0];
 }
 
 /* 페이지 버튼 */
