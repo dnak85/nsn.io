@@ -620,7 +620,7 @@
 
 /* 약속만들기 공통 */
 .progress_input {
-  @apply block h-fit min-h-[56px] w-full overflow-hidden rounded-[10px] border-[1px] border-[#7b61ff] bg-[#ede9fe] p-4 transition duration-500 ease-in;
+  @apply block h-fit min-h-[56px] w-full overflow-hidden rounded-[10px] border-[1px] border-[#7b61ff] bg-[#ede9fe] p-4 transition duration-150 ease-in;
 }
 .progress_input .title {
   @apply relative flex h-6 w-full cursor-pointer items-center gap-3;
