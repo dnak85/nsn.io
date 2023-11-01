@@ -789,7 +789,7 @@
   @apply w-full p-6;
 }
 .customChk {
-  @apply flex cursor-pointer items-center gap-5 text-[12px] text-slate-900;
+  @apply flex cursor-pointer items-center gap-5 text-[14px] text-slate-900;
 }
 .customChk .bullet {
   @apply flex h-6 w-6 items-center justify-center rounded-[3px] border-[1px] border-[#7b61ff];

@@ -5842,7 +5842,7 @@ button:hover,
   cursor: pointer;
   align-items: center;
   gap: 1.25rem;
-  font-size: 12px;
+  font-size: 14px;
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
