@@ -615,7 +615,7 @@
 
 /* 진행 입력 */
 .create_usr_input {
-  @apply relative flex w-full flex-col gap-6 px-6;
+  @apply relative flex w-full flex-col gap-3 px-6;
 }
 
 /* 약속만들기 공통 */
@@ -650,7 +650,7 @@
 /* 활성화 및 작성 완료 */
 
 .progress_input.active {
-  @apply bg-[#5742C3];
+  @apply mb-4 mt-3 bg-[#5742C3];
 }
 .progress_input.active {
   @apply shadow-cs4;
@@ -786,7 +786,7 @@
   @apply w-full p-6;
 }
 .customChk {
-  @apply flex cursor-pointer items-center gap-5 text-[16px] text-slate-900;
+  @apply flex cursor-pointer items-center gap-5 text-[12px] text-slate-900;
 }
 .customChk .bullet {
   @apply flex h-6 w-6 items-center justify-center rounded-[3px] border-[1px] border-[#7b61ff];
