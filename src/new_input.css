@@ -652,6 +652,9 @@
 .progress_input.active {
   @apply mb-4 mt-3 bg-[#5742C3];
 }
+.progress_input:first-child {
+  @apply mt-0 !important;
+}
 .progress_input.active {
   @apply shadow-cs4;
 }
