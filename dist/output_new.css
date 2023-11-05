@@ -5965,14 +5965,14 @@ input:checked + .customChk .bullet svg {
   display: flex;
   width: calc(100% - 66px);
   align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
+  justify-content: space-between;
+  padding-left: 1rem;
 }
 
 .usr-price .usr .input-price input {
   display: block;
   height: 44px;
-  width: calc(100% - 64px);
+  width: calc(100% - 48px);
   border-radius: 10px;
   border-style: none;
   --tw-bg-opacity: 1;

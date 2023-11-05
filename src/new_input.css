@@ -835,10 +835,10 @@ input:checked + .customChk .bullet svg {
   @apply border-none bg-white text-center text-[#7660E0];
 }
 .usr-price .usr .input-price {
-  @apply flex w-[calc(100%-66px)] items-center justify-end gap-4;
+  @apply flex w-[calc(100%-66px)] items-center justify-between pl-4;
 }
 .usr-price .usr .input-price input {
-  @apply block h-[44px] w-[calc(100%-64px)] rounded-[10px] border-none bg-white text-center text-[18px] font-[800] text-[#5742c3] hover:text-[#7660E0]  focus:text-[#7660E0]  disabled:bg-transparent disabled:text-white;
+  @apply block h-[44px] w-[calc(100%-48px)] rounded-[10px] border-none bg-white text-center text-[18px] font-[800] text-[#5742c3] hover:text-[#7660E0]  focus:text-[#7660E0]  disabled:bg-transparent disabled:text-white;
 }
 .usr-price .usr .input-price .del {
   @apply h-[34px] w-[34px];
