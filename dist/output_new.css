@@ -585,6 +585,10 @@ button:hover,
   visibility: hidden;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -967,6 +971,18 @@ button:hover,
 
 .top-\[86px\] {
   top: 86px;
+}
+
+.bottom-\[\] {
+  bottom: ;
+}
+
+.bottom-\[40px\] {
+  bottom: 40px;
+}
+
+.bottom-\[0\] {
+  bottom: 0;
 }
 
 .z-10 {
@@ -3012,6 +3028,31 @@ button:hover,
   padding-bottom: 3px;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
+}
+
+.py-\[40\] {
+  padding-top: 40;
+  padding-bottom: 40;
+}
+
+.py-\[4\] {
+  padding-top: 4;
+  padding-bottom: 4;
+}
+
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3194,6 +3235,18 @@ button:hover,
 
 .pt-\[84px\] {
   padding-top: 84px;
+}
+
+.pb-\[40px\] {
+  padding-bottom: 40px;
+}
+
+.pb-\[px\] {
+  padding-bottom: px;
+}
+
+.pb-\[116px\] {
+  padding-bottom: 116px;
 }
 
 .text-left {
