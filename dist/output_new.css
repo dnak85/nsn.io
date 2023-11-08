@@ -4188,6 +4188,7 @@ button:hover,
   align-items: center;
   justify-content: center;
   padding-right: 1.5rem;
+  text-align: center;
 }
 
 #m_header.sub .top .pageTitle strong {
@@ -6739,6 +6740,7 @@ input:checked + .customChk .bullet svg {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(123 97 255 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
@@ -6773,6 +6775,7 @@ input:checked + .customChk .bullet svg {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.75rem;

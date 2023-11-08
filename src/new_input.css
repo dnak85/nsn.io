@@ -176,7 +176,7 @@
   @apply flex h-6 w-6 items-center justify-center;
 }
 #m_header.sub .top .pageTitle {
-  @apply flex h-6 w-[calc(100%-24px)] items-center justify-center pr-6;
+  @apply flex h-6 w-[calc(100%-24px)] items-center justify-center pr-6 text-center;
 }
 #m_header.sub .top .pageTitle strong {
   @apply block w-full truncate font-gm text-[24px] font-medium text-slate-900;
@@ -1097,7 +1097,7 @@ input:checked + .customChk .bullet svg {
   @apply mt-4 block w-full;
 }
 .prms-content-box .txt .pp_table .tbl-title {
-  @apply flex w-full items-center bg-[#7b61ff] px-2 py-3;
+  @apply flex w-full items-center justify-center bg-[#7b61ff] px-2 py-3;
 }
 .prms-content-box .txt .pp_table .tbl-title span {
   @apply block h-[17px] w-[100px] text-center text-[14px] font-semibold leading-[17px] text-white;
@@ -1109,7 +1109,7 @@ input:checked + .customChk .bullet svg {
   @apply flex w-full flex-col;
 }
 .prms-content-box .txt .pp_table .tbl-list .list {
-  @apply flex w-full items-center px-2 py-3 leading-5;
+  @apply flex w-full items-center px-2 py-3 leading-5 justify-center;
 }
 .prms-content-box .txt .pp_table .tbl-list .list:nth-child(2n) {
   @apply bg-[#EDE9FE];

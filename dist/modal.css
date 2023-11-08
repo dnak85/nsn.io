@@ -1,9 +1,11 @@
 /* 모달 스타일 */
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 471px;
   height: 100%;
   z-index: 10014;
   display: none;
@@ -20,6 +22,7 @@
   width: calc(100% - 32px);
   height: 100%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .modal-dialog.centered {
@@ -44,7 +47,6 @@
   position: absolute;
   display: block;
   width: calc(100% - 32px);
-  max-width: 360px;
   height: auto;
   background: #fff;
   border-radius: 10px;
@@ -57,4 +59,16 @@
 /* 모달 콘텐츠 내 버튼 스타일 */
 .modal-content button {
   box-shadow: none;
+}
+@media screen and (min-width: 950px) {
+  .modal {
+    left: auto;
+    margin-left: -115px;
+  }
+  #startDateCalendar {
+    margin-left: -96px;
+  }
+  #endDateCalendar {
+    margin-left: -258px;
+  }
 }
