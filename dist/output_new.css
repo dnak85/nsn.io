@@ -1482,6 +1482,10 @@ button:hover,
   height: 2.25rem;
 }
 
+.h-\[108px\] {
+  height: 108px;
+}
+
 .h-\[116\.31px\] {
   height: 116.31px;
 }
@@ -1492,10 +1496,6 @@ button:hover,
 
 .h-\[128px\] {
   height: 128px;
-}
-
-.h-\[132px\] {
-  height: 132px;
 }
 
 .h-\[142px\] {
@@ -6467,11 +6467,31 @@ input:checked + .customChk .bullet svg {
   display: none;
 }
 
+.progress-detail > div.bfr .order .num {
+  --tw-text-opacity: 1;
+  color: rgb(169 167 218 / var(--tw-text-opacity));
+}
+
+.progress-detail > div.bfr .contxt {
+  justify-content: center;
+}
+
+.progress-detail > div.bfr .contxt span {
+  --tw-text-opacity: 1;
+  color: rgb(169 167 218 / var(--tw-text-opacity));
+}
+
+.progress-detail > div.bfr .contxt em {
+  display: none;
+}
+
 /* 약속상세 - 플로팅 버튼 */
 
 .floatingButton {
+  position: relative;
   display: flex;
   width: 100%;
+  max-width: 471px;
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(237 233 254 / var(--tw-bg-opacity));
@@ -6480,8 +6500,19 @@ input:checked + .customChk .bullet svg {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   transition-property: all;
-  transition-duration: 150ms;
+  transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floatingButton.scldn {
+  position: fixed;
+  top: calc(100% - 148px);
+  z-index: 20;
+  height: 72px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .floatingButton button {
@@ -6500,6 +6531,23 @@ input:checked + .customChk .bullet svg {
   --tw-shadow: 0px 8px 8px 0px #CCBAF4;
   --tw-shadow-colored: 0px 8px 8px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.floatingButton.scldn button {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.floatingButton.scldn button:disabled {
+  border-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  --tw-border-opacity: 1;
+  border-color: rgb(241 245 249 / var(--tw-border-opacity));
 }
 
 .floatingButton button:disabled {
@@ -6536,7 +6584,6 @@ input:checked + .customChk .bullet svg {
 }
 
 .prms-content-box .txt {
-  margin-top: 1.25rem;
   display: block;
   width: 100%;
 }
@@ -6604,11 +6651,12 @@ input:checked + .customChk .bullet svg {
 }
 
 .prms-content-box .txt dl dd .cmp.memo button {
+  margin-left: 15px;
   height: 28px;
   vertical-align: bottom;
 }
 
-.prms-content-box .txt dl dd .date {
+.prms-content-box .txt dl dd > .date {
   display: flex;
   min-height: 22px;
   width: 100%;
@@ -6617,7 +6665,7 @@ input:checked + .customChk .bullet svg {
   line-height: 28px;
 }
 
-.prms-content-box .txt dl dd .date span {
+.prms-content-box .txt dl dd > .date span {
   font-size: 16px;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -6669,6 +6717,143 @@ input:checked + .customChk .bullet svg {
 .prms-content-box .txt dl dd .modify textarea:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+/* 약속상세 - 인원/보증금 */
+
+.prms-content-box .txt p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.prms-content-box .txt .pp_table .tbl-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.prms-content-box .txt .pp_table .tbl-title span {
+  display: block;
+  height: 17px;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-title span:first-child {
+  width: 120px;
+}
+
+.prms-content-box .txt .pp_table .tbl-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list:nth-child(2n) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list .name {
+  display: flex;
+  height: 1.25rem;
+  width: 120px;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list .price {
+  height: 1.25rem;
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list .date {
+  height: 1.25rem;
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list.invite .name {
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.reset-date .modal-content {
+  padding: 0px;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.reset-date .modal-content .progress_input {
+  margin: 0px !important;
+  border-color: transparent !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+/* event bg */
+
+.eventBg {
+  position: fixed;
+  top: 0px;
+  z-index: 10010;
+  display: none;
+  height: 100%;
+  width: 100%;
+  max-width: 471px;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.6;
+}
+
+.eventBg.active {
+  display: block;
 }
 
 .placeholder\:text-center::-moz-placeholder {

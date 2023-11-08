@@ -998,13 +998,34 @@ input:checked + .customChk .bullet svg {
 .progress-detail > div.cmp .contxt em {
   @apply hidden;
 }
+.progress-detail > div.bfr .order .num {
+  @apply text-[#A9A7DA];
+}
+.progress-detail > div.bfr .contxt {
+  @apply justify-center;
+}
+.progress-detail > div.bfr .contxt span {
+  @apply text-[#A9A7DA];
+}
+.progress-detail > div.bfr .contxt em {
+  @apply hidden;
+}
 
 /* 약속상세 - 플로팅 버튼 */
 .floatingButton {
-  @apply flex w-full justify-center bg-violet-100 px-10 py-6 transition-all duration-150 ease-in-out;
+  @apply relative flex w-full max-w-[471px] justify-center bg-violet-100 px-10 py-6  transition-all duration-500 ease-in-out;
+}
+.floatingButton.scldn {
+  @apply fixed top-[calc(100%-148px)] z-20 h-[72px] px-0 py-0;
 }
 .floatingButton button {
   @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-violet-500 text-[16px] font-bold text-white shadow-cs4;
+}
+.floatingButton.scldn button {
+  @apply h-full w-full rounded-none shadow-none;
+}
+.floatingButton.scldn button:disabled {
+  @apply border-[1px] border-x-0 border-slate-100;
 }
 .floatingButton button:disabled {
   @apply border-[1px] border-[#CDC3FF] bg-white font-medium text-[#6D6C95] shadow-none;
@@ -1018,7 +1039,7 @@ input:checked + .customChk .bullet svg {
   @apply flex w-full items-center justify-between;
 }
 .prms-content-box .txt {
-  @apply mt-5 block w-full;
+  @apply block w-full;
 }
 .prms-content-box .txt dl {
   @apply flex w-full flex-wrap items-start justify-between;
@@ -1048,12 +1069,12 @@ input:checked + .customChk .bullet svg {
   @apply max-w-full;
 }
 .prms-content-box .txt dl dd .cmp.memo button {
-  @apply h-[28px] align-bottom;
+  @apply ml-[15px] h-[28px] align-bottom;
 }
-.prms-content-box .txt dl dd .date {
+.prms-content-box .txt dl dd > .date {
   @apply flex min-h-[22px] w-full items-center gap-[15px] leading-[28px];
 }
-.prms-content-box .txt dl dd .date span {
+.prms-content-box .txt dl dd > .date span {
   @apply text-[16px] font-medium text-black;
 }
 .prms-content-box .txt dl dd .modify {
@@ -1067,4 +1088,55 @@ input:checked + .customChk .bullet svg {
 }
 .prms-content-box .txt dl dd .modify textarea {
   @apply w-[calc(100%-40px)] rounded-[5px] border-[2px] border-violet-500 px-1 font-semibold text-slate-900 focus:outline-none;
+}
+/* 약속상세 - 인원/보증금 */
+.prms-content-box .txt p {
+  @apply text-[14px] font-medium leading-[17px] text-pink-500;
+}
+.prms-content-box .txt .pp_table {
+  @apply mt-4 block w-full;
+}
+.prms-content-box .txt .pp_table .tbl-title {
+  @apply flex w-full items-center bg-[#7b61ff] px-2 py-3;
+}
+.prms-content-box .txt .pp_table .tbl-title span {
+  @apply block h-[17px] w-[100px] text-center text-[14px] font-semibold leading-[17px] text-white;
+}
+.prms-content-box .txt .pp_table .tbl-title span:first-child {
+  @apply w-[120px];
+}
+.prms-content-box .txt .pp_table .tbl-list {
+  @apply flex w-full flex-col;
+}
+.prms-content-box .txt .pp_table .tbl-list .list {
+  @apply flex w-full items-center px-2 py-3 leading-5;
+}
+.prms-content-box .txt .pp_table .tbl-list .list:nth-child(2n) {
+  @apply bg-[#EDE9FE];
+}
+.prms-content-box .txt .pp_table .tbl-list .list .name {
+  @apply flex h-5 w-[120px] justify-center gap-2 text-[14px] leading-5 text-[#0f172a];
+}
+.prms-content-box .txt .pp_table .tbl-list .list .price {
+  @apply h-5 w-[100px] text-right text-[14px] leading-5 text-slate-900;
+}
+.prms-content-box .txt .pp_table .tbl-list .list .date {
+  @apply h-5 w-[100px] text-right text-[14px] leading-5 text-slate-900;
+}
+.prms-content-box .txt .pp_table .tbl-list .list.invite .name {
+  @apply font-[800] text-[#5742c3];
+}
+.reset-date .modal-content {
+  @apply p-0 shadow-none;
+}
+.reset-date .modal-content .progress_input {
+  @apply m-0 border-transparent shadow-none !important;
+}
+
+/* event bg */
+.eventBg {
+  @apply fixed top-0 z-[10010] hidden h-full w-full max-w-[471px] bg-black bg-opacity-60;
+}
+.eventBg.active {
+  @apply block;
 }
