@@ -27,7 +27,6 @@
   button:hover,
   button:active,
   button:focus {
-    background: none;
     outline: none;
   }
 }
