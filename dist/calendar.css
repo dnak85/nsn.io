@@ -179,8 +179,8 @@
   background-color: #808191 !important;
 }
 
-#mainCalendar.vanilla-calendar-day__btn.bg-red {
-  background-color: #ff3f02 !important;
+.vanilla-calendar-day__btn.slt_day {
+  background-color: #ffd500 !important;
   color: white !important;
 }
 
