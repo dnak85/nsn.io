@@ -633,6 +633,10 @@ button:hover,
   bottom: 164px;
 }
 
+.bottom-\[40px\] {
+  bottom: 40px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -971,18 +975,6 @@ button:hover,
 
 .top-\[86px\] {
   top: 86px;
-}
-
-.bottom-\[\] {
-  bottom: ;
-}
-
-.bottom-\[40px\] {
-  bottom: 40px;
-}
-
-.bottom-\[0\] {
-  bottom: 0;
 }
 
 .z-10 {
@@ -1936,6 +1928,10 @@ button:hover,
 
 .w-\[585px\] {
   width: 585px;
+}
+
+.w-\[58px\] {
+  width: 58px;
 }
 
 .w-\[64px\] {
@@ -3028,31 +3024,6 @@ button:hover,
   padding-bottom: 3px;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
-.py-\[40\] {
-  padding-top: 40;
-  padding-bottom: 40;
-}
-
-.py-\[4\] {
-  padding-top: 4;
-  padding-bottom: 4;
-}
-
-.py-\[40px\] {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3235,18 +3206,6 @@ button:hover,
 
 .pt-\[84px\] {
   padding-top: 84px;
-}
-
-.pb-\[40px\] {
-  padding-bottom: 40px;
-}
-
-.pb-\[px\] {
-  padding-bottom: px;
-}
-
-.pb-\[116px\] {
-  padding-bottom: 116px;
 }
 
 .text-left {
@@ -6909,6 +6868,235 @@ input:checked + .customChk .bullet svg {
 
 .eventBg.active {
   display: block;
+}
+
+/* 마이페이지 */
+
+.myInfo {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.myInfo .usr {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.myInfo .usr .ico {
+  height: 84px;
+  width: 84px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.myInfo .usr button {
+  margin-top: 0.75rem;
+  display: flex;
+  height: 2rem;
+  width: 102px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.myInfo .buttonGroup {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.myInfo .buttonGroup button {
+  display: flex;
+  height: 48px;
+  width: 295px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  font-size: 16px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.myInfo .buttonGroup button.btn-coupon {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #FC5185 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(252 81 133 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(214 101 244 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #D665F4 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #7B61FF var(--tw-gradient-to-position);
+}
+
+.myInfo .buttonGroup button.btn-log {
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+}
+
+.myInfo .buttonGroup button.btn-bank {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.ch-ico {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.625rem;
+  width: calc(100% - 32px);
+  border-radius: 12px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 87 255 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+}
+
+.ch-ico strong {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: GmarketSans;
+  font-size: 20px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.ch-ico .ico-list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  width: 292px;
+  flex-wrap: wrap;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  row-gap: 0.75rem;
+}
+
+.ch-ico .ico-list button {
+  height: 64px;
+  width: 64px;
+  overflow: hidden;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.ch-ico .ico-list button img {
+  width: 100%;
+}
+
+.ch-ico > button {
+  margin-top: 65px;
+  height: 48px;
+  width: 100%;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 16px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
+
+/* 마이페이지 - 계정정보 */
+
+.usr_info {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 70px;
+  width: calc(100% - 32px);
+  border-radius: 12px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.usr_info dl {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 0.75rem;
+}
+
+.usr_info dl dt {
+  display: block;
+  height: 1.25rem;
+  width: 73px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.usr_info dl dt::before {
+  padding-right: 0.625rem;
+  --tw-content: "\00b7";
+  content: var(--tw-content);
+}
+
+.usr_info dl dd {
+  display: block;
+  height: 1.25rem;
+  width: calc(100% - 100px);
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.infoButton {
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.infoButton button:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+.infoButton button:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-center::-moz-placeholder {

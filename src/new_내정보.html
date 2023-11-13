@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- page css -->
     <link rel="stylesheet" href="../dist/animate.css">
     <link rel="stylesheet" href="../dist/calendar.css">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="../dist/offcanvas.css">
     <link rel="stylesheet" href="../dist/timepicker.css">
     <link rel="stylesheet" href="../dist/output_new.css">
+
     <!-- svg icon js -->
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <!-- clipboard js -->
@@ -155,7 +157,8 @@
 
 
         <div id="m_wrap">
-            <header id="m_header" class="main">
+
+            <header id="m_header" class="sub">
                 <section class="top">
                     <div class="user">
                         <strong class="text-[18px] font-semibold">씽크풀</strong> 님
@@ -179,282 +182,30 @@
                     <!-- // -->
                 </section>
                 <!-- //상단 -->
-
-
-                <section class="alm-msg">
-                    <span>다가오는 <em class="font-bold">04</em>개의 약속이 있어요</span>
-                </section>
-                <!-- 알림메시지 -->
-
-
-                <section class="mn">
-                    <button>약속 검색하기 ＞</button>
-                    <button>리스트로 보기 ＞</button>
-                </section>
-                <!-- 메뉴 -->
-
             </header>
-            <!-- mobile-header -->
-
-
+            <!-- 
+                mobile-header : 고객센터/내정보
+            -->
 
             <div id="m_container">
-                <section id="my-prms">
-                    <div class="prms-category">
-                        <div class="swiper prms-mnu">
-                            <div class="swiper-wrapper">
-                                <button class="swiper-slide ">D-Day</button>
-                                <button class="swiper-slide">만드는중</button>
-                                <button class="swiper-slide">맺는중</button>
-                                <button class="swiper-slide">맺은약속</button>
-                                <button class="swiper-slide active">지난약속</button>
-                                <button class="swiper-slide">취소약속</button>
-                            </div>
-                            <div class="swiper-button-prev">＜</div>
-                            <div class="swiper-button-next">＞</div>
-                        </div>
-
-                        <script>
-                            const swRapper = document.querySelector('.prms-mnu .swiper-wrapper');
-                            const swiper = new Swiper(".prms-mnu", {
-                                slidesPerView: "auto",
-                                slidesPerGroup: 4,
-                                spaceBetween: 8,
-                                autoplay: false,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                            });
-                            const slides = document.querySelectorAll(".swiper-slide");
-                            slides.forEach((slide, index) => {
-                                slide.addEventListener("click", () => {
-                                    // 모든 슬라이드에서 'active' 클래스를 제거합니다.
-                                    slides.forEach((s) => s.classList.remove("active"));
-
-                                    // 클릭된 슬라이드에 'active' 클래스를 추가합니다.
-                                    slide.classList.add("active");
-
-                                    // 클릭된 슬라이드를 화면 중앙에 위치시킵니다.
-                                    swiper.slideTo(index);
-                                });
-                            });
-                        </script>
+                <div class="myInfo">
+                    <div class="usr">
+                        <button class="ico">
+                            <img src="./img/icon/ico01.png" alt="" class="w-[58px]">
+                        </button>
+                        <strong><span>홍길동</span> 님</strong>
+                        <button>로그아웃</button>
                     </div>
-                    <!-- 약속분류 -->
+                    <!-- //내정보 아이콘 및 로그아웃 -->
 
-                    <div class="prms-my-cal">
-                        <div id="customCalendar" class="w-full"></div>
-                        <!-- //calendar -->
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                const classes = {
-                                    header: "vanilla-calendar-header",
-                                    headerContent: "vanilla-calendar-header__content",
-                                    wrapper: "vanilla-calendar-wrapper",
-                                    content: "vanilla-calendar-content",
-                                };
-
-                                const calendar = new VanillaCalendar("#customCalendar", {
-                                    settings: {
-                                        lang: "define",
-                                        iso8601: false,
-                                        selected: {
-                                            dates: ["2023-11-11", "2023-10-20", "2023-10-31"],
-                                        },
-                                    },
-                                    locale: {
-                                        months: [
-                                            "01",
-                                            "02",
-                                            "03",
-                                            "04",
-                                            "05",
-                                            "06",
-                                            "07",
-                                            "08",
-                                            "09",
-                                            "10",
-                                            "11",
-                                            "12",
-                                        ],
-                                        weekday: ["일", "월", "화", "수", "목", "금", "토"],
-                                    },
-                                    DOMTemplates: {
-                                        default: `
-                                              <div class="${classes.header}">
-                                                <div class="${classes.headerContent}">
-                                                  <#Year/>
-                                                  <#Month />
-                                                </div>
-                                                <#ArrowPrev />
-                                                <#ArrowNext />
-                                              </div>
-                                              <div class="${classes.wrapper}">
-                                                <div class="${classes.content}">
-                                                  <#Week />
-                                                  <#Days />
-                                                </div>
-                                              </div>
-                                              `,
-                                        month: `
-                                              <div class="${classes.header}">
-                                                <div class="${classes.headerContent}">
-                                                  <#Year/>
-                                                  <#Month />
-                                                </div>
-                                                <#ArrowPrev />
-                                                <#ArrowNext />
-                                              </div>
-                                              <div class="${classes.wrapper}">
-                                                <div class="${classes.content}">
-                                                  <#Months />
-                                                </div>
-                                              </div>
-                                              `,
-                                        year: `
-                                              <div class="${classes.header}">
-                                                <div class="${classes.headerContent}">
-                                                  <#Year/>
-                                                  <#Month />
-                                                </div>
-                                                <#ArrowPrev />
-                                                <#ArrowNext />
-                                              </div>
-                                              <div class="${classes.wrapper}">
-                                                <div class="${classes.content}">
-                                                  <#Years />
-                                                </div>
-                                              </div>
-                                              `,
-                                    },
-                                });
-                                calendar.init();
-                            });
-                        </script>
+                    <div class="buttonGroup">
+                        <button class="shadow-cs4 btn-coupon">내 쿠폰</button>
+                        <button class="shadow-cs4 btn-log">계정정보</button>
+                        <button class="shadow-cs4 btn-bank">계좌정보</button>
                     </div>
-
-                    <div class="prms-my-list">
-
-                        <div class="list">
-
-
-                            <button class="summary sum01 shadow-cs4">
-                                <div class="top">
-                                    <div class="bullet">
-                                        <span class="ico">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M4.28571 5.61905L2.25714 3.6L3.6 2.25714L5.61905 4.28571L4.28571 5.61905ZM10.9524 0V2.85714H9.04762V0H10.9524ZM17.7429 3.6L15.7143 5.61905L14.381 4.28571L16.4 2.25714L17.7429 3.6ZM2.85714 9.04762V10.9524H0V9.04762H2.85714ZM17.1429 9.04762H20V10.9524H17.1429V9.04762ZM4.28571 18.0952H15.7143C16.2195 18.0952 16.7039 18.2959 17.0612 18.6531C17.4184 19.0103 17.619 19.4948 17.619 20H2.38095C2.38095 19.4948 2.58163 19.0103 2.93884 18.6531C3.29606 18.2959 3.78054 18.0952 4.28571 18.0952ZM10 3.80952C11.5155 3.80952 12.969 4.41156 14.0406 5.4832C15.1122 6.55484 15.7143 8.00829 15.7143 9.52381V17.1429H4.28571V9.52381C4.28571 8.00829 4.88775 6.55484 5.95939 5.4832C7.03103 4.41156 8.48448 3.80952 10 3.80952ZM10 5.71429C8.98965 5.71429 8.02068 6.11564 7.30626 6.83007C6.59184 7.54449 6.19048 8.51346 6.19048 9.52381V15.2381H13.8095V9.52381C13.8095 8.51346 13.4082 7.54449 12.6937 6.83007C11.9793 6.11564 11.0103 5.71429 10 5.71429Z" fill="#FF4B61" />
-                                            </svg>
-                                        </span>
-                                        <span class="bu_txt">
-                                            결제대기
-                                        </span>
-                                    </div>
-                                    <div class="usr">HOST</div>
-                                </div>
-                                <!-- // -->
-                                <div class="title">
-                                    <div class="obj">약속 명칭 제목</div>
-                                    <div class="date_local">
-                                        <span>2023년 12월 22일 14시</span>
-                                        <span>여의도역 5번 출구</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="info">
-                                    <dl>
-                                        <dt><span>호스트</span></dt>
-                                        <dd>홍길동</dd>
-                                        <dt><span>약속멤버</span></dt>
-                                        <dd>0명</dd>
-                                        <dt><span>만든날짜</span></dt>
-                                        <dd>0000년 00월 00일</dd>
-                                    </dl>
-                                </div>
-                                <!-- // -->
-                            </button>
-                            <!-- //결제대기 -->
-
-
-                            <button class="summary sum02 shadow-cs4">
-                                <div class="top">
-                                    <div class="bullet">
-                                        <span class="ico">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                <path d="M10.7238 9.81818L17.3958 3.34804C17.6827 3.07532 17.8789 2.72583 17.9593 2.3444C18.0396 1.96297 18.0005 1.56698 17.8469 1.20723C17.6933 0.847482 17.4321 0.54037 17.097 0.325286C16.7619 0.110202 16.3681 -0.0030477 15.9661 6.23797e-05H2.03395C1.63191 -0.0030477 1.23808 0.110202 0.902973 0.325286C0.567863 0.54037 0.306749 0.847482 0.153122 1.20723C-0.000505475 1.56698 -0.0396409 1.96297 0.0407343 2.3444C0.121109 2.72583 0.317331 3.07532 0.604231 3.34804L7.27623 9.81818L0.604231 16.2883C0.317331 16.561 0.121109 16.9105 0.0407343 17.292C-0.0396409 17.6734 -0.000505475 18.0694 0.153122 18.4291C0.306749 18.7889 0.567863 19.096 0.902973 19.3111C1.23808 19.5262 1.63191 19.6394 2.03395 19.6363H15.9661C16.3681 19.6394 16.7619 19.5262 17.097 19.3111C17.4321 19.096 17.6933 18.7889 17.8469 18.4291C18.0005 18.0694 18.0396 17.6734 17.9593 17.292C17.8789 16.9105 17.6827 16.561 17.3958 16.2883L10.7238 9.81818ZM14.9825 2.35641L13.3601 3.92731H4.63988L3.01751 2.35641H14.9825ZM7.07344 6.28366H10.9266L9 8.1491L7.07344 6.28366ZM3.01751 17.28L7.78322 12.6654V13.7454C7.78322 14.0579 7.91142 14.3576 8.13961 14.5785C8.3678 14.7995 8.67729 14.9236 9 14.9236C9.32271 14.9236 9.6322 14.7995 9.86039 14.5785C10.0886 14.3576 10.2168 14.0579 10.2168 13.7454V12.6654L14.9825 17.28H3.01751Z" fill="white" />
-                                            </svg>
-                                        </span>
-                                        <span class="bu_txt">멤버초대중</span>
-                                    </div>
-                                    <div class="usr">HOST</div>
-                                </div>
-                                <!-- // -->
-                                <div class="title">
-                                    <div class="obj">약속 명칭 제목</div>
-                                    <div class="date_local">
-                                        <span>2023년 12월 22일 14시</span>
-                                        <span>여의도역 5번 출구</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="info">
-                                    <dl>
-                                        <dt><span>호스트</span></dt>
-                                        <dd>홍길동</dd>
-                                        <dt><span>약속멤버</span></dt>
-                                        <dd>0명</dd>
-                                        <dt><span>만든날짜</span></dt>
-                                        <dd>0000년 00월 00일</dd>
-                                    </dl>
-                                </div>
-                                <!-- // -->
-                            </button>
-                            <!-- //멤버초대중 -->
-
-
-                            <button class="summary sum03 shadow-cs4">
-                                <div class="top">
-                                    <div class="bullet">
-                                        <span class="ico">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
-                                                <path d="M17.9999 4H3.99999C2.89542 4 2 4.89542 2 5.99999V19.9999C2 21.1045 2.89542 21.9999 3.99999 21.9999H17.9999C19.1045 21.9999 19.9999 21.1045 19.9999 19.9999V5.99999C19.9999 4.89542 19.1045 4 17.9999 4Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M14.9999 2V5.99997M6.99997 2V5.99997M2 9.99994H19.9999M6.99997 13.9999H7.00997M10.9999 13.9999H11.0099M14.9999 13.9999H15.0099M6.99997 17.9999H7.00997M10.9999 17.9999H11.0099M14.9999 17.9999H15.0099" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </span>
-                                        <span class="bu_txt">D-00</span>
-                                    </div>
-                                    <div class="usr">GUEST</div>
-                                </div>
-                                <!-- // -->
-                                <div class="title">
-                                    <div class="obj">약속 명칭 제목</div>
-                                    <div class="date_local">
-                                        <span>2023년 12월 22일 14시</span>
-                                        <span>여의도역 5번 출구</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="info">
-                                    <dl>
-                                        <dt><span>호스트</span></dt>
-                                        <dd>홍길동</dd>
-                                        <dt><span>약속멤버</span></dt>
-                                        <dd>0명</dd>
-                                        <dt><span>만든날짜</span></dt>
-                                        <dd>0000년 00월 00일</dd>
-                                    </dl>
-                                </div>
-                                <!-- // -->
-                            </button>
-                            <!-- //D-00 -->
-                        </div>
-                        <!-- //목록 -->
-                    </div>
-                    <!-- 내약속 리스트 -->
-                </section>
-                <!-- 약속만들기 -->
+                    <!-- button -->
+                </div>
+                <!-- // -->
             </div>
             <!-- mobile-container -->
 
@@ -462,7 +213,7 @@
 
             <footer id="m_footer">
                 <div class="f_mnu">
-                    <button class="">
+                    <button class="active">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <path d="M27.0184 11.9997C27.0184 11.6019 26.8604 11.2203 26.5791 10.939C26.2978 10.6577 25.9163 10.4997 25.5184 10.4997C25.1206 10.4997 24.7391 10.6577 24.4578 10.939C24.1765 11.2203 24.0184 11.6019 24.0184 11.9997H27.0184ZM6.01843 11.9997C6.01843 11.6019 5.8604 11.2203 5.57909 10.939C5.29779 10.6577 4.91626 10.4997 4.51843 10.4997C4.12061 10.4997 3.73908 10.6577 3.45777 10.939C3.17647 11.2203 3.01843 11.6019 3.01843 11.9997H6.01843ZM27.4579 16.0602C27.7408 16.3334 28.1197 16.4846 28.513 16.4812C28.9063 16.4778 29.2825 16.32 29.5607 16.0419C29.8388 15.7638 29.9965 15.3876 29.9999 14.9943C30.0034 14.601 29.8522 14.2221 29.5789 13.9392L27.4579 16.0602ZM15.0184 1.49968L16.0789 0.43918C15.7976 0.157973 15.4162 0 15.0184 0C14.6207 0 14.2392 0.157973 13.9579 0.43918L15.0184 1.49968ZM0.457932 13.9392C0.314667 14.0775 0.200394 14.2431 0.12178 14.4261C0.0431668 14.6091 0.00178736 14.8059 5.66351e-05 15.0051C-0.00167409 15.2042 0.0362785 15.4018 0.1117 15.5861C0.187121 15.7705 0.298501 15.9379 0.43934 16.0788C0.580179 16.2196 0.747657 16.331 0.932001 16.4064C1.11635 16.4818 1.31387 16.5198 1.51303 16.5181C1.7122 16.5163 1.90903 16.4749 2.09204 16.3963C2.27505 16.3177 2.44056 16.2034 2.57893 16.0602L0.457932 13.9392ZM7.51843 29.9997H22.5184V26.9997H7.51843V29.9997ZM27.0184 25.4997V11.9997H24.0184V25.4997H27.0184ZM6.01843 25.4997V11.9997H3.01843V25.4997H6.01843ZM29.5789 13.9392L16.0789 0.43918L13.9579 2.56018L27.4579 16.0602L29.5789 13.9392ZM13.9579 0.43918L0.457932 13.9392L2.57893 16.0602L16.0789 2.56018L13.9579 0.43918ZM22.5184 29.9997C23.7119 29.9997 24.8565 29.5256 25.7004 28.6817C26.5443 27.8377 27.0184 26.6932 27.0184 25.4997H24.0184C24.0184 25.8975 23.8604 26.279 23.5791 26.5603C23.2978 26.8416 22.9163 26.9997 22.5184 26.9997V29.9997ZM7.51843 26.9997C7.12061 26.9997 6.73908 26.8416 6.45777 26.5603C6.17647 26.279 6.01843 25.8975 6.01843 25.4997H3.01843C3.01843 26.6932 3.49254 27.8377 4.33645 28.6817C5.18037 29.5256 6.32496 29.9997 7.51843 29.9997V26.9997Z" fill="#847EA0" />
                         </svg>
@@ -486,7 +237,7 @@
                     </button>
                     <!-- // 약속만들기 -->
 
-                    <button class="active">
+                    <button>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <path d="M26.6667 3H25V0H21.6667V3H8.33333V0H5V3H3.33333C2.44928 3 1.60143 3.31607 0.976311 3.87868C0.351189 4.44129 0 5.20435 0 6V27C0 27.7957 0.351189 28.5587 0.976311 29.1213C1.60143 29.6839 2.44928 30 3.33333 30H26.6667C28.5167 30 30 28.665 30 27V6C30 4.335 28.5167 3 26.6667 3ZM26.6667 27H3.33333V12H26.6667V27ZM26.6667 9H3.33333V6H26.6667M6.66667 15H15V22.5H6.66667" fill="#847EA0" />
                         </svg>
@@ -494,13 +245,13 @@
                     </button>
                     <!-- // 내약속 -->
 
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <button class="active">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <path d="M27.1875 15C27.1875 11.7677 25.9035 8.66774 23.6179 6.38214C21.3323 4.09654 18.2323 2.8125 15 2.8125C11.7677 2.8125 8.66774 4.09654 6.38214 6.38214C4.09654 8.66774 2.8125 11.7677 2.8125 15C2.8125 18.2323 4.09654 21.3323 6.38214 23.6179C8.66774 25.9035 11.7677 27.1875 15 27.1875C18.2323 27.1875 21.3323 25.9035 23.6179 23.6179C25.9035 21.3323 27.1875 18.2323 27.1875 15ZM0 15C0 11.0218 1.58035 7.20644 4.3934 4.3934C7.20644 1.58035 11.0218 0 15 0C18.9782 0 22.7936 1.58035 25.6066 4.3934C28.4196 7.20644 30 11.0218 30 15C30 18.9782 28.4196 22.7936 25.6066 25.6066C22.7936 28.4196 18.9782 30 15 30C11.0218 30 7.20644 28.4196 4.3934 25.6066C1.58035 22.7936 0 18.9782 0 15ZM17.8535 16.5059C18.1055 16.8047 18.2812 17.1738 18.2812 17.5781C18.2812 17.9824 18.0996 18.3516 17.8535 18.6504C17.6016 18.9551 17.2617 19.2188 16.875 19.4355C16.7168 19.5234 16.541 19.6113 16.3652 19.6875C16.5469 19.7637 16.7168 19.8457 16.875 19.9395C17.2617 20.1562 17.6074 20.4199 17.8535 20.7246C18.1055 21.0234 18.2812 21.3926 18.2812 21.7969C18.2812 22.2012 18.0996 22.5703 17.8535 22.8691C17.6016 23.1738 17.2617 23.4375 16.875 23.6543C16.0957 24.0879 15.082 24.375 14.0625 24.375C13.8516 24.375 13.6641 24.2285 13.6113 24.0234C13.5586 23.8184 13.6465 23.6016 13.834 23.4961L13.8457 23.4902C13.8574 23.4844 13.875 23.4727 13.8984 23.4609C13.9453 23.4316 14.0156 23.3906 14.0977 23.3379C14.2617 23.2266 14.4785 23.0742 14.6953 22.8926C14.9121 22.7109 15.1172 22.5059 15.2578 22.3008C15.4043 22.0957 15.4629 21.9258 15.4629 21.7969C15.4629 21.668 15.4043 21.5039 15.2578 21.293C15.1113 21.0879 14.9121 20.8887 14.6953 20.7012C14.4785 20.5195 14.2617 20.3672 14.0977 20.2559C14.0156 20.2031 13.9453 20.1621 13.8984 20.1328L13.8516 20.1035L13.8457 20.0977L13.834 20.0918C13.6875 20.0098 13.5938 19.8516 13.5938 19.6816C13.5938 19.5117 13.6875 19.3535 13.834 19.2715L13.8457 19.2656C13.8574 19.2598 13.875 19.248 13.8984 19.2363C13.9453 19.207 14.0156 19.166 14.0977 19.1133C14.2617 19.002 14.4785 18.8496 14.6953 18.668C14.9121 18.4863 15.1172 18.2812 15.2578 18.0762C15.4043 17.8711 15.4629 17.7012 15.4629 17.5723C15.4629 17.4434 15.4043 17.2793 15.2578 17.0684C15.1113 16.8633 14.9121 16.6641 14.6953 16.4766C14.4785 16.2949 14.2617 16.1426 14.0977 16.0312C14.0156 15.9785 13.9453 15.9375 13.8984 15.9082C13.875 15.8965 13.8574 15.8848 13.8457 15.8789L13.834 15.873C13.6465 15.7676 13.5586 15.5508 13.6113 15.3457C13.6641 15.1406 13.8516 14.9941 14.0625 14.9941C15.082 14.9941 16.0957 15.2813 16.8691 15.7148C17.2559 15.9316 17.6016 16.1953 17.8477 16.5L17.8535 16.5059ZM8.46094 12.1875C8.46094 11.6902 8.65848 11.2133 9.01011 10.8617C9.36174 10.51 9.83866 10.3125 10.3359 10.3125C10.8332 10.3125 11.3101 10.51 11.6618 10.8617C12.0134 11.2133 12.2109 11.6902 12.2109 12.1875C12.2109 12.6848 12.0134 13.1617 11.6618 13.5133C11.3101 13.865 10.8332 14.0625 10.3359 14.0625C9.83866 14.0625 9.36174 13.865 9.01011 13.5133C8.65848 13.1617 8.46094 12.6848 8.46094 12.1875ZM19.7109 10.3125C20.2082 10.3125 20.6851 10.51 21.0368 10.8617C21.3884 11.2133 21.5859 11.6902 21.5859 12.1875C21.5859 12.6848 21.3884 13.1617 21.0368 13.5133C20.6851 13.865 20.2082 14.0625 19.7109 14.0625C19.2137 14.0625 18.7367 13.865 18.3851 13.5133C18.0335 13.1617 17.8359 12.6848 17.8359 12.1875C17.8359 11.6902 18.0335 11.2133 18.3851 10.8617C18.7367 10.51 19.2137 10.3125 19.7109 10.3125Z" fill="#847EA0" />
-                        </svg>
-                        <!-- <div class="usrIco">
+                        </svg> -->
+                        <div class="usrIco">
                             <img src="./img/icon/ico01.png" alt="유저아이콘" class="w-full">
-                        </div> -->
+                        </div>
                         <span>내 정보</span>
                     </button>
                     <!-- // 내정보 -->
@@ -510,6 +261,7 @@
         </div>
         <!-- //mobile -->
     </div>
+    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>
