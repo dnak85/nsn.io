@@ -157,7 +157,6 @@
 
 
         <div id="m_wrap">
-
             <header id="m_header" class="sub">
                 <section class="top">
                     <div class="backPage">
@@ -168,44 +167,179 @@
                         </button>
                     </div>
                     <div class="pageTitle">
-                        <strong>계좌정보</strong>
+                        <strong>약속취소</strong>
                     </div>
                 </section>
                 <!-- //상단 -->
             </header>
             <!-- 
-                mobile-header : 고객센터/내정보
+                mobile-header : 공지사항/ 계정정보 / 계좌정보
             -->
 
+
+
             <div id="m_container">
-                <div class="myInfo">
-                    <div class="bank-txt">
-                        약속금을 반환 받을 계좌정보를 <br>확인해주세요.
-                    </div>
-                    <!-- // -->
-                    <div class="mt-10 bank-info shadow-cs4">
-                        <dl>
-                            <dt>은행선택</dt>
-                            <dd>KB국민은행</dd>
-                            <!-- // -->
+                <div class="block w-full">
 
-                            <dt class="mt-5">계좌번호</dt>
-                            <dd>123-543456-13-333</dd>
-                            <!-- // -->
+                    <!-- 약속취소 버튼 -->
+                    <div class="mt-[48px] w-full text-center">
+                        <a href="javascript:" data-custom-open="cancel1" class="block text-[16px] font-bold leading-5 text-violet-900 underline">약속취소</a>
+                        <a href="javascript:" data-custom-open="cancel2" class="block text-[16px] font-bold leading-5 text-violet-900 underline">약속취소2(예시버튼 삭제요청)</a>
+                        <a href="javascript:" data-custom-open="cancel3" class="block text-[16px] font-bold leading-5 text-violet-900 underline">약속취소3(예시버튼 삭제요청)</a>
+                        <a href="javascript:" data-custom-open="cancel4" class="block text-[16px] font-bold leading-5 text-violet-900 underline">약속취소4(예시버튼 신규 삭제요청)</a>
+                    </div>
+                    <!-- //약속취소 버튼 -->
 
-                            <dt class="mt-5">예금주</dt>
-                            <dd>홍길동</dd>
-                            <!-- // -->
-                        </dl>
+                    <!-- modal 약속취소 -->
+                    <div class="modal micromodal-slide cancel" id="cancel1" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속체결취소">
+                                <main class="modal__content">
+                                    <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                                    <div class="w-full pt-[24px]">
+                                        <div class="flex flex-col w-full text-center text-white gap-7">
+                                            <strong class="block text-[20px] leading-5 text-white font-gm font-[400]">약속체결을 취소하시겠습니까?</strong>
+                                            <strong class="block text-[20px] leading-5 text-white font-gm font-[400]">결제 금액은 전액 환불되며<br>약속 호스트에게 알람이 갑니다.</strong>
+                                        </div>
+                                        <!-- text -->
+
+                                        <div class="mt-[58px] w-full text-center">
+                                            <svg class="inline-block" fill="none" height="100" viewBox="0 0 95 100" width="95" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M63.3316 15.7891H73.8859C76.6851 15.7891 79.3697 16.8981 81.349 18.8721C83.3283 20.8461 84.4403 23.5234 84.4403 26.3151V69.314C87.9628 70.5556 90.9318 72.9992 92.8224 76.2128C94.713 79.4265 95.4036 83.2032 94.7721 86.8756C94.1405 90.5479 92.2275 93.8794 89.3712 96.2811C86.5149 98.6827 82.8991 100 79.1631 100C75.4271 100 71.8114 98.6827 68.9551 96.2811C66.0988 93.8794 64.1857 90.5479 63.5542 86.8756C62.9227 83.2032 63.6132 79.4265 65.5039 76.2128C67.3945 72.9992 70.3635 70.5556 73.8859 69.314V26.3151H63.3316V42.1042L39.5842 21.0521L63.3316 0V15.7891ZM10.5597 35.9464C7.0372 34.7049 4.06825 32.2613 2.17761 29.0476C0.286976 25.834 -0.4036 22.0572 0.227948 18.3848C0.859497 14.7125 2.7725 11.3811 5.62883 8.97938C8.48515 6.57771 12.1009 5.26046 15.8369 5.26046C19.5729 5.26046 23.1886 6.57771 26.0449 8.97938C28.9012 11.3811 30.8143 14.7125 31.4458 18.3848C32.0773 22.0572 31.3868 25.834 29.4961 29.0476C27.6055 32.2613 24.6365 34.7049 21.1141 35.9464V69.314C24.6365 70.5556 27.6055 72.9992 29.4961 76.2128C31.3868 79.4265 32.0773 83.2032 31.4458 86.8756C30.8143 90.5479 28.9012 93.8794 26.0449 96.2811C23.1886 98.6827 19.5729 100 15.8369 100C12.1009 100 8.48515 98.6827 5.62883 96.2811C2.7725 93.8794 0.859497 90.5479 0.227948 86.8756C-0.4036 83.2032 0.286976 79.4265 2.17761 76.2128C4.06825 72.9992 7.0372 70.5556 10.5597 69.314V35.9464ZM15.8369 26.3151C17.2365 26.3151 18.5787 25.7606 19.5684 24.7736C20.5581 23.7866 21.1141 22.4479 21.1141 21.0521C21.1141 19.6562 20.5581 18.3176 19.5684 17.3306C18.5787 16.3436 17.2365 15.7891 15.8369 15.7891C14.4373 15.7891 13.095 16.3436 12.1053 17.3306C11.1157 18.3176 10.5597 19.6562 10.5597 21.0521C10.5597 22.4479 11.1157 23.7866 12.1053 24.7736C13.095 25.7606 14.4373 26.3151 15.8369 26.3151ZM15.8369 89.4714C17.2365 89.4714 18.5787 88.9169 19.5684 87.9299C20.5581 86.9429 21.1141 85.6042 21.1141 84.2084C21.1141 82.8125 20.5581 81.4738 19.5684 80.4868C18.5787 79.4998 17.2365 78.9453 15.8369 78.9453C14.4373 78.9453 13.095 79.4998 12.1053 80.4868C11.1157 81.4738 10.5597 82.8125 10.5597 84.2084C10.5597 85.6042 11.1157 86.9429 12.1053 87.9299C13.095 88.9169 14.4373 89.4714 15.8369 89.4714ZM79.1631 89.4714C80.5627 89.4714 81.905 88.9169 82.8947 87.9299C83.8843 86.9429 84.4403 85.6042 84.4403 84.2084C84.4403 82.8125 83.8843 81.4738 82.8947 80.4868C81.905 79.4998 80.5627 78.9453 79.1631 78.9453C77.7635 78.9453 76.4213 79.4998 75.4316 80.4868C74.4419 81.4738 73.8859 82.8125 73.8859 84.2084C73.8859 85.6042 74.4419 86.9429 75.4316 87.9299C76.4213 88.9169 77.7635 89.4714 79.1631 89.4714Z" fill="#8B5CF6"></path>
+                                            </svg>
+                                        </div>
+                                        <!-- visual -->
+
+                                        <div class="mt-[58px] flex w-full flex-col gap-6 px-5">
+                                            <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">약속체결 취소하기</button>
+                                        </div>
+                                        <!-- button -->
+                                    </div>
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
                     </div>
-                    <!-- // -->
-                    <div class="px-10 mt-10 page-btn">
-                        <button class="shadow-cs4">계좌정보 변경</button>
-                        <button class="mt-6 shadow-cs4 dark">계좌정보 삭제</button>
+                    <!-- //modal -->
+
+                    <!-- modal 약속취소 -->
+                    <div class="modal micromodal-slide cancel" id="cancel4" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속체결취소">
+                                <main class="modal__content">
+                                    <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                                    <div class="w-full pt-[24px]">
+                                        <div class="flex flex-col w-full gap-6 text-center text-white">
+                                            <strong class="block text-[20px] leading-5 text-white font-gm font-[400]">초대한 게스트가<br>약속일까지 약속을 체결하지 않으면<br>약속은 자동 환불됩니다.</strong>
+                                            <span class="leading-[19px] text-[16px] text-white font-[400]">그래도 환불하시겠습니까?</span>
+                                        </div>
+                                        <!-- text -->
+
+                                        <div class="mt-[43px] w-full text-center">
+                                            <svg class="inline-block" fill="none" height="100" viewBox="0 0 95 100" width="95" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M63.3316 15.7891H73.8859C76.6851 15.7891 79.3697 16.8981 81.349 18.8721C83.3283 20.8461 84.4403 23.5234 84.4403 26.3151V69.314C87.9628 70.5556 90.9318 72.9992 92.8224 76.2128C94.713 79.4265 95.4036 83.2032 94.7721 86.8756C94.1405 90.5479 92.2275 93.8794 89.3712 96.2811C86.5149 98.6827 82.8991 100 79.1631 100C75.4271 100 71.8114 98.6827 68.9551 96.2811C66.0988 93.8794 64.1857 90.5479 63.5542 86.8756C62.9227 83.2032 63.6132 79.4265 65.5039 76.2128C67.3945 72.9992 70.3635 70.5556 73.8859 69.314V26.3151H63.3316V42.1042L39.5842 21.0521L63.3316 0V15.7891ZM10.5597 35.9464C7.0372 34.7049 4.06825 32.2613 2.17761 29.0476C0.286976 25.834 -0.4036 22.0572 0.227948 18.3848C0.859497 14.7125 2.7725 11.3811 5.62883 8.97938C8.48515 6.57771 12.1009 5.26046 15.8369 5.26046C19.5729 5.26046 23.1886 6.57771 26.0449 8.97938C28.9012 11.3811 30.8143 14.7125 31.4458 18.3848C32.0773 22.0572 31.3868 25.834 29.4961 29.0476C27.6055 32.2613 24.6365 34.7049 21.1141 35.9464V69.314C24.6365 70.5556 27.6055 72.9992 29.4961 76.2128C31.3868 79.4265 32.0773 83.2032 31.4458 86.8756C30.8143 90.5479 28.9012 93.8794 26.0449 96.2811C23.1886 98.6827 19.5729 100 15.8369 100C12.1009 100 8.48515 98.6827 5.62883 96.2811C2.7725 93.8794 0.859497 90.5479 0.227948 86.8756C-0.4036 83.2032 0.286976 79.4265 2.17761 76.2128C4.06825 72.9992 7.0372 70.5556 10.5597 69.314V35.9464ZM15.8369 26.3151C17.2365 26.3151 18.5787 25.7606 19.5684 24.7736C20.5581 23.7866 21.1141 22.4479 21.1141 21.0521C21.1141 19.6562 20.5581 18.3176 19.5684 17.3306C18.5787 16.3436 17.2365 15.7891 15.8369 15.7891C14.4373 15.7891 13.095 16.3436 12.1053 17.3306C11.1157 18.3176 10.5597 19.6562 10.5597 21.0521C10.5597 22.4479 11.1157 23.7866 12.1053 24.7736C13.095 25.7606 14.4373 26.3151 15.8369 26.3151ZM15.8369 89.4714C17.2365 89.4714 18.5787 88.9169 19.5684 87.9299C20.5581 86.9429 21.1141 85.6042 21.1141 84.2084C21.1141 82.8125 20.5581 81.4738 19.5684 80.4868C18.5787 79.4998 17.2365 78.9453 15.8369 78.9453C14.4373 78.9453 13.095 79.4998 12.1053 80.4868C11.1157 81.4738 10.5597 82.8125 10.5597 84.2084C10.5597 85.6042 11.1157 86.9429 12.1053 87.9299C13.095 88.9169 14.4373 89.4714 15.8369 89.4714ZM79.1631 89.4714C80.5627 89.4714 81.905 88.9169 82.8947 87.9299C83.8843 86.9429 84.4403 85.6042 84.4403 84.2084C84.4403 82.8125 83.8843 81.4738 82.8947 80.4868C81.905 79.4998 80.5627 78.9453 79.1631 78.9453C77.7635 78.9453 76.4213 79.4998 75.4316 80.4868C74.4419 81.4738 73.8859 82.8125 73.8859 84.2084C73.8859 85.6042 74.4419 86.9429 75.4316 87.9299C76.4213 88.9169 77.7635 89.4714 79.1631 89.4714Z" fill="#8B5CF6"></path>
+                                            </svg>
+                                        </div>
+                                        <!-- visual -->
+
+                                        <div class="mt-[58px] flex w-full flex-col gap-6 px-5">
+                                            <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">약속 취소</button>
+                                        </div>
+                                        <!-- button -->
+                                    </div>
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
                     </div>
-                    <!-- // -->
+                    <!-- //modal -->
+
+                    <!-- modal 약속취소 -->
+                    <div class="modal micromodal-slide cancel" id="cancel2" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+                                <main class="modal__content">
+                                    <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                                    <div class="w-full pt-[56px]">
+                                        <div class="flex flex-col w-full gap-4 text-center text-white">
+                                            <strong class="font-gm text-[20px] leading-5 text-white font-[400]">체결 중인 약속입니다.</strong>
+                                            <strong class="font-gm text-[20px] leading-5 text-white font-[400]">
+                                                약속을 체결한 멤버에게<br>
+                                                취소요청을 보내겠습니까?
+                                            </strong>
+                                            <span class="text-[16px] leading-[19px] block mt-5">*24시간 안에 약속을 체결한<br>모든 멤버가 동의하면 약속이 취소됩니다.</span>
+                                            <span class="text-[16px] leading-[19px] block">*약속당일까지 취소되지 않은 약속은<br>예정대로 진행됩니다</span>
+                                        </div>
+                                        <!-- text -->
+
+                                        <div class="mt-[68px] flex w-full flex-col gap-6 px-5">
+                                            <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">취소요청 보내기</button>
+                                        </div>
+                                        <!-- button -->
+                                    </div>
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
+                    </div>
+                    <!-- //modal -->
+
+                    <!-- modal 약속취소 -->
+                    <div class="modal micromodal-slide cancel" id="cancel3" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="약속반환확정">
+                                <main class="modal__content">
+                                    <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+
+                                    <div class="w-full pt-[56px]">
+                                        <div class="flex flex-col w-full gap-4 text-center text-white">
+                                            <strong class="font-gm font-[400] text-[20px] leading-5 block">체결 완료된 약속입니다.</strong>
+                                            <strong class="font-gm font-[400] text-[20px] leading-5 block">약속을 체결한 멤버에게<br>취소요청을 보내겠습니까?</strong>
+                                            <span class="text-[16px] leading-[19px] block mt-5">*약속을 체결한 모든 멤버가 동의하면<br>약속이 취소됩니다.</span>
+                                            <span class="text-[16px] leading-[19px] block">*약속당일까지 취소되지 않은 약속은<br>예정대로 진행됩니다</span>
+                                        </div>
+                                        <!-- text -->
+
+                                        <div class="mt-[68px] flex w-full flex-col gap-6 px-5">
+                                            <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">취소요청 보내기</button>
+                                        </div>
+                                        <!-- button -->
+                                    </div>
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
+                    </div>
+                    <!-- //modal -->
+
+                    <script>
+                        MicroModal.init({
+                            onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+                            onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+                            openTrigger: 'data-custom-open', // [3]
+                            closeTrigger: 'data-custom-close', // [4]
+                            openClass: 'is-open', // [5]
+                            disableScroll: true, // [6]
+                            disableFocus: false, // [7]
+                            awaitOpenAnimation: true, // [8]
+                            awaitCloseAnimation: true, // [9]
+                            debugMode: true, // [10]
+                        });
+                    </script>
+
                 </div>
-                <!-- // -->
+                <!-- //약속취소 버튼 -->
             </div>
             <!-- mobile-container -->
 
@@ -261,7 +395,6 @@
         </div>
         <!-- //mobile -->
     </div>
-    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>

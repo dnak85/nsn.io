@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/gm/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../dist/animate.css">
+    <link rel="stylesheet" href="../dist/calendar.css">
+    <link rel="stylesheet" href="../dist/micromodal.css">
+    <link rel="stylesheet" href="../dist/modal.css">
+    <link rel="stylesheet" href="../dist/offcanvas.css">
+    <link rel="stylesheet" href="../dist/timepicker.css">
+    <link rel="stylesheet" href="../dist/output_new.css">
+
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <!-- microModal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- swipejs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap_w">
+        <div id="w_wrap">
+            <div class="text">
+                <em class="vi_title animate__animated animate__bounceInDown">Make appointments fun</em>
+
+                <span class="">
+                    <em class="">노쇼노</em>
+                    안전하게 약속하세요
+                </span>
+            </div>
+            <!-- //text -->
+
+            <div class=" visual">
+                <div class="txt">
+                    모르는 타인과의 약속, <br>
+                    노쇼노 서비스로 맺어보세요. <br>
+                    약속 당일, 맡긴 약속보증금을 <br>
+                    안전하게 돌려드립니다.
+                </div>
+                <!-- // -->
+
+                <div class="vi vi01">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
+                        <circle cx="47" cy="47" r="47" fill="#FF59A9" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi02">
+                    <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="140" cy="140" r="140" fill="#8B5CF6" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi03">
+                    <img class="w-[116.31px] h-[116.31px]" src="./img/vi__calendar.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi04">
+                    <img src="./img/vi__diary.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi05">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="20" fill="#FFBB8A" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi06">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewBox="0 0 156 156" fill="none">
+                        <path d="M77.9475 136.493C29.541 133.452 30.6908 111.95 25.9728 99.1936C22.4551 91.8695 23.8805 49.008 28.1769 40.685C30.8463 35.4908 42.5791 25.3176 68.1557 26.1786C124.228 23.2849 136.036 58.3626 134.931 76.2633C136.782 94.7787 127.976 132.746 77.9475 136.493Z" fill="#FB2E86" fill-opacity="0.3" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi07">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="297" height="295" viewBox="0 0 297 295" fill="none">
+                        <path d="M296.338 147.292C296.338 228.531 230.171 294.389 148.549 294.389C66.9267 294.389 0.759033 228.531 0.759033 147.292C0.759033 66.0526 66.9267 0.195068 148.549 0.195068C230.171 0.195068 296.338 66.0526 296.338 147.292Z" fill="#B796FF" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi08">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
+                        <path d="M12.7455 50.1389C13.3101 20.3086 26.5552 20.4358 34.2677 17.1926C38.674 14.8335 65.0531 14.5545 70.2838 16.9706C73.5478 18.4711 80.1159 25.4075 80.276 41.1489C83.5652 75.5301 62.3262 83.7321 51.2956 83.5355C39.9667 85.1717 16.3962 80.7832 12.7455 50.1389Z" fill="#FEC600" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+            </div>
+
+            <script>
+                // 이미지 요소들을 선택합니다.
+                const images = document.querySelectorAll('.vi');
+                // 마우스 움직임에 따른 이미지 이동 감도를 조절하는 상수입니다.
+                const sensitivity = 0.005;
+
+                // 이미지마다 랜덤한 이동 방향을 설정하는 함수
+                function setRandomDirection(image) {
+                    // 랜덤한 각도 값을 생성합니다.
+                    const angle = Math.random() * 2 * Math.PI;
+                    // 랜덤한 거리 값을 생성합니다.
+                    const distance = Math.random() * 50 + 10; // 최소 10, 최대 60의 거리로 설정
+
+                    // 랜덤한 각도와 거리를 이용하여 이미지의 초기 위치를 설정합니다.
+                    // const initialX = Math.cos(angle) * distance;
+                    // const initialY = Math.sin(angle) * distance;
+
+                    // 이미지에 초기 위치를 적용합니다.
+                    // image.style.transform = `translate(${initialX}px, ${initialY}px)`;
+                }
+
+                // 초기 이미지 위치 설정
+                images.forEach((image) => {
+                    setRandomDirection(image);
+                });
+
+                // 마우스 움직임 이벤트 리스너를 추가합니다.
+                document.addEventListener('mousemove', (event) => {
+                    // 마우스의 X, Y 좌표를 가져옵니다.
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
+
+                    // 각 이미지마다 마우스와의 상대적인 거리를 계산하여 이동량을 조절합니다.
+                    images.forEach((image, index) => {
+                        const imageRect = image.getBoundingClientRect();
+                        const imageCenterX = imageRect.left + imageRect.width / 2;
+                        const imageCenterY = imageRect.top + imageRect.height / 2;
+
+                        const deltaX = mouseX - imageCenterX;
+                        const deltaY = mouseY - imageCenterY;
+
+                        const translateY = deltaY * (index + 1) * sensitivity;
+                        const translateX = deltaX * (index + 1) * sensitivity;
+
+                        image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                    });
+                });
+
+            </script>
+        </div>
+        <!-- //web -->
+
+
+        <div id="m_wrap">
+            <div id="m_container">
+                <div class="absolute z-10 right-5 top-6">
+                    <button class="shadow-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M13.3 0.70998C13.2075 0.617276 13.0976 0.543728 12.9766 0.493547C12.8557 0.443366 12.726 0.417535 12.595 0.417535C12.464 0.417535 12.3344 0.443366 12.2134 0.493547C12.0924 0.543728 11.9825 0.617276 11.89 0.70998L7.00001 5.58998L2.11001 0.699979C2.01743 0.607397 1.90752 0.533957 1.78655 0.483852C1.66559 0.433747 1.53594 0.407959 1.40501 0.407959C1.27408 0.407959 1.14443 0.433747 1.02347 0.483852C0.902502 0.533957 0.792592 0.607397 0.70001 0.699979C0.607428 0.792561 0.533988 0.902472 0.483883 1.02344C0.433778 1.1444 0.40799 1.27405 0.40799 1.40498C0.40799 1.53591 0.433778 1.66556 0.483883 1.78652C0.533988 1.90749 0.607428 2.0174 0.70001 2.10998L5.59001 6.99998L0.70001 11.89C0.607428 11.9826 0.533988 12.0925 0.483883 12.2134C0.433778 12.3344 0.40799 12.464 0.40799 12.595C0.40799 12.7259 0.433778 12.8556 0.483883 12.9765C0.533988 13.0975 0.607428 13.2074 0.70001 13.3C0.792592 13.3926 0.902502 13.466 1.02347 13.5161C1.14443 13.5662 1.27408 13.592 1.40501 13.592C1.53594 13.592 1.66559 13.5662 1.78655 13.5161C1.90752 13.466 2.01743 13.3926 2.11001 13.3L7.00001 8.40998L11.89 13.3C11.9826 13.3926 12.0925 13.466 12.2135 13.5161C12.3344 13.5662 12.4641 13.592 12.595 13.592C12.7259 13.592 12.8556 13.5662 12.9766 13.5161C13.0975 13.466 13.2074 13.3926 13.3 13.3C13.3926 13.2074 13.466 13.0975 13.5161 12.9765C13.5662 12.8556 13.592 12.7259 13.592 12.595C13.592 12.464 13.5662 12.3344 13.5161 12.2134C13.466 12.0925 13.3926 11.9826 13.3 11.89L8.41001 6.99998L13.3 2.10998C13.68 1.72998 13.68 1.08998 13.3 0.70998Z" fill="#0F172A" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="complete" class="relative flex flex-col w-full h-full px-4 overflow-x-hidden overflow-y-auto">
+                    <div class="w-full mt-[96px]">
+                        <div class="text-[32px] text-slate-900 after:content-[''] after:absolute after:w-full after:h-[18px] after:bg-[#cdc4ff] after:bottom-0 after:left-0 relative w-fit h-10 leading-10 mx-auto px-[5px] after:z-[0] z-10">
+                            <span class="relative z-10 block"><em class="font-semibold">인증</em>이 완료되었어요.</span>
+                        </div>
+
+                        <div class="w-full pb-5 mt-4 leading-8 text-center border-b-[2px] border-slate-900">
+                            <span class="text-[28px] text-slate-900">
+                                마지막으로<br>
+                                노쇼노 서비스약관에<br>
+                                동의해주세요.
+                            </span>
+                        </div>
+                        <!-- sub text -->
+                    </div>
+                    <!-- top text -->
+
+                    <div class="w-full mt-[78px]">
+                        <div class="w-full pb-2.5 border-b-[1px] border-[#cdc4ff] relative">
+                            <input type="checkbox" id="allcheck" class="absolute top-0 left-[-9999em]">
+                            <label for="allcheck" class="flex items-center gap-4 text-[16px] text-slate-900 font-semibold">모두 동의합니다.</label>
+                        </div>
+                        <!-- 전체 -->
+
+                        <div class="w-full flex flex-col mt-[14px] px-[5px] gap-3 usrAgree">
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk01" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk01">
+                                    (필수) 이용약관
+                                </label>
+                                <button data-dn-toggle="modal" data-dn-target="#tos" class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk02" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk02">
+                                    (필수) 개인정보 처리방침
+                                </label>
+                                <button data-dn-toggle="modal" data-dn-target="#pvc" class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk03" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk03">
+                                    (필수) 휴대전화 인증 서비스이용약관
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#7b61ff]">보기</button>
+                            </div>
+                            <!--  -->
+                        </div>
+                        <!-- 각개 -->
+
+                        <script>
+                            // vue 대신 스크립트로 전체동의를 해야할 경우 말해주세요. 
+                        </script>
+                    </div>
+                    <!-- 전체동의 -->
+
+                    <div class="w-full mt-[68px]">
+                        <button class="w-full h-[48px] bg-violet-500 shadow-cs4 rounded-[10px] text-[16px] leading-5 text-white">
+                            회원가입
+                        </button>
+                    </div>
+                    <!-- 회원가입 버튼 -->
+
+                    <footer class="" id="footer">
+                        <div class="fnb">
+                            <a href="#">이용약관</a>
+                            <a href="#" class="font-bold">개인정보처리방침</a>
+                        </div>
+                        <!-- 하단 메뉴 -->
+
+                        <address>
+                            (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                            고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                            <br><br>
+                            Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                        </address>
+                    </footer>
+                    <!-- 하단 빈공간 -->
+
+
+                    <div id="tos" class="modal">
+                        <div class="modal-dialog centered fullpage">
+                            <div class="modal-content">
+                                <div class="h-full modal-body">
+                                    <div class="flex justify-end mt-[-10px] text-[25px] h-[25px] leading-[25px]">
+                                        <button class="close-button">&times;</button>
+                                    </div>
+                                    <!-- top close -->
+                                    <div class="w-full h-[calc(100%-25px)] pt-7 overflow-auto">
+                                        <div class="w-full text-center text-[20px] leading-5 font-medium font-gm">노쇼노 이용약관</div>
+                                        <!-- 타이틀 -->
+
+                                        <div class="flex flex-col w-full gap-5 mt-6">
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 1 장 총칙</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 1 조 (목적)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        이 약관은 주식회사 지웨어(이하 '회사')가 제공하는 노쇼노(NoShowNo) 서비스(이하 "서비스")의 이용과 관련하여 "회사"와
+                                                        "회원"(제2조에서 정의합니다) 간의 권리, 의무 및 책임사항, "회원"의 "서비스" 이용 절차에 관한 사항을 규정함을
+                                                        목적으로 합니다. 이 약관은 "회사"가 제공하는 "서비스" 일체에 적용됩니다.
+                                                    </span>
+                                                </div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 2 조 (용어의 정의)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        본 약관에서 사용하는 용어의 정의는 다음과 같습니다. <br><br>
+
+                                                        1. "서비스"란 노쇼방지, 선입금사기 방지를 위한 온라인 약속 플랫폼 서비스를 의미합니다.
+                                                        “서비스”는 모바일기기(스마트폰, 태블릿) 및 PC에서 이용할 수 있습니다. 제공형태는 모바일웹, PC웹 입니다. <br>
+                                                        2. "회원"이란 "서비스"에 접속하여 본 약관에 따라 "회사"와 이용계약을 체결하고 "회사"가 제공하는 “서비스”를
+                                                        이용하는 고객을 의미합니다. <br>
+                                                        3. "약속호스트"라 함은 "회사"가 제공하는 "서비스"를 이용하여 약속을 생성하고 약속의 규칙 등을 포함한 세부내용을
+                                                        공유 및 배포하는 “회원”을 의미합니다. <br>
+                                                        4. “약속게스트”란 “약속호스트”가 공유한 링크(URL)를 통해 “서비스”에 접속하여 약속을 맺는 “약속호트”의 상대방을 의미합니다. <br>
+                                                        5. “약속관리화면”이란 “회원”이 약속을 확인하고 반환버튼을 누를 수 있는 웹페이지를 의미합니다. <br>
+                                                        6. “약속보증금”이란 “회원”이 약속이행을 보증하기 위해 “회사”에 입금하는 금액을 의미합니다. <br>
+                                                        7. “약속체결”이란 “약속호스트”로부터 초대받은 “약속게스트”가 “약속보증금”을 예치 완료한 상태를 의미합니다. <br>
+                                                        8. “약속금반환”이란 약속 생성 시 미리 지정되었던 조건에 따라 약속 이행 후 “약속보증금”이 반환되는 것을 의미합니다. <br>
+                                                        9. “약속취소”란 모든 멤버의 동의 또는 지정된 조건에 의해 약속이 취소된 상태를 의미합니다. <br>
+                                                        10. “약속이행완료”란 약속이행이 완료되고 “약속보증금” 반환 절차까지 완료된 상태를 의미합니다. <br>
+                                                        11. “약속형태”란 “약속게스트”의 인원 및 약속을 맺는 형태를 구분하며 아래와 같습니다. <br>
+                                                        ① 1대1 약속: “약속호스트” 1인과 “약속게스트” 1인이 약속을 맺음 <br>
+                                                        ② 모임형 약속: “약속호스트” 1인과 다수의 “약속게스트”가 약속을 맺음. “약속호스트”를 포함한 10인 이하의 약속에서는
+                                                        “약속게스트”별로 차등 조건을 설정하여 약속을 생성할 수 있음. <br>
+                                                        ③ 10인 초과 약속에 대한 서비스는 향후 제공 예정이며 개시 시기는 홈페이지를 통해 공지하겠습니다. <br>
+                                                        12. 본 약관에서 사용하는 용어 중 본 조에서 정하지 아니한 사항은 관계 법령에서 정하는 바에 따르며, 그 외에는 일반 관례에 따릅니다.
+
+                                                    </span>
+                                                </div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 3 조 (약관의 게시와 개정)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. 본 약관은 "회원"이 서비스 가입 및 이용시 열람 할 수 있으며, "회사"는 본 약관의 내용을 "회원"이 쉽게 열람할 수
+                                                        있도록 노쇼노(NoShowNo)서비스 홈페이지(이하 "홈페이지") 또는 연결화면을 통하여 게시합니다. <br>
+                                                        2. "회사"는 『약관의 규제에 관한 법률』, 『전자상거래 등에서의 소비자보호에 관한 법률』,
+                                                        『정보통신망 이용촉진 및 정보보호(이하 "정보통신망법"이라 합니다)』, 『소비자기본법』, 『전자문서 및 전자거래 기본법』 등
+                                                        관련법에 위배되지 않는 범위 내에서 본 약관을 개정할 수 있습니다. <br>
+                                                        3. "회사"는 "약관"을 개정할 경우 개정내용과 적용일자를 명시하여 제5조에 따른 방법으로 적용일자 7일 전부터 적용일자 전일까지 통지합니다.
+                                                        다만, "회원"에게 불리하게 개정되는 경우에는 적용일자 30일 전부터 적용일자까지 공지하고, "회원"이 기재한 전자우편주소 또는
+                                                        "서비스" 로그인 시 노출되는 팝업 창 등의 전자적 수단을 통해 별도로 통지합니다. <br>
+                                                        4. "회사"가 전항에 따라 개정약관을 공지하면서 일정한 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을
+                                                        명확하게 공지 또는 통지하였음에도 "회원"이 명시적으로 거부의 의사표시를 하지 아니한 경우 개정약관에 동의한 것으로 봅니다. <br>
+                                                        5. "회원"은 개정약관에 동의하지 않는 경우에는 개정 약관의 적용일 이전에 명시적인 거부 의사를 표시하고 이용계약을 해지할 수 있습니다. <br>
+                                                        6. "회원"은 약관 변경에 대하여 주의의무를 다하여야 하며, 개정 약관을 인지하지 못해 발생하는 "회원"의 피해는 "회사"가 책임지지 않습니다.
+
+                                                    </span>
+                                                </div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 4 조 (개별 서비스에 대한 약관 및 약관의 해석 )</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 필요한 경우 특정 서비스에 관하여 적용될 사항(이하 "개별약관") 및 세부적인 내용(이하 "이용정책")을 정하여 운영할 수 있으며,
+                                                        해당 내용은 홈페이지 등을 통해 공지합니다. <br>
+                                                        2. 특정 서비스에 대한 "개별약관"이 본 약관과 상충할 경우에는 "개별약관"이 우선하여 적용됩니다. <br>
+                                                        3. "회원"은 항상 개별약관이나 이용정책의 내용에 변경이 있는지를 주시하여야 하며, 변경사항의 공지가 있을 시에는 이를 확인하여야 합니다. <br>
+                                                        4. 본 약관 또는 개별약관에서 정하지 않은 사항은 『전기통신사업법』, 『전자문서 및 전자거래 기본법』, 『정보통신망 이용촉진 및 정보보호 등에 관한 법률』,
+                                                        『전자상거래 등에서의 소비자보호에 관한 법률』, 『개인정보보호법』 등 관련 법의 규정 및 회사가 정한 서비스의 세부이용지침 등의 규정에 따릅니다.
+                                                        또한 본 약관에서 정한 회사의 책임 제한 규정은 관련 법령이 허용하는 최대한도의 범위 내에서 적용됩니다.
+                                                    </span>
+                                                </div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 5 조 (회원에 대한 통지)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"가 "회원"에 대한 통지를 하는 경우 이 약관에 별도 규정이 없는 한 서면(전자문서 또는 전자우편을 포함)에 의하여 "회원"이 "회사"에 제공한 전자우편주소, 전화번호 등 으로 할 수 있습니다. <br>
+                                                        2. "회사"는 "회원" 전체에 대하여 통지를 하는 경우 "서비스" 초기화면 또는 게시판에 게시함으로써 전항의 통지에 갈음할 수 있습니다. 다만, "회원"의 "서비스" 이용에
+                                                        중대한 영향을 주는 사항에 대해서는 전항의 통지 수단 중 2개 이상의 방법으로 통지합니다. <br>
+                                                        3. "회원"은 "회사"에서 연락이 가능한 전자우편, (휴대)전화번호, 주소 등의 정보를 제공하고 해당 정보들을 최신으로 유지하여야 하며,
+                                                        "회사"의 통지를 확인하여야 합니다. 연락처 부정확으로 인한 통지 미도달 및 통지 내용 미확인으로 인한 피해에 대해 “회사”는 책임을 지지 않습니다.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 1장 -->
+
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 2 장 서비스 이용계약의 체결과 해지</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 6 조 (이용계약의 체결)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. 이용계약은 "회원"이 되고자 하는 자(이하 "가입신청자")가 약관의 내용에 대하여 동의를 한 다음 "서비스" 이용 신청을 하고, "회사"가 이러한 신청에 대하여 승낙함으로써 체결됩니다.
+                                                        다만, "가입신청자"(회원이 14세 미만의 아동인 경우 그 아동의 법정대리인)이 가입신청 당시 이 약관의 내용과 함께 제공한 동의 확인란에 동의를 표시한 경우, "회사"는 "가입신청자"가
+                                                        이 약관의 내용을 모두 읽고 이를 충분히 이해하였으며, 이를 적용하는 것에 동의한 것으로 간주합니다. <br>
+
+                                                        2. "회사"는 "가입신청자"의 신청에 대하여 "서비스" 이용을 승낙함을 원칙으로 합니다. 다만, 회사는 다음 각 호에 해당하는 신청에 대하여는 승낙을 하지 않거나 사후에 이용계약을 해지할 수 있습니다. <br>
+                                                        1) 가입신청자가 이 약관에 의하여 이전에 회원자격을 상실한 적이 있는 경우, 단 "회사"의 회원 재가입 승낙을 얻은 경우에는 예외로 함 <br>
+                                                        2) 이미 가입된 회원과 정보가 동일한 경우 (“회사”가 제공하는 재인증 절차 후 사용 가능) <br>
+                                                        3) 실명이 아니거나 타인의 명의를 도용 혹은 등록내용에 허위, 기재누락이 있는 경우 <br>
+                                                        4) 허위의 정보를 기재하거나, 회사가 제시하는 내용을 기재하지 않은 경우. <br>
+                                                        5) 부정한 용도 및 영리 추구를 목적으로 서비스를 사용하고자 하는 경우. <br>
+                                                        6) 14세 미만 아동이 법정대리인(부모 등)의 동의 없이 신청하는 경우. <br>
+                                                        7) "회사"로부터 이용정지 및 제한을 당한 회원이 그 이용정지 기간 중에 이용계약을 임의 해지하고 재 신청을 하는 경우. <br>
+                                                        8) 회원 계약 해지 후 7일 이내에 같은 계정으로 가입한 경우(부정거래 이용방지 목적) <br>
+                                                        9) "가입신청자"의 귀책사유로 인하여 승인이 불가능하거나 기타 회사가 정한 제반 사항을 위반하여 신청하는 경우. <br>
+                                                        10) "회사"의 정책에 적합하지 않는 "회원"으로 판단되는 경우나 "서비스" 제공이 곤란한 경우, "회원"의 이용 목적이나 "서비스" 이용 방법이 "회사"의 재산권이나 영업권을 침해하거나 침해할 우려가 있는 경우 <br>
+                                                        11) 관계법령에 위배되거나 사회의 안녕질서 또는 미풍양속을 저해할 목적으로 신청한 경우 <br>
+                                                        12) 기타 "회사"가 합리적인 판단에 의하여 필요하다고 인정하는 경우. <br><br>
+                                                        3. 제1항에 따른 신청에 있어 "회사"는 전문기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다. <br>
+                                                        4. 제 1항에 따른 신청에 있어 "회사"는 제공하는 "서비스"의 종류에 따라 필요한 경우 "가입신청자"에게 추가 정보를 요청할 수 있습니다. <br>
+                                                        5. "회사"는 "서비스" 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다. <br>
+                                                        6. 본 조 제2항과 제4항에 따라 회원가입신청의 승낙을 하지 아니하거나 유보한 경우, "회사"는 원칙적으로 이를 "가입신청자"에게 알리도록 합니다. <br>
+                                                        7. 이용계약의 성립 시기는 "회사"가 가입완료를 신청절차 상에서 표시하거나 "회사"가 정하는 방법으로 "회사"가 "가입신청자"에게 가입완료 안내를 발송하여 도달한 시점으로 합니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 7 조 (이용계약의 해지 및 이용제한)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회원"은 언제든지 "회사"가 정한 절차에 따라 회원 탈퇴를 요청하여 이용계약 해지 신청을 할 수 있으며, "회사"는 관련법 등이 정하는 바에 따라 이를 즉시 처리합니다. <br>
+                                                        2. "회사" 또는 "회원"이 이용계약을 해지하는 경우, 관련법 및 개인정보취급방침에 따라 회사가 회원정보를 보유하는 경우를 제외하고는 해지업무 처리 완료 즉시 회원의 데이터는 아래와 같은 절차와 방법에 따라 파기처리 됩니다. <br>
+                                                        - 파기절차 : "회사"는 파기 사유가 발생한 개인정보를 선정하고, 개인정보 보호책임자의 승인 후 개인정보를 파기합니다. <br>
+                                                        - 파기방법 : "회사"는 전자적 파일 형태로 처리된 정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 의하여 처리된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다 <br><br>
+                                                        3. 회사는 아래 각 호의 사유가 발생하는 경우 회원의 "서비스" 이용을 중단하거나 경고, 일시 정지, 영구이용정지 등으로 "서비스"이용을 단계적으로 제한할 수 있습니다. <br>
+
+                                                        1) 부정하게 타인의 계정을 사용하여 "서비스"를 이용한 경우 <br>
+                                                        2) "회원"이 "회사" 서비스의 운영을 고의 및 과실로 방해하는 경우 <br>
+                                                        3) 제6조 제2항에 따른 승낙거부 사유가 있음이 확인된 경우. <br>
+                                                        4) "서비스"의 약속보증금 입금, 기타 "서비스"이용과 관련하여 회원이 부담하는 채무를 기일에 이행하지 않는 경우. <br>
+                                                        5) 타인의 "서비스" 이용을 방해하거나 정보를 도용하는 등 전자상거래질서를 위협하는 경우. <br>
+                                                        6) "회사"를 이용하여 법령과 이 약관이 금지하거나 공공질서, 미풍양속에 반하는 행위를 하는 경우. <br>
+                                                        7) 기타 "회사"가 "회원"의 이용정지를 진행할 합리적인 사유가 있는 경우. <br><br>
+
+                                                        4. "회사"는 본조 제 3항에 따른 귀책사유로 "회원"의 "서비스" 이용을 중단 및 제한하는 경우 7영업일 이내로 이메일, 문자 또는 기타의 방법을 통하여 "서비스" 이용의 중단 및 제한 의사를 통지하며, 통지된 시점에 실행됩니다. <br>
+                                                        5. 이용계약이 종료되는 경우 환불 등의 처리는 "회사"의 환불규정에 의합니다. <br>
+                                                        6. 이용계약의 종료와 관련하여 발생한 손해는 이용계약이 종료된 해당 "회원"이 책임을 부담하며, "회사"는 일체의 책임을 부담하지 않습니다. <br>
+                                                        7. "회사"는 "회원"이 계속해서 12개월 이상 로그인하지 않는 경우, 회원정보의 보호 및 운영의 효율성을 위해 이용을 정지할 수 있습니다. <br>
+                                                        8. "회원"이 계약을 해지하는 경우, 회원이 작성하였던 게시물 및 댓글 등은 삭제되지 않으며, 회원 탈퇴로 인하여 회원 정보가 삭제되어 작성자 본인을 확인할 수 없어
+                                                        게시물 편집 및 삭제가 원천적으로 불가합니다. 회원이 작성한 게시물의 삭제를 원할 경우에는 회원 탈퇴 이전에 게시물을 모두 삭제해야 합니다. <br>
+                                                        9. "회원"은 본 조에 따른 이용제한 등에 대해 "회사"가 정한 절차에 따라 이의신청을 할 수 있으며, 이의가 정당하다고 "회사"가 인정하는 경우 "회사"는 즉시 "서비스"의 이용을 재개합니다.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 2장 -->
+
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 3 장 서비스의 이용</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 8 조 ("서비스"의 내용 및 제공)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"가 본 약관에 따라 "회원"에게 제공하는 "서비스"는 아래 각 호와 같습니다. 단, "회사"는 일부 "서비스"의 이용조건 및 이용범위 등을 별도로 정하여 운영할 수 있으며 해당 사항은 "회원"에게 공지합니다. <br>
+
+                                                        1) 약속 생성 서비스. <br>
+                                                        2) 약속 내용 공유(문자메시지 등) 서비스 <br>
+                                                        3) 약속 정보 확인 및 관리하는 서비스 <br>
+                                                        4) 약속이행 완료 시까지 약속보증금을 “회사”가 일시적으로 관리하는 서비스 <br>
+                                                        5) 약속이행 완료가 확인되면 약속보증금을 반환하는 서비스 <br>
+                                                        6) 기타 “회사”가 추가 개발 또는 제휴 계약을 통해 “회원”에게 제공하는 서비스 <br> <br>
+
+                                                        2. "회사"는 "서비스"를 연중무휴, 1일 24시간 제공함을 원칙으로 합니다. <br>
+                                                        3. "회사"는 "서비스"의 제공에 필요한 경우 정기점검 혹은 수시점검을 실시할 수 있으며, 점검시간은 공지한 바에 따릅니다.
+                                                        '정기점검시간은 사전에 공지하는 것을 원칙으로 하나 부득이 한 사유가 있는 경우 사후에 통지할 수 있습니다. <br>
+                                                        4. "서비스" 이용에 관한 안내사항, 약속 생성 및 참여 시 유의사항, 약속 변경 및 취소 정책, 약속취소에 따른 환불정책 등은 ‘회사’가 정한 정책을 통해 별도로 제공하고 있습니다. <br>
+                                                        5. ‘약속호스트’는 ‘회사’가 정한 기본적인 정책의 범위 안에서 “약속”의 조건을 세부적으로 설정하여 약속을 생성할 수 있습니다. <br>
+                                                        6. "약속게스트"는 "약속호스트"의 약속 내용을 충분히 숙지하고 "서비스"를 이용하여야 합니다. "회사"는 통신판매중개자로서
+                                                        통신판매의 당사자가 아니며, "약속게스트"가 “서비스” 및 약속 내용을 제대로 숙지하지 못해 발생한 피해에 대해서는 "회사"가 책임을 부담하지 않습니다. <br>
+                                                        7. “약속보증금”의 반환은 서비스 화면 상에서 “약속호스트”와 “약속게스트” 가 모두 동의를 완료한 상태에서만 가능합니다. “회원” 간의 분쟁 발생 시
+                                                        “회사”는 분쟁이 해결될 때까지 “약속보증금”의 반환을 보류할 수 있으며, 분쟁당사자인 “회원”들 간의 “약속보증금” 처리에 대한 합의가 확인되면 “약속보증금”을 반환합니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 9 조 ("서비스"의 변경, 중지 및 종료)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 상당한 이유가 있는 경우에 운영상, 기술상의 필요에 따라 제공하고 있는 전부 또는 일부 "서비스"를 변경할 수 있습니다. <br>
+                                                        2. "회사"는 "서비스"의 변경 또는 서비스 중단이 예정된 경우 예정일로부터 30일 이상의 기간을 두고 회원이 충분히 인지할 수 있는 방법으로
+                                                        회사 홈페이지(서비스 초기화면)에 변경 또는 중단될 서비스의 종류, 변경 또는 중단 내용과 사유, 변경 또는 중단 일시 등을 공지합니다. <br>
+                                                        3. "회사"는 무료로 제공되는 서비스의 일부 또는 전부를 회사의 정책 및 운영의 필요상 수정, 중단, 변경할 수 있으며, 이에 대하여 관련법에 대한 특별한 규정이 없는 한 "회원"에게 별도의 보상을 하지 않습니다. <br>
+                                                        4. "회사"는 다음 각 호에 해당하는 경우 "서비스"의 일부 또는 전부의 제공을 일시적으로 중단할 수 있습니다. 이 경우 회사는 "서비스"
+                                                        이용의 중단 사실을 제5조의 방법에 따라 즉시 공지합니다. 다만, "회사"가 사전에 통지할 수 없는 부득이 한 사유가 있는 경우 사후에 통지할 수 있습니다. <br>
+                                                        1) 컴퓨터 등 정보통신설비의 보수점검, 교체 및 고장, 서버의 증설 및 교체, 운영자의 고의∙과실이 없는 장애 등의 부득이한 경우 <br>
+                                                        2) 「전기통신사업법」에 규정된 기간통신사업자가 전기통신서비스를 중지하는 경우 <br>
+                                                        3) 국가비상사태, 정전, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 정상적인 "서비스" 제공에 지장이 있는 경우 <br>
+                                                        4) "회원"이 "회사"가 제공하는 통상적인 수준의 트래픽, 용량 등을 과도하게 초과하여 "회사"의 정상적인 "서비스" 제공에 지장을 초래할 우려가 있는 경우 <br><br>
+                                                        5. "회사"는 이용 감소로 인한 원활한 서비스 제공의 곤란 및 수익성 악화, 기술 진보에 따른 차세대 서비스로의 전환 필요성, 서비스 제공과 관련한 "회사" 정책의 변경 등
+                                                        기타 상당한 이유가 있는 경우에 운영상, 기술상의 필요에 따라 제공하고 있는 전부 또는 일부 서비스를 변경 또는 중단할 수 있습니다. <br>
+                                                        6. "회사"가 "서비스" 제공을 종료하고자 할 경우, 서비스를 종료하고자 하는 날로부터 1개월 이전에 본 약관 제5조에 규정된 통지방법을 준용하여 회원에게 알려드립니다. <br>
+                                                        7. "회사"는 본 조항에 따른 서비스의 변경, 중지 및 종료로 발생하는 문제에 대해서 어떠한 책임도 지지 않습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 10 조 (약속 서비스의 이용)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "서비스"는 아래의 약관에 따라 운영됩니다. <br>
+                                                        1)"회원"이 "약속호스트"의 약속내용에 따라 정보 입력 및 약속보증금 입금 <br>
+                                                        2) 약속보증금 입금과 동시에 약속이 체결됨 <br>
+                                                        3) 약속보증금의 금액과 반환방법은 "약속호스트"의 약속 내용에 따라 운영됨 <br>
+                                                        4) “약속호스트”와 “약속게스트”가 “약속이행완료”를 확인해야 “약속보증금”이 반환됨. <br><br>
+                                                        2. 약속 및 “약속보증금”의 반환과 관련하여 "회원"이 입력한 정보에 문제가 있을 경우, 발생한 책임과 불이익은 전적으로 "회원"이 부담하여야 합니다. <br>
+                                                        3. “약속보증금” 입출금 관련 절차 중 본인확인 시 타인의 정보를 입력하여 발생하는 책임은 “회원”에게 있으며 피해에 대해서 “회사”는 책임을 지지 않습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 11 조 (계약의 성립)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 생성된 약속에 대하여 "약속보증금" 제도를 운영할 수 있으며, 아래의 약관에 따라 운영됩니다. <br>
+
+                                                        1) "약속게스트"가 ‘약속호스트’가 ‘약속생성’한 내용을 확인 후 "약속보증금" 입금 <br>
+                                                        2) "약속보증금" 입금과 동시에 “약속체결” <br><br>
+                                                        2. “약속보증금”은 사전에 등록한 계좌 또는 반환 시 지정하는 계좌로 반환됩니다 <br>
+                                                        3. 약속보증금 입금 후 약속 취소 및 노쇼 시 발생되는 수수료는 "회사"의 취소, 환불 및 반환제도를 따르며, “약속호스트”와 “약속게스트”간의 분쟁이 있을 경우 환불 또는 반환이 지연될 수 있습니다. <br>
+                                                        4. 약속보증금 입금 및 반환과 관련하여 "회원"이 입력한 정보 및 그 정보와 관련하여 발생한 책임과 불이익은 전적으로 "회원"이 부담하여야 합니다. <br>
+                                                        5. “약속게스트”는 "약속호스트"의 약속 내용을 동의 시 반드시 그 내용을 숙지해야 합니다. "회원"이 이 내용을 제대로 숙지하지 못해 발생한 피해에 대해서는 "회사"가 책임을 부담하지 않습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 12 조 (정보의 제공 및 광고의 게재)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 "회원"이 "서비스" 이용 중 필요하다고 인정되는 다양한 정보를 공지사항이나 전자우편, SMS, LMS, 푸시 메시지 등의 방법으로 "회원"에게 제공할 수 있습니다.
+                                                        다만, "회원"은 관련법에 따른 거래관련 정보 및 고객문의 등에 대한 답변을 제외하고는 언제든지 마케팅 수신 동의를 철회하실 수 있습니다. <br>
+                                                        2. "회사"는 "서비스"의 운영과 관련하여 서비스 화면, 홈페이지, 전자우편 등에 광고를 게재할 수 있습니다. 광고가 게재된 전자우편을 수신한 "회원"은 수신거절을 "회사"에게 할 수 있습니다. <br>
+                                                        3. "회원" 및 "비회원"은 회사가 제공하는 서비스와 관련하여 게시물 또는 기타 정보를 변경, 수정, 제한하는 등의 조치를 취하지 않습니다. <br>
+                                                        4. "회사"는 "회원"의 게시물 내용, 검색 내용뿐만 아니라 언어, 쿠키 및 기기정보, IP 주소, 브라우저 유형, 운영체제 및 요청 일시와 같은 표준 로그 정보 등을 활용한 맞춤광고를 제공합니다. 이에 대한 자세한 사항은 "개인정보처리방침"을 참고하시기 바랍니다. <br>
+                                                        5. "회원"이 서비스상에 게재되어 있는 광고를 이용하거나 서비스를 통한 광고주의 판촉활동에 다른 상품 등을 이용하는 경우, 이는 전적으로 회원과 광고주 간의 법률 관계이므로,
+                                                        그로 인해 발생한 회원과 광고주간 분쟁 등 제반 문제는 회원과 광고주간에 직접 해결하여야 하며, 이와 관련하여 회사는 어떠한 책임도 지지 않습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 13 조 (게시물의 저작권 및 배타적 이용허락)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회원"이 작성한 게시물의 저작권은 이를 작성한 "회원" 본인에게 있으며, 해당 게시물이 타인의 저작권을 침해하는 경우 그에 대한 책임은 회원 본인이 부담합니다. <br>
+                                                        2. "회원"은 "회사"에게 자신이 작성한 게시물을 독점적으로 이용할 수 있는 권리를 부여합니다. 이에 따라 "회사"는 회원이 작성한 게시물을 검색노출, 판촉, 홍보
+                                                        기타의 자료로 무상으로 영구적으로 이용할 수 있으며, 필요한 범위 내에서 게시물의 일부를 수정, 복제 및 편집할 수 있습니다. <br>
+                                                        3. "회사"는 "회원"이 등록한 게시물이 다음 각 호에 해당한다고 판단되는 경우 사전 통보 없이 해당 게시물을 삭제하거나 열람을 제한할 수 있으며, "회원"의 서비스 이용을 중지 또는 해지 할 수 있습니다. <br>
+                                                        1) 타인의 권리나 명예, 신용, 기타 정당한 이익을 침해하는 경우<br>
+                                                        2) 사회 공공질서나 미풍양속에 위배되는 경우<br>
+                                                        3) 범죄행위와 관련된 내용을 포함하는 경우<br>
+                                                        4) 허위 또는 과장 광고 내용을 포함하는 경우<br>
+                                                        5) 불법물, 음란물 또는 청소년유해매체물의 게시, 등록 또는 이와 관련된 물품의 홍보, 사이트를 링크하는 등의 경우<br>
+                                                        6) 정보통신기기의 오작동을 일으킬 수 있는 악성코드나 데이터를 포함하는 경우<br>
+                                                        7) 관련 법령에서 정하거나 정당한 권한을 가진 정부기관 등의 요청 등이 있는 경우<br>
+                                                        8) "회사"가 제공하는 "서비스"의 원활한 진행을 방해하는 것으로 판단되는 경우<br><br>
+                                                        4. "회원"은 "회사"에게 언제든지 자신이 작성한 게시물에 대해 삭제, 검색결과 제외, 비공개를 요구할 수 있으며 마케팅, 판촉, 홍보 및 기타 자료로 사용되지 않을 것을 요청할 수 있습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 14 조 (저작권의 귀속)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"가 작성한 저작물에 대한 저작권 및 기타 지적 재산권은 "회사"에 귀속됩니다. <br>
+                                                        2. "회원"은 "서비스"에 게재된 정보 중 "회사"에 지적 재산권이 귀속된 정보를 "회사"의 사전 승낙 없이 복제, 송신, 출판, 배포, 방송 및 기타 방법에 의하여 영리 또는 비영리 목적으로 이용하거나 제 3자에게 이용하게 하여서는 안됩니다. <br>
+                                                        3. "회원"은 본 이용약관으로 인하여 서비스를 소유하거나 서비스에 관한 저작권을 보유하게 되는 것이 아니라, 회사로부터 서비스의 이용을 허락 받게 되는바, 서비스는 정보취득 또는 개인용도로만 제공되는 형태로 회원이 이용할 수 있습니다.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 3장 -->
+
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 4 장 권리와 의무</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 15 조 (회사의 의무)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 관련 법령과 이 약관이 금지하거나 공공질서, 미풍양속에 반하는 행위를 하지 않으며, 이 약관이 정하는 바에 따라 지속적이고 안정적으로 "서비스"를 제공하기 위하여 최선을 다합니다. <br>
+                                                        2. "회사"는 "회원"이 안전하게 "서비스"를 이용할 수 있도록 "회원"의 개인정보(신용정보 포함) 보호를 위한 보안 시스템을 갖추어야 하며 개인정보취급방침을 공시하고 준수하며, "회원"의
+                                                        개인정보를 본인의 승낙 없이 제3자에게 누설, 배포하지 않고, 이를 보호하기 위하여 노력합니다. <br>
+                                                        3. "회사"는 전자금융거래가 안전하게 처리될 수 있도록 선량한 관리자로서의 주의를 다하며, 전자금융거래의 안전성과 신뢰성을 확보할 수 있도록 전자금융거래의 종류별로 전자적 전송이나 처리를 위한
+                                                        인력, 시설, 전자적 장치 등의 정보기술 부분 및 전자금융업무에 관하여 금융감독위원회가 정하는 기준을 준수합니다. <br>
+                                                        4. "회사"는 "서비스" 이용과 관련하여 발생하는 "회원"의 불만 및 피해구제요청을 적절하게 처리할 수 있도록 필요한 인력 및 시스템을 구비하며 "회사"는 "서비스" 이용과 관련하여 "회원"으로부터
+                                                        제기된 의견이나 불만이 정당하다고 인정할 경우에는 이를 처리하여야 합니다. "회원"이 제기한 의견이나 불만사항에 대해서는 전자우편 등을 통하여 "회원"에게 처리과정 및 결과를 전달합니다. <br>
+                                                        5. "회사"는 "회원"으로부터의 거래지시가 있음에도 불구하고 천재지변, "회사"의 귀책사유가 없는 정전, 화재, 통신장애 기타의 불가항력의 사유로 처리 불가능하거나 지연된 경우에는 "회원"에 대하여 이로 인한 책임을 지지 아니합니다. <br>
+                                                        6. "회사"가 제공하는 "서비스"로 인하여 "회원"에게 손해가 발생한 경우 그러한 손해가 회사의 고의나 과실에 의해 발생한 경우에 한하여 회사에서 책임을 부담하며, 그 책임의 범위는 통상손해에 한합니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 16조 (회원의 의무)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회원"은 기타 관계 법령, 본 약관의 규정, 이용안내 및 서비스상에 공지한 주의사항, "회사"가 통지하는 사항 등을 준수하여야 하며, 기타 회사의 업무에 방해되는 행위를 하여서는 아니 됩니다. <br>
+                                                        2. "회원"은 서비스의 이용권한, 기타 서비스 이용계약상의 지위를 타인에게 양도, 증여할 수 없으며 이를 담보로 제공할 수 없습니다. <br>
+                                                        3. "회원"은 서비스 이용과 관련하여 다음 각 호의 행위를 하여서는 안됩니다. <br>
+                                                        (1) 서비스 신청 또는 변경 시 허위내용을 등록하는 행위 <br>
+                                                        (2) 다른 회원의 아이디 및 비밀번호를 도용하여 부당하게 서비스를 이용하거나, 정보를 도용하는 행위 <br>
+                                                        (3) 타인의 계좌번호 등을 타인의 허락 없이 타인의 계좌정보를 이용하여 회사의 서비스를 이용하는 행위 <br>
+                                                        (4) 정당한 사유 없이 당사의 영업을 방해하는 내용을 기재하는 행위 <br>
+                                                        (5) 회사가 게시한 정보를 변경하는 행위 <br>
+                                                        (6) 회사가 정한 정보 이외의 정보(컴퓨터 프로그램 등) 등을 송신 또는 게시하는 행위<br>
+                                                        (7) 회사와 기타 제3자의 저작권 등 지적재산권을 침해하는 행위<br>
+                                                        (8) 회사 및 기타 제3자의 명예를 손상시키거나 업무를 방해 혹은 손해를 끼치는 행위<br>
+                                                        (9) 외설 또는 폭력적인 메시지, 화상, 음성 기타 공공질서 미풍양속에 반하는 정보를 공개 또는 게시하는 행위<br>
+                                                        (10) 회사의 동의 없이 영리를 목적으로 서비스를 사용하는 행위<br>
+                                                        (11) 회사의 직원이나 서비스의 관리자를 가장하거나 사칭하여 또는 타인의 명의를 도용하여 글을 게시하거나 메일을 발송하는 행위<br>
+                                                        (12) 서비스와 관련된 설비의 오동작이나 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스, 기타 다른 컴퓨터 코드, 파일, 프로그램 자료를 등록 또는 유포하는 행위<br>
+                                                        (13) 회사가 제공하는 소프트웨어 등을 개작하거나 리버스 엔지니어링, 디컴파일, 디스어셈블 및 기타 일체의 가공행위를 통하여 서비스를 복제, 분해 또는 모방 기타 변형하는 행위<br>
+                                                        (14) 자동 접속 프로그램 등을 사용하는 등 정상적인 용법과 다른 방법으로 서비스를 이용하여 회사의 서버에 부하를 일으켜 회사의 정상적인 서비스를 방해하는 행위<br>
+                                                        (15) 다른 회원의 개인정보를 그 동의 없이 수집, 저장, 공개하는 행위<br>
+                                                        (16) 기타 불법적이거나 회사에서 정한 규정을 위반하는 행위<br><br>
+                                                        4. "회사"는 "회원"이 제1항의 행위를 하는 경우 해당 게시물 등을 삭제 또는 임시 삭제할 수 있으며 서비스의 이용을 제한하거나 일방적으로 본 계약을 해지할 수 있습니다.<br>
+                                                        5. "회원"은 회원정보, 계정정보에 변경이 있는 경우 즉시 변경하여야 하며, 더불어 비밀번호를 철저히 관리하여야 합니다. 회원의 귀책으로 말미암은 관리소홀, 부정사용 등에 의하여 발생하는
+                                                        모든 결과에 대한 책임은 회원 본인이 부담하며, 회사는 이에 대한 어떠한 책임도 부담하지 않습니다.<br>
+                                                        6. 민법상 미성년자인 회원이 약속보증금 입금 서비스를 이용할 경우 미성년자인 회원은 입금 전 법정대리인의 동의를 얻어야 하며, 만 14세 미만 아동의 경우 본 서비스를 이용할 수 없습니다.<br>
+                                                        7. "회원"은 "회사"에서 공식적으로 인정한 경우를 제외하고는 서비스를 이용하여 상품을 판매하는 영업 활동을 할 수 없으며, 특히 해킹, 광고를 통한 수익, 음란사이트를 통한 상업행위,
+                                                        상용소프트웨어 불법배포 등을 할 수 없습니다. 이를 위반하여 발생한 영업 활동의 결과 및 손실, 관계기관에 의한 구속 등 법적 조치 등에 관해서는 회사가 책임을 지지 않으며,
+                                                        회원은 이와 같은 행위와 관련하여 회사에 대하여 손해배상 의무를 집니다.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 4장 -->
+
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 5 장 정보의 보호 및 위치정보</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 17 조 (개인정보보호)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 "회원"이 안전하게 "서비스"를 이용할 수 있도록 "회원"의 개인정보보호를 위하여 개인정보보호정책을 실시하며 이에 따라 "회원"의 개인정보보호를 최대한 보호하기 위하여 노력합니다. <br>
+                                                        2. "회사"의 개인정보보호정책은 "회사"의 "홈페이지"를 통해 확인할 수 있습니다. 단, "회사"의 공식 홈페이지 이외의 링크된 사이트에서는 회사의 개인정보취급방침이 적용되지 않습니다.
+                                                        링크된 사이트 및 서비스를 제공하는 제3자의 개인정보 처리에 대해서는 해당 사이트 및 제3자의 개인정보처리방침을 확인할 책임이 "회원"에게 있으며, "회사"는 이에 대하여 책임을 부담하지 않습니다. <br>
+                                                        3. "회원"이 "회사"에 제공한 개인정보는 서비스 이용의 혼선 방지, 불법적 사용자에 대한 수사기관 수사협조, 기타 안정적인 서비스 제공을 위해 회원탈퇴 후에도 일부 보유하게 됩니다. <br>
+                                                        4. "회사"는 "회사"가 "서비스"를 중단하거나 "회원"이 개인정보 제공 동의를 철회한 경우에는 신속하게 "회원"의 개인정보를 파기합니다. 단, 전자상거래 등에서의 소비자 보호에 관한 법률 등
+                                                        관련 법률에서 정하는 바에 따라 일정 정보는 보관할 수 있습니다. <br>
+                                                        5. "회사"는 "회원"이 서비스 이용 과정에서 직접 제공한 정보 외에도 개인정보 보호 등 관련 법령에서 정한 절차에 따라 그 밖의 정보를 수집 및 이용 또는 제3자에게 제공할 수 있습니다.
+                                                        이 경우 회사는 관련 법령에 따라 회원으로부터 필요한 동의를 받거나 관련 법령에서 정한 절차를 준수합니다. <br>
+                                                        6. 아이디, 비밀번호 등 계정정보의 관리책임은 "회원"에게 있으며, "회사"는 "회원"의 귀책사유로 인하여 노출된 "회원"의 개인정보에 대해서 일체의 책임을 지지 않습니다. <br>
+                                                        7. "회사"는 "회원"이 제공한 정보를 "회사"의 "서비스" 운영을 위한 목적 이외의 용도로 사용하거나 "회원"의 동의 없이 제3자에게 제공하지 않습니다.
+                                                        단, 다음 각 호와 같은 경우에는 예외로 합니다. <br>
+                                                        - 이벤트에 참여한 "회원"의 최소한의 회원정보가 해당 이벤트의 주최자에게 제공되는 경우 <br>
+                                                        - 약속 공유 시 "약속호스트"와 "약속게스트"간의 효율적인 소통을 위하여 해당 "약속호스트"와 "약속게스트" 간 최소한의 회원정보가 제공되는 경우 <br>
+                                                        - 법령에 근거하여 회원정보의 이용과 제3자에 대한 정보제공이 허용되는 경우 <br>
+                                                        - 기타 "회사"의 약관 및 정책에 따라 "회원"의 동의를 구한 경우
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 5장 -->
+
+                                            <div>
+                                                <div class="font-[800] text-[18px] text-slate-900">제 6 장 기타</div>
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 18 조 (손해배상)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회원"이 본 약관의 규정을 위반함으로 인하여 "회사"에 손해가 발생하게 되는 경우, 본 약관을 위반한 회원은 회사에 발생하는 모든 손해를 배상하여야 합니다. <br>
+                                                        2. "회원"이 "서비스"를 이용하는 과정에서 행한 불법행위나 본 약관 위반행위로 인하여 "회사"가 당해 회원 이외의 제3자로부터 손해배상 청구 또는 소송을 비롯한 각종
+                                                        이의제기를 받는 경우 당해 회원은 자신의 책임과 비용으로 회사를 면책시켜야 하며, 회사가 면책되지 못한 경우 당해 회원은 그로 인하여 회사에 발생한 모든 손해를 배상하여야 합니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 19 조(회사의 책임제한)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면책됩니다. <br>
+                                                        2. "회사"는 "회원"의 귀책사유로 인한 서비스의 이용장애에 대하여 책임을 지지 않습니다. <br>
+                                                        3. "회사"는 "회원"이 "서비스"를 이용하여 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며 그 밖에 서비스를 통하여 얻은 자료로 인한 손해 등에 대하여도 책임을 지지 않습니다.
+                                                        회사는 회원이 게재한 게시물의 정확성 등 내용에 대하여는 책임을 지지 않습니다. <br>
+                                                        4. "회사"는 "회원" 상호간 또는 "회원"과 제3자 상호간에 서비스를 매개로 발생한 분쟁에 대해서는 개입할 의무가 없으며 이로 인한 손해를 배상할 책임도 없습니다. <br>
+                                                        5. "회사"는 제3자가 서비스 내 화면 또는 링크된 웹사이트를 통하여 광고한 제품 또는 서비스의 내용과 품질에 대하여 감시할 의무가 없으며 그로 인한 어떠한 책임도 지지 아니합니다. <br>
+                                                        6. "회사"는 회사 및 회사의 임직원 그리고 회사 대리인의 고의 또는 중대한 과실이 없는 한 다음 각 호의 사항으로부터 발생하는 손해에 대해 책임을 지지 아니합니다. <br>
+                                                        (1) 회원정보 등의 허위 또는 부정확성에 기인하는 손해 <br>
+                                                        (2) 서비스에 대한 접속 및 서비스의 이용과정에서 발생하는 개인적인 손해 <br>
+                                                        (3) 서버에 대한 제3자의 모든 불법적인 접속 또는 서버의 불법적인 이용으로부터 발생하는 손해 <br>
+                                                        (4) 서버에 대한 전송 또는 서버로부터의 전송에 대한 제3자의 모든 불법적인 방해 또는 중단행위로부터 발생하는 손해 <br>
+                                                        (5) 제3자가 서비스를 이용하여 불법적으로 전송, 유포하거나 또는 전송, 유포되도록 한 모든 바이러스, 스파이웨어 및 기타 악성 프로그램으로 인한 손해 <br>
+                                                        (6) 전송된 데이터의 오류 및 생략, 누락, 파괴 등으로 발생되는 손해 <br>
+                                                        (7) 회원 간의 회원 상태정보 등록 및 서비스 이용 과정에서 발생하는 명예훼손 기타 불법행위로 인한 각종 민∙형사상 책임 <br><br>
+                                                        7. "회사"는 무료로 제공되는 서비스 이용과 관련하여 관련법에 특별한 규정이 없는 한 책임을 지지 않습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 20 조 (분쟁조정)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. "회사"는 위치정보와 관련된 분쟁에 대해 당사자 간 협의가 이루어지지 아니하거나 협의를 할 수 없는 경우에는 전기통신기본법 제40조의2의 규정에 의한 방송통신위원회에 재정을 신청할 수 있습니다. <br>
+                                                        2. "회사"는 "회원"으로부터 소정의 절차에 의해 제기되는 의견이나 불만이 정당하다고 인정할 경우에는 적절한 절차를 거쳐 처리합니다. 단, 처리 시 일정 기간이 소요될 경우 "회원"에게 그 사유와 처리 일정을 즉시 통보합니다. <br>
+                                                        3. "회원"은 "회사"의 분쟁처리결과에 대하여 이의가 있을 경우 '금융위원회의 설치 등에 관한 법률'에 따른 금융감독원의 금융분쟁조정위원회나 '소비자기본법' 에 따른 한국소비자원의 소비자분쟁조정위원회,
+                                                        전자거래기본법 제32조 및 동 시행령 제20조에 의하여 설치된 전자거래분쟁조정위원회에 회사의 전자금융거래서비스의 이용과 관련한 분쟁조정을 신청할 수 있습니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5">제 21 조 (준거법 및 재판관할)</strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        1. 이 약관과 관련된 사항에 대하여는 대한민국 법을 준거법으로 합니다. <br>
+                                                        2. "회사"와 "회원"간 발생한 분쟁에 관한 소송은 민사소송법 상의 관할법원에 제소합니다.
+                                                    </span>
+                                                </div>
+
+                                                <div class="w-full mt-6">
+                                                    <strong class="block text-[16px] font-bold text-slate-900 leading-5"></strong>
+                                                    <span class="block text-[14px] text-[#3e4453] leading-5 mt-2">
+                                                        *부칙 <br>
+                                                        이 약관은 2023년 4월 3일부터 시행합니다.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 6장 -->
+                                        </div>
+                                        <!-- 내용 -->
+                                    </div>
+                                    <!-- 스크롤영역 -->
+                                </div>
+                                <!-- body -->
+                            </div>
+                            <!-- content -->
+                        </div>
+                        <!-- dialog -->
+                    </div>
+                    <!-- 약관 모달 -->
+
+                    <div id="pvc" class="modal">
+                        <div class="modal-dialog centered fullpage">
+                            <div class="modal-content">
+                                <div class="h-full modal-body">
+                                    <div class="flex justify-end mt-[-10px] text-[25px] h-[25px] leading-[25px]">
+                                        <button class="close-button">&times;</button>
+                                    </div>
+                                    <!-- top close -->
+
+                                    <div class="w-full h-[calc(100%-25px)] pt-7 overflow-auto">
+                                        <div class="w-full text-center text-[20px] leading-5 font-medium font-gm">노쇼노 개인정보처리방침</div>
+                                        <!-- 타이틀 -->
+
+                                        <div class="flex flex-col w-full gap-5 mt-6">
+                                            <div class="w-full mt-6">
+                                                <div class="w-full mt-2">
+                                                    주식회사 지웨어(이하 "회사"라 한다)는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령에 따라 이용자의 개인정보를 보호하고,
+                                                    이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립합니다.
+                                                    <br><br>
+                                                    개인정보처리방침은 이용자가 언제나 쉽게 열람할 수 있도록 서비스 초기화면을 통해 공개하고 있으며 관련법령, 지침, 고시 또는 노쇼노(NoShwoNo) 서비스 정책의 변경에 따라 달라질 수 있습니다.
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">1. 개인정보의 수집·이용</strong>
+                                                <div class="w-full mt-2">
+                                                    회사는 다음과 같이 이용자의 개인정보를 수집합니다. 처리하고 있는 개인정보는 다음의 수집·이용 목적 이외의 용도로는 활용되지 않으며,
+                                                    수집·이용 목적이 변경되는 경우에는 개인정보보호법에 따라 별도의 동의를 받는 등 필요한 조치를 이행합니다. <br><br>
+                                                    1) 회원 정보의 수집·이용목적, 수집항목, 보유·이용기간은 아래와 같습니다. <br> <br>
+
+                                                    <table class="align-top">
+                                                        <colgroup>
+                                                            <col width="12%">
+                                                            <col width="30%">
+                                                            <col width="20%">
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="bg-gray-200 border-[1px] border-[#ccc] px-[5px]">구분</th>
+                                                                <th class="bg-gray-200 border-[1px] border-[#ccc] px-[5px]">수집 및 이용 목적</th>
+                                                                <th class="bg-gray-200 border-[1px] border-[#ccc] px-[5px]">항목</th>
+                                                                <th class="bg-gray-200 border-[1px] border-[#ccc] px-[5px]">보유 및 이용 기간</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc] text-center" rowspan="2">회원관리</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">회원 식별, 회원제 서비스 제공, 상담 관리, 휴대전화번호 인증</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">이름, 휴대전화 번호, 생년월일</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]" rowspan="2">목적달성(회원 탈퇴 등)후 지체없이 파기<br>(단, 관련법령 및 회사정책에 따라 별도 보관되는 정보는 예외)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">타사 계정을 이용한 회원 식별, 회원제 서비스 제공, 상담관리, 휴대전화번호 인증</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">*수집하는 개인정보 : 휴대전화번호, 닉네임, 이름, 생년월일, (선택)프로필이미지 <br>
+                                                                    *회사가 제3자로부터 제공받은 개인정보 <br>
+                                                                    - 카카오 : 카카오 ID, 이름, (선택)성별, 연령대, 생일, 출생연도 <br>
+                                                                    - 네이버 : 네이버 ID, 이름, 별명, 휴대전화번호, (선택)성별, 연령대, 생일, 출생연도, 이메일주소</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc] text-center" rowspan="4">서비스 이용</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">
+                                                                    결제 처리, 본민 명의 결제수단 인증, 부정 사용자 차단 및 관리
+                                                                </td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">
+                                                                    - 결제정보 : 계좌번호 <br>
+                                                                    - 본인인증 정보 : CI, 휴대전화번호, 생년월일, 성별, 이름, 내/외국인여부
+                                                                </td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">
+                                                                    서비스 해지시까지(단, 관련법령에 따라 보관되는 정보는 예외) <br>
+                                                                    *계좌정보는 PG 및 금융기관에 전달 후 별도 저장하지 않음
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc] text-center">서비스 진행상황 안내, 계약 이행 및 약관변경 등의 고지</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">휴대전화번호, 이메일주소</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]" rowspan="2">
+                                                                    목적달성(회원탈퇴등)후 지체없이 파기(단, 관련법령에 따라 보관되는 정보는 예외)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">회원관리, 불법 및 부정이용 방지, 서비스 이용 기록의 통계 및 분석, 서비스 개선, 신규 서비스 개발</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">수집한 모든 개인정보 항목, 자동 수집 정보</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">문의(회원상담, 제휴문의)</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">이메일주소, 휴대전화번호, 이름</td>
+                                                                <td class="px-[3px] py-1 border-[1px] border-[#ccc]">전자 상거래 등에서의 소비자 보호에 대한 법률에 따라 5년간 보관</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <br>
+                                                    2) 이용자 정보의 수집·이용목적, 수집항목, 보유 이용기간은 아래와 같습니다.
+                                                    <br><br>
+
+                                                    <table class="align-top">
+                                                        <colgroup>
+                                                            <col width="15%">
+                                                            <col width="30%">
+                                                            <col width="*">
+                                                            <col width="25%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">구분</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">수집 및 이용 목적</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">항목</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">보유 및 이용기간</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] text-center px-[3px] py-1" rowspan="2">필수</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    [노쇼노 웹, 앱] <br>
+                                                                    SMS, LMS(공지사항, 약속내용) 발송 및 부정이용 방지
+                                                                </td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">휴대전화번호</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">목적달성 3일 후 파기</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    [이벤트 페이지] <br>
+                                                                    이벤트 응모 및 안내, 경품 지급
+                                                                </td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">휴대전화번호</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">이벤트 종료 후 파기</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] text-center px-[3px] py-1">선택</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    [약속정보 알림] <br>
+                                                                    약속 생성자가 게스트에게 문자메시지 등의 방법으로 약속내용을 알리기 위한 목적
+                                                                </td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">휴대전화번호</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    호스트와 게스트 약속보증금 반환 완료 후 1년
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <br>
+                                                    3) 회사 내부 정책에 의하여 수집·이용되는 이용자의 정보는 아래와 같습니다.
+                                                    <br><br>
+
+                                                    <table class="align-top">
+                                                        <colgroup>
+                                                            <col width="15%">
+                                                            <col width="30%">
+                                                            <col width="*">
+                                                            <col width="25%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">구분</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">수집 및 이용 목적</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">항목</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">보유 및 이용기간</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">회사 내부 정책</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">회원가입 남용(부정거래), 서비스 부정사용(허위리뷰, 이벤트 부정혜택 등) 확인 및 방지</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">휴대전화번호, 이메일주소, 기기정보, CI/DI</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">회원탈퇴 후 3년간 보관</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <br>
+
+                                                    4) 서비스 이용과정에서 아래 자동 수집 정보가 생성되어 수집, 저장, 조합, 분석될 수 있습니다. <br>
+                                                    - IP 주소, 쿠키, 서비스 이용 기록, 기기 정보(기기고유번호, OS버전, 모델명, 제조사 정보 등), 광고ID, 통신기록등 <br><br>
+                                                    5) 회사는 회원관리, 불법 및 부정이용 방지, 서비스 이용기록 통계 및 분석, 서비스 개선, 신규서비스 개발 목적으로 수집한 모든 개인정보와 자동 수집 정보를 사용할 수 있습니다.
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">2. 개인정보 제3자 제공</strong>
+                                                <div class="w-full mt-2">
+                                                    회사는 이용자의 개인정보를 개인정보 수집·이용 목적에서 명시한 범위 내에서 사용하며,
+                                                    이용자의 사전 동의 없이 개인정보 수집·이용 목적 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 제공하지 않습니다.
+                                                    다만, 아래와 같이 양질의 서비스 제공을 위해 이용자의 개인정보를 협력업체와 공유할 필요가 있는 경우에는
+                                                    제공 받는 자, 제공목적, 제공정보 항목, 이용 및 보유기간 등을 회원에게 고지하여 동의를 구하거나 관련법령에 따른 경우는 예외로 합니다.
+                                                    <br><br>
+                                                    ① 이용자가 사전에 공개 또는 제3자 제공에 동의한 경우 <br><br>
+                                                    <table class="align-top">
+                                                        <colgroup>
+                                                            <col width="15%">
+                                                            <col width="30%">
+                                                            <col width="*">
+                                                            <col width="25%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">제공받는자</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">제공목적</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">항목</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">보유 및 이용기간</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">페이플</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    서비스 이용을 위한 약속보증금 입금 여부 확인, 약속이행에 따른 약속보증금 반환. 고객 상담 및 민원 해결을 위한 입출금정보 조회. 고객관리.
+                                                                </td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    고객식별값, 계좌정보
+                                                                </td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">고객식별값, 계좌정보</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <br>
+                                                    ② 관계 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사 기관의 요구가 있는 경우
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">3.개인정보 처리위탁</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 회사는 원활하고 향상된 서비스를 제공하기 위해서 개인정보 처리 업무를 다른 회사에 위탁할 수 있습니다.
+                                                    회사는 개인정보 처리 업무 위탁 시 이용자의 개인정보가 안전하게 처리될 수 있도록 관리·감독하며 다른 목적으로 이용자의 개인정보를 처리하지 않도록 제한합니다. <br><br>
+                                                    ② 회사는 아래와 같이 개인정보 처리 업무를 위탁하고 있습니다. <br><br>
+
+                                                    <table class="align-top">
+                                                        <colgroup>
+                                                            <col width="40%">
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">수탁업체</th>
+                                                                <th scope="col" class="bg-gray-200 border-[1px] border-[#ccc]">위탁업무내용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">씽크풀</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    서비스운영, 시스템운영, 서비스 이용분석, 시스템관리, 서비스홈페이지 및 앱 운영관리, 고객응대 및 상담업무, 정산, 안내문자(SMS, LMS) 발송, 비식별데이터 광고활용, 설문조사 등
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">페이플</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    전자 결제 처리. 입금 및 출금.
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">LG유플러스</td>
+                                                                <td class="border-[1px] border-[#ccc] px-[3px] py-1">
+                                                                    휴대폰 문자 메시지(SMS,LMS) 발송 관련 서비스
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">4. 개인정보의 파기절차 및 방법</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 회사는 이용자의 개인정보를 원칙적으로 보유·이용기간의 경과, 처리목적 달성, 서비스 이용약관에 따른 계약해지 등 개인 정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. <br><br>
+                                                    ② 이용자로부터 동의 받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다. <br>
+                                                    - 다른 법령에 따라 개인정보를 보관하는 경우는 다음과 같습니다. <br>
+                                                    ㆍ 계약 또는 청약철회 등에 관한 기록 <br>
+                                                    보존 이유 : 전자상거래등에서의 소비자보호에 관한 법률 <br>
+                                                    보존 기간 : 5년 <br>
+                                                    ㆍ 대금결제 및 재화 등의 공급에 관한 기록 <br>
+                                                    보존 이유 : 전자상거래등에서의 소비자보호에 관한 법률 <br>
+                                                    보존 기간 : 5년 <br>
+                                                    ㆍ 소비자의 불만 또는 분쟁처리에 관한 기록 <br>
+                                                    보존 이유 : 전자상거래등에서의 소비자보호에 관한 법률 <br>
+                                                    보존 기간 : 3년 <br>
+                                                    ㆍ 개인위치정보 수집ㆍ이용ㆍ제공사실 확인자료 <br>
+                                                    보존이유 : 위치정보의 보호 및 이용 등에 관한 법률 <br>
+                                                    보존기간 : 1년 <br>
+                                                    ㆍ 전자금융 거래에 관한 기록 <br>
+                                                    보존이유 : 전자금융거래법 <br>
+                                                    보존기간 : 5년 <br>
+                                                    ㆍ 서비스 이용 관련 개인정보 (로그기록) <br>
+                                                    보존이유 : 통신비밀보호법 <br>
+                                                    보존기간 : 3개월 <br><br>
+
+                                                    ③ 회사는 1년 동안 회사의 서비스를 이용하지 않은 이용자의 개인정보는 ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률 제29조’에 근거하여 이용자에게 사전통지하고 개인정보를 파기하거나 별도로 분리하여 저장합니다. <br>
+                                                    - 회사는 개인정보가 파기되거나 분리되어 저장·관리된다는 사실, 서비스 미이용 기간 만료일, 해당 개인정보의 항목을 공지사항, 전자우편 등의 방법으로 미이용 기간 30일 전에 이용자에게 알립니다.
+                                                    이를 위해 이용자는 회사에게 정확한 연락처 정보를 알리거나 수정하여야 합니다. <br><br>
+                                                    ④ 개인정보 파기의 절차 및 방법은 다음과 같습니다. <br>
+                                                    - 파기 절차 : 회사는 파기 사유가 발생한 개인정보를 개인정보 보호 책임자의 승인 절차를 거쳐 파기합니다. <br>
+                                                    - 파기 방법 : 회사는 전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없도록 기술적인 방법 또는 물리적인 방법을 이용하여 파기하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각등을 통하여 파기합니다.
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">5. 이용자 및 법정대리인의 권리와 그 행사방법</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 이용자가 직접 자신의 개인정보를 조회, 수정, 삭제하는 것을 원칙으로 하며, 회사는 이를 위한 기능을 제공합니다. <br>
+                                                    ② 이용자 및 법정대리인은 개인정보의 조회,수정,삭제를 요청할 수 있으며, 회사는 정책에 따라 본인확인 절차를 거쳐 이를 조치하겠습니다. <br>
+                                                    ③ 이용자께서 개인정보의 오류에 대한 정정을 요구하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다.
+                                                    또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체없이 통지하여 정정이 이루어지도록 하겠습니다. <br>
+                                                    ④ 이용자는 자신의 개인정보를 최신의 상태로 유지해야 하며, 이용자의 부정확한 정보 입력으로 발생하는 문제의 책임은 이용자 자신에게 있습니다. <br>
+                                                    ⑤ 타인의 개인정보를 도용한 회원가입의 경우 이용자 자격을 상실하거나 관련 개인정보보호 법령에 의해 처벌 받을 수 있습니다. <br>
+                                                    ⑥ 이용자는 전자우편, 비밀번호 등에 대한 보안을 유지할 책임이 있으며 제3자에게 이를 양도하거나 대여 할 수 없습니다.
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">6. 개인정보 자동수집장치의 설치/운영 및 거부에 관한 사항</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 온라인 맞춤형 광고 <br>
+                                                    (1) 온라인 맞춤형 광고는 이용자의 관심, 흥미, 기호 및 성향 등을 분석/추정한 후 이용자에게 맞춤형으로 제공되는 온라인 광고입니다. <br>
+                                                    (2) 회사는 온라인 맞춤형 광고 사업자가 이용자의 광고 ID및 행태정보를 수집하도록 허용하고 있습니다. <br>
+                                                    - 광고ID는 모바일 OS사업자가 광고 목적으로 모바일 기기에 부여한 정보(ADID, IDFA)입니다. <br>
+                                                    - 행태정보는 앱 사용이력, 구매 및 검색 이력 등에 관한 정보입니다. <br>
+                                                    (3) 이용자가 사이트를 방문하거나 앱을 실행할 때 자동 수집되며, 수집·처리하는 광고 사업자는 아래와 같습니다.- 구글, 페이스북 <br>
+                                                    (4) 회사는 온라인 맞춤 광고 제공을 위해 아래와 같이 정보를 제공합니다. 회사는 광고 ID로 개인을 식별할 수 없으며 다른 개인정보를 함께 제공하지 않습니다. <br>
+                                                    - 행태정보를 제공받는 자 : ㈜카카오- 제공하는 행태정보의 항목 : 광고 ID <br>
+                                                    - 행태정보를 제공받는 자의 이용 목적 : 온라인 맞춤 광고 제공 <br>
+                                                    (5) 행태정보 수집 및 맞춤형 광고 노출을 원하지 않는 이용자는 아래 방법을 통해 해제할 수 있습니다. <br>
+                                                    - Android : 설정 > google > 광고 > 광고 맞춤 설정 해제 <br>
+                                                    - IOS : 설정 > 개인 정보 보호 > 광고 > 광고 추적 제한 ON
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">7. 개인정보의 기술적/관리적 보호대책</strong>
+                                                <div class="w-full mt-2">
+                                                    회사는 이용자들의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적/관리적 보호대책을 강구하고 있습니다. <br><br>
+                                                    ① 비밀번호의 암호화 <br>
+                                                    이용자의 비밀번호는 일방향 암호화하여 저장 및 관리되고 있으며, 개인정보의 확인, 변경은 비밀번호를 알고 있는 본인에 의해서만 가능합니다. <br><br>
+                                                    ② 해킹 등에 대비한 대책 <br>
+                                                    (1) 회사는 해킹, 컴퓨터 바이러스 등 정보통신망 침입에 의해 이용자의 개인정보가 유출되거나 훼손되는 것을 막기 위해 최선을 다하고 있습니다. <br>
+                                                    (2) 최신 백신 프로그램을 이용하여 이용자들의 개인정보나 자료가 유출되거나 손상되지 않도록 방지하고 있습니다. <br>
+                                                    (3) 만일의 사태에 대비하여 침입차단 시스템을 이용하여 보안에 최선을 다하고 있습니다. <br>
+                                                    (4) 민감한 개인정보는 암호화 통신 등을 통하여 네트워크상에서 개인정보를 안전하게 전송할 수 있도록 하고 있습니다. <br><br>
+                                                    ③ 개인정보 처리 최소화 및 교육 <br>
+                                                    회사는 개인정보 관련 처리 담당자를 최소한으로 제한하며, 개인정보 처리자에 대한 교육 등 관리적 조치를 통해 법령 및 내부방침 등의 준수를 강조하고 있습니다. <br><br>
+                                                    ④ 개인정보보호 전담담당부서 운영 <br>
+                                                    회사는 개인정보의 보호를 위해 개인정보보호 전담부서를 운영하고 있으며, 개인정보처리방침의 이행사항 및 담당자의 준수여부를 확인하여 문제가 발견될 경우 즉시 해결하고 바로 잡을 수 있도록 최선을 다하고 있습니다.
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">8. 개인정보 보호책임자</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 고객님의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자 및 개인정보보호 담당자를 지정하고 있습니다. <br><br>
+                                                    ② 이용자께서는 회사의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보와 관련된 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당자에게 문의하실 수 있습니다.
+                                                    회사는 이용자의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다. <br><br>
+                                                    ㆍ 개인정보보호책임자 성명 : 김 대 진 <br>
+                                                    ㆍ 전화번호 : 02-2174-6365 <br>
+                                                    ㆍ 이메일 : master@noshowno.kr <br><br>
+
+                                                    ㆍ 개인정보보호담당자 성명 : 김 대 진 <br>
+                                                    ㆍ 전화번호 : 02-2174-6365 <br>
+                                                    ㆍ 이메일 : master@noshowno.kr
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">9. 기타 개인정보침해에 대한 신고 및 상담</strong>
+                                                <div class="w-full mt-2">
+                                                    이용자는 아래 이 기관에 대해 개인정보 침해에 대한 피해구제 상담 등을 문의하실 수 있습니다.
+                                                    아래의 기관은 정보기관 소속으로서, 회사의 자체적인 개인정보 불만처리 또는 개인정보 피해구제 결과에 만족하지 못하실 경우, 자세한 도움이 필요하실 경우에는 문의하여 주시기 바랍니다. <br><br>
+
+                                                    개인정보침해신고센터 (privacy.kisa.or.kr / 국번없이 118) <br>
+                                                    대검찰청 사이버수사과 (www.spo.go.kr / 국번없이 1301) <br>
+                                                    경찰청 사이버수사국 (police.go.kr / 국번없이 182) <br>
+                                                    전자거래분쟁조정위원회 (ecmc.or.kr / 1661-5714)
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full mt-6">
+                                                <strong class="block text-[16px] font-bold text-slate-900 leading-5">10. 고지의 의무</strong>
+                                                <div class="w-full mt-2">
+                                                    ① 현 개인정보처리방침은 법령, 정부의 정책 또는 회사 내부정책 등 필요에 의하여 변경될 수 있으며, 내용추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터
+                                                    홈페이지의 ‘공지사항’을 통해 고지할 것입니다. 다만, 이용자 권리의 중요한 변경이 있을 경우에는 최소 30일 전에 고지합니다. <br><br>
+                                                    ② 현 개인정보처리방침은 2022년 10월 27일부터 적용되며, 변경 전의 개인정보처리방침은 공지사항을 통해서 확인하실 수 있습니다. <br>
+                                                    - 공고일자 : 2023년 3월 27일 <br>
+                                                    - 시행일자 : 2022년 4월 3일
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- 내용 -->
+                                    </div>
+                                    <!-- 스크롤영역 -->
+                                </div>
+                                <!-- body -->
+                            </div>
+                            <!-- content -->
+                        </div>
+                        <!-- dialog -->
+                    </div>
+                    <!-- 개인정보 모달 -->
+
+
+
+                </div>
+                <!-- identification -->
+
+                <footer id="m_footer">
+                    <div class="f_mnu">
+                        <button class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M27.0184 11.9997C27.0184 11.6019 26.8604 11.2203 26.5791 10.939C26.2978 10.6577 25.9163 10.4997 25.5184 10.4997C25.1206 10.4997 24.7391 10.6577 24.4578 10.939C24.1765 11.2203 24.0184 11.6019 24.0184 11.9997H27.0184ZM6.01843 11.9997C6.01843 11.6019 5.8604 11.2203 5.57909 10.939C5.29779 10.6577 4.91626 10.4997 4.51843 10.4997C4.12061 10.4997 3.73908 10.6577 3.45777 10.939C3.17647 11.2203 3.01843 11.6019 3.01843 11.9997H6.01843ZM27.4579 16.0602C27.7408 16.3334 28.1197 16.4846 28.513 16.4812C28.9063 16.4778 29.2825 16.32 29.5607 16.0419C29.8388 15.7638 29.9965 15.3876 29.9999 14.9943C30.0034 14.601 29.8522 14.2221 29.5789 13.9392L27.4579 16.0602ZM15.0184 1.49968L16.0789 0.43918C15.7976 0.157973 15.4162 0 15.0184 0C14.6207 0 14.2392 0.157973 13.9579 0.43918L15.0184 1.49968ZM0.457932 13.9392C0.314667 14.0775 0.200394 14.2431 0.12178 14.4261C0.0431668 14.6091 0.00178736 14.8059 5.66351e-05 15.0051C-0.00167409 15.2042 0.0362785 15.4018 0.1117 15.5861C0.187121 15.7705 0.298501 15.9379 0.43934 16.0788C0.580179 16.2196 0.747657 16.331 0.932001 16.4064C1.11635 16.4818 1.31387 16.5198 1.51303 16.5181C1.7122 16.5163 1.90903 16.4749 2.09204 16.3963C2.27505 16.3177 2.44056 16.2034 2.57893 16.0602L0.457932 13.9392ZM7.51843 29.9997H22.5184V26.9997H7.51843V29.9997ZM27.0184 25.4997V11.9997H24.0184V25.4997H27.0184ZM6.01843 25.4997V11.9997H3.01843V25.4997H6.01843ZM29.5789 13.9392L16.0789 0.43918L13.9579 2.56018L27.4579 16.0602L29.5789 13.9392ZM13.9579 0.43918L0.457932 13.9392L2.57893 16.0602L16.0789 2.56018L13.9579 0.43918ZM22.5184 29.9997C23.7119 29.9997 24.8565 29.5256 25.7004 28.6817C26.5443 27.8377 27.0184 26.6932 27.0184 25.4997H24.0184C24.0184 25.8975 23.8604 26.279 23.5791 26.5603C23.2978 26.8416 22.9163 26.9997 22.5184 26.9997V29.9997ZM7.51843 26.9997C7.12061 26.9997 6.73908 26.8416 6.45777 26.5603C6.17647 26.279 6.01843 25.8975 6.01843 25.4997H3.01843C3.01843 26.6932 3.49254 27.8377 4.33645 28.6817C5.18037 29.5256 6.32496 29.9997 7.51843 29.9997V26.9997Z" fill="#847EA0" />
+                            </svg>
+                            <span>홈화면</span>
+                        </button>
+                        <!-- // 홈화면 -->
+
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M25.8245 9.54399H27.2727C27.996 9.54399 28.6897 9.83132 29.2012 10.3428C29.7127 10.8542 30 11.5479 30 12.2713V17.7258C30 18.4491 29.7127 19.1428 29.2012 19.6543C28.6897 20.1657 27.996 20.4531 27.2727 20.4531H25.8245C25.4921 23.0894 24.209 25.5138 22.216 27.2713C20.223 29.0287 17.6572 29.9985 15 29.9985V27.2713C17.17 27.2713 19.251 26.4093 20.7854 24.8749C22.3198 23.3405 23.1818 21.2594 23.1818 19.0894V10.9076C23.1818 8.73767 22.3198 6.65659 20.7854 5.1222C19.251 3.58782 17.17 2.72581 15 2.72581C12.83 2.72581 10.749 3.58782 9.21458 5.1222C7.68019 6.65659 6.81818 8.73767 6.81818 10.9076V20.4531H2.72727C2.00396 20.4531 1.31026 20.1657 0.7988 19.6543C0.287337 19.1428 0 18.4491 0 17.7258V12.2713C0 11.5479 0.287337 10.8542 0.7988 10.3428C1.31026 9.83132 2.00396 9.54399 2.72727 9.54399H4.17545C4.50822 6.90794 5.79147 4.4839 7.78442 2.72673C9.77736 0.969549 12.343 0 15 0C17.657 0 20.2226 0.969549 22.2156 2.72673C24.2085 4.4839 25.4918 6.90794 25.8245 9.54399ZM2.72727 12.2713V17.7258H4.09091V12.2713H2.72727ZM25.9091 12.2713V17.7258H27.2727V12.2713H25.9091ZM9.21818 20.1599L10.6636 17.8472C11.9633 18.6613 13.4664 19.0919 15 19.0894C16.5336 19.0919 18.0367 18.6613 19.3364 17.8472L20.7818 20.1599C19.049 21.2456 17.0448 21.8199 15 21.8167C12.9552 21.8199 10.951 21.2456 9.21818 20.1599Z" fill="#847EA0" />
+                            </svg>
+                            <span>질문답변</span>
+                        </button>
+                        <!-- //질문답변 -->
+
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M23.0502 0L30 5.71294L28.0691 7.99366L21.1148 2.28369L23.0502 0ZM6.94826 0L8.88218 2.2822L1.93091 7.99366L0 5.71146L6.94826 0ZM14.9992 3.25393C11.3983 3.25412 7.94488 4.66325 5.39875 7.17132C2.85262 9.67939 1.42234 13.081 1.42254 16.6277C1.42274 20.1745 2.85341 23.5759 5.39982 26.0837C7.94623 28.5914 11.3998 30.0002 15.0008 30C16.7838 29.9999 18.5493 29.6539 20.1966 28.9818C21.8438 28.3096 23.3405 27.3245 24.6012 26.0826C25.862 24.8407 26.862 23.3664 27.5442 21.7439C28.2265 20.1214 28.5776 18.3824 28.5775 16.6262C28.5774 14.87 28.2261 13.1311 27.5437 11.5086C26.8612 9.88618 25.861 8.412 24.6002 7.17027C23.3393 5.92854 21.8425 4.94357 20.1952 4.2716C18.5478 3.59963 16.7823 3.25383 14.9992 3.25393ZM14.9992 27.0269C9.17635 27.0269 4.43958 22.3614 4.43958 16.6262C4.43958 10.891 9.17635 6.22555 14.9992 6.22555C20.8221 6.22555 25.5589 10.891 25.5589 16.6262C25.5589 22.3614 20.8221 27.0269 14.9992 27.0269ZM16.5078 10.683H13.4907V15.1404H8.96515V18.112H13.4907V22.5695H16.5078V18.112H21.0333V15.1404H16.5078V10.683Z" fill="#847EA0" />
+                            </svg>
+                            <span>약속만들기</span>
+                        </button>
+                        <!-- // 약속만들기 -->
+
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M26.6667 3H25V0H21.6667V3H8.33333V0H5V3H3.33333C2.44928 3 1.60143 3.31607 0.976311 3.87868C0.351189 4.44129 0 5.20435 0 6V27C0 27.7957 0.351189 28.5587 0.976311 29.1213C1.60143 29.6839 2.44928 30 3.33333 30H26.6667C28.5167 30 30 28.665 30 27V6C30 4.335 28.5167 3 26.6667 3ZM26.6667 27H3.33333V12H26.6667V27ZM26.6667 9H3.33333V6H26.6667M6.66667 15H15V22.5H6.66667" fill="#847EA0" />
+                            </svg>
+                            <span>내 약속</span>
+                        </button>
+                        <!-- // 내약속 -->
+
+                        <button class="active">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M27.1875 15C27.1875 11.7677 25.9035 8.66774 23.6179 6.38214C21.3323 4.09654 18.2323 2.8125 15 2.8125C11.7677 2.8125 8.66774 4.09654 6.38214 6.38214C4.09654 8.66774 2.8125 11.7677 2.8125 15C2.8125 18.2323 4.09654 21.3323 6.38214 23.6179C8.66774 25.9035 11.7677 27.1875 15 27.1875C18.2323 27.1875 21.3323 25.9035 23.6179 23.6179C25.9035 21.3323 27.1875 18.2323 27.1875 15ZM0 15C0 11.0218 1.58035 7.20644 4.3934 4.3934C7.20644 1.58035 11.0218 0 15 0C18.9782 0 22.7936 1.58035 25.6066 4.3934C28.4196 7.20644 30 11.0218 30 15C30 18.9782 28.4196 22.7936 25.6066 25.6066C22.7936 28.4196 18.9782 30 15 30C11.0218 30 7.20644 28.4196 4.3934 25.6066C1.58035 22.7936 0 18.9782 0 15ZM17.8535 16.5059C18.1055 16.8047 18.2812 17.1738 18.2812 17.5781C18.2812 17.9824 18.0996 18.3516 17.8535 18.6504C17.6016 18.9551 17.2617 19.2188 16.875 19.4355C16.7168 19.5234 16.541 19.6113 16.3652 19.6875C16.5469 19.7637 16.7168 19.8457 16.875 19.9395C17.2617 20.1562 17.6074 20.4199 17.8535 20.7246C18.1055 21.0234 18.2812 21.3926 18.2812 21.7969C18.2812 22.2012 18.0996 22.5703 17.8535 22.8691C17.6016 23.1738 17.2617 23.4375 16.875 23.6543C16.0957 24.0879 15.082 24.375 14.0625 24.375C13.8516 24.375 13.6641 24.2285 13.6113 24.0234C13.5586 23.8184 13.6465 23.6016 13.834 23.4961L13.8457 23.4902C13.8574 23.4844 13.875 23.4727 13.8984 23.4609C13.9453 23.4316 14.0156 23.3906 14.0977 23.3379C14.2617 23.2266 14.4785 23.0742 14.6953 22.8926C14.9121 22.7109 15.1172 22.5059 15.2578 22.3008C15.4043 22.0957 15.4629 21.9258 15.4629 21.7969C15.4629 21.668 15.4043 21.5039 15.2578 21.293C15.1113 21.0879 14.9121 20.8887 14.6953 20.7012C14.4785 20.5195 14.2617 20.3672 14.0977 20.2559C14.0156 20.2031 13.9453 20.1621 13.8984 20.1328L13.8516 20.1035L13.8457 20.0977L13.834 20.0918C13.6875 20.0098 13.5938 19.8516 13.5938 19.6816C13.5938 19.5117 13.6875 19.3535 13.834 19.2715L13.8457 19.2656C13.8574 19.2598 13.875 19.248 13.8984 19.2363C13.9453 19.207 14.0156 19.166 14.0977 19.1133C14.2617 19.002 14.4785 18.8496 14.6953 18.668C14.9121 18.4863 15.1172 18.2812 15.2578 18.0762C15.4043 17.8711 15.4629 17.7012 15.4629 17.5723C15.4629 17.4434 15.4043 17.2793 15.2578 17.0684C15.1113 16.8633 14.9121 16.6641 14.6953 16.4766C14.4785 16.2949 14.2617 16.1426 14.0977 16.0312C14.0156 15.9785 13.9453 15.9375 13.8984 15.9082C13.875 15.8965 13.8574 15.8848 13.8457 15.8789L13.834 15.873C13.6465 15.7676 13.5586 15.5508 13.6113 15.3457C13.6641 15.1406 13.8516 14.9941 14.0625 14.9941C15.082 14.9941 16.0957 15.2813 16.8691 15.7148C17.2559 15.9316 17.6016 16.1953 17.8477 16.5L17.8535 16.5059ZM8.46094 12.1875C8.46094 11.6902 8.65848 11.2133 9.01011 10.8617C9.36174 10.51 9.83866 10.3125 10.3359 10.3125C10.8332 10.3125 11.3101 10.51 11.6618 10.8617C12.0134 11.2133 12.2109 11.6902 12.2109 12.1875C12.2109 12.6848 12.0134 13.1617 11.6618 13.5133C11.3101 13.865 10.8332 14.0625 10.3359 14.0625C9.83866 14.0625 9.36174 13.865 9.01011 13.5133C8.65848 13.1617 8.46094 12.6848 8.46094 12.1875ZM19.7109 10.3125C20.2082 10.3125 20.6851 10.51 21.0368 10.8617C21.3884 11.2133 21.5859 11.6902 21.5859 12.1875C21.5859 12.6848 21.3884 13.1617 21.0368 13.5133C20.6851 13.865 20.2082 14.0625 19.7109 14.0625C19.2137 14.0625 18.7367 13.865 18.3851 13.5133C18.0335 13.1617 17.8359 12.6848 17.8359 12.1875C17.8359 11.6902 18.0335 11.2133 18.3851 10.8617C18.7367 10.51 19.2137 10.3125 19.7109 10.3125Z" fill="#847EA0" />
+                                        </svg> -->
+                            <div class="usrIco">
+                                <img src="./img/icon/ico01.png" alt="유저아이콘" class="w-full">
+                            </div>
+                            <span>내 정보</span>
+                        </button>
+                        <!-- // 내정보 -->
+                    </div>
+                </footer>
+            </div>
+            <!-- mobile-container -->
+        </div>
+        <!-- //mobile -->
+    </div>
+    <script src="./js/custom_new.js"></script>
+</body>
+
+</html>

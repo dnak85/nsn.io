@@ -157,7 +157,6 @@
 
 
         <div id="m_wrap">
-
             <header id="m_header" class="sub">
                 <section class="top">
                     <div class="backPage">
@@ -168,42 +167,98 @@
                         </button>
                     </div>
                     <div class="pageTitle">
-                        <strong>계좌정보</strong>
+                        <strong>약속생성</strong>
                     </div>
                 </section>
                 <!-- //상단 -->
             </header>
             <!-- 
-                mobile-header : 고객센터/내정보
+                mobile-header : 공지사항/ 계정정보 / 계좌정보
             -->
 
+
+
             <div id="m_container">
-                <div class="myInfo">
-                    <div class="bank-txt">
-                        약속금을 반환 받을 계좌정보를 <br>확인해주세요.
+                <div class="block w-full calc-height">
+                    <div class="h-fit min-h-[205px] w-full">
+                        <img src="" alt="비주얼이미지" class="url_visual" />
                     </div>
-                    <!-- // -->
-                    <div class="mt-10 bank-info shadow-cs4">
-                        <dl>
-                            <dt>은행선택</dt>
-                            <dd>KB국민은행</dd>
-                            <!-- // -->
+                    <script>
+                        const visualImage = [];
+                        visualImage[0] = "./img/visual04.png";
+                        visualImage[1] = "./img/visual05.png";
+                        visualImage[2] = "./img/visual02.png";
 
-                            <dt class="mt-5">계좌번호</dt>
-                            <dd>123-543456-13-333</dd>
-                            <!-- // -->
+                        const randomVisual = Math.floor(Math.random() * visualImage.length);
+                        document.querySelector(".url_visual").src = visualImage[randomVisual];
+                    </script>
+                    <!-- //visual-image script 이미지 url 변경 -->
 
-                            <dt class="mt-5">예금주</dt>
-                            <dd>홍길동</dd>
-                            <!-- // -->
-                        </dl>
+                    <div class="mt-[48px] flex w-full flex-col flex-wrap items-center justify-center">
+                        <div class="leading-5 text-center">
+                            <span class="font-ptnd text-[18px] text-slate-900 xsm:text-[15px]">약속상대에게 URL링크를 전달해주세요.<br />상대방이 예약금을
+                                걸면 약속이 맺어져요.</span>
+                        </div>
+                        <!-- //text -->
+
+                        <div class="mt-[32px] w-full px-6">
+                            <strong class="w-full pb-2 font-ptnd text-[14px] text-violet-900">게스트1</strong>
+                            <div class="flex justify-between w-full gap-2 mt-2">
+                                <input type="text" name="" id="url1" value="https://www.sdgsd.com/" class="urlinput h-[58px] rounded-[15px] border-[2px] border-[#7B61FF] bg-white px-4 text-[16px] text-[#7B61FF]" />
+                                <button class="copy block h-[58px] w-[88px] rounded-[10px] bg-[#7B61FF] font-ptnd text-[16px] font-bold leading-5 text-white" data-clipboard-target="#url1">
+                                    복사
+                                </button>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <div class="w-full px-6 mt-6">
+                            <strong class="w-full font-ptnd text-[14px] text-violet-900">게스트2</strong>
+                            <div class="flex justify-between w-full gap-2 mt-2">
+                                <input type="text" name="" id="url2" value="https://www.sdgsd.com/" class="urlinput h-[58px] rounded-[15px] border-[2px] border-[#7B61FF] bg-white px-4 text-[16px] text-[#7B61FF]" />
+                                <button class="copy block h-[58px] w-[88px] rounded-[10px] bg-[#7B61FF] font-ptnd 
+                              text-[16px] font-bold leading-5 text-white" data-clipboard-target="#url2">
+                                    복사
+                                </button>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <div class="w-full px-6 mt-6">
+                            <strong class="w-full font-ptnd text-[14px] text-violet-900">게스트3</strong>
+                            <div class="flex justify-between w-full gap-2 mt-2">
+                                <input type="text" name="" id="url3" value="https://www.sdgsd.com/" class="urlinput h-[58px] rounded-[15px] border-[2px] border-[#7B61FF] bg-white px-4 text-[16px] text-[#7B61FF]" />
+                                <button class="copy block h-[58px] w-[88px] rounded-[10px] bg-[#7B61FF] font-ptnd text-[16px] 
+                              font-bold leading-5 text-white" data-clipboard-target="#url3">
+                                    복사
+                                </button>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <script>
+                            const clipboard = new ClipboardJS(".copy");
+                        </script>
+                        <!-- // url 복사 -->
+
+                        <div class="w-full mt-6 text-center">
+                            <button class="font-ptnd text-[16px] font-bold leading-5 text-violet-900 underline shadow-none">
+                                통합링크돌아가기
+                            </button>
+                        </div>
+                        <!-- //개별링크 -->
                     </div>
-                    <!-- // -->
-                    <div class="px-10 mt-10 page-btn">
-                        <button class="shadow-cs4">계좌정보 변경</button>
-                        <button class="mt-6 shadow-cs4 dark">계좌정보 삭제</button>
+                    <!-- //URL -->
+
+                    <div class="mt-[48px] w-full px-6">
+                        <button class="submitButton h-[48px] w-full rounded-[10px] bg-[#885cf6] font-ptnd text-[16px] font-bold text-white">
+                            약속확인
+                        </button>
                     </div>
-                    <!-- // -->
+                    <!-- // 생성 버튼 -->
+
+                    <div class="h-[40px] w-full"></div>
+                    <!-- // 하단여백 -->
                 </div>
                 <!-- // -->
             </div>
@@ -261,7 +316,6 @@
         </div>
         <!-- //mobile -->
     </div>
-    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>

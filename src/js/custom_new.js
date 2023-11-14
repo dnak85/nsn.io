@@ -4,26 +4,47 @@ const newDiv = document.createElement("div");
 newDiv.classList.add("eventBg");
 const animationDuration = 350;
 
+// 공통으로 사용되는 애니메이션 함수
 function animateElement(element, keyframes, duration) {
-  return new Promise((resolve) => {
-    element.animate(keyframes, duration).onfinish = () => {
-      resolve();
-    };
+  return element.animate(keyframes, { duration, fill: "forwards" }).finished;
+}
+
+// closeModal 함수 정의
+function closeModal(modal, overlay) {
+  body.classList.remove("overflow-hidden");
+  animateElement(
+    modal,
+    [
+      { opacity: 1, marginTop: 0 }, // 시작 상태
+      { opacity: 0, marginTop: "5%" }, // 종료 상태
+    ],
+    animationDuration
+  ).then(() => {
+    modal.classList.remove("active");
+    overlay.style.display = "none";
   });
 }
 
+// 공통으로 사용되는 열기/닫기 함수
+function toggleElement(dnTarget, isOpening) {
+  body.classList.toggle("overflow-hidden", isOpening);
+  dnTarget.classList.toggle("active", isOpening);
+  newDiv.classList.toggle("active", isOpening);
+}
+
+// 열기 함수
 function openElement(dnTarget) {
-  body.classList.add("overflow-hidden");
-  dnTarget.classList.add("active");
-  dnTarget.animate(
+  toggleElement(dnTarget, true);
+  animateElement(
+    dnTarget,
     [
       { opacity: 0, marginTop: "5%" }, // 시작 상태
       { opacity: 1, marginTop: 0 }, // 종료 상태
     ],
     animationDuration
   );
-  newDiv.classList.add("active");
-  newDiv.animate(
+  animateElement(
+    newDiv,
     [
       { opacity: 0 }, // 시작 상태
       { opacity: 1 }, // 종료 상태
@@ -32,19 +53,19 @@ function openElement(dnTarget) {
   );
 }
 
-function closeElement(eventTarget, removeClass, extraAction) {
-  body.classList.remove("overflow-hidden");
+// 닫기 함수
+function closeElement(dnTarget, removeClass, extraAction) {
   animateElement(
-    eventTarget,
+    dnTarget,
     [
       { opacity: 1, marginTop: 0 }, // 시작 상태
       { opacity: 0, marginTop: "5%" }, // 종료 상태
     ],
     animationDuration
   ).then(() => {
-    eventTarget.classList.remove("active");
+    toggleElement(dnTarget, false);
     if (removeClass) {
-      eventTarget.classList.remove(removeClass);
+      dnTarget.classList.remove(removeClass);
     }
     if (extraAction) {
       extraAction();
@@ -64,9 +85,10 @@ for (let i = 0; i < dnToggle.length; i++) {
     );
     wrap.appendChild(newDiv);
 
-    if (dnTarget.classList.contains("modal")) {
-      openElement(dnTarget);
-    } else if (dnTarget.classList.contains("offcanvas")) {
+    if (
+      dnTarget.classList.contains("modal") ||
+      dnTarget.classList.contains("offcanvas")
+    ) {
       openElement(dnTarget);
     } else if (dnTarget.classList.contains("dropdown")) {
       if (dnTarget.classList.contains("show")) {

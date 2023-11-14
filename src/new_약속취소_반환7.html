@@ -157,7 +157,6 @@
 
 
         <div id="m_wrap">
-
             <header id="m_header" class="sub">
                 <section class="top">
                     <div class="backPage">
@@ -168,44 +167,123 @@
                         </button>
                     </div>
                     <div class="pageTitle">
-                        <strong>계좌정보</strong>
+                        <strong>약속취소</strong>
                     </div>
                 </section>
                 <!-- //상단 -->
             </header>
             <!-- 
-                mobile-header : 고객센터/내정보
+                mobile-header : 공지사항/ 계정정보 / 계좌정보
             -->
 
+
+
             <div id="m_container">
-                <div class="myInfo">
-                    <div class="bank-txt">
-                        약속금을 반환 받을 계좌정보를 <br>확인해주세요.
+                <div class="block w-full">
+                    <div class="block w-full mt-5 px-7"> <!-- 개편 px-4 ->7 -->
+                        <div class="block w-full inputName">
+                            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900">
+                        </div>
+                        <!-- // 입력  개편 -->
                     </div>
-                    <!-- // -->
-                    <div class="mt-10 bank-info shadow-cs4">
-                        <dl>
-                            <dt>은행선택</dt>
-                            <dd>KB국민은행</dd>
-                            <!-- // -->
 
-                            <dt class="mt-5">계좌번호</dt>
-                            <dd>123-543456-13-333</dd>
-                            <!-- // -->
+                    <div class="w-full px-4 mt-[25px]">
+                        <div class="w-full rounded-[12px] bg-[#5742C3] px-3 py-6 shadow-cs4">
+                            <span class="block h-[14px] w-full px-1 text-[14px] font-[800] leading-[14px] text-[#FF8AC7]">* 약속 당일 반환기능이 활성화 됩니다.</span>
 
-                            <dt class="mt-5">예금주</dt>
-                            <dd>홍길동</dd>
-                            <!-- // -->
-                        </dl>
+                            <!-- 약속반환조건 -->
+                            <div class="w-full px-1 mt-5">
+                                <span class="flex items-center h-5 text-[14px] text-white font-[800] before:inline-block before:w-4 before:text-center before:text-[18px] before:content-['\00b7']">
+                                    약속유형
+                                    <em class="text-[16px] font-semibold ml-10">#1:1 호스트 선입금형</em>
+                                </span>
+
+                                <div class="w-full mt-2 ml-2">
+                                    <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                        <span>① 약속성사시 선입금 금액은 게스트에게 입금</span>
+                                    </div>
+
+                                    <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                        <span>② 게스트 불참 시 호스트 금액은 호스트에게 환불</span>
+                                    </div>
+
+                                    <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                        <span>③ 응답 미 일치/ 불응답시 입금보류</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //약속반환조건 -->
+
+                            <!-- start 1:1약속 -->
+                            <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-4">
+                                <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">본인은 약속을 지켯나요?</strong>
+
+                                <div class="relative flex justify-center w-full gap-[48px] px-6 mt-6">
+                                    <input type="radio" name="sgle" id="sgl01" class="peer/sgl01 absolute  left-[-9999em]" checked />
+                                    <label for="sgl01" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                                    bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3]
+                                                    peer-checked/sgl01:bg-[#7b61ff] peer-checked/sgl01:text-white peer-checked/sgl01:shadow-cs2">
+                                        예
+                                    </label>
+                                    <!-- &nbsp;예&nbsp; -->
+
+                                    <input type="radio" name="sgle" id="sgl02" class="peer/sgl02 absolute  left-[-9999em]" />
+                                    <label for="sgl02" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                                    bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3] 
+                                                    peer-checked/sgl02:bg-[#7b61ff] peer-checked/sgl02:text-white peer-checked/sgl02:shadow-cs2">
+                                        아니오
+                                    </label>
+                                    <!-- 아니오 -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- end 약속확인 -->
+
+                            <!-- start 1:1약속 -->
+                            <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-4">
+                                <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">상대방은 약속을 지켯나요?</strong>
+
+                                <div class="relative flex justify-center w-full gap-[48px] px-6 mt-6">
+                                    <input type="radio" name="sgle2" id="sgl011" class="peer/sgl011 absolute  left-[-9999em]" checked />
+                                    <label for="sgl011" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                                    bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3]
+                                                    peer-checked/sgl011:bg-[#7b61ff] peer-checked/sgl011:text-white peer-checked/sgl011:shadow-cs2">
+                                        예
+                                    </label>
+                                    <!-- &nbsp;예&nbsp; -->
+
+                                    <input type="radio" name="sgle2" id="sgl012" class="peer/sgl012 absolute  left-[-9999em]" />
+                                    <label for="sgl012" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                                    bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3] 
+                                                    peer-checked/sgl012:bg-[#7b61ff] peer-checked/sgl012:text-white peer-checked/sgl012:shadow-cs2">
+                                        아니오
+                                    </label>
+                                    <!-- 아니오 -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- end 약속확인 -->
+                        </div>
                     </div>
-                    <!-- // -->
-                    <div class="px-10 mt-10 page-btn">
-                        <button class="shadow-cs4">계좌정보 변경</button>
-                        <button class="mt-6 shadow-cs4 dark">계좌정보 삭제</button>
+
+                    <div class="w-full mt-[40px] flex justify-center gap-5">
+                        <span class="text-[14px] text-pink-500 font-semibold">약속자체가 진행되지 않았습니다.</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <g clip-path="url(#clip0_1132_1099)">
+                                <path d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.25 15V12.5H8.75V15H11.25ZM11.25 11.25V5H8.75V11.25H11.25Z" fill="#EC4899" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1132_1099">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
-                    <!-- // -->
+                    <!-- 약속진행 안내 -->
                 </div>
                 <!-- // -->
+                <div class="h-10"></div>
             </div>
             <!-- mobile-container -->
 
@@ -261,7 +339,6 @@
         </div>
         <!-- //mobile -->
     </div>
-    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>

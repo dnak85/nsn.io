@@ -157,7 +157,6 @@
 
 
         <div id="m_wrap">
-
             <header id="m_header" class="sub">
                 <section class="top">
                     <div class="backPage">
@@ -168,42 +167,148 @@
                         </button>
                     </div>
                     <div class="pageTitle">
-                        <strong>계좌정보</strong>
+                        <strong>약속취소</strong>
                     </div>
                 </section>
                 <!-- //상단 -->
             </header>
             <!-- 
-                mobile-header : 고객센터/내정보
+                mobile-header : 공지사항/ 계정정보 / 계좌정보
             -->
 
+
+
             <div id="m_container">
-                <div class="myInfo">
-                    <div class="bank-txt">
-                        약속금을 반환 받을 계좌정보를 <br>확인해주세요.
+                <div class="block w-full">
+                    <div class="block w-full mt-5 px-7"> <!-- 개편 px-4 ->7 -->
+                        <div class="block w-full inputName">
+                            <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900">
+                        </div>
+                        <!-- // 입력  개편 -->
                     </div>
-                    <!-- // -->
-                    <div class="mt-10 bank-info shadow-cs4">
-                        <dl>
-                            <dt>은행선택</dt>
-                            <dd>KB국민은행</dd>
-                            <!-- // -->
-
-                            <dt class="mt-5">계좌번호</dt>
-                            <dd>123-543456-13-333</dd>
-                            <!-- // -->
-
-                            <dt class="mt-5">예금주</dt>
-                            <dd>홍길동</dd>
-                            <!-- // -->
-                        </dl>
+                
+                    <!-- 반환금 정보 -->
+                    <div class="w-full px-4 mt-[25px]">
+                        <div class="w-full rounded-[12px] bg-[#5742C3] px-3 py-6 shadow-cs4">
+                            <span class="block h-[14px] w-full px-1 text-[14px] font-[800] leading-[14px] text-[#FF8AC7]">* 약속 당일 반환기능이 활성화 됩니다.</span>
+                
+                            <!-- 약속반환조건 -->
+                            <div class="w-full px-1 mt-5">
+                                <span class="flex items-center h-5 text-[14px] text-white font-[800] before:inline-block before:w-4 before:text-center before:text-[18px] before:content-['\00b7']">
+                                    약속금 반환조건
+                                    <em class="text-[16px] font-semibold ml-10">#모임형 - 집금형</em>
+                                </span>
+                
+                                <div class="w-full mt-2 ml-2">
+                                    <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                        <span>① 약속보증금은 호스트에게 입금</span>
+                                    </div>
+                
+                                    <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                        <span>② 응답 미 일치/ 불응답시 입금보류</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //약속반환조건 -->
+                
+                            <!-- start 다수형약속 -->
+                            <div class="mt-10 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-4">
+                                <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">상대방이 약속을 지켰나요?</strong>
+                
+                                <dl class="flex flex-wrap items-center justify-between w-full mt-3 gap-y-5">
+                                    <dt class="h-10 w-fit max-w-[106px] text-[14px]  leading-10 text-white font-[800]">게스트01 (김서연)</dt>
+                                    <dd class="relative min-h-10 leading-10 w-[calc(100%-132px)]">
+                                        <div class="relative flex flex-wrap justify-center w-full gap-4">
+                                            <input type="radio" name="sgle1" id="sgl011" class="peer/sgl011 absolute left-[-9999em]" checked />
+                                            <label for="sgl011" class="block h-[30px] leading-[30px] w-fit text-center rounded-full
+                                     bg-[#7b61ff] px-4 text-[16px] font-semibold  text-[#B9C3F3] 
+                                     peer-checked/sgl011:bg-[#7b61ff] peer-checked/sgl011:text-white peer-checked/sgl011:shadow-cs2">
+                                                예
+                                            </label>
+                                            <!-- 예 -->
+                
+                                            <input type="radio" name="sgle1" id="sgl021" class="peer/sgl021 absolute left-[-9999em]" />
+                                            <label for="sgl021" class="block h-[30px] leading-[30px] w-fit text-center rounded-full
+                                     bg-[#7b61ff] px-4 text-[16px] font-semibold text-[#B9C3F3] 
+                                     peer-checked/sgl021:bg-[#7b61ff] peer-checked/sgl021:text-white peer-checked/sgl021:shadow-cs2">
+                                                아니오
+                                            </label>
+                                            <!-- 아니오 -->
+                                        </div>
+                                        <!-- // -->
+                
+                                        <!-- <span class="text-[14px] text-white">멤버 반환완료</span>
+                                                    <span class="text-[16px] text-white font-[800]">환불완료</span>
+                
+                                                    <button class="h-10 min-w-[100px] px-5 rounded-[10px] bg-[#8B5CF6] shadow-none font-bold text-[14px] text-white">반환받기</button>
+                                                    <button class="h-10 min-w-[100px] px-5 rounded-[10px] bg-[#8B5CF6] shadow-none font-bold text-[14px] text-white">약속미진행 요청 중</button>
+                
+                                                    <div class="loading">
+                                                        <span class="text-[14px] text-white">응답 대기중</span>
+                                                        <div>
+                                                            <em></em>
+                                                            <em></em>
+                                                            <em></em>
+                                                            <em></em>
+                                                        </div>
+                                                    </div> -->
+                                    </dd>
+                                    <!-- 게스트01 -->
+                
+                                    <dt class="h-10 w-fit max-w-[106px] text-[14px] leading-10 text-white font-[800]">게스트02 (김서연)</dt>
+                                    <dd class="relative min-h-10 leading-10 w-[calc(100%-132px)]">
+                                        <div class="relative flex flex-wrap justify-center w-full gap-4">
+                                            <input type="radio" name="sgle2" id="sgl012" class="peer/sgl012 absolute left-[-9999em]" checked />
+                                            <label for="sgl012" class="block h-[30px] leading-[30px] text-center w-fit rounded-full 
+                                    bg-[#7b61ff] px-4 text-[16px] font-semibold text-[#B9C3F3]
+                                    peer-checked/sgl012:bg-[#7b61ff] peer-checked/sgl012:text-white peer-checked/sgl012:shadow-cs2">
+                                                예
+                                            </label>
+                                            <!-- 예 -->
+                
+                                            <input type="radio" name="sgle2" id="sgl022" class="peer/sgl022 absolute left-[-9999em]" />
+                                            <label for="sgl022" class="block h-[30px] leading-[30px] text-center w-fit rounded-full 
+                                    bg-[#7b61ff] px-4 text-[16px] font-semibold text-[#B9C3F3]
+                                    peer-checked/sgl022:bg-[#7b61ff] peer-checked/sgl022:text-white peer-checked/sgl022:shadow-cs2">
+                                                아니오
+                                            </label>
+                                            <!-- 아니오 -->
+                                        </div>
+                                        <!-- // -->
+                                    </dd>
+                                    <!-- 게스트01 -->
+                
+                                    <dt class="h-10 w-fit max-w-[106px] text-[14px] leading-10 text-white font-[800]">게스트03 (김서연)</dt>
+                                    <dd class="relative min-h-10 leading-10 w-[calc(100%-132px)]">
+                                        <div class="relative flex flex-wrap justify-center w-full gap-4">
+                                            <input type="radio" name="sgle3" id="sgl013" class="peer/sgl013 absolute left-[-9999em]" checked />
+                                            <label for="sgl013" class="block h-[30px] leading-[30px] text-center w-fit rounded-full 
+                                    bg-[#7b61ff] px-4 text-[16px] font-semibold text-[#B9C3F3]
+                                    peer-checked/sgl013:bg-[#7b61ff] peer-checked/sgl013:text-white peer-checked/sgl013:shadow-cs2">
+                                                예
+                                            </label>
+                                            <!-- 예 -->
+                
+                                            <input type="radio" name="sgle3" id="sgl023" class="peer/sgl023 absolute left-[-9999em]" />
+                                            <label for="sgl023" class="block h-[30px] leading-[30px] text-center w-fit rounded-full 
+                                    bg-[#7b61ff] px-4 text-[16px] font-semibold text-[#B9C3F3] 
+                                    peer-checked/sgl023:bg-[#7b61ff] peer-checked/sgl023:text-white peer-checked/sgl023:shadow-cs2">
+                                                아니오
+                                            </label>
+                                            <!-- 아니오 -->
+                                        </div>
+                                        <!-- // -->
+                                    </dd>
+                                    <!-- 게스트01 -->
+                                </dl>
+                            </div>
+                            <!-- end 약속확인 -->
+                        </div>
                     </div>
-                    <!-- // -->
-                    <div class="px-10 mt-10 page-btn">
-                        <button class="shadow-cs4">계좌정보 변경</button>
-                        <button class="mt-6 shadow-cs4 dark">계좌정보 삭제</button>
-                    </div>
-                    <!-- // -->
+                    <!-- //반환금 정보 -->
+                
+                    <div class="h-[64px] w-full"></div>
+                    <!-- // 하단여백 -->
                 </div>
                 <!-- // -->
             </div>
@@ -261,7 +366,6 @@
         </div>
         <!-- //mobile -->
     </div>
-    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>

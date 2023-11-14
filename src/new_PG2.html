@@ -157,59 +157,34 @@
 
 
         <div id="m_wrap">
+            <div id="m_container" class="fpage">
+                <div class="flex flex-col items-center gap-[100px] w-full min-h-full py-[100px] relative pb-[144px]">
 
-            <header id="m_header" class="sub">
-                <section class="top">
-                    <div class="backPage">
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z" fill="#0F172A" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="pageTitle">
-                        <strong>계좌정보</strong>
-                    </div>
-                </section>
-                <!-- //상단 -->
-            </header>
-            <!-- 
-                mobile-header : 고객센터/내정보
-            -->
+                    <div class="w-full">
+                        <div class="relative z-20 mx-auto w-fit h-[38px] leading-[38px]
+                                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[18px] after:bg-[#cdc3ff] after:z-[-1] after:w-full">
+                            <span class="text-[32px] text-[#0f172a] font-normal"><em class="font-semibold">결제</em>가 완료되었습니다.</span>
+                        </div>
+                        <!-- 타이틀 -->
 
-            <div id="m_container">
-                <div class="myInfo">
-                    <div class="bank-txt">
-                        약속금을 반환 받을 계좌정보를 <br>확인해주세요.
-                    </div>
-                    <!-- // -->
-                    <div class="mt-10 bank-info shadow-cs4">
-                        <dl>
-                            <dt>은행선택</dt>
-                            <dd>KB국민은행</dd>
-                            <!-- // -->
+                        <div class="w-full mt-6 text-center">
+                            <span class="text-[#0f172a] text-[28px] tracking-[-2px]">다시 시도해 주세요</span>
+                        </div>
 
-                            <dt class="mt-5">계좌번호</dt>
-                            <dd>123-543456-13-333</dd>
-                            <!-- // -->
+                        <div class="flex flex-col gap-5 w-[calc(100%-56px)] mx-auto mt-[45px] min-h-[180px] border-y-[2px] border-slate-900 py-8 justify-center items-center">
+                            <div class="text-[20px] leading-[24px] font-semibold text-[#0f172a]">실패사유</div>
+                            <div class="text-[36px] leading-[43px] font-black text-[#0f172a]">404</div>
+                        </div>
+                        <!-- info -->
+                    </div>
 
-                            <dt class="mt-5">예금주</dt>
-                            <dd>홍길동</dd>
-                            <!-- // -->
-                        </dl>
+                    <div class="w-[calc(100%-56px)] mx-auto">
+                        <button data-custom-open="returnComplete" class="h-[48px] w-full rounded-[10px] bg-[#8b5cf6] font-bold text-white shadow-cs4">이전 페이지</button>
                     </div>
-                    <!-- // -->
-                    <div class="px-10 mt-10 page-btn">
-                        <button class="shadow-cs4">계좌정보 변경</button>
-                        <button class="mt-6 shadow-cs4 dark">계좌정보 삭제</button>
-                    </div>
-                    <!-- // -->
+                    <!-- button -->
                 </div>
                 <!-- // -->
             </div>
-            <!-- mobile-container -->
-
-
 
             <footer id="m_footer">
                 <div class="f_mnu">
@@ -261,7 +236,6 @@
         </div>
         <!-- //mobile -->
     </div>
-    <script src="./js/custom_new.js"></script>
 </body>
 
 </html>

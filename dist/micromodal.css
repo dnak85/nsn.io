@@ -8,20 +8,14 @@
 }
 
 /* 모달 슬라이드 애니메이션 */
-.micromodal-slide[aria-hidden="false"] .modal__overlay {
+.micromodal-slide[aria-hidden="false"] .modal__overlay,
+.micromodal-slide[aria-hidden="false"] .modal__container {
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden="false"] .modal__container {
-  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
-}
-
-.micromodal-slide[aria-hidden="true"] .modal__overlay {
-  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
-}
-
+.micromodal-slide[aria-hidden="true"] .modal__overlay,
 .micromodal-slide[aria-hidden="true"] .modal__container {
-  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide .modal__container,
@@ -40,13 +34,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(87, 66, 195, 1);
-  padding: 4px;
-  @apply inset-0 bg-opacity-100 px-4 lg:absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 16px;
+  width:100%
 }
 
 .checking .modal__overlay {
-  background-color: rgba(87, 66, 195, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.checking .modal__container {
+  padding: 25px 20px;
 }
 
 /* 모달 컨테이너 스타일 */
@@ -54,14 +51,15 @@
   position: relative;
   top: -80px;
   width: 100%;
+  max-width: 441px;
   border-radius: 12px;
   background-color: #5742c3;
-  padding: 5px 20px;
+  padding: 25px 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .cancel .modal__container {
-  padding: 0;
+  padding: 25px 10px;
 }
 
 .checking .modal__container {
@@ -86,10 +84,6 @@
   display: block;
   height: 5px;
   width: 5px;
-}
-
-.modal__close:focus,
-.modal__close:active {
   outline: 0;
   border: 0;
 }
@@ -107,6 +101,9 @@
 
 .modal__close::after {
   transform: rotate(-45deg);
+}
+.modal__close::before {
+  transform: rotate(45deg);
 }
 
 /* 모달 버튼 스타일 */

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/gm/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../dist/animate.css">
+    <link rel="stylesheet" href="../dist/calendar.css">
+    <link rel="stylesheet" href="../dist/micromodal.css">
+    <link rel="stylesheet" href="../dist/modal.css">
+    <link rel="stylesheet" href="../dist/offcanvas.css">
+    <link rel="stylesheet" href="../dist/timepicker.css">
+    <link rel="stylesheet" href="../dist/output_new.css">
+
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <!-- microModal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- swipejs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <header id="web_header">
+        <div id="floating-pop" class="h-[44px] bg-violet-600 w-full flex justify-center relative items-center">
+            <div class="relative inline-block w-[1200px] h-[44px] leading-[44px] text-center text-[14px] text-white">
+                <span>오늘까지 <em class="text-[20px] font-semibold">761개</em>의 약속이 만들어졌어요</span>
+
+                <button class="absolute top-2.5 right-0 floating-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_903_4028)">
+                            <path d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM16.2424 7.75763C15.9495 7.46475 15.4748 7.46475 15.1819 7.75763L12 10.9395L8.81812 7.75763C8.52525 7.46475 8.0505 7.46475 7.75725 7.75763C7.46438 8.0505 7.46438 8.52525 7.75725 8.81812L10.9391 12L7.75725 15.1819C7.46438 15.4744 7.46438 15.9499 7.75725 16.2424C8.05013 16.5353 8.52487 16.5353 8.81812 16.2424L12 13.0605L15.1819 16.2424C15.4748 16.5353 15.9495 16.5353 16.2424 16.2424C16.5352 15.9499 16.5352 15.4744 16.2424 15.1819L13.0605 12L16.2424 8.81812C16.5356 8.52487 16.5356 8.05013 16.2424 7.75763Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_903_4028">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script>
+            const ftClose = document.querySelector('.floating-close');
+            ftClose.addEventListener('click', () => {
+                document.querySelector('#floating-pop').classList.add('hidden');
+            });
+
+        </script>
+        <!-- // -->
+
+        <div class="flex w-[1200px] h-[78px] px-5 items-center justify-between">
+
+            <div class="flex items-end h-10">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./img/webLogo.png" alt="노쇼노 웹소개페이지" width="70">
+                    </a>
+                </h1>
+                <nav class="flex h-10 gap-[42px] ml-[90px] relative z-10">
+                    <button class="btnschl active" data-hash="web_s01">홈</button>
+                    <button class="btnschl" data-hash="web_s02">서비스소개</button>
+                    <button class="btnschl" data-hash="web_s03">이용방법</button>
+                    <button class="btnschl" data-hash="web_s04">FAQ</button>
+                </nav>
+
+            </div>
+            <!-- left -->
+
+            <div class="flex items-center">
+
+                <div class="relative webSch w-[317px]">
+                    <input type="search" name="" id="" class="border-[2px] border-[#e7e6ef] w-full px-2.5 text-[16px] text-gray-500 h-10">
+                    <button type="submit" class="absolute top-0 right-0 bg-[#fb2e86] z-10 w-[50px] h-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                            <path d="M20.7099 19.2899L16.9999 15.6099C18.44 13.8143 19.1374 11.5352 18.9487 9.2412C18.76 6.94721 17.6996 4.81269 15.9854 3.27655C14.2713 1.74041 12.0337 0.919414 9.73283 0.982375C7.43194 1.04534 5.24263 1.98747 3.61505 3.61505C1.98747 5.24263 1.04534 7.43194 0.982375 9.73283C0.919414 12.0337 1.74041 14.2713 3.27655 15.9854C4.81269 17.6996 6.94721 18.76 9.2412 18.9487C11.5352 19.1374 13.8143 18.44 15.6099 16.9999L19.2899 20.6799C19.3829 20.7736 19.4935 20.848 19.6153 20.8988C19.7372 20.9496 19.8679 20.9757 19.9999 20.9757C20.1319 20.9757 20.2626 20.9496 20.3845 20.8988C20.5063 20.848 20.6169 20.7736 20.7099 20.6799C20.8901 20.4934 20.9909 20.2442 20.9909 19.9849C20.9909 19.7256 20.8901 19.4764 20.7099 19.2899ZM9.9999 16.9999C8.61544 16.9999 7.26206 16.5894 6.11091 15.8202C4.95977 15.051 4.06256 13.9578 3.53275 12.6787C3.00293 11.3996 2.86431 9.99214 3.13441 8.63427C3.4045 7.27641 4.07119 6.02912 5.05016 5.05016C6.02912 4.07119 7.27641 3.4045 8.63427 3.13441C9.99214 2.86431 11.3996 3.00293 12.6787 3.53275C13.9578 4.06256 15.051 4.95977 15.8202 6.11091C16.5894 7.26206 16.9999 8.61544 16.9999 9.9999C16.9999 11.8564 16.2624 13.6369 14.9497 14.9497C13.6369 16.2624 11.8564 16.9999 9.9999 16.9999Z" fill="url(#paint0_linear_943_156)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_943_156" x1="0.979004" y1="0.979004" x2="24.4288" y2="15.376" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F3F9FF" />
+                                    <stop offset="1" stop-color="#F1F0FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="ml-10 webLogin w-[38px] h-10 flex justify-center items-center">
+                    <div class="after">
+                        <button>
+                            <svg width="38" height="13" viewBox="0 0 38 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.35 10.278H12.278V11.79H0.602V10.278H5.502V8.36H1.946V3.992H9.142V2.606H1.932V1.136H10.962V5.434H3.78V6.876H11.256V8.36H7.35V10.278ZM21.8669 3.026V2.97H14.6849V1.5H23.7149V3.026C23.7149 4.832 23.7149 6.596 23.2389 9.242L21.4049 9.074C21.8669 6.61 21.8669 4.776 21.8669 3.026ZM13.4809 10.012H25.1429V11.524H13.4809V10.012ZM37.0698 0.323999V9.578H35.2078V0.323999H37.0698ZM28.3478 4.412C28.3478 5.448 29.1038 6.078 30.0558 6.078C31.0218 6.078 31.7498 5.448 31.7498 4.412C31.7498 3.348 31.0218 2.732 30.0558 2.732C29.1038 2.732 28.3478 3.348 28.3478 4.412ZM33.5558 4.412C33.5558 6.288 32.0298 7.674 30.0558 7.674C28.0818 7.674 26.5418 6.288 26.5418 4.412C26.5418 2.508 28.0818 1.136 30.0558 1.136C32.0298 1.136 33.5558 2.508 33.5558 4.412ZM30.3358 11.51H37.3918V12.98H28.4878V8.668H30.3358V11.51Z" fill="#0D0E43" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- <div class="before">
+                        <a href="#" class="block w-8 h-8 rounded-full">
+                            <img src="./img/avata.png" alt="아바타" width="100%">
+                        </a>
+                    </div> -->
+                </div>
+
+            </div>
+            <!-- right -->
+
+        </div>
+    </header>
+    <!-- // -->
+
+
+
+    <section id="web_s01" class="web_container">
+        <div class="flex section-wrap w-[1200px] h-[720px]">
+            <div class="section-content w-[50%] h-full flex flex-col justify-center gap-[86px]">
+                <div class="flex flex-col w-full gap-5">
+                    <strong class="text-[26px] font-[800] text-[#ff519c] block w-full animate__animated animate__lightSpeedInRight">Make appointments fun</strong>
+                    <span class="text-black font-gm text-[54px] leading-[54px] tracking-[-2.7px] block w-full animate__animated animate__lightSpeedInRight animate__delay-1s">
+                        노쇼노<br>
+                        안전하게 약속하세요
+                    </span>
+                    <span class="text-[#8b8ead] text-[20px] font-semibold leading-6 block w-full pt-1">
+                        모르는 타인과의 약속, <br>
+                        노쇼노 서비스로 맺어보세요. <br>
+                        약속 당일, 맡긴 약속보증금을 안전하게 돌려드립니다.
+                    </span>
+                </div>
+                <div>
+                    <a href="#web_s02" class="block px-[48px] h-[50px] rounded-[50px] bg-[#FB2E86] text-white font-bold leading-[50px] w-fit text-[18px]">서비스 둘러보기</a>
+                </div>
+            </div>
+            <div class="relative w-[50%] h-full section-visual z-10">
+                <div class="absolute top-0 right-[-40px] v_img">
+                    <img src="./img/v__01.png" class="cloudM" alt="비주얼이미지">
+                </div>
+                <div class="absolute v_img top-[80px] right-[-100px] z-20">
+                    <img src="./img/v__02.png" class="cloudP" alt="비주얼이미지">
+                </div>
+                <div class="absolute v_img top-[310px] left-[20px] z-30">
+                    <img src="./img/v__03.png" class="cloudM" alt="비주얼이미지">
+                </div>
+                <div class="absolute top-[-20px] v_img left-[-20px] z-40">
+                    <img src="./img/v__calendar.png" class="cloudM" alt="비주얼이미지">
+                </div>
+                <div class="absolute top-[10px] v_img right-[-240px] z-50">
+                    <img src="./img/v__diary.png" class="cloudP" alt="비주얼이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+    <section id="web_s02" class="web_container">
+        <div class="guide relative h-[678px] w-full overflow-hidden">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+            <div class="swiper ws_s">
+                <div class="parallax-bg" data-swiper-parallax="-80%"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="flex justify-between w-[1200px] h-[600px] pt-[84px]">
+                            <div class="block w-1/2">
+                                <div class="flex items-end gap-4 h-[64px] w-full">
+                                    <span class="font-gm text-[64px] font-bold leading-[64px] block text-white opacity-50">01</span>
+                                    <span class="text-[16px] font-gm text-white leading-normal block">이렇게 활용하세요~</span>
+                                </div>
+                                <!--  -->
+                                <div class="block w-full mt-3 text-[48px] text-white tracking-[-2.4px]">
+                                    <strong class="font-[800]">약속의 주최자</strong>가 되세요.
+                                </div>
+                                <!--  -->
+
+                                <div class="text-[18px] text-white leading-[22px] w-full block mt-[22px]">
+                                    일시와 초대인원, 예약금과 반환방법을 설정하고 약속을 만드세요. <br>
+                                    생성된 약속링크를 공유하면 약속 상대를 초대할 수 있어요.
+                                </div>
+                                <!--  -->
+                            </div>
+                            <!-- // -->
+                            <div class="relative block w-1/2 h-full">
+                                <span class="absolute top-2.5 z-10 right-[-30px]"><img src="./img/ws02_0101.png" width="186" alt="스와이프 비주얼 이미지"></span>
+                                <span class="absolute top-2.5 left-[-110px] z-10"><img src="./img/ws02_0102.png" width="186" alt="스와이프 비주얼 이미지"></span>
+                                <span class="absolute top-[-82px] left-[10px] z-20"><img src="./img/ws02_0103.png" width="224" alt="스와이프 비주얼 이미지"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex justify-between w-[1200px] h-[600px]  pt-[84px]">
+                            <div class="block w-1/2">
+                                <div class="flex items-end gap-4 h-[64px]">
+                                    <span class="font-gm text-[64px] font-bold leading-[64px] block text-white opacity-50">02</span>
+                                    <span class="text-[16px] font-gm text-white leading-normal block">이렇게 활용하세요~</span>
+                                </div><!--  -->
+                                <div class="block w-full mt-3 text-[48px] text-white tracking-[-2.4px]">
+                                    <strong class="font-[800]">안전한 약속</strong>을 맺으세요.
+                                </div>
+                                <!--  -->
+
+                                <div class="text-[18px] text-white leading-[22px] w-full block mt-[22px]">
+                                    링크를 공유 받은 게스트가 약속을 맺으면 약속이 체결돼요. <br>
+                                    맡긴 예약금은 약속날까지 노쇼노가 안전하게 보관해요.
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div class="relative block w-1/2 h-full">
+                                <span class="absolute top-[-84px] left-[-120px] z-20"><img src="./img/ws02_0201.png" alt="스와이프 비주얼이미지"></span>
+                                <span class="absolute top-[-84px] right-[-20px] z-10"><img src="./img/ws02_0202.png" alt="스와이프 비주얼이미지"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex justify-between w-[1200px] h-[600px]  pt-[84px]">
+                            <div class="block w-1/2">
+                                <div class="flex items-end gap-4 h-[64px]">
+                                    <span class="font-gm text-[64px] font-bold leading-[64px] block text-white opacity-50">03</span>
+                                    <span class="text-[16px] font-gm text-white leading-normal block">이렇게 활용하세요~</span>
+                                </div><!--  -->
+                                <div class="block w-full mt-3 text-[48px] text-white tracking-[-2.4px]">
+                                    <strong class="font-[800]">약속</strong>이 지켜졋나요?.
+                                </div>
+
+                                <div class="text-[18px] text-white leading-[22px] w-full block mt-[22px]">
+                                    <em class="font-black">약속당일</em>약속멤버들이 약속성사유무를 선택하면 <br>
+                                    사전에 동의한 조건에 따라 예약금이 반환돼요! <br>
+                                    응답이 일치할 때까지 약속예약금은 안전하게 보관해드려요.
+                                </div>
+                                <!--  -->
+
+                                <div class="block w-full mt-[56px]">
+                                    <button class="px-[63px] py-4 border-[2px] border-white rounded-[30px] text-[18px] text-white font-black">약속 만들기</button>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <!-- // -->
+                            <div class="relative block w-1/2 h-full">
+                                <span class="absolute top-[-84px] left-[-120px] z-20"><img src="./img/ws02_0301.png" alt="스와이프 비주얼이미지"></span>
+                                <span class="absolute top-[-84px] right-[-20px] z-10"><img src="./img/ws02_0302.png" alt="스와이프 비주얼이미지"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M6.66659 18.3334V21.6667H26.6666V25H29.9999V21.6667H33.3333V18.3334H29.9999V15H26.6666V18.3334H6.66659ZM23.3333 11.6667H26.6666V15H23.3333V11.6667ZM23.3333 11.6667H19.9999V8.33337H23.3333V11.6667ZM23.3333 28.3334H26.6666V25H23.3333V28.3334ZM23.3333 28.3334H19.9999V31.6667H23.3333V28.3334Z" fill="white" />
+                    </svg>
+                </div>
+                <!-- next -->
+                <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M33.3334 18.3334V21.6667H13.3334V25H10.0001V21.6667H6.66675V18.3334H10.0001V15H13.3334V18.3334H33.3334ZM16.6667 11.6667H13.3334V15H16.6667V11.6667ZM16.6667 11.6667H20.0001V8.33337H16.6667V11.6667ZM16.6667 28.3334H13.3334V25H16.6667V28.3334ZM16.6667 28.3334H20.0001V31.6667H16.6667V28.3334Z" fill="white" />
+                    </svg>
+                </div>
+                <!-- prev -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper(".ws_s", {
+                    speed: 600,
+                    parallax: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+        </div>
+    </section>
+    <section id="web_s03" class="web_container">
+
+        <div class="create relative flex flex-col justify-center w-[1200px] min-h-[769px] pt-[143px] pb-[65px]">
+            <strong class="text-[#ffdeec] font-gm font-bold text-[96px] leading-[80px] block">Happy <br>memories</strong>
+
+            <div class="bg-[#ff4595] w-[585px] h-[400px] mt-[1px] block pl-8">
+                <div class="flex w-full gap-1 mt-[66px] items-center">
+                    <span class="h-8 px-6 leading-8 bg-white rounded-[32px] text-[14px] text-[#ff4595]"># 골프모임</span>
+                    <span class="h-8 px-6 leading-8 bg-white rounded-[32px] text-[14px] text-[#ff4595]"># 중고거래</span>
+                    <span class="h-8 px-6 leading-8 bg-white rounded-[32px] text-[14px] text-[#ff4595]"># 식당예약</span>
+                    <span class="text-[36px] leading-5 text-white">&middot;&middot;&middot;</span>
+                </div>
+                <!-- tag -->
+                <div class="block mt-[37px] text-[40px] font-semibold leading-[40px] text-white">
+                    다양한 약속에 <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이용해보세요
+                </div>
+                <!-- title -->
+                <div class="block mt-7 text-[18px] text-white leading-5">
+                    가족과 친구, 연인간 약속 <br>
+                    모르는 타인과의 약속 <br><br>
+
+                    약속을 만들고, 초대하고, 관리하세요. <br>
+                    오늘의 중요한 약속도 꼭 지켜질 거 에요.
+                </div>
+                <!-- text -->
+            </div>
+            <!-- // -->
+
+            <div class="absolute top-[338px] right-0 flex gap-[22px]">
+                <div class=""><img src="./img/ws0301.png" alt="골프약속에대한 이미지"></div>
+                <div class=""><img src="./img/ws0302.png" alt="식사약속에대한 이미지"></div>
+            </div>
+            <!--  -->
+
+            <div class="absolute top-[658px] right-0">
+                <button class="bg-opacity-10 px-[42px] h-[45px] border-[1px] border-[#ff4595] bg-[#fb2e86] rounded-[45px] text-[16px] text-[#ff4595] font-[800]">
+                    약속 만들기 →
+                </button>
+            </div>
+        </div>
+
+    </section>
+    <!-- // -->
+    <section id="web_s04" class="web_container">
+        <div class="faq w-[1200px] min-h-[860px] h-full relative">
+            <div class="absolute top-[86px] left-[101px] cloudM2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="186" height="200" viewBox="0 0 186 200" fill="none">
+                    <g clip-path="url(#clip0_903_4104)">
+                        <path d="M136.67 32.6385C115.155 19.8971 95.9997 20.4594 75.7492 29.7009C72.0757 31.3773 70.372 35.6496 71.8973 39.3884L78.3036 55.0909C79.8441 58.8667 84.1159 60.727 87.9289 59.281C99.69 54.8209 107.582 52.9169 118.129 59.1626C126.421 64.0734 133.517 75.4843 128.755 83.5253C125.155 89.6041 118.288 89.7541 107.382 89.4956C94.6641 89.1942 78.0836 88.3735 68.214 105.039L66.6516 107.677C64.5357 111.25 65.7167 115.862 69.2895 117.978L88.8236 129.546C92.3964 131.662 97.0079 130.481 99.1237 126.908L100.045 125.352C106.887 113.799 140.937 133.314 159.451 102.052C173.394 78.5094 159.549 46.1879 136.67 32.6385ZM74.3542 131.702C64.0587 125.605 50.7222 129.021 44.6251 139.316C38.5281 149.611 41.9437 162.948 52.2392 169.045C62.5347 175.142 75.8712 171.727 81.9684 161.431C88.0655 151.136 84.6497 137.799 74.3542 131.702Z" fill="white" fill-opacity="0.2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_903_4104">
+                            <rect width="120.294" height="160.392" fill="white" transform="translate(82.2163 0.390289) rotate(30.6347)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="absolute top-[281px] left-[-100px] cloudP2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="294" height="220" viewBox="0 0 294 220" fill="none">
+                    <path d="M135.047 26.7411L170.037 95.6589L73.2571 144.796L70.3975 153.554L67.5864 162.163L26.7474 81.7263L135.047 26.7411ZM134.895 2.05169L6.90472 67.0342C1.48975 69.7835 -0.69128 76.4633 2.05798 81.8782L72.0391 219.714L91.4261 160.338L189.88 110.351C195.295 107.602 197.476 100.922 194.727 95.507L149.739 6.89844C146.99 1.48347 140.31 -0.697567 134.895 2.05169ZM204.116 16.44L184.426 26.4373L229.414 115.046L101.423 180.028L111.421 199.719C114.17 205.134 120.85 207.315 126.265 204.566L234.564 149.581L293.94 168.968L218.961 21.2868C216.211 15.8718 209.531 13.6907 204.116 16.44Z" fill="white" fill-opacity="0.3" />
+                </svg>
+            </div>
+            <div class="absolute top-[626px] left-[20px] cloudM2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="164" height="164" viewBox="0 0 164 164" fill="none">
+                    <g clip-path="url(#clip0_903_4108)">
+                        <path d="M59.4706 22.2119C27.1049 34.3003 8.67973 67.6631 19.649 97.0325C24.8261 110.894 35.687 121.006 48.955 126.648C48.9237 130.205 48.3154 133.733 47.154 137.095C45.615 141.559 43.6861 145.88 41.3894 150.007C40.872 150.875 40.637 151.883 40.7167 152.891C40.7965 153.899 41.187 154.857 41.8346 155.633C42.4821 156.41 43.3546 156.966 44.3318 157.226C45.3089 157.485 46.3425 157.435 47.2899 157.082C57.4228 153.297 64.6675 150.461 70.6132 146.254C75.9301 142.486 79.7801 137.315 83.2414 130.784C88.3754 130.154 93.6175 129.353 98.7686 127.429C131.134 115.341 149.56 81.978 138.59 52.6086C127.621 23.2393 91.8364 10.1235 59.4706 22.2119ZM62.8878 31.3612C90.9077 20.896 120.59 32.3291 129.441 56.0259C138.292 79.7226 123.371 107.815 95.3514 118.28C90.3696 120.141 84.8744 121.213 79.6824 121.687C78.8581 121.779 78.0709 122.08 77.3949 122.56C76.7189 123.041 76.1764 123.685 75.8185 124.434C72.5156 131.292 69.5826 135.009 65.0145 138.243C62.9121 139.732 58.356 141.267 55.2734 142.7C55.6439 141.738 56.0997 141.129 56.4399 140.142C58.3953 134.408 59.9411 128.539 58.9644 122.909C58.8055 122.069 58.4287 121.285 57.8715 120.636C57.3144 119.986 56.5965 119.495 55.7897 119.211C43.2499 114.876 33.3928 105.917 28.7983 93.6152C19.9477 69.9185 34.868 41.8265 62.8878 31.3612ZM60.8424 52.4865C60.1046 52.968 59.5109 53.64 59.124 54.4315L54.666 63.431L63.3226 67.8502L66.8305 60.6756L77.8372 56.5647L83.9462 59.8294L86.4561 66.5496L77.6666 78.7881C77.1993 79.4489 76.9036 80.2156 76.8061 81.0191C76.7085 81.8225 76.8122 82.6377 77.1079 83.3912L80.5251 92.5405L89.6744 89.1233L87.2174 82.5449L96.0069 70.3065C96.4747 69.6449 96.7706 68.8774 96.8678 68.073C96.9651 67.2687 96.8607 66.4527 96.564 65.6988L92.4531 54.6921C92.0341 53.5887 91.2296 52.6744 90.1885 52.1183L80.4424 46.9592C79.8319 46.6274 79.1576 46.4297 78.4646 46.3793C77.7716 46.3289 77.0757 46.427 76.4237 46.667L61.8396 52.114C61.4946 52.2015 61.1602 52.3264 60.8424 52.4865ZM82.2337 97.1152L85.6509 106.264L94.8002 102.847L91.383 93.6979L82.2337 97.1152Z" fill="white" fill-opacity="0.2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_903_4108">
+                            <rect width="126.967" height="126.967" fill="white" transform="translate(0 44.4238) rotate(-20.4803)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="absolute top-[70px] right-[-160px] cloudP2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="342" height="277" viewBox="0 0 342 277" fill="none">
+                    <path d="M220.087 5.50255C138.181 -14.6813 55.0968 27.2255 36.7816 101.548C28.1375 136.626 36.1163 171.968 55.1023 201.612C50.1424 208.741 44.0587 215.017 37.0882 220.197C27.8381 227.082 17.9999 233.138 7.6876 238.298C5.44854 239.337 3.58719 241.045 2.36044 243.187C1.13369 245.329 0.602003 247.799 0.83876 250.256C1.07552 252.713 2.06905 255.036 3.68223 256.905C5.29541 258.773 7.44873 260.095 9.84501 260.687C35.4875 267.006 54.0006 271.261 71.7812 270.964C87.6909 270.685 102.572 265.56 118.544 257.155C129.763 262.953 141.436 268.555 154.472 271.768C236.377 291.952 319.462 250.045 337.777 175.722C356.092 101.399 301.992 25.6864 220.087 5.50255ZM214.381 28.656C285.289 46.1297 329.401 110.049 314.624 170.016C299.846 229.984 231.085 266.088 160.177 248.614C147.57 245.508 135.013 240.105 123.891 233.913C122.102 232.964 120.101 232.486 118.077 232.524C116.052 232.562 114.07 233.115 112.319 234.131C96.2166 243.413 85.1845 246.871 71.5216 247.102C65.2323 247.21 53.9321 244.033 45.7438 242.678C47.8153 241.248 49.5715 240.649 51.6166 239.127C63.4547 230.256 74.6508 220.551 80.4322 207.854C81.2691 205.94 81.5887 203.84 81.3589 201.764C81.1291 199.689 80.3581 197.709 79.1229 196.025C59.805 170.021 52.2638 138.384 59.9351 107.254C74.7128 47.2864 143.474 11.1824 214.381 28.656ZM181.173 68.4373C179.022 68.3925 176.9 68.9302 175.03 69.9935L153.651 82.0027L165.022 102.832L181.973 93.1941L209.827 100.058L217.65 115.052L213.46 132.058L178.887 144.635C177.035 145.324 175.383 146.463 174.08 147.949C172.778 149.435 171.865 151.221 171.423 153.147L165.718 176.301L188.871 182.007L192.973 165.359L227.546 152.782C229.4 152.092 231.053 150.952 232.357 149.464C233.66 147.976 234.573 146.187 235.013 144.258L241.877 116.404C242.551 113.603 242.188 110.652 240.854 108.097L228.304 84.2761C227.53 82.7665 226.443 81.4395 225.115 80.3838C223.787 79.328 222.249 78.5679 220.603 78.1541L183.697 69.0592C182.88 68.7606 182.034 68.552 181.173 68.4373ZM162.865 187.878L157.159 211.031L180.313 216.737L186.018 193.583L162.865 187.878Z" fill="white" fill-opacity="0.3" />
+                </svg>
+            </div>
+            <div class="absolute top-[626px] right-[90px] cloudM2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="205" height="205" viewBox="0 0 205 205" fill="none">
+                    <g clip-path="url(#clip0_903_4112)">
+                        <path d="M124.119 49.9417L101.277 86.763L49.5695 54.6861L44.5408 55.8644L39.5972 57.0227L66.2572 14.047L124.119 49.9417ZM135.906 42.6845L67.5234 0.263464C64.6303 -1.53127 60.7948 -0.632614 59 2.26049L13.3158 75.903L47.4092 67.9149L100.011 100.547C102.904 102.341 106.74 101.443 108.534 98.5495L137.903 51.2079C139.697 48.3148 138.799 44.4793 135.906 42.6845ZM149.154 80.041L138.634 73.5147L109.265 120.856L40.8828 78.4353L34.3565 88.9556C32.5618 91.8487 33.4604 95.6842 36.3535 97.479L94.2155 133.374L102.204 167.467L151.151 88.5644C152.946 85.6713 152.047 81.8358 149.154 80.041Z" fill="white" fill-opacity="0.2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_903_4112">
+                            <rect width="148.563" height="148.563" fill="white" transform="translate(78.3158 0.000305176) rotate(31.8134)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <!--  -->
+
+            <div class="flex flex-col items-center">
+                <strong class="block text-black text-[54px] tracking-[-2.7px] leading-[54px] font-semibold mt-[144px]">노쇼노 이런 점이 궁금해요</strong>
+
+                <div class="relative mt-[56px]">
+                    <input type="search" name="" id="" class="w-[720px] h-[68px] border-[2px] border-[#400513] rounded-[50px] bg-white text-[24px] font-semibold text-black placeholder:text-[24px] placeholder:text-black placeholder:font-semibold text-center px-[183px]" placeholder="무엇이든 물어보세요">
+                    <button type="submit" class="text-[20px] text-[#ffb9d7] font-bold leading-[24px] w-[183px] h-[68px] bg-[#400513] flex rounded-r-[50px] absolute top-0 right-0 gap-[5px] pl-[18px] items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-0" width="38" height="41" viewBox="0 0 38 41" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4724 3.88609C15.2399 3.88635 13.0399 4.46059 11.0567 5.56075C9.0734 6.6609 7.36455 8.25495 6.07318 10.2095C4.7818 12.164 3.94547 14.4221 3.6342 16.7947C3.32293 19.1673 3.54577 21.5855 4.28408 23.8467C5.02238 26.1079 6.25467 28.1464 7.87777 29.7916C9.50087 31.4367 11.4676 32.6406 13.6132 33.3024C15.7588 33.9643 18.021 34.0649 20.2103 33.5958C22.3996 33.1267 24.4523 32.1015 26.1967 30.6061L31.9036 36.7311C32.1965 37.0347 32.5888 37.2027 32.9959 37.1989C33.4031 37.1951 33.7926 37.0198 34.0805 36.7108C34.3685 36.4018 34.5318 35.9838 34.5353 35.5468C34.5389 35.1098 34.3823 34.6888 34.0995 34.3744L28.3925 28.2494C30.0355 26.0425 31.0644 23.3826 31.3609 20.5757C31.6574 17.7689 31.2093 14.9292 30.0683 12.3836C28.9273 9.83797 27.1398 7.68989 24.9114 6.18658C22.683 4.68327 20.1044 3.88585 17.4724 3.88609ZM8.15491 18.8861C8.15491 17.5729 8.39592 16.2725 8.86416 15.0593C9.33241 13.846 10.0187 12.7436 10.8839 11.815C11.7491 10.8864 12.7763 10.1498 13.9067 9.6473C15.0372 9.14475 16.2488 8.88609 17.4724 8.88609C18.696 8.88609 19.9076 9.14475 21.038 9.6473C22.1685 10.1498 23.1956 10.8864 24.0609 11.815C24.9261 12.7436 25.6124 13.846 26.0806 15.0593C26.5489 16.2725 26.7899 17.5729 26.7899 18.8861C26.7899 21.5383 25.8082 24.0818 24.0609 25.9572C22.3135 27.8325 19.9435 28.8861 17.4724 28.8861C15.0012 28.8861 12.6313 27.8325 10.8839 25.9572C9.13657 24.0818 8.15491 21.5383 8.15491 18.8861Z" fill="#FFB9D7" />
+                        </svg>
+                        질문 보내기
+                    </button>
+                </div>
+                <!-- search -->
+
+                <strong class="mt-[56px] block text-[40px] leading-[40px] text-black tracking-[-2px]">자주묻는질문</strong>
+
+                <div class="w-[720px] mt-[21px] flex flex-col gap-4 items-center">
+                    <div class="w-full text-center h-[66px] border-[2px] border-black leading-[66px] bg-white text-black font-semibold text-[20px]">
+                        몇 명까지 약속을 맺을 수 있나요?
+                    </div>
+                    <div class="w-full text-center h-[66px] border-[2px] border-black leading-[66px] bg-white text-black font-semibold text-[20px]">
+                        예약금은 어떻게 반환되나요?
+                    </div>
+                    <div class="w-full text-center h-[66px] border-[2px] border-black leading-[66px] bg-white text-black font-semibold text-[20px]">
+                        어떤 약속에 이용하나요?
+                    </div>
+                    <div class="w-full text-center h-[66px] border-[2px] border-black leading-[66px] bg-white text-black font-semibold text-[20px]">
+                        돈을 걷는 모임에 사용하고 싶어요!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+    <footer id="web_footer">
+        <div class="flex justify-center w-auto gap-5">
+            <a href="#" class="text-[16px] text-white font-semibold">이용약관</a>
+            <a href="#" class="text-[16px] text-white font-semibold">개인정보처리방침</a>
+            <a href="#" class="text-[16px] text-white font-semibold">제휴문의</a>
+        </div>
+
+        <address class="text-[#9f9f9f] text-[14px] leading-[16px]">
+            ㈜씽크풀 서울시 영등포구 국제금융로70 15층(여의도동, 미원빌딩) <br>
+            고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+        </address>
+    </footer>
+    <!-- // -->
+
+    <script>
+        //scrollspy.js
+        let isScrolling = false; // 스크롤 중인지 여부를 나타내는 플래그 변수
+        let scrollTimeout; // 스크롤 이벤트 후 딜레이를 처리하는 setTimeout 핸들러
+
+        let navigations = document.querySelectorAll(".btnschl");
+        let sections = document.querySelectorAll('.web_container');
+
+        // 네비게이션 버튼 클릭 이벤트 핸들러
+        navigations.forEach((nav) => {
+            nav.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                let _hash = nav.getAttribute('data-hash');
+                let scrollPosition = document.getElementById(_hash).offsetTop;
+
+                // 스크롤 완료 후에 active 클래스 업데이트 실행
+                scrollToPosition(scrollPosition, () => {
+                    updateActiveNav(nav);
+                });
+            });
+        });
+
+        // 스크롤 이벤트 핸들러
+        window.addEventListener('scroll', () => {
+            // 스크롤 중이라면 이전의 스크롤 딜레이 타임아웃을 제거
+            if (isScrolling) {
+                clearTimeout(scrollTimeout);
+            }
+
+            // 스크롤 중임을 표시
+            isScrolling = true;
+
+            // 스크롤 완료 후에 active 네비게이션 업데이트를 위한 딜레이 처리
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false; // 스크롤 종료 상태로 설정
+                updateActiveNavBasedOnScroll();
+            }, 200); // 딜레이 값은 조정 가능
+
+        });
+
+        // 스크롤 완료 후에 지정된 위치로 스크롤하는 함수
+        function scrollToPosition(scrollPosition, callback) {
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+            });
+
+            // 스크롤 완료 후에 콜백 함수 실행
+            window.addEventListener('scroll', function onScroll() {
+                if (!isScrolling) {
+                    callback();
+                    window.removeEventListener('scroll', onScroll);
+                }
+            });
+        }
+
+        // 현재 스크롤 위치에 따라 네비게이션 활성화 상태 업데이트
+        function updateActiveNavBasedOnScroll() {
+            sections.forEach((section) => {
+                let scrollPosition = section.offsetTop;
+                let sectionHeight = section.offsetHeight;
+
+                if (window.scrollY >= scrollPosition && window.scrollY < scrollPosition + sectionHeight) {
+                    let correspondingNav = document.querySelector(`.btnschl[data-hash="${section.id}"]`);
+                    if (correspondingNav) {
+                        updateActiveNav(correspondingNav);
+                    }
+                }
+            });
+        }
+
+        // 활성화된 네비게이션 업데이트
+        function updateActiveNav(activeNav) {
+            document.querySelector('.btnschl.active').classList.remove('active');
+            activeNav.classList.add('active');
+        }
+
+        // 초기 스크롤 위치에 따라 초기 네비게이션 상태 설정
+        window.addEventListener('load', () => {
+            updateActiveNavBasedOnScroll();
+        });
+
+
+    </script>
+</body>
+
+</html>
