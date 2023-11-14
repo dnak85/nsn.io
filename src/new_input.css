@@ -1056,13 +1056,25 @@ input:checked + .customChk .bullet svg {
 
 /* 약속상세 -약속내용 */
 .prms-content-box {
-  @apply w-full bg-white px-6 py-4;
+  @apply w-full bg-white py-4;
 }
 .prms-content-box .top {
-  @apply flex w-full items-center justify-between;
+  @apply flex w-full items-center justify-between px-6;
+}
+.prms-content-box .top strong {
+  @apply text-[18px] font-[800] text-slate-900;
+}
+.prms-content-box .top button {
+  @apply transition-all duration-300 ease-in-out;
+}
+.prms-content-box.closet .top button {
+  @apply rotate-180;
 }
 .prms-content-box .txt {
-  @apply block w-full;
+  @apply block w-full px-6 transition-all duration-300 ease-in-out;
+}
+.prms-content-box.closet .txt {
+  @apply hidden;
 }
 .prms-content-box .txt dl {
   @apply flex w-full flex-wrap items-start justify-between;
@@ -1746,4 +1758,81 @@ input:checked + .customChk .bullet svg {
 
 .urlinput {
   width: calc(100% - 39px);
+}
+/* 결제하기 */
+.closeBtn {
+  @apply flex h-6 w-6 items-center justify-center;
+}
+
+.prms-coupon-box {
+  @apply mt-4 w-full bg-white p-[16px_24px_32px];
+}
+.prms-coupon-box .top {
+  @apply w-full;
+}
+.prms-coupon-box .top strong {
+  @apply text-[18px] font-[800] text-slate-900;
+}
+.prms-coupon-box .cont {
+  @apply relative mt-5 w-full rounded-[12px] border-[1px] border-[#7b61ff] py-5;
+}
+.prms-coupon-box .cont > button {
+  @apply mx-auto flex w-[calc(100%-32px)] items-center  justify-between px-1;
+}
+.prms-coupon-box .cont > button.active {
+  @apply border-b-[1px] border-[#7b61ff] pb-2;
+}
+.prms-coupon-box .cont > button span {
+  @apply block text-[16px] font-medium text-[#5742c3];
+}
+.prms-coupon-box .cont .dropdown-content {
+  @apply mx-auto flex h-0 w-[calc(100%-40px)] flex-col overflow-hidden transition-all duration-500 ease-in-out;
+}
+.prms-coupon-box .cont .dropdown-content.active {
+  @apply h-fit;
+}
+.prms-coupon-box .cont .dropdown-content > button {
+  @apply flex flex-col border-b-[1px] border-dashed border-violet-500 px-1 py-2;
+}
+.prms-coupon-box .cont .dropdown-content > button:last-child {
+  @apply border-none pb-0;
+}
+.prms-coupon-box .cont .dropdown-content > button span {
+  @apply text-[14px] font-semibold text-slate-900;
+}
+.prms-coupon-box .cont .dropdown-content > button em {
+  @apply text-[12px] text-gray-500;
+}
+.prms-content-box .price-info {
+  @apply mx-auto w-[calc(100%-32px)] rounded-[12px] border-[2px] border-[#7b61ff] px-5 py-7;
+}
+.prms-content-box .price-info .paylist {
+  @apply flex w-full flex-wrap items-center gap-y-4 border-b-[1px] border-[#7b61ff] pb-2.5;
+}
+.prms-content-box .price-info .paylist dt {
+  @apply w-[110px] font-semibold text-[#5742C3] text-[16p] before:px-2 before:content-["\00b7"];
+}
+.prms-content-box .price-info .paylist dd {
+  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 text-[16px] font-semibold text-slate-900 pr-4;
+}
+.prms-content-box .price-info .paylist dd span {
+  @apply text-[20px];
+}
+.prms-content-box .price-info .paylist dd span.coupon_bullet {
+  @apply flex h-6 w-[70px] items-center justify-center rounded-[99px] bg-pink-500 text-[12px] font-[700] text-white;
+}
+.prms-content-box .price-info p {
+  @apply mt-3 text-[14px] font-bold text-pink-500;
+}
+.prms-content-box .price-info .lastpay {
+  @apply mt-8 flex w-full items-center;
+}
+.prms-content-box .price-info .lastpay dt {
+  @apply w-[125px] text-[18px] font-[800] text-[#5742C3] before:px-2 before:text-[22px] before:font-[800] before:content-["\00b7"];
+}
+.prms-content-box .price-info .lastpay dd {
+  @apply flex w-[calc(100%-125px)] justify-end gap-2.5 text-[16px] font-semibold text-[#5742c3] items-center pr-4;
+}
+.prms-content-box .price-info .lastpay dd span {
+  @apply text-[24px] font-[800];
 }

@@ -304,7 +304,7 @@
                             </div>
                         </div>
                         <!-- // -->
-                        
+
                         <div class="bfr">
                             <div class="order">
                                 <span class="num">4</span>
@@ -763,6 +763,17 @@
                         <button class="mt-6 shadow-cs4 dark">약속 취소하기</button>
                     </div>
                     <!-- //페이지 버튼 -->
+
+                    <script>
+                        const collapse = document.querySelectorAll('.prms-content-box');
+                        const collapseButton = document.querySelectorAll('.prms-content-box .top');
+
+                        collapseButton.forEach((button) => {
+                            button.addEventListener('click', () => {
+                                button.parentNode.classList.toggle('closet');
+                            })
+                        })
+                    </script>
 
                     <div class="h-[108px]"></div>
                 </div>

@@ -592,6 +592,10 @@ input:hover,
   visibility: hidden;
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .fixed {
   position: fixed;
 }
@@ -6639,8 +6643,6 @@ input:checked + .customChk .bullet svg {
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -6650,11 +6652,40 @@ input:checked + .customChk .bullet svg {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.prms-content-box .top strong {
+  font-size: 18px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-content-box .top button {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prms-content-box.closet .top button {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .prms-content-box .txt {
   display: block;
   width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prms-content-box.closet .txt {
+  display: none;
 }
 
 .prms-content-box .txt dl {
@@ -8012,6 +8043,245 @@ input:checked + .customChk .bullet svg {
 
 .urlinput {
   width: calc(100% - 39px);
+}
+
+/* 결제하기 */
+
+.closeBtn {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.prms-coupon-box {
+  margin-top: 1rem;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 16px 24px 32px;
+}
+
+.prms-coupon-box .top {
+  width: 100%;
+}
+
+.prms-coupon-box .top strong {
+  font-size: 18px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-coupon-box .cont {
+  position: relative;
+  margin-top: 1.25rem;
+  width: 100%;
+  border-radius: 12px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.prms-coupon-box .cont > button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: calc(100% - 32px);
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.prms-coupon-box .cont > button.active {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-bottom: 0.5rem;
+}
+
+.prms-coupon-box .cont > button span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.prms-coupon-box .cont .dropdown-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 0px;
+  width: calc(100% - 40px);
+  flex-direction: column;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prms-coupon-box .cont .dropdown-content.active {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.prms-coupon-box .cont .dropdown-content > button {
+  display: flex;
+  flex-direction: column;
+  border-bottom-width: 1px;
+  border-style: dashed;
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.prms-coupon-box .cont .dropdown-content > button:last-child {
+  border-style: none;
+  padding-bottom: 0px;
+}
+
+.prms-coupon-box .cont .dropdown-content > button span {
+  font-size: 14px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-coupon-box .cont .dropdown-content > button em {
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 32px);
+  border-radius: 12px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.prms-content-box .price-info .paylist {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 1rem;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-bottom: 0.625rem;
+}
+
+.prms-content-box .price-info .paylist dt {
+  width: 110px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+  color: 16p;
+}
+
+.prms-content-box .price-info .paylist dt::before {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-content: "\00b7";
+  content: var(--tw-content);
+}
+
+.prms-content-box .price-info .paylist dd {
+  display: flex;
+  width: calc(100% - 110px);
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  padding-right: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info .paylist dd span {
+  font-size: 20px;
+}
+
+.prms-content-box .price-info .paylist dd span.coupon_bullet {
+  display: flex;
+  height: 1.5rem;
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+  font-size: 12px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info p {
+  margin-top: 0.75rem;
+  font-size: 14px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info .lastpay {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.prms-content-box .price-info .lastpay dt {
+  width: 125px;
+  font-size: 18px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info .lastpay dt::before {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 22px;
+  font-weight: 800;
+  --tw-content: "\00b7";
+  content: var(--tw-content);
+}
+
+.prms-content-box .price-info .lastpay dd {
+  display: flex;
+  width: calc(100% - 125px);
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  padding-right: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.prms-content-box .price-info .lastpay dd span {
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .placeholder\:text-center::-moz-placeholder {
