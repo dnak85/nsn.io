@@ -1,0 +1,64 @@
+/* 왼쪽으로 슬라이딩 애니메이션 클래스 */
+.sliding-left {
+  animation: sliding-left 1s ease-in-out;
+}
+
+/* 왼쪽으로 슬라이딩 애니메이션 클래스 (역방향) */
+.sliding-left-reverse {
+  animation: sliding-left-reverse 1s ease-in-out;
+}
+
+/* 아래로 슬라이딩 오프캔버스 스타일 */
+.offcanvas.offcanvas-bottom {
+  position: absolute;
+  width: 100%;
+  height: 324px;
+  background: #fff;
+  bottom: -324px;
+  z-index: 10015;
+  border-radius: 25px 25px 0 0;
+  transition: all 0.45s ease-in-out;
+}
+
+/* 아래로 슬라이딩 오프캔버스 활성화 스타일 */
+.offcanvas-bottom.active {
+  bottom: 0;
+}
+
+/* 오프캔버스 활성화 스타일 */
+.offcanvas.show {
+  bottom: 0;
+}
+
+/* 아래로 슬라이딩 오프캔버스 역방향 활성화 스타일 */
+.offcanvas-bottom.active.reverse {
+  bottom: -324px;
+}
+
+/* 왼쪽으로 슬라이딩 오프캔버스 스타일 */
+.offcanvas.left {
+  position: fixed;
+  width: 0;
+  padding: 0;
+  height: 100%;
+  top: 0;
+  z-index: 10015;
+  color: #fff;
+  overflow: auto;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+/* 왼쪽으로 슬라이딩 오프캔버스 활성화 스타일 */
+.offcanvas.left.active {
+  width: 100%;
+  max-width: 471px;
+  padding: 0 16px;
+  opacity: 1;
+}
+
+/* 왼쪽으로 슬라이딩 오프캔버스 역방향 활성화 스타일 */
+.offcanvas.left.active.reverse {
+  width: 0;
+  opacity: 0;
+}

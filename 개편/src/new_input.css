@@ -1,0 +1,1838 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* reset */
+  * {
+    font-family: "Pretendard", serif;
+    font-feature-settings: "clig" off, "liga" off;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  em {
+    font-style: normal;
+  }
+  html,
+  body {
+    @apply h-full w-full bg-[#EDE9FE];
+  }
+  img {
+    @apply w-full;
+  }
+  button svg {
+    margin: 0 auto;
+  }
+  button:hover,
+  button:active,
+  button:focus {
+    outline: none;
+  }
+  input:hover,
+  textarea:hover,
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+}
+
+.hidden-ab {
+  @apply absolute left-[-9999px];
+}
+
+/* layout */
+#wrap_w {
+  @apply relative h-full w-full;
+}
+/* web */
+#w_wrap {
+  @apply fixed left-[50%] ml-[-585px] hidden h-full flex-col justify-center pl-[65px] lg:flex;
+}
+/* 웹 - 상단텍스트 */
+#w_wrap .text {
+  @apply relative z-40;
+}
+#w_wrap .text > em {
+  @apply block text-[20px] font-black leading-6 text-pink-500;
+}
+#w_wrap .text > span {
+  @apply mt-5 block w-full font-gm text-[40px] leading-[40px] tracking-[-2px] text-[#271651];
+}
+#w_wrap .text > span > em {
+  @apply block font-gm text-[48px] font-[800] leading-[48px] tracking-[-2.4px] text-[#844EFF];
+}
+
+/* 웹 - 비주얼 */
+#w_wrap .visual {
+  @apply relative mt-5 block h-[600px] w-full;
+}
+#w_wrap .visual > .txt {
+  @apply text absolute left-[50px] top-[68px] z-20 text-[16px] font-medium leading-5 text-[#eae0ff];
+}
+#w_wrap .visual > .vi01 {
+  @apply absolute left-[-65px] top-[37px] z-20 inline-block;
+}
+#w_wrap .visual > .vi02 {
+  @apply absolute inset-0 z-10 inline-block;
+}
+#w_wrap .visual > .vi03 {
+  @apply absolute left-0 top-[145px] z-30 inline-block;
+}
+#w_wrap .visual > .vi04 {
+  @apply absolute left-[55px] top-[135px] z-30 inline-block;
+}
+#w_wrap .visual > .vi05 {
+  @apply absolute left-[372px] top-[27px] inline-block;
+}
+#w_wrap .visual > .vi06 {
+  @apply absolute left-[45px] top-[300px] inline-block;
+}
+#w_wrap .visual > .vi07 {
+  @apply absolute left-[132px] top-[172px] z-20 inline-block;
+}
+#w_wrap .visual > .vi08 {
+  @apply absolute left-[298px] top-[123px] inline-block;
+}
+
+/* mobile */
+#m_wrap {
+  @apply relative mx-auto flex h-full w-full max-w-[475px] flex-col overflow-auto lg:left-[293px] lg:border-l-[2px] lg:border-r-[2px] lg:border-white;
+}
+
+/* header */
+#m_header.main {
+  @apply relative flex h-[204px] w-full flex-col rounded-br-[40px] pb-6 pl-6 pr-4 pt-4;
+  background: linear-gradient(279deg, #7b61ff 0%, #fc5185 100%);
+  box-shadow: 0px 4px 60px 0px rgba(143, 143, 143, 0.1),
+    0px 0px 2px 0px rgba(184, 184, 184, 0.2);
+}
+#m_header.sub {
+  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-6;
+}
+
+/* container */
+#m_container {
+  @apply relative w-full pb-[76px];
+}
+#m_container.fpage {
+  @apply h-full pb-0;
+}
+
+/* footer */
+#m_footer {
+  @apply fixed bottom-0 flex h-[76px] w-full max-w-[475px];
+}
+#footer {
+  @apply mt-5 w-full pb-6;
+}
+#footer .fnb {
+  @apply mt-[17px] flex justify-center gap-2;
+}
+#footer .fnb a {
+  @apply block text-[12px] leading-[14px] text-[#8994a4];
+}
+address {
+  @apply mt-2 block w-full text-center text-[11px] not-italic leading-[13px] text-[#8994a4];
+}
+
+/* header */
+/* header - 상단 */
+#m_header .top {
+  @apply flex w-full items-center justify-between;
+}
+#m_header.main .top .user {
+  @apply block text-[14px] font-semibold leading-[17px] text-white;
+}
+
+#m_header .top .info {
+  @apply flex gap-3;
+}
+#m_header.sub .top {
+  @apply px-4;
+}
+#m_header.main .top .info button.alm {
+  @apply relative flex h-[33px] w-[33px] items-center justify-center rounded-full bg-white;
+}
+#m_header.sub .top .info button.alm {
+  @apply bg-transparent;
+}
+#m_header.sub .top .info button.alm svg > path {
+  @apply fill-slate-900;
+}
+#m_header.main .top .info button.alm span {
+  @apply absolute right-2 top-2 z-10 hidden h-[3px] w-[3px] rounded-full bg-[#ff6565];
+}
+#m_header.main .top .info button.alm.active span {
+  @apply block;
+}
+#m_header.main .top .info button.stg {
+  @apply flex h-[33px] w-[33px] items-center justify-center rounded-full border-[2px] border-white;
+}
+#m_header.sub .top .info button.stg svg > path {
+  @apply fill-slate-900;
+}
+/* header - 알림메시지 */
+#m_header .alm-msg {
+  @apply mt-[37px] block w-full font-gm text-[22px] font-medium leading-[22px] text-white;
+}
+#m_header .alm-msg * {
+  @apply font-gm;
+}
+
+/* header - 메인메뉴 */
+#m_header .mn {
+  @apply mt-[52px] flex w-full gap-6;
+}
+#m_header .mn button {
+  @apply text-[14px] font-[800] text-white;
+}
+
+/* header - sub - 상단 */
+#m_header.sub .top .backPage {
+  @apply block;
+}
+#m_header.sub .top .backPage button {
+  @apply flex h-6 w-6 items-center justify-center;
+}
+#m_header.sub .top .pageTitle {
+  @apply flex h-6 w-[calc(100%-24px)] items-center justify-center pr-6 text-center;
+}
+#m_header.sub .top .pageTitle strong {
+  @apply block w-full truncate font-gm text-[24px] font-medium text-slate-900;
+}
+/* footer */
+#m_footer .f_mnu {
+  @apply flex h-[76px] w-full items-center justify-center gap-8 bg-white;
+}
+#m_footer .f_mnu button {
+  @apply flex flex-col items-center gap-2;
+}
+#m_footer .f_mnu button svg {
+  @apply block;
+}
+#m_footer .f_mnu button span {
+  @apply block w-full text-center text-[11px] font-semibold text-[#847EA0];
+}
+#m_footer .f_mnu button.active svg path {
+  @apply fill-[#7B61FF];
+}
+#m_footer .f_mnu button.active span {
+  @apply text-[#7B61FF];
+}
+#m_footer .f_mnu button .usrIco {
+  @apply block h-[30px] w-[30px] overflow-hidden rounded-full;
+}
+#m_footer .f_mnu button.active .usrIco {
+  @apply bg-[#7b61ff];
+}
+
+/* main */
+#m_main {
+  @apply relative z-10 mt-[-120px] h-full w-full px-4;
+}
+/* main-welcome */
+#m_main .welcome-box {
+  @apply flex w-full flex-col gap-[6px] rounded-[20px] border-[1px] border-[#7b61ff] bg-white px-[44px] pb-2 pt-[34px];
+}
+#m_main .welcome-box .welcome-txt {
+  @apply block w-full text-center font-gm text-[24px] font-bold text-[#2b2b2b];
+}
+/* main-notice */
+#m_main .notice-box {
+  @apply mt-8 flex w-full flex-col gap-6 pb-10;
+}
+#m_main .notice-box .main-alm-box {
+  @apply relative flex items-center justify-between rounded-[20px] p-2 text-left;
+}
+#m_main .notice-box .main-alm-box .content {
+  @apply flex flex-col gap-[14px];
+}
+#m_main .notice-box .main-alm-box .bullet {
+  @apply flex h-[21px] w-[63px] items-center justify-center rounded-[99px] text-[12px] font-[900] text-white;
+}
+#m_main .notice-box .main-alm-box .text {
+  @apply flex w-full flex-col gap-[3px] pl-4;
+}
+#m_main .notice-box .main-alm-box .text strong {
+  @apply block h-[21px] w-full text-[18px] font-[900] leading-[21px] text-black;
+}
+#m_main .notice-box .main-alm-box .text span {
+  @apply block w-full text-[14px] font-semibold leading-[17px] text-[#3f366f];
+}
+#m_main .notice-box .main-alm-box .bg {
+  @apply block w-[120px] text-center;
+}
+#m_main .notice-box .main-alm-box.box-st-01 {
+  @apply border-[1px] border-[#7b61ff] bg-[#D1C6FF];
+}
+#m_main .notice-box .main-alm-box.box-st-02 {
+  @apply border-[1px] border-[#FF8761] bg-[#FED895];
+}
+#m_main .notice-box .main-alm-box.box-st-01 .bullet {
+  @apply bg-[#7B61FF];
+}
+#m_main .notice-box .main-alm-box.box-st-02 .bullet {
+  @apply bg-[#ff7628];
+}
+
+/* 약속만들기 */
+#my-prms {
+  @apply relative w-full;
+}
+.prms-category {
+  @apply sticky top-0 z-20 w-full bg-[#EDE9FE] px-4 pb-4 pt-6;
+}
+.prms-mnu .swiper-wrapper .swiper-slide {
+  @apply block h-10 w-auto px-2 text-[16px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-wrapper .swiper-slide.active {
+  @apply rounded-[99px] bg-[#7B61FF] px-4 text-white;
+}
+.prms-mnu .swiper-button-next {
+  @apply right-0 top-0 m-0 flex h-[40px] items-center justify-center bg-[#EDE9FE] text-[18px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-button-prev {
+  @apply left-0 top-0 m-0 flex h-[40px] items-center justify-center bg-[#EDE9FE] text-[18px] font-semibold text-[#6d6c95];
+}
+.prms-mnu .swiper-button-next,
+.prms-mnu .swiper-button-prev {
+  @apply after:hidden;
+}
+.prms-mnu .swiper-button-disabled {
+  @apply hidden;
+}
+
+/* 내약속목록 */
+.prms-my-list {
+  @apply relative w-full overflow-hidden px-4 pb-10;
+}
+/* 내약속목록 - 정렬 */
+.prms-my-list .sort {
+  @apply flex w-full justify-end gap-6 pt-4;
+}
+.prms-my-list .sort button {
+  @apply relative flex h-5 items-center justify-center px-[3px] text-[16px] font-semibold text-[#9998c3];
+}
+.prms-my-list .sort button.active {
+  @apply text-slate-900 after:absolute after:bottom-[-3px] after:h-[1px] after:w-full after:bg-slate-900 after:content-[''];
+}
+
+/* 내약속목록 - 리스트 */
+.prms-my-list .list {
+  @apply flex w-full flex-col gap-6 pt-8;
+}
+
+/* 내약속목록 - 리스트 - 요약박스 */
+.prms-my-list .list .summary {
+  @apply w-full rounded-[20px] bg-white px-4 pb-5 pt-3 text-slate-900;
+}
+
+/* 내약속목록 - 리스트 - 요약박스 - 상단 */
+.prms-my-list .list .summary .top {
+  @apply flex w-full items-center justify-between;
+}
+.prms-my-list .list .summary .top .bullet {
+  @apply relative block h-[34px] w-[138px] overflow-hidden rounded-[99px] bg-white py-[5px];
+}
+.prms-my-list .list .summary .top .bullet .ico {
+  @apply float-left ml-5 block h-fit w-fit text-center;
+}
+.prms-my-list .list .summary .top .bullet .bu_txt {
+  @apply float-left ml-2 block h-6 w-fit min-w-[70px] text-center font-gm text-[16px] font-bold leading-[25px];
+}
+.prms-my-list .list .summary .top .usr {
+  @apply text-[14px] font-[900];
+}
+
+/* 내약속목록 - 리스트 - 요약박스 - 약속명 */
+.prms-my-list .list .summary .title {
+  @apply flex w-full flex-col gap-2.5 border-b-[1px] pb-3 pt-4 text-left;
+}
+.prms-my-list .list .summary .title .obj {
+  @apply block h-[22px] w-full font-gm text-[22px] font-bold leading-[22px];
+}
+.prms-my-list .list .summary .title .date_local {
+  @apply block h-[14px] w-full text-[12px] leading-[14px];
+}
+
+/* 내약속목록 - 리스트 - 요약박스 - 약속정보 */
+.prms-my-list .list .summary .info {
+  @apply block w-full pt-3;
+}
+.prms-my-list .list .summary .info dl {
+  @apply block w-full;
+}
+.prms-my-list .list .summary .info dl dt {
+  @apply float-left clear-left block h-[18px] text-[12px] font-[600] leading-[18px] after:float-left after:px-1 after:text-[12px] after:font-semibold after:content-[':'];
+}
+.prms-my-list .list .summary .info dl dt span {
+  @apply float-left block before:px-1 before:content-['\00b7'];
+}
+.prms-my-list .list .summary .info dl dd {
+  @apply float-left block h-[18px] text-[14px] font-semibold leading-[18px];
+}
+
+/* 내약속목록 - 리스트 - 결제대기 */
+.prms-my-list .list .summary.sum01 {
+  @apply border-[#cdc3ff] bg-[#FF4B61] text-white;
+}
+.prms-my-list .list .summary.sum01 .top .bullet {
+  @apply bg-white text-[#FF4B61];
+}
+.prms-my-list .list .summary.sum01 .top .bullet .ico {
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+}
+.prms-my-list .list .summary.sum01 .title {
+  @apply border-white;
+}
+
+/* 내약속목록 - 리스트 - 멤버초대중 */
+.prms-my-list .list .summary.sum02 {
+  @apply border-[#cdc3ff] bg-white;
+}
+.prms-my-list .list .summary.sum02 .top .bullet {
+  @apply bg-[#FF4B61] text-white;
+}
+.prms-my-list .list .summary.sum02 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
+.prms-my-list .list .summary.sum02 .top .usr {
+  @apply text-[#ff4b61];
+}
+.prms-my-list .list .summary.sum02 .title {
+  @apply border-[#ff4b61];
+}
+
+/* 내약속목록 - 리스트 - d-00 */
+.prms-my-list .list .summary.sum03 {
+  @apply border-[#CDC3FF] bg-white;
+}
+.prms-my-list .list .summary.sum03 .top .bullet {
+  @apply bg-[#7B61FF] text-white;
+}
+.prms-my-list .list .summary.sum03 .top .usr {
+  @apply text-[#7b61ff];
+}
+.prms-my-list .list .summary.sum03 .title {
+  @apply border-[#7b61ff];
+}
+
+/* 내약속목록 - 리스트 - d-day */
+.prms-my-list .list .summary.sum04 {
+  @apply border-[#cdc3ff] bg-[#FF48B6] text-white;
+}
+.prms-my-list .list .summary.sum04 .top .bullet {
+  @apply bg-white text-[#FF48B6];
+}
+.prms-my-list .list .summary.sum04 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
+
+/* 내약속목록 - 리스트 - 응답대기 */
+.prms-my-list .list .summary.sum05 {
+  @apply border-[#cdc3ff] bg-[#7B61FF] text-white;
+}
+.prms-my-list .list .summary.sum05 .top .bullet {
+  @apply bg-white text-[#7B61FF];
+}
+.prms-my-list .list .summary.sum05 .top .bullet .ico {
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+}
+.prms-my-list .list .summary.sum05 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
+
+/* 내약속목록 - 리스트 - 취소약속 */
+.prms-my-list .list .summary.sum06 {
+  @apply border-[#cdc3ff] bg-[#554F73] text-white;
+}
+.prms-my-list .list .summary.sum06 .top .bullet {
+  @apply bg-white text-[#554F73];
+}
+.prms-my-list .list .summary.sum06 .top .bullet .ico svg {
+  @apply mt-[1px];
+}
+
+/* 내약속목록 - 리스트 - 취소대기 */
+.prms-my-list .list .summary.sum07 {
+  @apply border-[#cdc3ff] bg-white;
+}
+.prms-my-list .list .summary.sum07 .top .bullet {
+  @apply bg-[#DA48FF] text-white;
+}
+.prms-my-list .list .summary.sum07 .top .bullet .ico {
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#48DEFF] before:content-[''];
+}
+.prms-my-list .list .summary.sum07 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
+.prms-my-list .list .summary.sum07 .top .usr {
+  @apply text-[#da48ff];
+}
+.prms-my-list .list .summary.sum07 .title {
+  @apply border-[#da48ff];
+}
+
+/* 내약속목록 - 리스트 - 입금대기 */
+.prms-my-list .list .summary.sum08 {
+  @apply border-[#cdc3ff] bg-[#3888FF] text-white;
+}
+.prms-my-list .list .summary.sum08 .top .bullet {
+  @apply bg-white text-[#3888FF];
+}
+.prms-my-list .list .summary.sum08 .top .bullet .ico svg {
+  @apply mt-[2px];
+}
+.prms-my-list .list .summary.sum08 .top .bullet .ico {
+  @apply ml-0 before:float-left before:ml-2 before:mr-[5px] before:mt-[3px] before:block before:h-2 before:w-2 before:rounded-full before:bg-[#FF5D02] before:content-[''];
+}
+
+/* 내약속목록 - 리스트 - 약속완료 */
+.prms-my-list .list .summary.sum09 {
+  @apply border-[#cdc3ff] bg-[#8E89A9] text-white;
+}
+.prms-my-list .list .summary.sum09 .top .bullet {
+  @apply bg-white text-[#8E89A9];
+}
+.prms-my-list .list .summary.sum09 .top .bullet .ico svg {
+  @apply mt-[3px];
+}
+
+/* 내약속목록 - 리스트 - 더보기버튼 */
+.summary_more {
+  @apply mt-2 flex h-[48px] w-full items-center justify-center rounded-[12px] bg-white text-[16px] font-semibold text-[#7b61ff];
+}
+
+/* 내약속목록 - 달력으로 보기 */
+.prms-my-cal {
+  @apply block w-full px-2 pt-4;
+}
+/* 내약속목록 - 달력으로 보기 - 달력 */
+.prms-my-cal #customCalendar {
+  @apply rounded-[10px] border-[1px] border-[#cdc3ff] py-6 !important;
+}
+.prms-my-cal
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
+  @apply bg-[#FF3F02] !important;
+}
+.prms-my-cal
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_today {
+  @apply bg-transparent font-bold text-[#7b61ff] !important;
+}
+
+/* 약속검색 */
+#prms-search {
+  @apply relative w-full;
+}
+/* 약속검색 - 약속명 */
+#prms-search .sch_prms_name {
+  @apply block w-full px-6 pt-5;
+}
+#prms-search .sch_prms_name input {
+  @apply h-[58px] w-full rounded-[15px] border-[2px] border-[#7b61ff] bg-transparent text-center text-[20px] font-semibold text-violet-900 placeholder:text-center placeholder:text-[20px] placeholder:font-semibold placeholder:text-violet-900;
+}
+/* 약속검색 - 약속일 */
+#prms-search .sch_prms_date {
+  @apply flex w-full justify-center gap-5 px-6 pt-8;
+}
+#prms-search .sch_prms_date > .startDate,
+#prms-search .sch_prms_date > .endDate {
+  @apply flex h-6 gap-3;
+}
+#prms-search .sch_prms_date > .startDate > input,
+#prms-search .sch_prms_date > .endDate > input {
+  @apply m-0 h-6 w-[80px] border-transparent bg-transparent p-0 text-center text-[14px] font-semibold leading-6 text-black;
+}
+#prms-search .sch_prms_date > .startDate > button,
+#prms-search .sch_prms_date > .endDate > button {
+  @apply flex h-6 w-6 items-center justify-center;
+}
+#prms-search .sch_prms_date > span {
+  @apply block h-6 text-[14px] font-semibold leading-6 text-black;
+}
+#prms-search .sch-submit {
+  @apply flex w-full justify-center px-10 pt-10;
+}
+#prms-search .sch-submit button {
+  @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-violet-500 text-[16px] font-bold text-white;
+}
+.prms-start-cal #customCalendar,
+.prms-end-cal #customCalendar {
+  @apply w-full rounded-none border-transparent py-6 !important;
+}
+.modal-dialog.prms-sch-modal {
+  @apply items-center;
+}
+.modal-dialog.prms-sch-modal .modal-content {
+  @apply static w-full border-[1px] border-[#cdc3ff] px-1 py-0;
+}
+.modal-dialog.prms-sch-modal .modal-content .prms-my-cal {
+  @apply p-0;
+}
+
+/* 약속만들기 */
+#create-prms {
+  @apply relative w-full pt-6;
+}
+/* 약속만들기 입력 진행도 */
+.c_progress {
+  @apply relative mx-auto mb-[50px] h-5 w-[calc(100%-56px)] px-6
+  before:absolute before:left-0 before:top-[9px] before:z-[5] before:h-0.5 before:w-full before:rounded-[99px] before:bg-[#cdc3ff] before:content-[""];
+}
+.c_progress .pgrs-list {
+  @apply flex h-5 w-full justify-between gap-[calc((100%-50px)/5)];
+}
+.c_progress button {
+  @apply relative z-20 mt-[7px] block h-[6px] w-[6px] 
+  before:absolute before:inset-0 before:z-20 before:block before:h-full before:w-full before:rounded-full before:bg-[#cdc3ff] before:content-[""]
+  after:absolute after:left-[-7px] after:top-[-7px] after:z-10 after:hidden after:h-5 after:w-5 after:rounded-full after:bg-[#7b61ff] after:content-[""];
+}
+.c_progress button span {
+  @apply absolute left-[-33px] top-5 hidden h-4 w-fit min-w-[66px] text-center text-[14px] font-semibold text-[#5742c3];
+}
+.c_progress button.active {
+  @apply before:bg-white after:block;
+}
+.c_progress button.cmp {
+  @apply before:bg-[#7B61FF];
+}
+.c_progress button.active span {
+  @apply block;
+}
+
+/* 진행 바 */
+.c_progress .bar {
+  @apply absolute left-0 top-[9px] z-[9] h-0.5 rounded-full bg-[#7b61ff];
+}
+.c_progress .bar.per0 {
+  @apply w-[calc((100%-50px)*(0/5)+24px)];
+}
+.c_progress .bar.per1 {
+  @apply w-[calc((100%-50px)*(1/5)+24px)];
+}
+.c_progress .bar.per2 {
+  @apply w-[calc((100%-50px)*(2/5)+24px)];
+}
+.c_progress .bar.per3 {
+  @apply w-[calc((100%-50px)*(3/5)+24px)];
+}
+.c_progress .bar.per4 {
+  @apply w-[calc((100%-50px)*(4/5)+24px)];
+}
+.c_progress .bar.per5 {
+  @apply w-[calc((100%-50px)+24px)];
+}
+.c_progress .bar.per6 {
+  @apply w-full;
+}
+
+/* 진행 입력 */
+.create_usr_input {
+  @apply relative flex w-full flex-col gap-3 px-6;
+}
+
+/* 약속만들기 공통 */
+.progress_input {
+  @apply block h-fit min-h-[56px] w-full overflow-hidden rounded-[10px] border-[1px] border-[#7b61ff] bg-[#ede9fe] p-4 transition duration-150 ease-in;
+}
+.progress_input .title {
+  @apply relative flex h-6 w-full cursor-pointer items-center gap-3;
+}
+.progress_input .title .bullet {
+  @apply flex h-6 w-6 items-center justify-center rounded-[6px] bg-[#7b61ff] font-gm text-[12px] font-bold text-white;
+}
+.progress_input .title .obj {
+  @apply block h-6 w-fit min-w-[70px] text-[20px] font-medium leading-6  text-[#5742c3];
+}
+.progress_input .title .obj-txt {
+  @apply hidden w-[calc(100%-152px)] truncate text-right text-[18px] font-[800] text-white;
+}
+.progress_input .title .obj-date {
+  @apply hidden w-[calc(100%-152px)] truncate text-right text-[14px] font-[800] text-white;
+}
+.progress_input .title .obj-price {
+  @apply hidden w-[calc(100%-176px)] truncate text-right text-[14px] font-[900] text-white;
+}
+.progress_input .title .bg-arrow {
+  @apply absolute right-0 top-0 transition-all duration-150;
+}
+.progress_input .inputbox {
+  @apply hidden;
+}
+
+/* 활성화 및 작성 완료 */
+
+.progress_input.active {
+  @apply mb-4 mt-3 bg-[#5742C3];
+}
+.progress_input:first-child {
+  @apply mt-0 !important;
+}
+.progress_input.active {
+  @apply shadow-cs4;
+}
+
+.progress_input.active .title .bullet {
+  @apply bg-white text-[#5742c3];
+}
+
+.progress_input.active .title .obj {
+  @apply text-white;
+}
+.progress_input.cmp .title .obj-txt,
+.progress_input.cmp .title .obj-date,
+.progress_input.cmp .title .obj-price {
+  @apply block text-[#5742c3];
+}
+.progress_input.active .title .bg-arrow svg {
+  @apply rotate-180;
+}
+
+.progress_input.active .title .bg-arrow svg path {
+  @apply stroke-white;
+}
+.progress_input.active .inputbox {
+  @apply block w-full;
+}
+.progress_input .inputbox .prms_obj {
+  @apply flex w-full flex-col gap-3 pt-6;
+}
+.progress_input .inputbox .prms_obj strong {
+  @apply block w-full text-center text-[16px] font-normal text-white;
+}
+.progress_input .inputbox .prms_obj input {
+  @apply block h-[44px] w-full rounded-[10px] border-none bg-white text-center font-[800] text-[#5742c3] placeholder:text-[#5742c3] hover:text-[#7660E0] focus:text-[#7660E0] focus:outline-[#5742c3];
+}
+.progress_input .inputbox .submitBtn {
+  @apply flex h-[48px] w-full items-center justify-center rounded-[10px] border-[1px] border-white bg-transparent text-[16px] font-bold text-white;
+}
+
+/* 반환정보입력 */
+.ch_return {
+  @apply flex w-full flex-col gap-5 pt-6;
+}
+.ch_return label {
+  @apply flex h-[44px] w-full cursor-pointer items-center justify-between rounded-[10px] bg-[#7b61ff] px-4;
+}
+.ch_return label span {
+  @apply block text-[16px] font-semibold text-white;
+}
+.ch_return label svg {
+}
+.ch_return input:checked + label {
+  @apply border-[2px] border-white bg-transparent;
+}
+.ch_return input:checked + label svg path:first-child {
+  @apply fill-white stroke-none;
+}
+.ch_return input:checked + label svg path:last-child {
+  @apply stroke-[#5742C3];
+}
+.ch_usr {
+  @apply hidden gap-6 px-6;
+}
+.ch_usr label {
+  @apply flex h-[31px] w-[calc((100%-24px)/2)] items-center justify-center rounded-[20px] border-[1px] border-[#7b61ff] bg-transparent p-0 text-[14px] font-semibold text-white;
+}
+.ch_usr input:checked + label {
+  @apply border-white bg-white text-[#5742C3];
+}
+#ch_usr02 {
+  @apply peer-checked/rt02:flex;
+}
+.returnGuide {
+  @apply flex w-full flex-col gap-2 px-2.5 pt-5;
+}
+.returnGuide div {
+  @apply block w-full text-[12px] leading-[14px] text-white;
+}
+.returnGuide div strong {
+  @apply font-bold;
+}
+.inputbox .btn {
+  @apply flex w-full justify-between gap-6;
+}
+.inputbox .btn button {
+  @apply flex h-[48px] w-[calc((100%-24px)/2)] items-center justify-center rounded-[10px] border-[1px] border-white text-[16px] font-semibold text-white;
+}
+.inputbox .btn button.on {
+  @apply bg-[#7b61ff];
+}
+
+/* 약속일시 입력 */
+.date-value {
+  @apply mt-5 flex h-[50px] w-full items-center justify-center gap-1.5 rounded-[10px] bg-[#ede9fe];
+}
+.date-value .date {
+  @apply text-[20px] font-[800] text-[#5742c3];
+}
+.date-value .time {
+  @apply text-[20px] font-[500] text-[#5742c3];
+}
+.input-date {
+  @apply flex w-full flex-col gap-5 pt-5;
+}
+.input-date #customCalendar {
+  @apply rounded-[10px] border-[1px] border-[#cdc3ff] py-6 !important;
+}
+
+.input-date
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_today {
+  @apply bg-transparent font-bold text-[#7b61ff] !important;
+}
+.input-date
+  #customCalendar
+  .vanilla-calendar-wrapper
+  .vanilla-calendar-content
+  .vanilla-calendar-days
+  .vanilla-calendar-day
+  .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
+  @apply bg-[#FF3F02] font-medium text-white !important;
+}
+.input-date .time {
+  @apply overflow-hidden rounded-[10px] bg-white px-10 py-2;
+}
+
+/* 약속생성 동의 */
+.create_agree {
+  @apply w-full p-6;
+}
+.customChk {
+  @apply flex cursor-pointer items-center gap-5 text-[14px] text-slate-900;
+}
+.customChk .bullet {
+  @apply flex h-6 w-6 items-center justify-center rounded-[3px] border-[1px] border-[#7b61ff];
+}
+.customChk .bullet svg {
+  @apply hidden;
+}
+input:checked + .customChk .bullet {
+  @apply border-[#1a1d2d] bg-[#2563eb];
+}
+input:checked + .customChk .bullet svg {
+  @apply block;
+}
+
+/* 약속만들기 보증금 */
+.prms-price {
+  @apply block w-full pt-6;
+}
+.prms-price .top-txt {
+  @apply block w-full text-center text-white;
+}
+.prms-price .top-txt span {
+  @apply block h-5 w-full text-center text-[16px] leading-5;
+}
+.prms-price .top-txt em {
+  @apply block h-4 w-full text-center text-[12px] font-[800] leading-4;
+}
+
+/* 인원별 보증금 */
+.usr-price {
+  @apply flex w-full flex-col gap-4 pt-4;
+}
+.usr-price .usr {
+  @apply flex h-[44px] w-full items-center justify-between;
+}
+.usr-price .usr .name {
+  @apply block w-fit min-w-[56px];
+}
+.usr-price .usr .name input {
+  @apply block h-[44px] w-[66px] rounded-[10px] border-none bg-transparent px-[5px] text-left text-[18px] font-[800] leading-5 text-white;
+}
+.usr-price .usr .name input:hover,
+.usr-price .usr .name input:focus {
+  @apply border-none bg-white text-center text-[#7660E0];
+}
+.usr-price .usr .input-price {
+  @apply flex w-[calc(100%-66px)] items-center justify-between pl-4;
+}
+.usr-price .usr .input-price input {
+  @apply block h-[44px] w-[calc(100%-48px)] rounded-[10px] border-none bg-white text-center text-[18px] font-[800] text-[#5742c3] hover:text-[#7660E0]  focus:text-[#7660E0]  disabled:bg-transparent disabled:text-white;
+}
+.usr-price .usr .input-price .del {
+  @apply h-[34px] w-[34px];
+}
+.usr-price .usr .input-price .del button {
+  @apply flex h-full w-full items-center justify-center overflow-hidden rounded-full border-[2px] border-white text-[18px] font-[800] text-white;
+}
+.usr-price .addUsr {
+  @apply w-full pt-2.5;
+}
+.usr-price .addUsr button {
+  @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-[#cdc3ff] text-[32px] font-[800] text-[#5742c3];
+}
+/* 요약 */
+.sum-price {
+  @apply mt-8 block w-full rounded-[10px] bg-white px-6 py-4;
+}
+.sum-price dl {
+  @apply flex w-full flex-wrap justify-between gap-y-2;
+}
+.sum-price dl dt {
+  @apply flex h-5 w-1/2 items-center gap-1 indent-1 text-[18px] font-semibold leading-5 text-[#5742c3] before:text-[20px] before:font-[800] before:content-['\00b7'];
+}
+.sum-price dl dd {
+  @apply flex h-5 w-1/2 items-end justify-end gap-1 text-[16px] font-semibold leading-5 text-[#5742c3];
+}
+.sum-price dl dd em {
+  @apply text-[20px];
+}
+/* 동의 */
+.price-agree {
+  @apply mb-6 mt-4 block w-full;
+}
+.price-agree label {
+  @apply flex h-6 w-full items-center gap-4;
+}
+.price-agree label .bullet {
+  @apply flex h-6 w-6 items-center justify-center rounded-[3px] border-[1px] border-[#7B61FF] bg-[#EDE9FE];
+}
+.price-agree label .bullet svg {
+  @apply hidden;
+}
+.price-agree input:checked + label .bullet {
+  @apply border-black bg-blue-500;
+}
+.price-agree input:checked + label .bullet svg {
+  @apply block;
+}
+.price-agree label .txt {
+  @apply block text-[14px] text-[#ede9fe];
+}
+/* 버튼 */
+.price-btn {
+  @apply w-full px-2.5;
+}
+
+/* 약속생성 - 메모 */
+.prms-msg {
+  @apply w-full pt-6;
+}
+.prms-msg .msg-txt {
+  @apply block w-full text-[16px] leading-5 text-white;
+}
+.prms-msg .msg-txt em {
+  @apply text-[14px] font-[800] text-white;
+}
+.prms-msg .msg-input {
+  @apply flex w-full flex-col gap-4 px-1 pt-6;
+}
+.prms-msg .msg-input textarea {
+  @apply h-[120px] w-full rounded-[10px] px-5 py-3 text-[16px] font-medium text-[#5742c3] hover:text-[#7660E0] focus:text-[#7660E0];
+}
+
+/* 페이지 버튼 */
+.page-btn {
+  @apply block w-full;
+}
+.page-btn button {
+  @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-[#8b5cf6] text-[16px] font-bold text-white;
+}
+.page-btn button.dark {
+  @apply bg-[#6D6C95];
+}
+
+/* 약속상세 */
+.prms-detail {
+  @apply relative w-full;
+}
+.prms-detail .dayTop {
+  @apply w-full px-6;
+}
+.prms-detail .dayTop > div {
+  @apply flex h-[56px] w-full items-center justify-between rounded-[12px] bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF] px-4 shadow-cs4;
+}
+.prms-detail .dayTop > div div {
+  @apply flex gap-2;
+}
+.prms-detail .dayTop > div .ico {
+  @apply block text-[24px] font-semibold;
+}
+.prms-detail .dayTop > div .dday {
+  @apply block font-gm text-[24px] font-bold text-white;
+}
+.prms-detail .dayTop > div .usr {
+  @apply block font-gm text-[14px] font-bold text-white;
+}
+
+/* 약속상세-진행도 */
+.progress-detail {
+  @apply mt-8 w-full bg-white px-6 pb-8 pt-6;
+}
+.progress-detail > div {
+  @apply relative z-20 flex h-[56px] items-center gap-6 py-[5px] after:absolute after:left-[17px] after:top-0 after:z-10 after:h-full after:w-[1px] after:bg-[#CDC3FF] after:content-[''];
+}
+.progress-detail > div.fst {
+  @apply h-[51px] pt-0 after:top-1/2 after:h-1/2;
+}
+.progress-detail > div.lst {
+  @apply h-[51px] pb-0 after:h-1/2;
+}
+.progress-detail > div .order {
+  @apply z-20 flex h-[34px] w-[34px] items-center justify-center rounded-full border-[1px] border-[#cdc3ff] bg-white;
+}
+.progress-detail > div .order .num {
+  @apply block text-[14px] font-[800] text-[#7b61ff];
+}
+.progress-detail > div .order svg {
+  @apply hidden;
+}
+.progress-detail > div.cmp .order {
+  @apply bg-[#7b61ff];
+}
+.progress-detail > div.cmp .order .num {
+  @apply hidden;
+}
+.progress-detail > div.cmp .order svg {
+  @apply block;
+}
+.progress-detail > div .contxt {
+  @apply flex h-full w-[calc(100%-58px)] flex-col justify-between;
+}
+.progress-detail > div .contxt span {
+  @apply block w-full truncate text-[20px] font-medium text-black;
+}
+.progress-detail > div .contxt em {
+  @apply text-[12px] font-semibold text-violet-400;
+}
+.progress-detail > div.cmp .contxt {
+  @apply justify-center rounded-[10px] bg-[#7b61ff] px-4;
+}
+.progress-detail > div.cmp .contxt span {
+  @apply text-white;
+}
+.progress-detail > div.cmp .contxt em {
+  @apply hidden;
+}
+.progress-detail > div.bfr .order .num {
+  @apply text-[#A9A7DA];
+}
+.progress-detail > div.bfr .contxt {
+  @apply justify-center;
+}
+.progress-detail > div.bfr .contxt span {
+  @apply text-[#A9A7DA];
+}
+.progress-detail > div.bfr .contxt em {
+  @apply hidden;
+}
+
+/* 약속상세 - 플로팅 버튼 */
+.floatingButton {
+  @apply relative flex w-full max-w-[471px] justify-center bg-violet-100 px-10 py-6  transition-all duration-500 ease-in-out;
+}
+.floatingButton.scldn {
+  @apply fixed top-[calc(100%-148px)] z-20 h-[72px] px-0 py-0;
+}
+.floatingButton button {
+  @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-violet-500 text-[16px] font-bold text-white shadow-cs4;
+}
+.floatingButton.scldn button {
+  @apply h-full w-full rounded-none shadow-none;
+}
+.floatingButton.scldn button:disabled {
+  @apply border-[1px] border-x-0 border-slate-100;
+}
+.floatingButton button:disabled {
+  @apply border-[1px] border-[#CDC3FF] bg-white font-medium text-[#6D6C95] shadow-none;
+}
+
+/* 약속상세 -약속내용 */
+.prms-content-box {
+  @apply w-full bg-white py-4;
+}
+.prms-content-box .top {
+  @apply flex w-full items-center justify-between px-6;
+}
+.prms-content-box .top strong {
+  @apply text-[18px] font-[800] text-slate-900;
+}
+.prms-content-box .top button {
+  @apply transition-all duration-300 ease-in-out;
+}
+.prms-content-box.closet .top button {
+  @apply rotate-180;
+}
+.prms-content-box .txt {
+  @apply block w-full px-6 transition-all duration-300 ease-in-out;
+}
+.prms-content-box.closet .txt {
+  @apply hidden;
+}
+.prms-content-box .txt dl {
+  @apply flex w-full flex-wrap items-start justify-between;
+}
+.prms-content-box .txt dl dt {
+  @apply flex h-[28px] w-[70px] items-center leading-[28px];
+}
+.prms-content-box .txt dl dt span {
+  @apply text-[14px] font-medium text-[#5742C3];
+}
+.prms-content-box .txt dl dd {
+  @apply relative min-h-[28px] w-[calc(100%-90px)] leading-[28px];
+}
+.prms-content-box .txt dl dd .cmp {
+  @apply flex min-h-[22px] w-full items-center gap-[15px] leading-[28px];
+}
+.prms-content-box .txt dl dd .cmp span {
+  @apply max-w-[calc(100%-35px)] text-[16px] font-medium text-black;
+}
+.prms-content-box .txt dl dd .cmp em {
+  @apply text-[12px] font-medium text-pink-500;
+}
+.prms-content-box .txt dl dd .cmp.memo {
+  @apply block;
+}
+.prms-content-box .txt dl dd .cmp.memo span {
+  @apply max-w-full;
+}
+.prms-content-box .txt dl dd .cmp.memo button {
+  @apply ml-[15px] h-[28px] align-bottom;
+}
+.prms-content-box .txt dl dd > .date {
+  @apply flex min-h-[22px] w-full items-center gap-[15px] leading-[28px];
+}
+.prms-content-box .txt dl dd > .date span {
+  @apply text-[16px] font-medium text-black;
+}
+.prms-content-box .txt dl dd .modify {
+  @apply flex w-full gap-[15px];
+}
+.prms-content-box .txt dl dd .modify.memo {
+  @apply items-end;
+}
+.prms-content-box .txt dl dd .modify input {
+  @apply h-[28px] w-[calc(100%-40px)] rounded-[5px] border-[2px] border-violet-500 px-1 font-semibold text-slate-900 focus:outline-none;
+}
+.prms-content-box .txt dl dd .modify textarea {
+  @apply w-[calc(100%-40px)] rounded-[5px] border-[2px] border-violet-500 px-1 font-semibold text-slate-900 focus:outline-none;
+}
+/* 약속상세 - 인원/보증금 */
+.prms-content-box .txt p {
+  @apply text-[14px] font-medium leading-[17px] text-pink-500;
+}
+.prms-content-box .txt .pp_table {
+  @apply mt-4 block w-full;
+}
+.prms-content-box .txt .pp_table .tbl-title {
+  @apply flex w-full items-center justify-center bg-[#7b61ff] px-2 py-3;
+}
+.prms-content-box .txt .pp_table .tbl-title span {
+  @apply block h-[17px] w-[100px] text-center text-[14px] font-semibold leading-[17px] text-white;
+}
+.prms-content-box .txt .pp_table .tbl-title span:first-child {
+  @apply w-[120px];
+}
+.prms-content-box .txt .pp_table .tbl-list {
+  @apply flex w-full flex-col;
+}
+.prms-content-box .txt .pp_table .tbl-list .list {
+  @apply flex w-full items-center justify-center px-2 py-3 leading-5;
+}
+.prms-content-box .txt .pp_table .tbl-list .list:nth-child(2n) {
+  @apply bg-[#EDE9FE];
+}
+.prms-content-box .txt .pp_table .tbl-list .list .name {
+  @apply flex h-5 w-[120px] justify-center gap-2 text-[14px] leading-5 text-[#0f172a];
+}
+.prms-content-box .txt .pp_table .tbl-list .list .price {
+  @apply h-5 w-[100px] text-right text-[14px] leading-5 text-slate-900;
+}
+.prms-content-box .txt .pp_table .tbl-list .list .date {
+  @apply h-5 w-[100px] text-right text-[14px] leading-5 text-slate-900;
+}
+.prms-content-box .txt .pp_table .tbl-list .list.invite .name {
+  @apply font-[800] text-[#5742c3];
+}
+.reset-date .modal-content {
+  @apply p-0 shadow-none;
+}
+.reset-date .modal-content .progress_input {
+  @apply m-0 border-transparent shadow-none !important;
+}
+
+/* event bg */
+.eventBg {
+  @apply fixed left-0 top-0 z-[10010] hidden h-full w-full bg-black bg-opacity-60;
+}
+.eventBg.active {
+  @apply block;
+}
+
+/* 마이페이지 */
+.myInfo {
+  @apply w-full py-[80px];
+}
+.myInfo .usr {
+  @apply flex w-full flex-col items-center justify-center gap-3;
+}
+.myInfo .usr .ico {
+  @apply h-[84px] w-[84px] cursor-pointer overflow-hidden rounded-full border-[2px] border-[#7b61ff] bg-white;
+}
+.myInfo .usr button {
+  @apply mt-3 flex h-8 w-[102px] items-center justify-center rounded-[99px] border-[1px] border-[#7b61ff] text-[16px] font-semibold text-[#5742c3];
+}
+.myInfo .buttonGroup {
+  @apply mt-[60px] flex w-full flex-col items-center gap-6;
+}
+.myInfo .buttonGroup button {
+  @apply flex h-[48px] w-[295px] items-center justify-center rounded-[99px] text-[16px] font-bold text-white;
+}
+.myInfo .buttonGroup button.btn-coupon {
+  @apply bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF];
+}
+.myInfo .buttonGroup button.btn-log {
+  @apply bg-[#8B5CF6];
+}
+.myInfo .buttonGroup button.btn-bank {
+  @apply bg-white text-[#5742c3];
+}
+
+.ch-ico {
+  @apply mx-4 mt-2.5 w-[calc(100%-32px)] rounded-[12px] bg-[#7357ff] p-5;
+}
+.ch-ico strong {
+  @apply block w-full text-center font-gm text-[20px] font-medium text-white;
+}
+.ch-ico .ico-list {
+  @apply mx-auto mt-[30px] flex w-[292px] flex-wrap gap-x-3 gap-y-3;
+}
+.ch-ico .ico-list button {
+  @apply h-[64px] w-[64px] overflow-hidden rounded-full bg-white;
+}
+.ch-ico .ico-list button img {
+  @apply w-full;
+}
+.ch-ico > button {
+  @apply mt-[65px] h-[48px] w-full rounded-[10px] bg-white text-[16px] font-bold text-violet-900;
+}
+
+/* 마이페이지 - 계정정보 */
+.usr_info {
+  @apply mx-4 mt-[70px] w-[calc(100%-32px)] rounded-[12px] bg-[#7b61ff] px-[45px] py-7;
+}
+.usr_info dl {
+  @apply flex w-full flex-wrap gap-x-6 gap-y-3;
+}
+.usr_info dl dt {
+  @apply block h-5 w-[73px] text-[14px] font-[800] leading-5 text-white before:pr-2.5 before:content-["\00b7"];
+}
+.usr_info dl dd {
+  @apply block h-5 w-[calc(100%-100px)] text-right text-[16px] font-semibold leading-5 text-white;
+}
+.infoButton {
+  @apply mt-10 flex w-full flex-col items-center gap-10;
+}
+.infoButton button:last-child {
+  @apply text-[16px] font-semibold text-slate-900 underline;
+}
+.infoButton button:first-child {
+  @apply text-[16px] font-medium text-[#4c1d95];
+}
+
+/* 마이페이지 - 계좌정보 */
+.bank-txt {
+  @apply block w-full text-center text-[24px] text-slate-900;
+}
+.bank-info {
+  @apply mx-4 block w-[calc(100%-32px)] rounded-[12px] bg-[#7b61ff] p-8;
+}
+.bank-info dl {
+  @apply flex w-full flex-col items-center;
+}
+.bank-info dl dt {
+  @apply text-[14px] font-[800] text-white;
+}
+.bank-info dl dd {
+  @apply text-[20px] text-white;
+}
+
+/* 마이페이지 - 쿠폰 */
+.coupon-txt {
+  @apply w-full px-4 text-[14px] text-slate-900;
+}
+.coupon-txt em {
+  @apply text-[16px] font-[800] text-[#7b61ff];
+}
+.coupon-list {
+  @apply mt-2 flex w-full flex-col gap-4 px-4;
+}
+.coupon-list .coupon {
+  @apply flex w-full justify-between rounded-[10px] px-4 py-2;
+}
+.coupon-list .coupon .txt {
+  @apply flex flex-col items-start gap-1;
+}
+.coupon-list .coupon .txt strong {
+  @apply text-[14px];
+}
+.coupon-list .coupon .txt span {
+  @apply text-[12px] font-[800];
+}
+.coupon-list .coupon .txt em {
+  @apply mt-1 text-[11px];
+}
+.coupon-list .coupon .img {
+  @apply flex min-h-[65px] min-w-[60px] items-center justify-center border-l-[2px] border-dashed pl-2.5;
+}
+.coupon-list .coupon.cp01 {
+  @apply bg-violet-700;
+}
+.coupon-list .coupon.cp01 .txt strong {
+  @apply text-white;
+}
+.coupon-list .coupon.cp01 .txt span {
+  @apply text-[#DBD4FF];
+}
+.coupon-list .coupon.cp01 .txt em {
+  @apply text-white;
+}
+.coupon-list .coupon.cp01 .img {
+  @apply border-[#a08dff];
+}
+/*  */
+
+.coupon-list .coupon.cp02 {
+  @apply bg-pink-500;
+}
+.coupon-list .coupon.cp02 .txt strong {
+  @apply text-white;
+}
+.coupon-list .coupon.cp02 .txt span {
+  @apply text-[#FFD3E9];
+}
+.coupon-list .coupon.cp02 .txt em {
+  @apply text-white;
+}
+.coupon-list .coupon.cp02 .img {
+  @apply border-[#F998C8];
+}
+
+/*  */
+.coupon-list .coupon.cp03 {
+  @apply border-[2px] border-[#7b61ff] bg-[#E2E4FF];
+}
+.coupon-list .coupon.cp03 .txt strong {
+  @apply text-[#5742C3];
+}
+.coupon-list .coupon.cp03 .txt span {
+  @apply text-[#5742C3];
+}
+.coupon-list .coupon.cp03 .txt em {
+  @apply text-[#7B61FF];
+}
+.coupon-list .coupon.cp03 .img {
+  @apply border-[#A08DFF];
+}
+
+.coupon-guide {
+  @apply mt-[120px] flex w-full flex-col items-start px-2 text-[11px] text-slate-900;
+}
+.coupon-guide span {
+  @apply before:pr-[5px] before:content-["\00b7"];
+}
+
+/* checkbox */
+#allcheck + label:before {
+  @apply h-6 w-6 border-0 bg-cover;
+  content: "";
+  background-image: url(../src/img/join/rdo.png);
+}
+
+#allcheck:checked + label:before {
+  @apply h-6 w-6 border-0 bg-cover outline-none;
+  content: "";
+  background-image: url(../src/img/join/rdo_check.png);
+}
+
+.usrAgree div label {
+  @apply flex items-center gap-3 text-base leading-4 text-slate-900;
+}
+
+.usrAgree div label:before {
+  @apply h-5 w-5 border-0 bg-cover;
+  content: "";
+  background-image: url(../src/img/join/rdo.png);
+}
+
+.usrAgree div input:checked + label:before {
+  @apply h-5 w-5 border-0 bg-cover outline-none;
+  content: "";
+  background-image: url(../src/img/join/rdo_check.png);
+}
+
+.usrAgree div button {
+  @apply shadow-none;
+}
+
+/* top banner */
+.cs-banner {
+  @apply bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500 shadow-cs4;
+}
+
+/* 고객센터 */
+
+.board-tabs button {
+  @apply shadow-none;
+}
+.board-tabs button.active {
+  @apply rounded-[99px] bg-[#7B61FF] font-semibold text-white;
+}
+.collapse-box {
+}
+.pagingNum {
+  @apply h-[44px] w-[44px] text-[14px] font-semibold leading-[17px] text-[#6D6C95];
+}
+
+.pagingNum.active {
+  @apply bg-[#7B61FF] text-white;
+}
+.prev {
+  @apply relative h-[38px] pl-[6px] pr-[16px];
+}
+.prev-1:after {
+  @apply absolute right-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
+}
+.prev,
+.prevAll,
+.next,
+.nextAll,
+.pagingNum {
+  @apply shadow-none;
+}
+
+.next {
+  @apply relative h-[38px] pl-[16px] pr-[6px];
+}
+.next-1:before {
+  @apply absolute left-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
+}
+
+.micromodal-slide {
+  @apply hidden;
+}
+
+.micromodal-slide.is-open {
+  @apply block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  -webkit-animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  -webkit-animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  -webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  @apply will-change-transform;
+}
+
+#login {
+  @apply relative;
+}
+
+#image1 {
+  left: 115px;
+  bottom: 0;
+  animation: move-right 1.5s ease-in-out;
+  width: 342px;
+  height: 208px;
+  background-image: url("../src/img/login/vector2.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#image2 {
+  opacity: 0;
+  left: 112px;
+  bottom: 0;
+  width: 342px;
+  height: 208px;
+  background-image: url("../src/img/login/vector1.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#image2.active {
+  opacity: 1;
+  animation: move-left 3s ease-in-out;
+}
+#image3 {
+  width: 293px;
+  height: 0;
+  bottom: -35px;
+  left: -22px;
+  background-image: url("../src/img/login/vector3.svg");
+  background-size: 293px 123px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#image3.active {
+  height: 123px;
+  animation: bounce1 0.5s ease-in-out;
+}
+#image4 {
+  left: -20px;
+  bottom: -55px;
+  background: url("../src/img/login/vector4.svg");
+  background-size: cover;
+  width: 139px;
+  height: 74px;
+}
+#image4.active {
+  left: 90px;
+  bottom: 95px;
+  animation: bounce2 0.6s ease-in-out;
+}
+#image5 {
+  left: 25px;
+  bottom: -100px;
+  background: url("../src/img/login/vector5.svg");
+  width: 60px;
+  height: 87px;
+}
+#image5.active {
+  bottom: 20px;
+  animation: bounce3 0.45s ease-in-out;
+}
+.ani-opc {
+  animation: opc-btm 1s ease-in-out;
+}
+.ani-opc-l {
+  animation: opc-left 0.7s ease-in-out;
+}
+.ani-opc-l2 {
+  animation: opc-left 1.2s ease-in-out;
+}
+.bg-lnar {
+  background: linear-gradient(
+    278.31deg,
+    #563dd9 0.03%,
+    #af2bd2 47.9%,
+    #bd355e 97.82%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* 반환 */
+
+.g-txt {
+  position: absolute;
+  left: 0;
+  padding: 15px 12px 13px;
+  border-radius: 12px;
+  background: #5742c4;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  line-height: 18px;
+  display: none;
+  animation: fadeout 0.5s;
+  font-weight: normal;
+}
+.g-txt.inbgBox {
+  @apply bg-[#CDC3FF] text-violet-900;
+}
+.g-txt.active {
+  display: block;
+  animation: fadein 0.5s;
+}
+.g-txt:after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 21px;
+  background: url(../src/img/polygon.png) no-repeat 0 0;
+  background-size: cover;
+  left: 50%;
+  margin-left: -12px;
+  top: -11px;
+}
+.g-txt.inbgBox span {
+  display: block;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid #cdc3ff;
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 16px);
+  z-index: 20;
+}
+.g-txt.inbgBox:after {
+  display: none;
+}
+
+#web_header {
+  @apply fixed inset-0 z-50 flex h-fit min-h-[78px] w-full flex-col items-center justify-center bg-white;
+}
+#web_header button {
+  @apply shadow-none;
+}
+#web_header nav button {
+  @apply /* hover */ 
+  /* active */
+  /* focus */ relative 
+  h-[40px] px-2 font-lato text-[16px] 
+  font-semibold leading-[40px]
+  text-[#0D0E43] after:hidden after:content-[];
+}
+#web_header nav button:first-child {
+  @apply text-[#FB2E86];
+}
+#web_header nav button.active {
+  @apply after:absolute after:bottom-0 after:left-0 after:block 
+  after:h-1 after:w-full after:bg-[#7e33e0] after:content-[''];
+}
+
+.web_container {
+  @apply relative flex w-full items-center justify-center pt-[78px];
+}
+.web_container button {
+  @apply shadow-none;
+}
+
+.section-container {
+  @apply relative w-[1200px];
+}
+#web_s01 {
+  @apply h-[100vh] min-h-[860px] bg-[#f2f0ff];
+}
+#web_s02 {
+  @apply flex h-[678px] items-center pt-0;
+}
+#web_s03 {
+  @apply h-[769px] items-start bg-white pt-0;
+}
+.ws01 {
+  @apply bg-[#A55FFF];
+}
+.ws02 {
+  @apply bg-[#FF4595];
+}
+.ws03 {
+  @apply bg-[#FF8754];
+}
+#web_s04 {
+  @apply h-[calc(100vh-187px)] min-h-[946px] bg-[#FF99C5];
+}
+#web_footer {
+  @apply flex h-[187px] w-full flex-col items-center justify-center gap-6 bg-[#151515];
+}
+#web {
+  @apply h-full w-full overflow-y-auto;
+}
+
+.ws_s {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.ws_s .swiper-slide {
+  @apply flex items-center justify-center pt-[78px];
+}
+
+.ws_s .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  @apply bg-gradient-to-r from-[#A55FFF] via-[#FF4595] to-[#FF8754];
+}
+
+.ws_s .swiper-pagination {
+  @apply absolute bottom-[31px] left-1/2 ml-[-542px] inline-flex w-auto items-center gap-[18px] !important;
+}
+.ws_s .swiper-pagination .swiper-pagination-bullet {
+  @apply h-[14px] w-[14px] bg-white opacity-50 !important;
+}
+.ws_s .swiper-pagination .swiper-pagination-bullet-active {
+  @apply h-[14px] w-[34px] rounded-[14px] opacity-100 !important;
+}
+
+.ws_s .swiper-button-next {
+  @apply bottom-[18px] right-1/2 top-auto mr-[364px] h-10 w-10;
+}
+.ws_s .swiper-button-next::after {
+  display: none;
+}
+.ws_s .swiper-button-prev {
+  @apply bottom-[18px] left-auto right-1/2 top-auto mr-[560px] h-10 w-10;
+}
+.ws_s .swiper-button-prev::after {
+  display: none;
+}
+
+.ws_v .swiper-wrapper {
+  display: block !important;
+  height: 100% !important;
+}
+.ws_v .swiper-wrapper .swiper-slide {
+  height: auto !important;
+}
+
+.menu button {
+  box-shadow: none;
+}
+#pleDown,
+#pleUp {
+  @apply shadow-none;
+}
+#pleDown svg,
+#pleUp svg {
+  @apply fill-slate-900;
+}
+.modal__close {
+  @apply shadow-none;
+}
+.options {
+  transition: max-height ease-in-out 0.3s;
+}
+.sidePrev {
+  @apply shadow-none;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  color: black;
+  left: -100px;
+  box-sizing: border-box;
+  animation: shadowRolling 2s linear infinite;
+}
+.cloudP {
+  animation: cloudP 10s linear infinite;
+}
+.cloudM {
+  animation: cloudM 10s linear infinite;
+}
+
+.cloudP2 {
+  animation: cloudP 5s linear infinite;
+}
+.cloudM2 {
+  animation: cloudM 5s linear infinite;
+}
+
+.urlinput {
+  width: calc(100% - 39px);
+}
+/* 결제하기 */
+.closeBtn {
+  @apply flex h-6 w-6 items-center justify-center;
+}
+
+.prms-coupon-box {
+  @apply mt-4 w-full bg-white p-[16px_24px_32px];
+}
+.prms-coupon-box .top {
+  @apply w-full;
+}
+.prms-coupon-box .top strong {
+  @apply text-[18px] font-[800] text-slate-900;
+}
+.prms-coupon-box .cont {
+  @apply relative mt-5 w-full rounded-[12px] border-[1px] border-[#7b61ff] py-5;
+}
+.prms-coupon-box .cont > button {
+  @apply mx-auto flex w-[calc(100%-32px)] items-center  justify-between px-1;
+}
+.prms-coupon-box .cont > button.active {
+  @apply border-b-[1px] border-[#7b61ff] pb-2;
+}
+.prms-coupon-box .cont > button span {
+  @apply block text-[16px] font-medium text-[#5742c3];
+}
+.prms-coupon-box .cont .dropdown-content {
+  @apply mx-auto flex h-0 w-[calc(100%-40px)] flex-col overflow-hidden transition-all duration-500 ease-in-out;
+}
+.prms-coupon-box .cont .dropdown-content.active {
+  @apply h-fit;
+}
+.prms-coupon-box .cont .dropdown-content > button {
+  @apply flex flex-col border-b-[1px] border-dashed border-violet-500 px-1 py-2;
+}
+.prms-coupon-box .cont .dropdown-content > button:last-child {
+  @apply border-none pb-0;
+}
+.prms-coupon-box .cont .dropdown-content > button span {
+  @apply text-[14px] font-semibold text-slate-900;
+}
+.prms-coupon-box .cont .dropdown-content > button em {
+  @apply text-[12px] text-gray-500;
+}
+.prms-content-box .price-info {
+  @apply mx-auto w-[calc(100%-32px)] rounded-[12px] border-[2px] border-[#7b61ff] px-5 py-7;
+}
+.prms-content-box .price-info .paylist {
+  @apply flex w-full flex-wrap items-center gap-y-4 border-b-[1px] border-[#7b61ff] pb-2.5;
+}
+.prms-content-box .price-info .paylist dt {
+  @apply w-[110px] font-semibold text-[#5742C3] text-[16p] before:px-2 before:content-["\00b7"];
+}
+.prms-content-box .price-info .paylist dd {
+  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 text-[16px] font-semibold text-slate-900 pr-4;
+}
+.prms-content-box .price-info .paylist dd span {
+  @apply text-[20px];
+}
+.prms-content-box .price-info .paylist dd span.coupon_bullet {
+  @apply flex h-6 w-[70px] items-center justify-center rounded-[99px] bg-pink-500 text-[12px] font-[700] text-white;
+}
+.prms-content-box .price-info p {
+  @apply mt-3 text-[14px] font-bold text-pink-500;
+}
+.prms-content-box .price-info .lastpay {
+  @apply mt-8 flex w-full items-center;
+}
+.prms-content-box .price-info .lastpay dt {
+  @apply w-[125px] text-[18px] font-[800] text-[#5742C3] before:px-2 before:text-[22px] before:font-[800] before:content-["\00b7"];
+}
+.prms-content-box .price-info .lastpay dd {
+  @apply flex w-[calc(100%-125px)] justify-end gap-2.5 text-[16px] font-semibold text-[#5742c3] items-center pr-4;
+}
+.prms-content-box .price-info .lastpay dd span {
+  @apply text-[24px] font-[800];
+}

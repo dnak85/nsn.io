@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/gm/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../dist/animate.css">
+    <link rel="stylesheet" href="../dist/calendar.css">
+    <link rel="stylesheet" href="../dist/micromodal.css">
+    <link rel="stylesheet" href="../dist/modal.css">
+    <link rel="stylesheet" href="../dist/offcanvas.css">
+    <link rel="stylesheet" href="../dist/timepicker.css">
+    <link rel="stylesheet" href="../dist/output_new.css">
+
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <!-- microModal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- swipejs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap_w">
+        <div id="w_wrap">
+            <div class="text">
+                <em class="vi_title animate__animated animate__bounceInDown">Make appointments fun</em>
+
+                <span class="">
+                    <em class="">노쇼노</em>
+                    안전하게 약속하세요
+                </span>
+            </div>
+            <!-- //text -->
+
+            <div class=" visual">
+                <div class="txt">
+                    모르는 타인과의 약속, <br>
+                    노쇼노 서비스로 맺어보세요. <br>
+                    약속 당일, 맡긴 약속보증금을 <br>
+                    안전하게 돌려드립니다.
+                </div>
+                <!-- // -->
+
+                <div class="vi vi01">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
+                        <circle cx="47" cy="47" r="47" fill="#FF59A9" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi02">
+                    <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="140" cy="140" r="140" fill="#8B5CF6" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi03">
+                    <img class="w-[116.31px] h-[116.31px]" src="./img/vi__calendar.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi04">
+                    <img src="./img/vi__diary.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi05">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="20" fill="#FFBB8A" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi06">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewBox="0 0 156 156" fill="none">
+                        <path d="M77.9475 136.493C29.541 133.452 30.6908 111.95 25.9728 99.1936C22.4551 91.8695 23.8805 49.008 28.1769 40.685C30.8463 35.4908 42.5791 25.3176 68.1557 26.1786C124.228 23.2849 136.036 58.3626 134.931 76.2633C136.782 94.7787 127.976 132.746 77.9475 136.493Z" fill="#FB2E86" fill-opacity="0.3" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi07">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="297" height="295" viewBox="0 0 297 295" fill="none">
+                        <path d="M296.338 147.292C296.338 228.531 230.171 294.389 148.549 294.389C66.9267 294.389 0.759033 228.531 0.759033 147.292C0.759033 66.0526 66.9267 0.195068 148.549 0.195068C230.171 0.195068 296.338 66.0526 296.338 147.292Z" fill="#B796FF" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi08">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
+                        <path d="M12.7455 50.1389C13.3101 20.3086 26.5552 20.4358 34.2677 17.1926C38.674 14.8335 65.0531 14.5545 70.2838 16.9706C73.5478 18.4711 80.1159 25.4075 80.276 41.1489C83.5652 75.5301 62.3262 83.7321 51.2956 83.5355C39.9667 85.1717 16.3962 80.7832 12.7455 50.1389Z" fill="#FEC600" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+            </div>
+
+            <script>
+                // 이미지 요소들을 선택합니다.
+                const images = document.querySelectorAll('.vi');
+                // 마우스 움직임에 따른 이미지 이동 감도를 조절하는 상수입니다.
+                const sensitivity = 0.005;
+
+                // 이미지마다 랜덤한 이동 방향을 설정하는 함수
+                function setRandomDirection(image) {
+                    // 랜덤한 각도 값을 생성합니다.
+                    const angle = Math.random() * 2 * Math.PI;
+                    // 랜덤한 거리 값을 생성합니다.
+                    const distance = Math.random() * 50 + 10; // 최소 10, 최대 60의 거리로 설정
+
+                    // 랜덤한 각도와 거리를 이용하여 이미지의 초기 위치를 설정합니다.
+                    // const initialX = Math.cos(angle) * distance;
+                    // const initialY = Math.sin(angle) * distance;
+
+                    // 이미지에 초기 위치를 적용합니다.
+                    // image.style.transform = `translate(${initialX}px, ${initialY}px)`;
+                }
+
+                // 초기 이미지 위치 설정
+                images.forEach((image) => {
+                    setRandomDirection(image);
+                });
+
+                // 마우스 움직임 이벤트 리스너를 추가합니다.
+                document.addEventListener('mousemove', (event) => {
+                    // 마우스의 X, Y 좌표를 가져옵니다.
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
+
+                    // 각 이미지마다 마우스와의 상대적인 거리를 계산하여 이동량을 조절합니다.
+                    images.forEach((image, index) => {
+                        const imageRect = image.getBoundingClientRect();
+                        const imageCenterX = imageRect.left + imageRect.width / 2;
+                        const imageCenterY = imageRect.top + imageRect.height / 2;
+
+                        const deltaX = mouseX - imageCenterX;
+                        const deltaY = mouseY - imageCenterY;
+
+                        const translateY = deltaY * (index + 1) * sensitivity;
+                        const translateX = deltaX * (index + 1) * sensitivity;
+
+                        image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                    });
+                });
+
+            </script>
+        </div>
+        <!-- //web -->
+
+
+        <div id="m_wrap">
+            <div id="m_container" class="fpage">
+                <div class="absolute z-10 right-5 top-6">
+                    <button class="shadow-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M13.3 0.70998C13.2075 0.617276 13.0976 0.543728 12.9766 0.493547C12.8557 0.443366 12.726 0.417535 12.595 0.417535C12.464 0.417535 12.3344 0.443366 12.2134 0.493547C12.0924 0.543728 11.9825 0.617276 11.89 0.70998L7.00001 5.58998L2.11001 0.699979C2.01743 0.607397 1.90752 0.533957 1.78655 0.483852C1.66559 0.433747 1.53594 0.407959 1.40501 0.407959C1.27408 0.407959 1.14443 0.433747 1.02347 0.483852C0.902502 0.533957 0.792592 0.607397 0.70001 0.699979C0.607428 0.792561 0.533988 0.902472 0.483883 1.02344C0.433778 1.1444 0.40799 1.27405 0.40799 1.40498C0.40799 1.53591 0.433778 1.66556 0.483883 1.78652C0.533988 1.90749 0.607428 2.0174 0.70001 2.10998L5.59001 6.99998L0.70001 11.89C0.607428 11.9826 0.533988 12.0925 0.483883 12.2134C0.433778 12.3344 0.40799 12.464 0.40799 12.595C0.40799 12.7259 0.433778 12.8556 0.483883 12.9765C0.533988 13.0975 0.607428 13.2074 0.70001 13.3C0.792592 13.3926 0.902502 13.466 1.02347 13.5161C1.14443 13.5662 1.27408 13.592 1.40501 13.592C1.53594 13.592 1.66559 13.5662 1.78655 13.5161C1.90752 13.466 2.01743 13.3926 2.11001 13.3L7.00001 8.40998L11.89 13.3C11.9826 13.3926 12.0925 13.466 12.2135 13.5161C12.3344 13.5662 12.4641 13.592 12.595 13.592C12.7259 13.592 12.8556 13.5662 12.9766 13.5161C13.0975 13.466 13.2074 13.3926 13.3 13.3C13.3926 13.2074 13.466 13.0975 13.5161 12.9765C13.5662 12.8556 13.592 12.7259 13.592 12.595C13.592 12.464 13.5662 12.3344 13.5161 12.2134C13.466 12.0925 13.3926 11.9826 13.3 11.89L8.41001 6.99998L13.3 2.10998C13.68 1.72998 13.68 1.08998 13.3 0.70998Z" fill="#0F172A" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col w-full px-7">
+                    <div class="w-full mt-10">
+                        <div class="text-[32px] text-slate-900 after:content-[''] after:absolute after:w-full after:h-[18px] after:bg-[#cdc4ff] after:bottom-0 after:left-0 relative w-fit h-10 leading-10 mx-auto px-[5px] after:z-[0] z-10">
+                            <span class="relative z-10 block"><em class="font-semibold">본인인증</em>이 필요합니다.</span>
+                        </div>
+                    </div>
+                    <!-- top text -->
+
+                    <div class="flex flex-col w-full gap-8 mt-10">
+
+                        <div>
+                            <div class="w-full h-5 leading-5">
+                                <strong class="text-[16px] text-slate-900 font-normal">이름</strong>
+                            </div>
+                            <div class="w-full h-[48px] border-[1px] border-[#d7d5dc] bg-white mt-2">
+                                <label for="" class="hidden">이름</label>
+                                <input type="text" class="w-full h-[46px] px-4 text-[16px] leading-5 text-slate-900 text-center" placeholder="홍길동">
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <div>
+                            <div class="w-full h-5 leading-5">
+                                <strong class="text-[16px] text-slate-900 font-normal">주민등록번호</strong>
+                            </div>
+                            <div class="w-full h-[48px] border-[1px] border-[#d7d5dc] bg-white mt-2 flex content-center items-center">
+                                <label for="" class="hidden">주민등록번호</label>
+                                <input type="text" class="h-[46px] w-[calc((100%-10px)/2)] px-4 text-[16px] leading-5 text-slate-900" placeholder="940831">
+                                <span class="w-2.5">-</span>
+                                <!-- 2023.08.18 수정 -->
+                                <div class="relative w-[calc((100%-10px)/2)] min-w-[146px] px-4 flex gap-1 items-center justify-end">
+                                    <input type="text" id="pswd" class="w-3 text-right text-slate-900 indfipw" maxlength="1" onInput='toggleLabel()'>
+                                    <label for="pswd" id="dummyPw" class="pws-dum">●</label>
+                                    <label for="pswd" class="flex gap-1 w-[98px]">
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                        <span class="block w-auto h-fit text-[13px] font-bold text-black">●</span>
+                                    </label>
+
+                                    <script>
+                                        function toggleLabel() {
+                                            const inputField = document.getElementById('pswd');
+                                            const label = document.getElementById('dummyPw');
+
+                                            if (inputField.value) {
+                                                label.style.display = 'none';
+                                            } else {
+                                                label.style.display = 'block';
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                                <!-- 2023.08.18 수정 -->
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!-- 유저정보 -->
+
+                    <div class="w-full mt-10">
+                        <div class="w-full pb-2.5 border-b-[1px] border-[#cdc4ff] relative">
+                            <input type="checkbox" id="allcheck" class="absolute top-0 left-[-9999em]">
+                            <label for="allcheck" class="flex items-center gap-4 text-[16px] text-slate-900 font-semibold">휴대전화 인증 전체 동의</label>
+                        </div>
+                        <!-- 전체 -->
+
+                        <div class="w-full flex flex-col mt-[14px] px-[5px] gap-3 usrAgree">
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk01" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk01">
+                                    (필수) 본인확인서비스 이용약관
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk02" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk02">
+                                    (필수) 개인정보 수집/이용동의
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk03" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk03">
+                                    (필수) 고유식별정보처리 동의
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk04" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk04">
+                                    (필수) 통신사 이용약관
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
+                            </div>
+                            <!--  -->
+                            <div class="relative flex justify-between clear-both w-full">
+                                <input type="checkbox" name="" id="chk05" class="absolute top-0 left-[-9999em] chk00">
+                                <label for="chk05">
+                                    (알뜰폰) 개인정보 제3자 제공 동의
+                                </label>
+                                <button class="block text-[12px] text-[#7b61ff] px-2.5 py-[3px] border-[1px] border-[#BBADFF]">보기</button>
+                            </div>
+                            <!--  -->
+                        </div>
+                        <!-- 개편 : 보기버튼 보더 변경
+                                 -->
+
+                        <script>
+                            // vue 대신 스크립트로 전체동의를 해야할 경우 말해주세요. 
+                        </script>
+                    </div>
+                    <!-- 전체동의 -->
+
+                    <div class="flex flex-col w-full gap-5 mt-10">
+                        <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white">
+                            <select name="" id="" class="h-full w-[95px] text-[16px] text-slate-900 text-center">
+                                <optgroup label="통신사 선택">
+                                    <option value="" selected>SKT</option>
+                                    <option value="">KT</option>
+                                    <option value="">LGU+</option>
+                                </optgroup>
+                            </select>
+                            <input type="text" placeholder="휴대폰 번호 - 없이 입력" class="text-[16px] text-slate-900 h-full w-[calc(100%-177px)] px-1">
+                            <button class="shadow-none absolute top-[-1px] right-0 w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px]">인증요청</button>
+                            <!-- 개편 : 버튼 shadow-none 추가 -->
+                        </div>
+                        <!-- 인증요청 -->
+
+                        <div class="relative w-full h-[52px] border-[1px] border-[#d7d5dc] bg-white flex">
+                            <input type="text" class="w-[calc(100%-72px)] h-full text-[16px] text-slate-900 pl-4 pr-[100px]" placeholder="000000">
+                            <button class="shadow-none w-[72px] h-[52px] bg-[#8b5cf6] text-white font-semibold text-[14px] mt-[-1px]" onclick="MicroModal.show('dupl')">인증하기</button>
+                            <!-- 개편 : 버튼 shadow-none 추가 -->
+                            <em class="absolute top-4 time right-[96px] text-[16px] text-slate-900 leading-5 block">05:00</em>
+                        </div>
+                        <!-- 인증하기 -->
+
+                        <div class="block w-full mt-4">
+                            <span class="block w-full text-center text-[16px] text-[#ca2727] leading-5">!인증번호를 확인해 주세요.</span>
+                        </div>
+                        <!-- 실패시 -->
+
+
+                        <div class="block w-full mt-5">
+                            <span class="block w-full text-[14px] text-[#CA2727] leading-4">
+                                &middot; 인증번호 발송은 1일 5회까지 가능합니다.
+                            </span>
+                            <span class="block w-full text-[14px] text-[#CA2727] leading-4">
+                                &middot; 메시지가 도착하지 않을 경우 수신차단 여부를 확인해주세요.
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 휴대전화인증 -->
+
+
+                    <!-- 
+                                백그라운드 클릭 닫힘효과를 없앨경우 overlay 에서 close 를 삭제하면 됨
+                             -->
+                    <div class="modal micromodal-slide checking" id="age" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close><!-- 이부분에서 close부분을 삭제하면 배경닫힘효과 사라짐  -->
+                            <div class="modal__container checking" role="dialog" aria-modal="true" aria-labelledby="14세미만">
+                                <main class="modal__content">
+                                    <div id="before" class="flex flex-col w-full">
+                                        <div class="w-full text-center mt-5 text-[24px] text-slate-900 font-semibold leading-[30px]">
+                                            14세 미만은 <br>
+                                            서비스 이용이 불가합니다.
+                                        </div>
+                                        <div class="w-full mt-10">
+                                            <button class="w-full h-[48px] shadow-cs4 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">다음에 이용하기</button>
+                                        </div>
+                                    </div>
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
+                    </div>
+                    <!-- modal -->
+
+
+
+                    <div class="modal micromodal-slide checking" id="dupl" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="중복가입">
+                                <main class="modal__content">
+                                    <div id="after" class="flex flex-col w-full h-full">
+                                        <div class="w-full mt-5 text-center">
+                                            <span class="block w-full pb-4 border-b-[1px] border-[#cdc4ff] text-[18px] text-slate-900 font-semibold leading-[22px]">
+                                                같은 번호로 가입한 계정이 있습니다. <br>
+                                                가입한 이전 계정으로 로그인하세요
+                                            </span>
+                                        </div>
+                                        <!--  -->
+
+                                        <div class="w-full mt-4 text-center">
+                                            <div class="inline-block text-left">
+                                                <div class="text-[16px] leading-[20px] text-slate-900">
+                                                    이메일: <em class="text-violet-500">kkk***@naver.com</em>
+                                                </div>
+                                                <div class="text-[16px] leading-[20px] text-slate-900">
+                                                    연락처: 0107****75
+                                                </div>
+                                                <div class="text-[16px] leading-[20px] text-slate-900">
+                                                    SNS연동: 네이버
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+
+                                        <div class="w-full mt-10">
+                                            <button class="w-full h-[48px] shadow-cs4 rounded-[10px] bg-violet-500 font-bold text-white text-[16px]">로그인 화면 돌아가기</button>
+                                        </div>
+                                        <!--  -->
+                                    </div>
+                                    <!-- // -->
+                                </main>
+                                <!-- //main -->
+                            </div>
+                            <!-- //modal__container -->
+                        </div>
+                        <!-- //modal__overlay -->
+                    </div>
+                    <!-- modal -->
+                    <script>
+                        MicroModal.init();
+
+                    </script>
+
+                    <div class="w-full h-[40px]"></div>
+
+                    <footer id="footer" class="">
+
+                        <div class="fnb">
+                            <a href="#">이용약관</a>
+                            <a href="#" class="font-bold">개인정보처리방침</a>
+                        </div>
+                        <!-- 하단 메뉴 -->
+
+                        <address>
+                            (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                            고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                            <br><br>
+                            Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                        </address>
+                    </footer>
+                    <!-- //footer -->
+
+                    <script src="./js/custom.js"></script>
+                    <!-- 하단 빈공간 -->
+                </div>
+                <!-- identification -->
+            </div>
+            <!-- mobile-container -->
+        </div>
+        <!-- //mobile -->
+    </div>
+</body>
+
+</html>

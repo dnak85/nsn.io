@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/gm/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../dist/animate.css">
+    <link rel="stylesheet" href="../dist/calendar.css">
+    <link rel="stylesheet" href="../dist/micromodal.css">
+    <link rel="stylesheet" href="../dist/modal.css">
+    <link rel="stylesheet" href="../dist/offcanvas.css">
+    <link rel="stylesheet" href="../dist/timepicker.css">
+    <link rel="stylesheet" href="../dist/output_new.css">
+
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <!-- microModal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- swipejs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap_w">
+        <div id="w_wrap">
+            <div class="text">
+                <em class="vi_title animate__animated animate__bounceInDown">Make appointments fun</em>
+
+                <span class="">
+                    <em class="">노쇼노</em>
+                    안전하게 약속하세요
+                </span>
+            </div>
+            <!-- //text -->
+
+            <div class=" visual">
+                <div class="txt">
+                    모르는 타인과의 약속, <br>
+                    노쇼노 서비스로 맺어보세요. <br>
+                    약속 당일, 맡긴 약속보증금을 <br>
+                    안전하게 돌려드립니다.
+                </div>
+                <!-- // -->
+
+                <div class="vi vi01">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
+                        <circle cx="47" cy="47" r="47" fill="#FF59A9" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi02">
+                    <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="140" cy="140" r="140" fill="#8B5CF6" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi03">
+                    <img class="w-[116.31px] h-[116.31px]" src="./img/vi__calendar.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi04">
+                    <img src="./img/vi__diary.png" alt="비주얼이미지">
+                </div>
+                <!-- // -->
+                <div class="vi vi05">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="20" fill="#FFBB8A" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi06">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewBox="0 0 156 156" fill="none">
+                        <path d="M77.9475 136.493C29.541 133.452 30.6908 111.95 25.9728 99.1936C22.4551 91.8695 23.8805 49.008 28.1769 40.685C30.8463 35.4908 42.5791 25.3176 68.1557 26.1786C124.228 23.2849 136.036 58.3626 134.931 76.2633C136.782 94.7787 127.976 132.746 77.9475 136.493Z" fill="#FB2E86" fill-opacity="0.3" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi07">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="297" height="295" viewBox="0 0 297 295" fill="none">
+                        <path d="M296.338 147.292C296.338 228.531 230.171 294.389 148.549 294.389C66.9267 294.389 0.759033 228.531 0.759033 147.292C0.759033 66.0526 66.9267 0.195068 148.549 0.195068C230.171 0.195068 296.338 66.0526 296.338 147.292Z" fill="#B796FF" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+                <div class="vi vi08">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
+                        <path d="M12.7455 50.1389C13.3101 20.3086 26.5552 20.4358 34.2677 17.1926C38.674 14.8335 65.0531 14.5545 70.2838 16.9706C73.5478 18.4711 80.1159 25.4075 80.276 41.1489C83.5652 75.5301 62.3262 83.7321 51.2956 83.5355C39.9667 85.1717 16.3962 80.7832 12.7455 50.1389Z" fill="#FEC600" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <!-- // -->
+            </div>
+
+            <script>
+                // 이미지 요소들을 선택합니다.
+                const images = document.querySelectorAll('.vi');
+                // 마우스 움직임에 따른 이미지 이동 감도를 조절하는 상수입니다.
+                const sensitivity = 0.005;
+
+                // 이미지마다 랜덤한 이동 방향을 설정하는 함수
+                function setRandomDirection(image) {
+                    // 랜덤한 각도 값을 생성합니다.
+                    const angle = Math.random() * 2 * Math.PI;
+                    // 랜덤한 거리 값을 생성합니다.
+                    const distance = Math.random() * 50 + 10; // 최소 10, 최대 60의 거리로 설정
+
+                    // 랜덤한 각도와 거리를 이용하여 이미지의 초기 위치를 설정합니다.
+                    // const initialX = Math.cos(angle) * distance;
+                    // const initialY = Math.sin(angle) * distance;
+
+                    // 이미지에 초기 위치를 적용합니다.
+                    // image.style.transform = `translate(${initialX}px, ${initialY}px)`;
+                }
+
+                // 초기 이미지 위치 설정
+                images.forEach((image) => {
+                    setRandomDirection(image);
+                });
+
+                // 마우스 움직임 이벤트 리스너를 추가합니다.
+                document.addEventListener('mousemove', (event) => {
+                    // 마우스의 X, Y 좌표를 가져옵니다.
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
+
+                    // 각 이미지마다 마우스와의 상대적인 거리를 계산하여 이동량을 조절합니다.
+                    images.forEach((image, index) => {
+                        const imageRect = image.getBoundingClientRect();
+                        const imageCenterX = imageRect.left + imageRect.width / 2;
+                        const imageCenterY = imageRect.top + imageRect.height / 2;
+
+                        const deltaX = mouseX - imageCenterX;
+                        const deltaY = mouseY - imageCenterY;
+
+                        const translateY = deltaY * (index + 1) * sensitivity;
+                        const translateX = deltaX * (index + 1) * sensitivity;
+
+                        image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                    });
+                });
+
+            </script>
+        </div>
+        <!-- //web -->
+
+
+        <div id="m_wrap">
+
+            <header id="m_header" class="sub">
+                <section class="top">
+                    <div class="backPage">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z" fill="#0F172A" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="pageTitle">
+                        <strong>약속만들기</strong>
+                    </div>
+                </section>
+                <!-- //상단 -->
+            </header>
+            <!-- 
+                mobile-header : 공지사항/ 계정정보 / 계좌정보
+            -->
+
+
+
+            <div id="m_container">
+                <section id="create_prms">
+                    <div class="c_progress">
+                        <div class="pgrs-list">
+                            <button class="cmp" disabled="disabled">
+                                <span>약속명</span>
+                            </button>
+                            <button class="active" disabled="disabled">
+                                <span>반환유형</span>
+                            </button>
+                            <button class="" disabled="disabled">
+                                <span>약속일시</span>
+                            </button>
+                            <button class="" disabled="disabled">
+                                <span>약속장소</span>
+                            </button>
+                            <button class="" disabled="disabled">
+                                <span>인원/보증금</span>
+                            </button>
+                            <button class="" disabled="disabled">
+                                <span>메모</span>
+                            </button>
+                        </div>
+                        <!-- 
+                            진행중인 메뉴 active
+                            완료된 메뉴 cmp 
+                            클래스 추가
+                         -->
+                        <div class="bar"></div>
+                        <script>
+                            // Get all the buttons within the parent container
+                            const buttons = document.querySelectorAll('.pgrs-list button');
+
+                            for (let i = 0; i < buttons.length; i++) {
+                                if (buttons[i].classList.contains('active')) {
+                                    activeButtonIndex = i;
+                                    break;
+                                } else {
+                                    activeButtonIndex = 6
+                                }
+                            }
+                            document.querySelector('.c_progress .bar').classList.add("per" + activeButtonIndex);
+                        </script>
+                    </div>
+                    <!-- //진행상태 -->
+
+                    <div class="create_usr_input">
+                        <div class="progress_input cmp">
+                            <div class="title">
+                                <div class="bullet">01</div>
+                                <div class="obj">약속명</div>
+                                <div class="obj-txt">약속명이 길어지면 말줄임표가 나옵니다</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- //title -->
+
+                            <div class="inputbox">
+                                <div class="prms_obj">
+                                    <strong>약속명을 입력해주세요.</strong>
+                                    <input type="text" placeholder="백두산 놀러가기">
+                                    <button class="submitBtn">입 력</button>
+                                </div>
+                            </div>
+                            <!-- //inputbox -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="progress_input active">
+                            <div class="title">
+                                <div class="bullet">02</div>
+                                <div class="obj">반환유형</div>
+                                <div class="obj-txt">모임 보증금형</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- //title -->
+
+                            <div class="inputbox">
+                                <div class="ch_return">
+                                    <input type="radio" name="chkreturn" id="chkReturn01" class="hidden">
+                                    <label for="chkReturn01">
+                                        <span>1:1 반환형</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 22C13.3135 22.0017 14.6143 21.7438 15.8278 21.2412C17.0413 20.7385 18.1435 20.001 19.071 19.071C20.001 18.1435 20.7385 17.0413 21.2412 15.8278C21.7438 14.6143 22.0017 13.3135 22 12C22.0017 10.6865 21.7438 9.3857 21.2411 8.17222C20.7385 6.95875 20.001 5.85656 19.071 4.92901C18.1435 3.99902 17.0413 3.26151 15.8278 2.75885C14.6143 2.25619 13.3135 1.99831 12 2.00001C10.6865 1.99833 9.3857 2.25623 8.17222 2.75889C6.95875 3.26154 5.85656 3.99904 4.92901 4.92901C3.99904 5.85656 3.26154 6.95875 2.75889 8.17222C2.25623 9.3857 1.99833 10.6865 2.00001 12C1.99831 13.3135 2.25619 14.6143 2.75885 15.8278C3.26151 17.0413 3.99902 18.1435 4.92901 19.071C5.85656 20.001 6.95875 20.7385 8.17222 21.2411C9.3857 21.7438 10.6865 22.0017 12 22Z" stroke="#9E8BFD" stroke-width="2" stroke-linejoin="round" />
+                                            <path d="M8 12L11 15L17 9" stroke="#9E8BFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </label>
+                                    <!-- // -->
+
+                                    <input type="radio" name="chkreturn" id="chkReturn02" class="hidden peer/rt02">
+                                    <label for="chkReturn02">
+                                        <span>1:1 선입금형</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 22C13.3135 22.0017 14.6143 21.7438 15.8278 21.2412C17.0413 20.7385 18.1435 20.001 19.071 19.071C20.001 18.1435 20.7385 17.0413 21.2412 15.8278C21.7438 14.6143 22.0017 13.3135 22 12C22.0017 10.6865 21.7438 9.3857 21.2411 8.17222C20.7385 6.95875 20.001 5.85656 19.071 4.92901C18.1435 3.99902 17.0413 3.26151 15.8278 2.75885C14.6143 2.25619 13.3135 1.99831 12 2.00001C10.6865 1.99833 9.3857 2.25623 8.17222 2.75889C6.95875 3.26154 5.85656 3.99904 4.92901 4.92901C3.99904 5.85656 3.26154 6.95875 2.75889 8.17222C2.25623 9.3857 1.99833 10.6865 2.00001 12C1.99831 13.3135 2.25619 14.6143 2.75885 15.8278C3.26151 17.0413 3.99902 18.1435 4.92901 19.071C5.85656 20.001 6.95875 20.7385 8.17222 21.2411C9.3857 21.7438 10.6865 22.0017 12 22Z" stroke="#9E8BFD" stroke-width="2" stroke-linejoin="round" />
+                                            <path d="M8 12L11 15L17 9" stroke="#9E8BFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </label>
+                                    <div id="ch_usr02" class="ch_usr">
+                                        <input type="radio" name="usr" id="chkusr01" class="hidden">
+                                        <label for="chkusr01">호스트 선입금</label>
+                                        <input type="radio" name="usr" id="chkusr02" class="hidden">
+                                        <label for="chkusr02">게스트 선입금</label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <input type="radio" name="chkreturn" id="chkReturn03" class="hidden">
+                                    <label for="chkReturn03">
+                                        <span>모임 보증금형</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 22C13.3135 22.0017 14.6143 21.7438 15.8278 21.2412C17.0413 20.7385 18.1435 20.001 19.071 19.071C20.001 18.1435 20.7385 17.0413 21.2412 15.8278C21.7438 14.6143 22.0017 13.3135 22 12C22.0017 10.6865 21.7438 9.3857 21.2411 8.17222C20.7385 6.95875 20.001 5.85656 19.071 4.92901C18.1435 3.99902 17.0413 3.26151 15.8278 2.75885C14.6143 2.25619 13.3135 1.99831 12 2.00001C10.6865 1.99833 9.3857 2.25623 8.17222 2.75889C6.95875 3.26154 5.85656 3.99904 4.92901 4.92901C3.99904 5.85656 3.26154 6.95875 2.75889 8.17222C2.25623 9.3857 1.99833 10.6865 2.00001 12C1.99831 13.3135 2.25619 14.6143 2.75885 15.8278C3.26151 17.0413 3.99902 18.1435 4.92901 19.071C5.85656 20.001 6.95875 20.7385 8.17222 21.2411C9.3857 21.7438 10.6865 22.0017 12 22Z" stroke="#9E8BFD" stroke-width="2" stroke-linejoin="round" />
+                                            <path d="M8 12L11 15L17 9" stroke="#9E8BFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </label>
+                                    <!-- // -->
+
+                                    <input type="radio" name="chkreturn" id="chkReturn04" class="hidden">
+                                    <label for="chkReturn04">
+                                        <span>모임 집금형</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 22C13.3135 22.0017 14.6143 21.7438 15.8278 21.2412C17.0413 20.7385 18.1435 20.001 19.071 19.071C20.001 18.1435 20.7385 17.0413 21.2412 15.8278C21.7438 14.6143 22.0017 13.3135 22 12C22.0017 10.6865 21.7438 9.3857 21.2411 8.17222C20.7385 6.95875 20.001 5.85656 19.071 4.92901C18.1435 3.99902 17.0413 3.26151 15.8278 2.75885C14.6143 2.25619 13.3135 1.99831 12 2.00001C10.6865 1.99833 9.3857 2.25623 8.17222 2.75889C6.95875 3.26154 5.85656 3.99904 4.92901 4.92901C3.99904 5.85656 3.26154 6.95875 2.75889 8.17222C2.25623 9.3857 1.99833 10.6865 2.00001 12C1.99831 13.3135 2.25619 14.6143 2.75885 15.8278C3.26151 17.0413 3.99902 18.1435 4.92901 19.071C5.85656 20.001 6.95875 20.7385 8.17222 21.2411C9.3857 21.7438 10.6865 22.0017 12 22Z" stroke="#9E8BFD" stroke-width="2" stroke-linejoin="round" />
+                                            <path d="M8 12L11 15L17 9" stroke="#9E8BFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </label>
+                                    <!-- // -->
+
+                                    <button class="submitBtn">선택완료</button>
+                                </div>
+                                <!-- //반환유형 선택 -->
+
+                                <div class="returnGuide">
+                                    <div>
+                                        <strong>1:1 반환형 :</strong>
+                                        <span>
+                                            모든 국민은 능력에 따라 균등하게 교육을 받을
+                                            권리를 가진다. 혼인과 가족생활은 개인의 존엄과 양성의
+                                            평등을 기초로 성립되고 유지되어야 하며, 국가는
+                                        </span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div>
+                                        <strong>1:1 선입금형 :</strong>
+                                        <span>
+                                            모든 국민은 능력에 따라 균등하게 교육을 받을
+                                            권리를 가진다. 혼인과 가족생활은 개인의 존엄과 양성의
+                                            평등을 기초로 성립되고 유지되어야 하며, 국가는
+                                        </span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div>
+                                        <strong>모임 보증금형 :</strong>
+                                        <span>
+                                            모든 국민은 능력에 따라 균등하게 교육을 받을
+                                            권리를 가진다. 혼인과 가족생활은 개인의 존엄과 양성의
+                                            평등을 기초로 성립되고 유지되어야 하며, 국가는
+                                        </span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div>
+                                        <strong>모임 집금형 :</strong>
+                                        <span>
+                                            모든 국민은 능력에 따라 균등하게 교육을 받을
+                                            권리를 가진다. 혼인과 가족생활은 개인의 존엄과 양성의
+                                            평등을 기초로 성립되고 유지되어야 하며, 국가는
+                                        </span>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- //반환유형 안내문 -->
+                            </div>
+                            <!-- //inputbox -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="progress_input ">
+                            <div class="title">
+                                <div class="bullet">03</div>
+                                <div class="obj">약속일시</div>
+                                <div class="obj-date">2023.10.31. PM 9:00</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- //title -->
+                            <div class="inputbox">
+                                <div class="prms-date">
+                                    <div class="date-value">
+                                        <span class="date">2023.10.31</span>
+                                        <span class="time">PM 09:00</span>
+                                    </div>
+                                    <!-- //date-value -->
+
+                                    <div class="input-date">
+
+                                        <div id="customCalendar" class=""></div>
+                                        <!-- //calendar -->
+
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", () => {
+                                                const classes = {
+                                                    header: "vanilla-calendar-header",
+                                                    headerContent: "vanilla-calendar-header__content",
+                                                    wrapper: "vanilla-calendar-wrapper",
+                                                    content: "vanilla-calendar-content",
+                                                };
+
+                                                const calendar = new VanillaCalendar("#customCalendar", {
+                                                    settings: {
+                                                        lang: "define",
+                                                        iso8601: false,
+                                                        selected: {
+                                                            dates: ["2023-10-11", "2023-10-20", "2023-10-31"],
+                                                        },
+                                                    },
+                                                    locale: {
+                                                        months: [
+                                                            "01",
+                                                            "02",
+                                                            "03",
+                                                            "04",
+                                                            "05",
+                                                            "06",
+                                                            "07",
+                                                            "08",
+                                                            "09",
+                                                            "10",
+                                                            "11",
+                                                            "12",
+                                                        ],
+                                                        weekday: ["일", "월", "화", "수", "목", "금", "토"],
+                                                    },
+                                                    DOMTemplates: {
+                                                        default: `
+                                                                                      <div class="${classes.header}">
+                                                                                        <div class="${classes.headerContent}">
+                                                                                          <#Year/>
+                                                                                          <#Month />
+                                                                                        </div>
+                                                                                        <#ArrowPrev />
+                                                                                        <#ArrowNext />
+                                                                                      </div>
+                                                                                      <div class="${classes.wrapper}">
+                                                                                        <div class="${classes.content}">
+                                                                                          <#Week />
+                                                                                          <#Days />
+                                                                                        </div>
+                                                                                      </div>
+                                                                                      `,
+                                                        month: `
+                                                                                      <div class="${classes.header}">
+                                                                                        <div class="${classes.headerContent}">
+                                                                                          <#Year/>
+                                                                                          <#Month />
+                                                                                        </div>
+                                                                                        <#ArrowPrev />
+                                                                                        <#ArrowNext />
+                                                                                      </div>
+                                                                                      <div class="${classes.wrapper}">
+                                                                                        <div class="${classes.content}">
+                                                                                          <#Months />
+                                                                                        </div>
+                                                                                      </div>
+                                                                                      `,
+                                                        year: `
+                                                                                      <div class="${classes.header}">
+                                                                                        <div class="${classes.headerContent}">
+                                                                                          <#Year/>
+                                                                                          <#Month />
+                                                                                        </div>
+                                                                                        <#ArrowPrev />
+                                                                                        <#ArrowNext />
+                                                                                      </div>
+                                                                                      <div class="${classes.wrapper}">
+                                                                                        <div class="${classes.content}">
+                                                                                          <#Years />
+                                                                                        </div>
+                                                                                      </div>
+                                                                                      `,
+                                                    },
+                                                });
+                                                calendar.init();
+                                            });
+                                        </script>
+
+                                        <div class="time">
+                                            <div class="time__input">
+                                                <input id="tpker" type="text" class="hidden timepicker" />
+                                            </div>
+                                        </div>
+                                        <!-- //time -->
+                                        <script src="./js/timepicker.js"></script>
+                                        <!-- //input-date -->
+
+                                    </div>
+                                    <!-- //input-date -->
+
+
+                                    <button class="mt-4 submitBtn">선택완료</button>
+                                </div>
+                                <!-- //prms-date -->
+
+                            </div>
+                            <!-- // input박스 -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="progress_input ">
+                            <div class="title">
+                                <div class="bullet">04</div>
+                                <div class="obj">약속장소</div>
+                                <div class="obj-txt">인천공항 제2터미널</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="inputbox">
+                                <div class="prms_obj">
+                                    <strong><em>(선택)</em> 약속장소를 입력해주세요</strong>
+                                    <input type="text" placeholder="인천공항 제2터미널">
+                                    <button class="submitBtn">입 력</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="progress_input ">
+                            <div class="title">
+                                <div class="bullet">05</div>
+                                <div class="obj">인원/보증금</div>
+                                <div class="obj-price">2명/ 200,000원</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="inputbox">
+                                <div class="prms-price">
+                                    <div class="top-txt">
+                                        <span>약속보증금을 입력해주세요.</span>
+                                        <em>이름을 클릭해 약속에 쓸 닉네임을 설정할 수 있어요.</em>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="usr-price">
+                                        <!-- 게스트삭제 버튼은 입력폼 3번쨰 부터 활성화됨 -->
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="나">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="0" disabled>
+                                            </div>
+                                            <!-- //가격 -->
+                                            <div class="hidden del">
+                                                <button>-</button>
+                                            </div>
+                                            <!-- //삭제 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="hidden del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+                                        <div class="usr">
+                                            <div class="name">
+                                                <input type="text" value="유저명">
+                                            </div>
+                                            <!-- //이름 -->
+                                            <div class="input-price">
+                                                <input type="text" value="100,000">
+
+                                                <div class="del">
+                                                    <button>-</button>
+                                                </div>
+                                                <!-- //삭제 -->
+                                            </div>
+                                            <!-- //가격 -->
+                                        </div>
+                                        <!-- //유저 -->
+
+
+                                        <div class="addUsr">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="sum-price">
+                                        <dl>
+                                            <dt>총 약속인원</dt>
+                                            <dd>
+                                                <em>2</em>명
+                                            </dd>
+
+                                            <dt>총 약속보증금</dt>
+                                            <dd>
+                                                <em>200,000</em>원
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <!-- 요약 -->
+
+                                    <div class="price-agree">
+                                        <input type="checkbox" name="" id="prmsallcheckagree" class="hidden">
+                                        <label for="prmsallcheckagree">
+                                            <span class="bullet">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 13L9 17L19 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="txt">
+                                                인원이 모두 모이지 않아도 약속진행
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="price-btn">
+                                        <button class="submitBtn">입력완료</button>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- //prms-price -->
+                            </div>
+                            <!-- //inputbox -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="progress_input ">
+                            <div class="title">
+                                <div class="bullet">06</div>
+                                <div class="obj">메모</div>
+                                <div class="bg-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                        <path d="M6.8397 8.4099L10.9905 12.4481L15.173 8.44042" stroke="#7B61FF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="inputbox">
+                                <div class="prms-msg">
+                                    <div class="msg-txt">
+                                        <span><em>(선택)</em> 약속에 참여하는 모든 멤버들에게 공유할 내용을 적어주세요.</span>
+                                    </div>
+                                    <div class="msg-input">
+                                        <textarea name="" id="" cols="30" rows="10">클릭 시 결제페이지 or 공유페이지 이동클릭 시 결제페이지 or 공유페이지 이동클릭 시 결제페이지 or 공유페이지 이동 클릭 시 결제페이지 or 공유페이지 이동</textarea>
+                                        <button class="submitBtn">입 력</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // 진행 입력 -->
+
+                    <div class="create_agree">
+                        <input type="checkbox" name="" id="prmschkagree" class="hidden">
+                        <label for="prmschkagree" class="customChk">
+                            <span class="bullet">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 13L9 17L19 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="txt">
+                                모든 약속내용을 확인했으며 동의합니다.
+                            </span>
+                        </label>
+                    </div>
+                    <!-- //동의사항 -->
+
+                    <div class="px-10 pt-2.5 page-btn">
+                        <button class="shadow-cs4">약속만들기</button>
+                    </div>
+                    <!-- //페이지 버튼 -->
+
+
+                    <div class="h-10"></div>
+                </section>
+            </div>
+            <!-- mobile-container -->
+
+
+
+            <footer id="m_footer">
+                <div class="f_mnu">
+                    <button class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M27.0184 11.9997C27.0184 11.6019 26.8604 11.2203 26.5791 10.939C26.2978 10.6577 25.9163 10.4997 25.5184 10.4997C25.1206 10.4997 24.7391 10.6577 24.4578 10.939C24.1765 11.2203 24.0184 11.6019 24.0184 11.9997H27.0184ZM6.01843 11.9997C6.01843 11.6019 5.8604 11.2203 5.57909 10.939C5.29779 10.6577 4.91626 10.4997 4.51843 10.4997C4.12061 10.4997 3.73908 10.6577 3.45777 10.939C3.17647 11.2203 3.01843 11.6019 3.01843 11.9997H6.01843ZM27.4579 16.0602C27.7408 16.3334 28.1197 16.4846 28.513 16.4812C28.9063 16.4778 29.2825 16.32 29.5607 16.0419C29.8388 15.7638 29.9965 15.3876 29.9999 14.9943C30.0034 14.601 29.8522 14.2221 29.5789 13.9392L27.4579 16.0602ZM15.0184 1.49968L16.0789 0.43918C15.7976 0.157973 15.4162 0 15.0184 0C14.6207 0 14.2392 0.157973 13.9579 0.43918L15.0184 1.49968ZM0.457932 13.9392C0.314667 14.0775 0.200394 14.2431 0.12178 14.4261C0.0431668 14.6091 0.00178736 14.8059 5.66351e-05 15.0051C-0.00167409 15.2042 0.0362785 15.4018 0.1117 15.5861C0.187121 15.7705 0.298501 15.9379 0.43934 16.0788C0.580179 16.2196 0.747657 16.331 0.932001 16.4064C1.11635 16.4818 1.31387 16.5198 1.51303 16.5181C1.7122 16.5163 1.90903 16.4749 2.09204 16.3963C2.27505 16.3177 2.44056 16.2034 2.57893 16.0602L0.457932 13.9392ZM7.51843 29.9997H22.5184V26.9997H7.51843V29.9997ZM27.0184 25.4997V11.9997H24.0184V25.4997H27.0184ZM6.01843 25.4997V11.9997H3.01843V25.4997H6.01843ZM29.5789 13.9392L16.0789 0.43918L13.9579 2.56018L27.4579 16.0602L29.5789 13.9392ZM13.9579 0.43918L0.457932 13.9392L2.57893 16.0602L16.0789 2.56018L13.9579 0.43918ZM22.5184 29.9997C23.7119 29.9997 24.8565 29.5256 25.7004 28.6817C26.5443 27.8377 27.0184 26.6932 27.0184 25.4997H24.0184C24.0184 25.8975 23.8604 26.279 23.5791 26.5603C23.2978 26.8416 22.9163 26.9997 22.5184 26.9997V29.9997ZM7.51843 26.9997C7.12061 26.9997 6.73908 26.8416 6.45777 26.5603C6.17647 26.279 6.01843 25.8975 6.01843 25.4997H3.01843C3.01843 26.6932 3.49254 27.8377 4.33645 28.6817C5.18037 29.5256 6.32496 29.9997 7.51843 29.9997V26.9997Z" fill="#847EA0" />
+                        </svg>
+                        <span>홈화면</span>
+                    </button>
+                    <!-- // 홈화면 -->
+
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M25.8245 9.54399H27.2727C27.996 9.54399 28.6897 9.83132 29.2012 10.3428C29.7127 10.8542 30 11.5479 30 12.2713V17.7258C30 18.4491 29.7127 19.1428 29.2012 19.6543C28.6897 20.1657 27.996 20.4531 27.2727 20.4531H25.8245C25.4921 23.0894 24.209 25.5138 22.216 27.2713C20.223 29.0287 17.6572 29.9985 15 29.9985V27.2713C17.17 27.2713 19.251 26.4093 20.7854 24.8749C22.3198 23.3405 23.1818 21.2594 23.1818 19.0894V10.9076C23.1818 8.73767 22.3198 6.65659 20.7854 5.1222C19.251 3.58782 17.17 2.72581 15 2.72581C12.83 2.72581 10.749 3.58782 9.21458 5.1222C7.68019 6.65659 6.81818 8.73767 6.81818 10.9076V20.4531H2.72727C2.00396 20.4531 1.31026 20.1657 0.7988 19.6543C0.287337 19.1428 0 18.4491 0 17.7258V12.2713C0 11.5479 0.287337 10.8542 0.7988 10.3428C1.31026 9.83132 2.00396 9.54399 2.72727 9.54399H4.17545C4.50822 6.90794 5.79147 4.4839 7.78442 2.72673C9.77736 0.969549 12.343 0 15 0C17.657 0 20.2226 0.969549 22.2156 2.72673C24.2085 4.4839 25.4918 6.90794 25.8245 9.54399ZM2.72727 12.2713V17.7258H4.09091V12.2713H2.72727ZM25.9091 12.2713V17.7258H27.2727V12.2713H25.9091ZM9.21818 20.1599L10.6636 17.8472C11.9633 18.6613 13.4664 19.0919 15 19.0894C16.5336 19.0919 18.0367 18.6613 19.3364 17.8472L20.7818 20.1599C19.049 21.2456 17.0448 21.8199 15 21.8167C12.9552 21.8199 10.951 21.2456 9.21818 20.1599Z" fill="#847EA0" />
+                        </svg>
+                        <span>질문답변</span>
+                    </button>
+                    <!-- //질문답변 -->
+
+                    <button class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M23.0502 0L30 5.71294L28.0691 7.99366L21.1148 2.28369L23.0502 0ZM6.94826 0L8.88218 2.2822L1.93091 7.99366L0 5.71146L6.94826 0ZM14.9992 3.25393C11.3983 3.25412 7.94488 4.66325 5.39875 7.17132C2.85262 9.67939 1.42234 13.081 1.42254 16.6277C1.42274 20.1745 2.85341 23.5759 5.39982 26.0837C7.94623 28.5914 11.3998 30.0002 15.0008 30C16.7838 29.9999 18.5493 29.6539 20.1966 28.9818C21.8438 28.3096 23.3405 27.3245 24.6012 26.0826C25.862 24.8407 26.862 23.3664 27.5442 21.7439C28.2265 20.1214 28.5776 18.3824 28.5775 16.6262C28.5774 14.87 28.2261 13.1311 27.5437 11.5086C26.8612 9.88618 25.861 8.412 24.6002 7.17027C23.3393 5.92854 21.8425 4.94357 20.1952 4.2716C18.5478 3.59963 16.7823 3.25383 14.9992 3.25393ZM14.9992 27.0269C9.17635 27.0269 4.43958 22.3614 4.43958 16.6262C4.43958 10.891 9.17635 6.22555 14.9992 6.22555C20.8221 6.22555 25.5589 10.891 25.5589 16.6262C25.5589 22.3614 20.8221 27.0269 14.9992 27.0269ZM16.5078 10.683H13.4907V15.1404H8.96515V18.112H13.4907V22.5695H16.5078V18.112H21.0333V15.1404H16.5078V10.683Z" fill="#847EA0" />
+                        </svg>
+                        <span>약속만들기</span>
+                    </button>
+                    <!-- // 약속만들기 -->
+
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M26.6667 3H25V0H21.6667V3H8.33333V0H5V3H3.33333C2.44928 3 1.60143 3.31607 0.976311 3.87868C0.351189 4.44129 0 5.20435 0 6V27C0 27.7957 0.351189 28.5587 0.976311 29.1213C1.60143 29.6839 2.44928 30 3.33333 30H26.6667C28.5167 30 30 28.665 30 27V6C30 4.335 28.5167 3 26.6667 3ZM26.6667 27H3.33333V12H26.6667V27ZM26.6667 9H3.33333V6H26.6667M6.66667 15H15V22.5H6.66667" fill="#847EA0" />
+                        </svg>
+                        <span>내 약속</span>
+                    </button>
+                    <!-- // 내약속 -->
+
+                    <button class="active">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M27.1875 15C27.1875 11.7677 25.9035 8.66774 23.6179 6.38214C21.3323 4.09654 18.2323 2.8125 15 2.8125C11.7677 2.8125 8.66774 4.09654 6.38214 6.38214C4.09654 8.66774 2.8125 11.7677 2.8125 15C2.8125 18.2323 4.09654 21.3323 6.38214 23.6179C8.66774 25.9035 11.7677 27.1875 15 27.1875C18.2323 27.1875 21.3323 25.9035 23.6179 23.6179C25.9035 21.3323 27.1875 18.2323 27.1875 15ZM0 15C0 11.0218 1.58035 7.20644 4.3934 4.3934C7.20644 1.58035 11.0218 0 15 0C18.9782 0 22.7936 1.58035 25.6066 4.3934C28.4196 7.20644 30 11.0218 30 15C30 18.9782 28.4196 22.7936 25.6066 25.6066C22.7936 28.4196 18.9782 30 15 30C11.0218 30 7.20644 28.4196 4.3934 25.6066C1.58035 22.7936 0 18.9782 0 15ZM17.8535 16.5059C18.1055 16.8047 18.2812 17.1738 18.2812 17.5781C18.2812 17.9824 18.0996 18.3516 17.8535 18.6504C17.6016 18.9551 17.2617 19.2188 16.875 19.4355C16.7168 19.5234 16.541 19.6113 16.3652 19.6875C16.5469 19.7637 16.7168 19.8457 16.875 19.9395C17.2617 20.1562 17.6074 20.4199 17.8535 20.7246C18.1055 21.0234 18.2812 21.3926 18.2812 21.7969C18.2812 22.2012 18.0996 22.5703 17.8535 22.8691C17.6016 23.1738 17.2617 23.4375 16.875 23.6543C16.0957 24.0879 15.082 24.375 14.0625 24.375C13.8516 24.375 13.6641 24.2285 13.6113 24.0234C13.5586 23.8184 13.6465 23.6016 13.834 23.4961L13.8457 23.4902C13.8574 23.4844 13.875 23.4727 13.8984 23.4609C13.9453 23.4316 14.0156 23.3906 14.0977 23.3379C14.2617 23.2266 14.4785 23.0742 14.6953 22.8926C14.9121 22.7109 15.1172 22.5059 15.2578 22.3008C15.4043 22.0957 15.4629 21.9258 15.4629 21.7969C15.4629 21.668 15.4043 21.5039 15.2578 21.293C15.1113 21.0879 14.9121 20.8887 14.6953 20.7012C14.4785 20.5195 14.2617 20.3672 14.0977 20.2559C14.0156 20.2031 13.9453 20.1621 13.8984 20.1328L13.8516 20.1035L13.8457 20.0977L13.834 20.0918C13.6875 20.0098 13.5938 19.8516 13.5938 19.6816C13.5938 19.5117 13.6875 19.3535 13.834 19.2715L13.8457 19.2656C13.8574 19.2598 13.875 19.248 13.8984 19.2363C13.9453 19.207 14.0156 19.166 14.0977 19.1133C14.2617 19.002 14.4785 18.8496 14.6953 18.668C14.9121 18.4863 15.1172 18.2812 15.2578 18.0762C15.4043 17.8711 15.4629 17.7012 15.4629 17.5723C15.4629 17.4434 15.4043 17.2793 15.2578 17.0684C15.1113 16.8633 14.9121 16.6641 14.6953 16.4766C14.4785 16.2949 14.2617 16.1426 14.0977 16.0312C14.0156 15.9785 13.9453 15.9375 13.8984 15.9082C13.875 15.8965 13.8574 15.8848 13.8457 15.8789L13.834 15.873C13.6465 15.7676 13.5586 15.5508 13.6113 15.3457C13.6641 15.1406 13.8516 14.9941 14.0625 14.9941C15.082 14.9941 16.0957 15.2813 16.8691 15.7148C17.2559 15.9316 17.6016 16.1953 17.8477 16.5L17.8535 16.5059ZM8.46094 12.1875C8.46094 11.6902 8.65848 11.2133 9.01011 10.8617C9.36174 10.51 9.83866 10.3125 10.3359 10.3125C10.8332 10.3125 11.3101 10.51 11.6618 10.8617C12.0134 11.2133 12.2109 11.6902 12.2109 12.1875C12.2109 12.6848 12.0134 13.1617 11.6618 13.5133C11.3101 13.865 10.8332 14.0625 10.3359 14.0625C9.83866 14.0625 9.36174 13.865 9.01011 13.5133C8.65848 13.1617 8.46094 12.6848 8.46094 12.1875ZM19.7109 10.3125C20.2082 10.3125 20.6851 10.51 21.0368 10.8617C21.3884 11.2133 21.5859 11.6902 21.5859 12.1875C21.5859 12.6848 21.3884 13.1617 21.0368 13.5133C20.6851 13.865 20.2082 14.0625 19.7109 14.0625C19.2137 14.0625 18.7367 13.865 18.3851 13.5133C18.0335 13.1617 17.8359 12.6848 17.8359 12.1875C17.8359 11.6902 18.0335 11.2133 18.3851 10.8617C18.7367 10.51 19.2137 10.3125 19.7109 10.3125Z" fill="#847EA0" />
+                        </svg> -->
+                        <div class="usrIco">
+                            <img src="./img/icon/ico01.png" alt="유저아이콘" class="w-full">
+                        </div>
+                        <span>내 정보</span>
+                    </button>
+                    <!-- // 내정보 -->
+                </div>
+            </footer>
+            <!-- mobile-footer -->
+        </div>
+        <!-- //mobile -->
+    </div>
+</body>
+
+</html>
