@@ -474,13 +474,14 @@
                                             });
                                         </script>
 
-                                        <div class="time">
-                                            <div class="time__input">
-                                                <input id="tpker" type="text" class="hidden timepicker" />
-                                            </div>
+                                        <div id="time">
+                                            <input type="text" class="timePick" value="12:32:AM">
                                         </div>
                                         <!-- //time -->
-                                        <script src="./js/timepicker.js"></script>
+                                        <script src="./js/time-pick.js"></script>
+                                        <script>
+                                            var timepicker = new TimePick('.timePick');
+                                        </script>
                                         <!-- //input-date -->
 
                                     </div>

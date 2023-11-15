@@ -483,13 +483,18 @@
                                             });
                                         </script>
 
-                                        <div class="time">
-                                            <div class="time__input">
-                                                <input id="tpker" type="text" class="hidden timepicker" />
-                                            </div>
+                                        <div id="time">
+                                            <input type="text" class="timePick" value="08:06:04">
                                         </div>
                                         <!-- //time -->
-                                        <script src="./js/timepicker.js"></script>
+                                        <div id="time">
+                                            <input type="text" class="timePick" value="12:32:AM">
+                                        </div>
+                                        <!-- //time -->
+                                        <script src="./js/time-pick.js"></script>
+                                        <script>
+                                            var timepicker = new TimePick('.timePick');
+                                        </script>
                                         <!-- //input-date -->
 
                                     </div>
@@ -499,7 +504,7 @@
                                     <button class="mt-4 submitBtn">선택완료</button>
                                 </div>
                                 <!-- //prms-date -->
- 
+
                             </div>
                             <!-- // input박스 -->
                         </div>

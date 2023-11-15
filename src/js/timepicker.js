@@ -1,9 +1,40 @@
+/*
+ *  minTime 및 maxTime을 설정할 수 있는 Vanilla Javascript 시간 선택기
+ *
+ *        사용 가능한 메서드 목록을 보려면 아래 코드를 확인하세요
+ *
+ *  개발자: Lance Jernigan
+ *  버전: 1.0.4
+ *
+ */
+
+/*
+ *  시간 선택기에 전달할 인수 설정
+ *
+ *  @args - format (부울) - 입력 값의 형식을 지정할 것인지 여부 또는 24시간 형식으로 남길 것인지 (boolean)
+ *          minTime (문자열) - 시간 선택기가 도달해야 하는 최소 시간 (Javascript의 Date()가 수용하는 유효한 시간 문자열)
+ *          maxTime (문자열) - 시간 선택기가 도달해야 하는 최대 시간 (Javascript의 Date()가 수용하는 유효한 시간 문자열)
+ *          meridiem (부울) - 시간 선택기가 오전/오후를 표시할지 여부 (format이 true이면 기본값은 true이고 format이 false이면 기본값은 false)
+ *          arrowColor (문자열) - 화살표에 사용할 유효한 색상 (Hex, RGB, RGBA 등)
+ *
+ */
+
 var args = {
   // format: true,
   // minTime: '2:00 am',
   // maxTime: '1:00 pm',
-  // meridiem: false,
+  // meridiem: false
 };
+
+/*
+ *  입력 요소에 새로운 시간 선택기 생성 및 args를 전달합니다
+ */
+
+var tpicker = new timepicker(document.querySelector("input.timepicker"), args);
+
+/*
+ *  시간 선택기 기능 시작
+ */
 
 function timepicker(element, args) {
   this.initialized = false;
@@ -104,8 +135,10 @@ function timepicker(element, args) {
         down.className = "timepicker__button timepicker__button__down";
 
         if (this.settings.arrowColor) {
-          up.childNodes[0].style.borderBottomColor = this.settings.arrowColor;
-          down.childNodes[0].style.borderTopColor = this.settings.arrowColor;
+          up.childNodes[0].style["border-bottom-color"] =
+            this.settings.arrowColor;
+          down.childNodes[0].style["border-top-color"] =
+            this.settings.arrowColor;
         }
 
         this.elements[elements[e]].appendChild(up);
@@ -138,7 +171,7 @@ function timepicker(element, args) {
       var element = this.elements[key];
       var func = "get" + key.charAt(0).toUpperCase() + key.slice(1);
 
-      element.querySelector(".display").textContent = this[func]();
+      element.querySelector(".display").innerText = this[func]();
 
       if (
         Object.keys(this.elements)[e] == "meridiem" &&
@@ -305,6 +338,19 @@ function timepicker(element, args) {
   };
 
   this.toggleActive = function (e) {
+    // 이전 코드
+    // if (e.target == this.element) {
+    //     if (!this.initialized) {
+    //         this.initialized = true;
+    //         this.updateInput();
+    //     }
+    //     this.updateBounds(this.timepicker, e.target);
+    //     this.active = true;
+    // } else if (e.target.className.indexOf('timepicker__') == -1 && e.target.parentElement.className.indexOf('timepicker__') == -1) {
+    //     this.active = false;
+    // }
+
+    // 변경된 코드: 항상 Timepicker를 활성화 상태로 설정
     if (!this.initialized) {
       this.initialized = true;
       this.updateInput();
@@ -322,7 +368,7 @@ function timepicker(element, args) {
     var bounds = this.element.getBoundingClientRect();
 
     this.timepicker.style.top =
-      this.element.offsetTop + this.element.clientHeight + "px";
+      this.element.offsetTop + this.element.innerHeight + "px";
     this.timepicker.style.width = bounds.width + "px";
   };
 
@@ -383,20 +429,15 @@ function timepicker(element, args) {
   this.init = function () {
     if (element.length) {
       console.warn(
-        "시간 선택기는 특정 요소를 대상으로 해야하며 요소 목록이 아니어야 합니다."
+        "시간 선택기 선택기는 특정 요소를 대상으로해야하며 요소 목록이 아니어야합니다."
       );
       return;
     }
 
     this.element = element;
 
-    // 변경된 코드: 시간을 특정 시간으로 설정
-    var specificTime = new Date(); // 예시: 현재 시간으로 초기화
-    specificTime.setHours(17); // 시 설정
-    specificTime.setMinutes(30); // 분 설정
-    specificTime.setSeconds(0); // 초 설정
-    this.time = specificTime;
-
+    // 변경된 코드: 시간을 초기화하기 전에 현재 시간을 가져와서 설정
+    this.time = new Date(); // 이 부분을 수정하여 현재 시간으로 설정
     this.element.value = this.buildString();
 
     this.updateSettings(args);
@@ -405,6 +446,3 @@ function timepicker(element, args) {
 
   this.init();
 }
-
-// 초기화
-var tpicker = new timepicker(document.querySelector("input.timepicker"), args);

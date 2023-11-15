@@ -2462,6 +2462,10 @@ input:hover,
   border-bottom-right-radius: 0.5rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-0 {
   border-width: 0px;
 }
@@ -5907,7 +5911,7 @@ address {
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
-.input-date .time {
+.input-date #time {
   overflow: hidden;
   border-radius: 10px;
   --tw-bg-opacity: 1;
@@ -5916,6 +5920,82 @@ address {
   padding-right: 2.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+#time {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#time .timePick {
+  display: none;
+}
+
+#time .TimePick_ICON {
+  display: none;
+}
+
+.TimePick_BTN {
+  position: relative !important;
+  margin: 0px !important;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+#time .TimePick_POPUP {
+  position: relative !important;
+  inset: 0px !important;
+  margin: 0px !important;
+  display: flex !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  width: 100% !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  border-radius: 0px !important;
+  border-color: transparent !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+#time .TimePick_POPUP .label {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 32px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(123 97 255 / var(--tw-text-opacity));
+}
+
+#time .TimePick_POPUP .hour,
+#time .TimePick_POPUP .minute,
+#time .TimePick_POPUP .ampm {
+  position: relative !important;
+  display: flex !important;
+  width: 51px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+#time .TimePick_POPUP .minute::before {
+  position: absolute;
+  left: -15px;
+  top: 22px;
+  font-size: 32px;
+  --tw-text-opacity: 1;
+  color: rgb(123 97 255 / var(--tw-text-opacity));
+  --tw-content: ":";
+  content: var(--tw-content);
+}
+
+.adjustbtn {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* 약속생성 동의 */

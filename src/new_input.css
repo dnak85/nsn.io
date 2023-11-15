@@ -805,10 +805,39 @@ address {
   .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
   @apply bg-[#FF3F02] font-medium text-white !important;
 }
-.input-date .time {
+.input-date #time {
   @apply overflow-hidden rounded-[10px] bg-white px-10 py-2;
 }
-
+#time {
+  @apply relative h-fit;
+}
+#time .timePick {
+  @apply hidden;
+}
+#time .TimePick_ICON {
+  @apply hidden;
+}
+.TimePick_BTN {
+  @apply relative m-0 flex w-full justify-center !important;
+}
+#time .TimePick_POPUP {
+  @apply relative inset-0 m-0 flex h-fit w-full justify-center gap-[30px] rounded-none border-transparent bg-white shadow-none
+   !important;
+}
+#time .TimePick_POPUP .label {
+  @apply w-fit text-[32px] font-semibold text-[#7b61ff];
+}
+#time .TimePick_POPUP .hour,
+#time .TimePick_POPUP .minute,
+#time .TimePick_POPUP .ampm {
+  @apply relative flex w-[51px] flex-col items-center !important;
+}
+#time .TimePick_POPUP .minute {
+  @apply before:absolute before:left-[-15px] before:top-[22px] before:text-[32px] before:text-[#7b61ff] before:content-[":"];
+}
+.adjustbtn {
+  @apply h-6 w-6;
+}
 /* 약속생성 동의 */
 .create_agree {
   @apply w-full p-6;
