@@ -121,7 +121,7 @@
 
 /* footer */
 #m_footer {
-  @apply fixed bottom-0 flex h-[76px] w-full max-w-[475px];
+  @apply fixed bottom-0 z-30 flex h-[76px] w-full max-w-[475px] bg-white;
 }
 #footer {
   @apply mt-5 w-full pb-6;
@@ -1813,7 +1813,7 @@ input:checked + .customChk .bullet svg {
   @apply w-[110px] font-semibold text-[#5742C3] text-[16p] before:px-2 before:content-["\00b7"];
 }
 .prms-content-box .price-info .paylist dd {
-  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 text-[16px] font-semibold text-slate-900 pr-4;
+  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 pr-4 text-[16px] font-semibold text-slate-900;
 }
 .prms-content-box .price-info .paylist dd span {
   @apply text-[20px];
@@ -1831,8 +1831,96 @@ input:checked + .customChk .bullet svg {
   @apply w-[125px] text-[18px] font-[800] text-[#5742C3] before:px-2 before:text-[22px] before:font-[800] before:content-["\00b7"];
 }
 .prms-content-box .price-info .lastpay dd {
-  @apply flex w-[calc(100%-125px)] justify-end gap-2.5 text-[16px] font-semibold text-[#5742c3] items-center pr-4;
+  @apply flex w-[calc(100%-125px)] items-center justify-end gap-2.5 pr-4 text-[16px] font-semibold text-[#5742c3];
 }
 .prms-content-box .price-info .lastpay dd span {
   @apply text-[24px] font-[800];
+}
+
+.toastjs-container {
+  position: absolute; /* Fallback */
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  width: calc(100% - 16px);
+  min-width: 320px;
+  margin-left: calc(((100% - 16px) / 2) * -1);
+  transform: translateY(70%);
+  transition: transform 2s;
+  opacity: 0;
+  z-index: 100; /* */
+}
+
+.toastjs-container[aria-hidden="false"] {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.toastjs {
+  background: #6a6580;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 49px;
+  line-height: 43px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: Center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.toastjs p {
+  display: block;
+  width: calc(100% - 20px);
+  text-align: center;
+  text-indent: 20px;
+}
+
+.toastjs.default {
+  border-color: #fff;
+}
+
+.toastjs.success {
+  @apply bg-green-500;
+}
+.toastjs.warning {
+  @apply bg-orange-500;
+}
+.toastjs.danger {
+  @apply bg-red-500;
+}
+
+.toastjs-btn,
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  text-indent: -9999em;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border: 0;
+}
+.toastjs-btn:after {
+  content: "x";
+  color: #fff;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  border: 0;
+  width: 20px;
+  height: 49px;
+  text-align: center;
+}
+
+.toastjs-btn--custom {
+}
+
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  outline: none;
 }
