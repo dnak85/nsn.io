@@ -8463,6 +8463,77 @@ input:checked + .customChk .bullet svg {
   outline: none;
 }
 
+.msg.bgmsg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+}
+
+.msg.bgmsg span {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.msg {
+  position: relative;
+  display: flex;
+  min-height: 80px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  --tw-shadow: 0px 8px 8px 0px #CCBAF4;
+  --tw-shadow-colored: 0px 8px 8px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.msg span {
+  display: block;
+  min-height: 20px;
+  font-size: 16px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
+
+.msg .bullet {
+  position: absolute;
+  inset: 0.5rem;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 12px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 90 179 / var(--tw-text-opacity));
+}
+
+.msg .time {
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
+
+.msg.bgmsg .time {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
 }

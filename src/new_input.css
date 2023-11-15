@@ -1953,3 +1953,24 @@ input:checked + .customChk .bullet svg {
 .toastjs-btn:focus {
   outline: none;
 }
+.msg.bgmsg {
+  @apply bg-[#7B61FF];
+}
+.msg.bgmsg span {
+  @apply text-white;
+}
+.msg {
+  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px]  border-[2px] border-[#7b61ff] px-[25px] py-[30px] shadow-cs4;
+}
+.msg span {
+  @apply block min-h-[20px] text-[16px] leading-5 text-violet-900;
+}
+.msg .bullet {
+  @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
+}
+.msg .time {
+  @apply absolute bottom-[10px] right-4 text-[12px] text-violet-900;
+}
+.msg.bgmsg .time {
+  @apply text-white;
+}
