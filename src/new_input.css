@@ -1213,7 +1213,7 @@ input:checked + .customChk .bullet svg {
 
 /* 마이페이지 */
 .myInfo {
-  @apply w-full py-[80px];
+  @apply w-full pb-[80px];
 }
 .myInfo .usr {
   @apply flex w-full flex-col items-center justify-center gap-3;

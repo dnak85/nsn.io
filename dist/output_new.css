@@ -1504,10 +1504,6 @@ input:hover,
   height: 2.25rem;
 }
 
-.h-\[108px\] {
-  height: 108px;
-}
-
 .h-\[116\.31px\] {
   height: 116.31px;
 }
@@ -1668,6 +1664,10 @@ input:hover,
   height: 6px;
 }
 
+.h-\[70px\] {
+  height: 70px;
+}
+
 .h-\[720px\] {
   height: 720px;
 }
@@ -1711,14 +1711,6 @@ input:hover,
 
 .h-full {
   height: 100%;
-}
-
-.h-\[8px\] {
-  height: 8px;
-}
-
-.h-\[70px\] {
-  height: 70px;
 }
 
 .max-h-0 {
@@ -7079,7 +7071,6 @@ input:checked + .customChk .bullet svg {
 
 .myInfo {
   width: 100%;
-  padding-top: 80px;
   padding-bottom: 80px;
 }
 
