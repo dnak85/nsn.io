@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <section id="login" class="flex flex-col w-full min-h-full">
+            <div class="mt-10 font-semibold text-center text-[18px] text-slate-900 leading-5">
+                <span>김서연님이 만든 약속에 초대했습니다. <br>내용을 확인 후 약속을 진행해주세요.</span>
+            </div>
+            <!-- text -->
+
+            <div class="mt-6 w-[calc(100%-32px)] rounded-[10px] bg-[#5742C3] px-3 py-5 mx-auto shadow-cs4">
+                <div class="w-full h-fit pb-5 border-b-[2px] border-white">
+                    <strong class="block w-full h-6 leading-6 text-center text-[24px] font-gm font-bold text-white">우리기업 골프모임</strong>
+                </div>
+                <!-- title -->
+
+                <div class="table w-full text-white pr-3 pl-2 py-2.5">
+                    <div class="table-row-group">
+                        <div class="table-row h-8 leading-8">
+                            <div class="table-cell w-[120px] before:content-['\00b7'] before:font-black before:text-[20px] before:mr-1">
+                                <strong class="text-[16px] font-semibold">약속일시</strong>
+                            </div>
+                            <!-- td -->
+                            <div class="table-cell text-right">
+                                <span class="text-[16px]">2022년 00월 00일</span>
+                            </div>
+                            <!-- td -->
+                        </div>
+                        <!-- tr -->
+
+                        <div class="table-row h-8 leading-8">
+                            <div class="table-cell before:content-['\00b7'] before:font-black before:text-[20px] before:mr-1">
+                                <strong class="text-[16px] font-semibold">약속 호스트</strong>
+                            </div>
+                            <!-- td -->
+                            <div class="table-cell text-right">
+                                <span class="text-[16px]">김서연</span>
+                            </div>
+                            <!-- td -->
+                        </div>
+                        <!-- tr -->
+
+                        <div class="table-row h-8 leading-8">
+                            <div class="table-cell before:content-['\00b7'] before:font-black before:text-[20px] before:mr-1">
+                                <strong class="text-[16px] font-semibold">약속인원</strong>
+                            </div>
+                            <!-- td -->
+                            <div class="table-cell text-right">
+                                <span class="text-[16px]">3</span>
+                            </div>
+                            <!-- td -->
+                        </div>
+                        <!-- tr -->
+                    </div>
+                    <!-- tbody -->
+                </div>
+                <!-- 약속정보 table -->
+
+                <div class="border-[3px] border-white rounded-[12px] w-full py-4 text-center text-white my-2">
+                    <strong class="block text-[18px] leading-5 font-semibold">총 모이는 약속보증금</strong>
+                    <span class="block text-[16px] leading-8 font-semibold mt-2">
+                        <em class="font-black text-[32px]">20,000</em> 원
+                    </span>
+                    <span class="block text-[14px] leading-4 text-white mt-1">총 서스수수료: 1000원</span>
+                </div>
+                <!-- 총 보증금 -->
+
+                <div class="table w-full text-white pr-3 pl-2 pt-2.5">
+                    <div class="table-row h-8 leading-8">
+                        <div class="table-cell w-[120px] before:content-['\00b7'] before:font-black before:text-[20px] before:mr-1">
+                            <strong class="text-[16px] font-semibold">약속유형</strong>
+                        </div>
+                        <!-- td -->
+                        <div class="table-cell">
+                            <span class="text-[18px] font-semibold">#모임형 - 보증금형</span>
+                        </div>
+                        <!-- td -->
+                    </div>
+                    <!-- tr -->
+                </div>
+
+                <div class="block pt-2">
+                    <div class="block">
+                        <span class="text-[16px] leading-5 text-white block w-full pl-3">
+                            ① 게스트가 약속보증금 선입금 <br>
+                            ② 약속성사시 선입금 금액은 호스트에게 입금 <br>
+                            ③ 응답 미 일치/ 불응답시 입금보류
+                        </span>
+                    </div>
+                    <!-- td -->
+                </div>
+                <!-- tr -->
+
+                <div class="table w-full pt-3 pl-2 pr-3 text-white">
+                    <div class="table-row h-8 leading-8">
+                        <div class="table-cell w-[120px] before:content-['\00b7'] before:font-black before:text-[20px] before:mr-1">
+                            <strong class="text-[16px] font-semibold">기타내용</strong>
+                        </div>
+                        <!-- td -->
+                        <div class="table-cell ">
+                            <span class="text-[16px] leading-5 block">
+                                자신과 무엇이 그와 약동하다. 꽃 그들의 풀이 봄날의
+                                꽃 그들의 풀이 봄날의
+                            </span>
+                        </div>
+                    </div>
+                    <!-- tr -->
+                </div>
+                <!-- 약속정보 table -->
+
+                <!-- <div class="w-full leading-5 text-[16px] text-white pl-5 pr-3">
+                    <span>준비물품 : 개인용품 담을 가방, 골프장갑, 골프화 등 개인장비, 식비, 모자 등</span>
+                </div> -->
+                <!-- 두줄 기타내용 -->
+            </div>
+            <!-- info 퍼플 -->
+
+            <div class="mt-[30px] w-full text-center text-slate-900 text-[18px] font-semibold">
+                <span><em class="text-[#FF0982]">약속보증금을 클릭</em>해 약속을 맺으세요</span>
+            </div>
+            <!-- text -->
+
+            <div class="flex flex-col w-full gap-6 px-4 mt-6">
+                <div class="flex justify-between w-full">
+                    <span class="h-[48px] pl-2 text-[16px] font-bold leading-[48px] w-[30%] min-w-[calc(100%-240px)] text-slate-900">게스트01</span>
+                    <button data-custom-open="alert02" class="w-[70%] min-w-[190px] h-[48px] bg-violet-500 rounded-[10px] shadow-cs4 flex justify-center items-center">
+                        <div class="flex justify-center pl-5 ">
+                            <span class="block h-[30px] leading-[30px] text-[22px] font-bold text-white min-w-[95px] text-left">1,000</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M15 22.5C12.9792 22.5 11.25 21.8125 9.8125 20.4375C8.375 19.0625 7.60417 17.375 7.5 15.375L10.125 16.1562C10.3958 17.2812 10.9792 18.2029 11.875 18.9212C12.7708 19.6396 13.8125 19.9992 15 20C16.375 20 17.5521 19.5104 18.5312 18.5312C19.5104 17.5521 20 16.375 20 15C20 13.8125 19.6404 12.7708 18.9212 11.875C18.2021 10.9792 17.2804 10.3958 16.1562 10.125L15.375 7.5C17.375 7.60417 19.0625 8.375 20.4375 9.8125C21.8125 11.25 22.5 12.9792 22.5 15C22.5 17.0833 21.7708 18.8542 20.3125 20.3125C18.8542 21.7708 17.0833 22.5 15 22.5ZM15 27.5C13.2708 27.5 11.6458 27.1717 10.125 26.515C8.60417 25.8583 7.28125 24.9679 6.15625 23.8438C5.03125 22.7188 4.14083 21.3958 3.485 19.875C2.82917 18.3542 2.50083 16.7292 2.5 15V14.4375C2.5 14.25 2.52083 14.0625 2.5625 13.875L5 14.625V15C5 17.7917 5.96875 20.1562 7.90625 22.0938C9.84375 24.0312 12.2083 25 15 25C17.7917 25 20.1562 24.0312 22.0938 22.0938C24.0312 20.1562 25 17.7917 25 15C25 12.2083 24.0312 9.84375 22.0938 7.90625C20.1562 5.96875 17.7917 5 15 5H14.625L13.875 2.5625C14.0625 2.52083 14.25 2.5 14.4375 2.5H15C16.7292 2.5 18.3542 2.82833 19.875 3.485C21.3958 4.14167 22.7188 5.03208 23.8438 6.15625C24.9688 7.28125 25.8596 8.60417 26.5162 10.125C27.1729 11.6458 27.5008 13.2708 27.5 15C27.5 16.7292 27.1717 18.3542 26.515 19.875C25.8583 21.3958 24.9679 22.7188 23.8438 23.8438C22.7188 24.9688 21.3958 25.8596 19.875 26.5162C18.3542 27.1729 16.7292 27.5008 15 27.5ZM7.8125 10.2813L6.875 13.125C6.77083 13.4167 6.57292 13.5575 6.28125 13.5475C5.98958 13.5375 5.79167 13.3863 5.6875 13.0938L2.84375 3.625C2.76042 3.39583 2.8125 3.1875 3 3C3.1875 2.8125 3.39583 2.76042 3.625 2.84375L13.0938 5.6875C13.3854 5.79167 13.5367 5.98958 13.5475 6.28125C13.5583 6.57292 13.4175 6.77083 13.125 6.875L10.2813 7.8125L14.4062 11.9375C14.7604 12.2917 14.9375 12.6979 14.9375 13.1562C14.9375 13.6146 14.7604 14.0208 14.4062 14.375C14.0521 14.7292 13.6404 14.9062 13.1712 14.9062C12.7021 14.9062 12.2908 14.7292 11.9375 14.375L7.8125 10.2813Z" fill="white" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="flex justify-between w-full">
+                    <span class="h-[48px] pl-2 text-[16px] font-bold leading-[48px] w-[30%] min-w-[calc(100%-240px)] text-slate-900">게스트02</span>
+                    <button data-custom-open="alert02" class="w-[70%] min-w-[190px] h-[48px] bg-violet-500 rounded-[10px] shadow-cs4 flex justify-center items-center disabled:bg-[#b9b7dc]" disabled>
+                        <div class="flex justify-center pl-5" >
+                            <span class="block h-[30px] leading-[30px] text-[22px] font-bold text-white min-w-[95px] text-left">10,000</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M15 22.5C12.9792 22.5 11.25 21.8125 9.8125 20.4375C8.375 19.0625 7.60417 17.375 7.5 15.375L10.125 16.1562C10.3958 17.2812 10.9792 18.2029 11.875 18.9212C12.7708 19.6396 13.8125 19.9992 15 20C16.375 20 17.5521 19.5104 18.5312 18.5312C19.5104 17.5521 20 16.375 20 15C20 13.8125 19.6404 12.7708 18.9212 11.875C18.2021 10.9792 17.2804 10.3958 16.1562 10.125L15.375 7.5C17.375 7.60417 19.0625 8.375 20.4375 9.8125C21.8125 11.25 22.5 12.9792 22.5 15C22.5 17.0833 21.7708 18.8542 20.3125 20.3125C18.8542 21.7708 17.0833 22.5 15 22.5ZM15 27.5C13.2708 27.5 11.6458 27.1717 10.125 26.515C8.60417 25.8583 7.28125 24.9679 6.15625 23.8438C5.03125 22.7188 4.14083 21.3958 3.485 19.875C2.82917 18.3542 2.50083 16.7292 2.5 15V14.4375C2.5 14.25 2.52083 14.0625 2.5625 13.875L5 14.625V15C5 17.7917 5.96875 20.1562 7.90625 22.0938C9.84375 24.0312 12.2083 25 15 25C17.7917 25 20.1562 24.0312 22.0938 22.0938C24.0312 20.1562 25 17.7917 25 15C25 12.2083 24.0312 9.84375 22.0938 7.90625C20.1562 5.96875 17.7917 5 15 5H14.625L13.875 2.5625C14.0625 2.52083 14.25 2.5 14.4375 2.5H15C16.7292 2.5 18.3542 2.82833 19.875 3.485C21.3958 4.14167 22.7188 5.03208 23.8438 6.15625C24.9688 7.28125 25.8596 8.60417 26.5162 10.125C27.1729 11.6458 27.5008 13.2708 27.5 15C27.5 16.7292 27.1717 18.3542 26.515 19.875C25.8583 21.3958 24.9679 22.7188 23.8438 23.8438C22.7188 24.9688 21.3958 25.8596 19.875 26.5162C18.3542 27.1729 16.7292 27.5008 15 27.5ZM7.8125 10.2813L6.875 13.125C6.77083 13.4167 6.57292 13.5575 6.28125 13.5475C5.98958 13.5375 5.79167 13.3863 5.6875 13.0938L2.84375 3.625C2.76042 3.39583 2.8125 3.1875 3 3C3.1875 2.8125 3.39583 2.76042 3.625 2.84375L13.0938 5.6875C13.3854 5.79167 13.5367 5.98958 13.5475 6.28125C13.5583 6.57292 13.4175 6.77083 13.125 6.875L10.2813 7.8125L14.4062 11.9375C14.7604 12.2917 14.9375 12.6979 14.9375 13.1562C14.9375 13.6146 14.7604 14.0208 14.4062 14.375C14.0521 14.7292 13.6404 14.9062 13.1712 14.9062C12.7021 14.9062 12.2908 14.7292 11.9375 14.375L7.8125 10.2813Z" fill="white" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- button -->
+
+            <div class="h-[45px] w-full"></div>
+
+            <footer class="" id="footer">
+                <svg class="mx-auto" fill="none" height="29" viewBox="0 0 70 29" width="70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect fill="url(#pattern0)" height="29" width="70" />
+                    <defs>
+                        <pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+                            <use transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" xlink:href="#image0_2_697" />
+                        </pattern>
+                        <image height="144" id="image0_2_697" width="351" xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+
+                <div class="fnb">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="font-bold">개인정보처리방침</a>
+                </div>
+                <!-- 하단 메뉴 -->
+
+                <address>
+                    (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                    고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                    <br><br>
+                    Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                </address>
+            </footer>
+            <!-- //footer -->
+        </section>
+        <!-- login -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

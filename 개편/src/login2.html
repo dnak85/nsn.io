@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <section id="login" class="flex flex-col w-full min-h-full">
+            <div id="top" class="relative flex items-center justify-center w-full overflow-hidden h-[512px]">
+                <h1 class="absolute z-20 logo top-4 left-6">
+                    <svg width="70" height="29" viewBox="0 0 70 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="70" height="29" fill="url(#pattern0)" />
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_394_3734" transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" />
+                            </pattern>
+                            <image id="image0_394_3734" width="351" height="144" xlink:href="data:image/png;base64,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" />
+                        </defs>
+                    </svg>
+                </h1>
+                <!-- logo -->
+
+                <div class="absolute top-[102px] left-6 z-50">
+                    <strong class="text-white block w-[236px] h-[80px] relative ">
+                        <img src="./img/login/no-bg-title.png" alt="노쇼노로 안전하게 약속하세요." class="absolute w-[283px] inset-0 z-20">
+                    </strong>
+                    <!-- // -->
+
+                    <span class="block w-[68px] h-[5px] bg-white mt-3"></span>
+
+                    <span class="block text-white mt-[10px] text-[16px] leading-6 font-semibold">
+                        중요한 약속은 <em class="text-[20px] font-[900]">노쇼노, 안전하게</em> 약속하세요.
+                    </span>
+                    <!-- // -->
+
+                    <em class="block mt-5 text-white text-[14px] leading-[17px]">
+                        *서비스수수료 제외
+                    </em>
+                </div>
+                <!-- text -->
+
+                <div class="w-full h-full">
+                    <img src="./img/login/bg2.png" alt="배경" class="h-full">
+                </div>
+                <!-- bg -->
+
+                <div id="image-animation" class="absolute bottom-1 left-1/2 w-full min-w-[375px] ml-[-187px]">
+                    <div id="image1" class="absolute z-[40]"></div>
+                    <div id="image2" class="absolute z-[30]"></div>
+                    <div id="image3" class="absolute z-[60]"></div>
+                    <div id="image4" class="absolute z-[20]"></div>
+                    <div id="image5" class="absolute z-[10]"></div>
+                </div>
+
+                <script>
+                    setTimeout(() => {
+                        document.querySelector('#image2').classList.add('active');
+                    }, 1500);
+
+                    setTimeout(() => {
+                        document.querySelector('#image3').classList.add('active');
+                    }, 1500);
+
+                    setTimeout(() => {
+                        document.querySelector('#image4').classList.add('active');
+                    }, 2000);
+
+                    setTimeout(() => {
+                        document.querySelector('#image5').classList.add('active');
+                    }, 2300);
+
+
+                </script>
+            </div>
+
+            <!-- 개편 -->
+            <div class="flex justify-center w-full mt-10 leading-5">
+                <span class="text-[16px] text-[#0f172a] font-bold">최근 로그인한 계정은 카카오입니다.</span>
+            </div>
+            <!-- //개편 -->
+
+            <!-- 개편 mt-[55] -> mt-[30px] -->
+            <div id="btn" class="flex flex-col justify-center w-full gap-6 px-10 mt-[30px]">
+                <button class="w-full h-12 bg-[#fee500] rounded-[12px] flex justify-center items-center gap-2 shadow-cs4">
+                    <svg class="inline-block mx-0" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.9" fill-rule="evenodd" clip-rule="evenodd" d="M11.0009 0.681641C4.92474 0.681641 0 4.50447 0 9.22142C0 12.155 1.90498 14.7402 4.80555 16.2779L3.58323 20.7577C3.56092 20.8461 3.56603 20.9392 3.59785 21.0247C3.62967 21.1102 3.68672 21.1839 3.76142 21.2362C3.83612 21.2885 3.92497 21.3169 4.01616 21.3176C4.10735 21.3182 4.19656 21.2911 4.27202 21.2399L9.62214 17.6952C10.0732 17.7386 10.5322 17.7643 10.9991 17.7643C17.0746 17.7643 22 13.9402 22 9.22448C22 4.50875 17.0746 0.684699 10.9991 0.684699" fill="black" />
+                    </svg>
+                    <span class="inline-block w-fit h-5 leading-5 text-[16px] text-[#191919] font-medium">카카오로 시작하기</span>
+                </button>
+                <button class="w-full h-12 bg-[#03C75A] rounded-[12px] flex justify-center items-center gap-2 shadow-cs4">
+                    <svg class="inline-block mx-0" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.15995 6.42L4.66995 0H0.949951V12H4.84995V5.58L9.32995 12H13.0499V0H9.15995V6.42Z" fill="white" />
+                    </svg>
+                    <span class="inline-block h-5 leading-5 text-white text-[16px] font-bold">네이버로 시작하기</span>
+                </button>
+            </div>
+            <!-- btn -->
+
+            <div id="txt" class="flex flex-col items-center content-center w-full mt-[46px] gap-3 pb-[35px]">
+                <!-- 개편 수정 text-white -> text-slate-900 -->
+                <a href="#" class="block text-[16px] text-slate-900 font-bold leading-5">비회원으로 둘러보기</a>
+                <a href="#" class="block text-[14px] text-slate-900 leading-4">가입계정찾기</a>
+                <!-- // -->
+            </div>
+            <!-- txt -->
+
+            <!-- <footer class="" id="footer">
+                <svg class="mx-auto" fill="none" height="29" viewBox="0 0 70 29" width="70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect fill="url(#pattern0)" height="29" width="70" />
+                    <defs>
+                        <pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+                            <use transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" xlink:href="#image0_2_697" />
+                        </pattern>
+                        <image height="144" id="image0_2_697" width="351" xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+
+                <div class="fnb">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="font-bold">개인정보처리방침</a>
+                </div>
+
+                <address>
+                    (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                    고객센터: 1566-9378 사업자등록번호: 116-81-54775 대표: 김동진
+                    <br><br>
+                    Copyright since 1999 © ThinkPool Co.,Ltd. All Rights Reserved
+                </address>
+            </footer> -->
+            <!-- //footer -->
+
+
+        </section>
+        <!-- login -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

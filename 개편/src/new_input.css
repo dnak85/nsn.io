@@ -108,7 +108,7 @@
     0px 0px 2px 0px rgba(184, 184, 184, 0.2);
 }
 #m_header.sub {
-  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-6;
+  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-[19px];
 }
 
 /* container */
@@ -121,7 +121,7 @@
 
 /* footer */
 #m_footer {
-  @apply fixed bottom-0 flex h-[76px] w-full max-w-[475px];
+  @apply fixed bottom-0 z-30 flex h-[58px] w-full max-w-[475px] bg-white;
 }
 #footer {
   @apply mt-5 w-full pb-6;
@@ -203,10 +203,10 @@ address {
 }
 /* footer */
 #m_footer .f_mnu {
-  @apply flex h-[76px] w-full items-center justify-center gap-8 bg-white;
+  @apply flex h-[58px] w-full items-center justify-center gap-8 bg-white;
 }
 #m_footer .f_mnu button {
-  @apply flex flex-col items-center gap-2;
+  @apply flex flex-col items-center justify-center gap-1;
 }
 #m_footer .f_mnu button svg {
   @apply block;
@@ -805,10 +805,39 @@ address {
   .vanilla-calendar-day__btn.vanilla-calendar-day__btn_selected {
   @apply bg-[#FF3F02] font-medium text-white !important;
 }
-.input-date .time {
+.input-date #time {
   @apply overflow-hidden rounded-[10px] bg-white px-10 py-2;
 }
-
+#time {
+  @apply relative h-fit;
+}
+#time .timePick {
+  @apply hidden;
+}
+#time .TimePick_ICON {
+  @apply hidden;
+}
+.TimePick_BTN {
+  @apply relative m-0 flex w-full justify-center !important;
+}
+#time .TimePick_POPUP {
+  @apply relative inset-0 m-0 flex h-fit w-full justify-center gap-[30px] rounded-none border-transparent bg-white shadow-none
+   !important;
+}
+#time .TimePick_POPUP .label {
+  @apply w-fit text-[32px] font-semibold text-[#7b61ff];
+}
+#time .TimePick_POPUP .hour,
+#time .TimePick_POPUP .minute,
+#time .TimePick_POPUP .ampm {
+  @apply relative flex w-[51px] flex-col items-center !important;
+}
+#time .TimePick_POPUP .minute {
+  @apply before:absolute before:left-[-15px] before:top-[22px] before:text-[32px] before:text-[#7b61ff] before:content-[":"];
+}
+.adjustbtn {
+  @apply h-6 w-6;
+}
 /* 약속생성 동의 */
 .create_agree {
   @apply w-full p-6;
@@ -957,19 +986,19 @@ input:checked + .customChk .bullet svg {
   @apply w-full px-6;
 }
 .prms-detail .dayTop > div {
-  @apply flex h-[56px] w-full items-center justify-between rounded-[12px] bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF] px-4 shadow-cs4;
+  @apply flex h-[48px] w-full items-center justify-between rounded-[12px] bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF] px-4 shadow-cs4;
 }
 .prms-detail .dayTop > div div {
-  @apply flex gap-2;
+  @apply flex items-center gap-2;
 }
 .prms-detail .dayTop > div .ico {
   @apply block text-[24px] font-semibold;
 }
 .prms-detail .dayTop > div .dday {
-  @apply block font-gm text-[24px] font-bold text-white;
+  @apply block font-gm text-[18px] font-bold text-white;
 }
 .prms-detail .dayTop > div .usr {
-  @apply block font-gm text-[14px] font-bold text-white;
+  @apply block font-gm text-[12px] font-bold text-white;
 }
 
 /* 약속상세-진행도 */
@@ -1039,7 +1068,7 @@ input:checked + .customChk .bullet svg {
   @apply relative flex w-full max-w-[471px] justify-center bg-violet-100 px-10 py-6  transition-all duration-500 ease-in-out;
 }
 .floatingButton.scldn {
-  @apply fixed top-[calc(100%-148px)] z-20 h-[72px] px-0 py-0;
+  @apply fixed top-[calc(100%-106px)] z-20 h-[48px] px-0 py-0;
 }
 .floatingButton button {
   @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-violet-500 text-[16px] font-bold text-white shadow-cs4;
@@ -1166,6 +1195,12 @@ input:checked + .customChk .bullet svg {
 }
 .reset-date .modal-content .progress_input {
   @apply m-0 border-transparent shadow-none !important;
+}
+.prms-detail .page-btn {
+  @apply flex w-full flex-col items-center justify-center;
+}
+.prms-detail .page-btn button {
+  @apply h-fit w-fit bg-transparent text-[16px] font-normal text-slate-900 underline shadow-none;
 }
 
 /* event bg */
@@ -1813,7 +1848,7 @@ input:checked + .customChk .bullet svg {
   @apply w-[110px] font-semibold text-[#5742C3] text-[16p] before:px-2 before:content-["\00b7"];
 }
 .prms-content-box .price-info .paylist dd {
-  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 text-[16px] font-semibold text-slate-900 pr-4;
+  @apply flex w-[calc(100%-110px)] items-center justify-end gap-2.5 pr-4 text-[16px] font-semibold text-slate-900;
 }
 .prms-content-box .price-info .paylist dd span {
   @apply text-[20px];
@@ -1831,8 +1866,117 @@ input:checked + .customChk .bullet svg {
   @apply w-[125px] text-[18px] font-[800] text-[#5742C3] before:px-2 before:text-[22px] before:font-[800] before:content-["\00b7"];
 }
 .prms-content-box .price-info .lastpay dd {
-  @apply flex w-[calc(100%-125px)] justify-end gap-2.5 text-[16px] font-semibold text-[#5742c3] items-center pr-4;
+  @apply flex w-[calc(100%-125px)] items-center justify-end gap-2.5 pr-4 text-[16px] font-semibold text-[#5742c3];
 }
 .prms-content-box .price-info .lastpay dd span {
   @apply text-[24px] font-[800];
+}
+
+.toastjs-container {
+  position: absolute; /* Fallback */
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  width: calc(100% - 16px);
+  min-width: 320px;
+  margin-left: calc(((100% - 16px) / 2) * -1);
+  transform: translateY(70%);
+  transition: transform 2s;
+  opacity: 0;
+  z-index: 100; /* */
+}
+
+.toastjs-container[aria-hidden="false"] {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.toastjs {
+  background: #6a6580;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 49px;
+  line-height: 43px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: Center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.toastjs p {
+  display: block;
+  width: calc(100% - 20px);
+  text-align: center;
+  text-indent: 20px;
+}
+
+.toastjs.default {
+  border-color: #fff;
+}
+
+.toastjs.success {
+  @apply bg-green-500;
+}
+.toastjs.warning {
+  @apply bg-orange-500;
+}
+.toastjs.danger {
+  @apply bg-red-500;
+}
+
+.toastjs-btn,
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  text-indent: -9999em;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border: 0;
+}
+.toastjs-btn:after {
+  content: "x";
+  color: #fff;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  border: 0;
+  width: 20px;
+  height: 49px;
+  text-align: center;
+}
+
+.toastjs-btn--custom {
+}
+
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  outline: none;
+}
+.msg.bgmsg {
+  @apply bg-[#7B61FF];
+}
+.msg.bgmsg span {
+  @apply text-white;
+}
+.msg {
+  @apply relative flex min-h-[80px] w-full flex-col justify-center rounded-[12px]  border-[2px] border-[#7b61ff] px-[25px] py-[30px] shadow-cs4;
+}
+.msg span {
+  @apply block min-h-[20px] text-[16px] leading-5 text-violet-900;
+}
+.msg .bullet {
+  @apply absolute inset-2 flex h-5 w-5 flex-wrap items-center justify-center rounded-full bg-white text-[12px] font-extrabold text-[#ff5ab3];
+}
+.msg .time {
+  @apply absolute bottom-[10px] right-4 text-[12px] text-violet-900;
+}
+.msg.bgmsg .time {
+  @apply text-white;
 }

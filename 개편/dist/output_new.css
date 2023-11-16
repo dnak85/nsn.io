@@ -1713,6 +1713,14 @@ input:hover,
   height: 100%;
 }
 
+.h-\[8px\] {
+  height: 8px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -2460,6 +2468,10 @@ input:hover,
 .rounded-r-lg {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-0 {
@@ -4057,8 +4069,8 @@ input:hover,
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(237 233 254 / var(--tw-bg-opacity));
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 /* container */
@@ -4079,10 +4091,13 @@ input:hover,
 #m_footer {
   position: fixed;
   bottom: 0px;
+  z-index: 30;
   display: flex;
-  height: 76px;
+  height: 58px;
   width: 100%;
   max-width: 475px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 #footer {
@@ -4276,7 +4291,7 @@ address {
 
 #m_footer .f_mnu {
   display: flex;
-  height: 76px;
+  height: 58px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -4289,7 +4304,8 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 #m_footer .f_mnu button svg {
@@ -5904,7 +5920,7 @@ address {
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
-.input-date .time {
+.input-date #time {
   overflow: hidden;
   border-radius: 10px;
   --tw-bg-opacity: 1;
@@ -5913,6 +5929,82 @@ address {
   padding-right: 2.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+#time {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#time .timePick {
+  display: none;
+}
+
+#time .TimePick_ICON {
+  display: none;
+}
+
+.TimePick_BTN {
+  position: relative !important;
+  margin: 0px !important;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+#time .TimePick_POPUP {
+  position: relative !important;
+  inset: 0px !important;
+  margin: 0px !important;
+  display: flex !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  width: 100% !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  border-radius: 0px !important;
+  border-color: transparent !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+#time .TimePick_POPUP .label {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 32px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(123 97 255 / var(--tw-text-opacity));
+}
+
+#time .TimePick_POPUP .hour,
+#time .TimePick_POPUP .minute,
+#time .TimePick_POPUP .ampm {
+  position: relative !important;
+  display: flex !important;
+  width: 51px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+#time .TimePick_POPUP .minute::before {
+  position: absolute;
+  left: -15px;
+  top: 22px;
+  font-size: 32px;
+  --tw-text-opacity: 1;
+  color: rgb(123 97 255 / var(--tw-text-opacity));
+  --tw-content: ":";
+  content: var(--tw-content);
+}
+
+.adjustbtn {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* 약속생성 동의 */
@@ -6349,7 +6441,7 @@ input:checked + .customChk .bullet svg {
 
 .prms-detail .dayTop > div {
   display: flex;
-  height: 56px;
+  height: 48px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -6370,6 +6462,7 @@ input:checked + .customChk .bullet svg {
 
 .prms-detail .dayTop > div div {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -6382,7 +6475,7 @@ input:checked + .customChk .bullet svg {
 .prms-detail .dayTop > div .dday {
   display: block;
   font-family: GmarketSans;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -6391,7 +6484,7 @@ input:checked + .customChk .bullet svg {
 .prms-detail .dayTop > div .usr {
   display: block;
   font-family: GmarketSans;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -6579,9 +6672,9 @@ input:checked + .customChk .bullet svg {
 
 .floatingButton.scldn {
   position: fixed;
-  top: calc(100% - 148px);
+  top: calc(100% - 106px);
   z-index: 20;
-  height: 72px;
+  height: 48px;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -6938,6 +7031,30 @@ input:checked + .customChk .bullet svg {
   --tw-shadow: 0 0 #0000 !important;
   --tw-shadow-colored: 0 0 #0000 !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.prms-detail .page-btn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prms-detail .page-btn button {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* event bg */
@@ -8282,6 +8399,173 @@ input:checked + .customChk .bullet svg {
 .prms-content-box .price-info .lastpay dd span {
   font-size: 24px;
   font-weight: 800;
+}
+
+.toastjs-container {
+  position: absolute;
+  /* Fallback */
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  width: calc(100% - 16px);
+  min-width: 320px;
+  margin-left: calc(((100% - 16px) / 2) * -1);
+  transform: translateY(70%);
+  transition: transform 2s;
+  opacity: 0;
+  z-index: 100;
+  /* */
+}
+
+.toastjs-container[aria-hidden="false"] {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.toastjs {
+  background: #6a6580;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 49px;
+  line-height: 43px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: Center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.toastjs p {
+  display: block;
+  width: calc(100% - 20px);
+  text-align: center;
+  text-indent: 20px;
+}
+
+.toastjs.default {
+  border-color: #fff;
+}
+
+.toastjs.success {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.toastjs.warning {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.toastjs.danger {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.toastjs-btn,
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  text-indent: -9999em;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.toastjs-btn:after {
+  content: "x";
+  color: #fff;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  border: 0;
+  width: 20px;
+  height: 49px;
+  text-align: center;
+}
+
+.toastjs-btn--custom {
+}
+
+.toastjs-btn:hover,
+.toastjs-btn:focus {
+  outline: none;
+}
+
+.msg.bgmsg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(123 97 255 / var(--tw-bg-opacity));
+}
+
+.msg.bgmsg span {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.msg {
+  position: relative;
+  display: flex;
+  min-height: 80px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(123 97 255 / var(--tw-border-opacity));
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  --tw-shadow: 0px 8px 8px 0px #CCBAF4;
+  --tw-shadow-colored: 0px 8px 8px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.msg span {
+  display: block;
+  min-height: 20px;
+  font-size: 16px;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
+
+.msg .bullet {
+  position: absolute;
+  inset: 0.5rem;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 12px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 90 179 / var(--tw-text-opacity));
+}
+
+.msg .time {
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
+
+.msg.bgmsg .time {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-center::-moz-placeholder {

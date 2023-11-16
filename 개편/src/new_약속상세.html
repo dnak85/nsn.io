@@ -33,6 +33,19 @@
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <!-- swipejs -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="./js/toast.js"></script>
+    <script>
+        //const nextPage = document.querySelector('.nextButton');
+        const msgtext = "날짜를 선택해주세요."
+
+        function toastAlert() {
+            new Toast({
+                message: msgtext,
+                type: 'default'
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -362,7 +375,7 @@
                             const floating = document.querySelector('.floatingButton');
                             const floatingOffset = floating.offsetTop;
 
-                            console.log(floatingOffset)
+
                             wrap.addEventListener("scroll", function () {
                                 const scrollPosition = wrap.scrollTop;
 
@@ -530,13 +543,14 @@
                                                                         });
                                                                     </script>
 
-                                                                    <div class="time">
-                                                                        <div class="time__input">
-                                                                            <input id="tpker" type="text" class="hidden timepicker" />
-                                                                        </div>
+                                                                    <div id="time">
+                                                                        <input type="text" class="timePick" value="12:32:AM">
                                                                     </div>
                                                                     <!-- //time -->
-                                                                    <script src="./js/timepicker.js"></script>
+                                                                    <script src="./js/time-pick.js"></script>
+                                                                    <script>
+                                                                        var timepicker = new TimePick('.timePick');
+                                                                    </script>
                                                                     <!-- //input-date -->
 
                                                                 </div>
@@ -759,8 +773,8 @@
                     <!-- //인원/보증금 -->
 
                     <div class="px-10 mt-8 page-btn">
-                        <button class="shadow-cs4">약속 복사하기</button>
-                        <button class="mt-6 shadow-cs4 dark">약속 취소하기</button>
+                        <button onclick="toastAlert()">약속 복사하기</button>
+                        <button class="mt-6">약속 취소하기</button>
                     </div>
                     <!-- //페이지 버튼 -->
 
@@ -775,7 +789,7 @@
                         })
                     </script>
 
-                    <div class="h-[108px]"></div>
+                    <div class="h-[70px]"></div>
                 </div>
             </div>
             <!-- mobile-container -->

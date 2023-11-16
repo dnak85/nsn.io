@@ -429,20 +429,15 @@ function timepicker(element, args) {
   this.init = function () {
     if (element.length) {
       console.warn(
-        "시간 선택기는 특정 요소를 대상으로 해야하며 요소 목록이 아니어야 합니다."
+        "시간 선택기 선택기는 특정 요소를 대상으로해야하며 요소 목록이 아니어야합니다."
       );
       return;
     }
 
     this.element = element;
 
-    // 변경된 코드: 시간을 특정 시간으로 설정
-    var specificTime = new Date(); // 예시: 현재 시간으로 초기화
-    specificTime.setHours(17); // 시 설정
-    specificTime.setMinutes(30); // 분 설정
-    specificTime.setSeconds(0); // 초 설정
-    this.time = specificTime;
-
+    // 변경된 코드: 시간을 초기화하기 전에 현재 시간을 가져와서 설정
+    this.time = new Date(); // 이 부분을 수정하여 현재 시간으로 설정
     this.element.value = this.buildString();
 
     this.updateSettings(args);

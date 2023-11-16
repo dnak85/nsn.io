@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- modal cdn add -->
+</head>
+
+<body class="h-full">
+    <div id="wrap" class="">
+        <header id="header" class="">
+            <div class="backButton absolute top-6 left-4 flex h-8 flex-wrap content-center text-[24px] text-white">
+                <button class="w-6 h-6 leading-6 text-center shadow-none">
+                    <!-- 개편 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                        <path d="M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z" fill="#0F172A" />
+                    </svg>
+                </button>
+            </div>
+            <!-- //backbutton -->
+
+            <div class="leading-9 title">
+                <!-- 개편 -->
+                <span class="text-[24px] text-slate-900">약속 생성</span>
+            </div>
+            <!-- //title -->
+
+            <div class="absolute flex flex-wrap items-center content-center justify-between gap-3 userable top-6 right-4">
+                <div class="inline-block h-6">
+                    <button class="relative p-0 text-center shadow-none group/alarm alarm active">
+                        <!-- 개편 -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span class="absolute top-1 right-1 h-[6px] w-[6px] rounded-full flex">
+                            <em class="absolute inset-0 inline-flex w-full h-full bg-pink-500 rounded-full opacity-75 animate-ping"></em>
+                            <em class="inline-flex w-full h-full bg-pink-600 rounded-full"></em>
+                        </span>
+
+                    </button>
+                </div>
+                <!-- //alarm -->
+
+                <div class="inline-block my">
+                    <a href="#" class="block w-8 h-8 rounded-full">
+                        <img src="./img/avata.png" alt="아바타" width="100%" />
+                    </a>
+                </div>
+                <!-- //my -->
+            </div>
+            <!-- //userable -->
+        </header>
+        <!-- //header -->
+
+        <section id="container" class="">
+            <div class="block w-full">
+                <div class="block w-full mt-5 px-7"> <!-- 개편 px-4 ->7 -->
+                    <div class="block w-full inputName">
+                        <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900">
+                    </div>
+                    <!-- // 입력  개편 -->
+                </div>
+
+                <div class="w-full px-4 mt-[25px]">
+                    <div class="w-full rounded-[12px] bg-[#5742C3] px-3 py-6 shadow-cs4">
+                        <span class="block h-[14px] w-full px-1 text-[14px] font-[800] leading-[14px] text-[#FF8AC7]">* 약속 당일 반환기능이 활성화 됩니다.</span>
+
+                        <!-- 약속반환조건 -->
+                        <div class="w-full px-1 mt-5">
+                            <span class="flex items-center h-5 text-[14px] text-white font-[800] before:inline-block before:w-4 before:text-center before:text-[18px] before:content-['\00b7']">
+                                약속유형
+                                <em class="text-[16px] font-semibold ml-10">#1:1 반환형</em>
+                            </span>
+
+                            <div class="w-full mt-2 ml-2">
+                                <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                    <span>① 약속을 지킨 멤버는 보증금 입금</span>
+                                </div>
+
+                                <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                    <span>② 불참멤버 보증금은 약속상대에게 입금</span>
+                                </div>
+
+                                <div class="flex flex-wrap w-full text-[16px] text-white items-center">
+                                    <span>③ 응답 미 일치/ 불응답시 입금보류</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //약속반환조건 -->
+
+                        <!-- start 1:1약속 -->
+                        <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-4">
+                            <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">본인은 약속을 지켯나요?</strong>
+                        
+                            <div class="relative flex justify-center w-full gap-[48px] px-6 mt-6">
+                                <input type="radio" name="sgle" id="sgl01" class="peer/sgl01 absolute  left-[-9999em]" checked />
+                                <label for="sgl01" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                        bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3]
+                                        peer-checked/sgl01:bg-[#7b61ff] peer-checked/sgl01:text-white peer-checked/sgl01:shadow-cs2">
+                                    예
+                                </label>
+                                <!-- &nbsp;예&nbsp; -->
+                        
+                                <input type="radio" name="sgle" id="sgl02" class="peer/sgl02 absolute  left-[-9999em]" />
+                                <label for="sgl02" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                        bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3] 
+                                        peer-checked/sgl02:bg-[#7b61ff] peer-checked/sgl02:text-white peer-checked/sgl02:shadow-cs2">
+                                    아니오
+                                </label>
+                                <!-- 아니오 -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- end 약속확인 -->
+
+                        <!-- start 1:1약속 -->
+                        <div class="mt-5 w-full rounded-[10px] border-[1px] border-dashed border-[#CDC3FF] py-6 px-4">
+                            <strong class="block w-full text-center text-[24px] font-semibold leading-[30px] text-white">상대방은 약속을 지켯나요?</strong>
+                        
+                            <div class="relative flex justify-center w-full gap-[48px] px-6 mt-6">
+                                <input type="radio" name="sgle" id="sgl011" class="peer/sgl011 absolute  left-[-9999em]" checked />
+                                <label for="sgl011" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                        bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3]
+                                        peer-checked/sgl011:bg-[#7b61ff] peer-checked/sgl011:text-white peer-checked/sgl011:shadow-cs2">
+                                    예
+                                </label>
+                                <!-- &nbsp;예&nbsp; -->
+                        
+                                <input type="radio" name="sgle" id="sgl012" class="peer/sgl012 absolute  left-[-9999em]" />
+                                <label for="sgl012" class="block h-[30px] leading-[30px] min-w-[60px] text-center w-fit rounded-full 
+                                        bg-[#7b61ff] px-8 text-[16px] font-semibold text-[#B9C3F3] 
+                                        peer-checked/sgl012:bg-[#7b61ff] peer-checked/sgl012:text-white peer-checked/sgl012:shadow-cs2">
+                                    아니오
+                                </label>
+                                <!-- 아니오 -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- end 약속확인 -->
+                    </div>
+                </div>
+
+                <div class="w-full mt-[122px] flex justify-center gap-5">
+                    <span class="text-[14px] text-pink-500 font-semibold">약속자체가 진행되지 않았습니다.</span>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_1132_1099)">
+                            <path d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.25 15V12.5H8.75V15H11.25ZM11.25 11.25V5H8.75V11.25H11.25Z" fill="#EC4899" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1132_1099">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- 약속진행 안내 -->
+            </div>
+            <!-- // -->
+
+            <footer class="" id="footer">
+                <svg class="mx-auto" fill="none" height="29" viewBox="0 0 70 29" width="70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect fill="url(#pattern0)" height="29" width="70" />
+                    <defs>
+                        <pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+                            <use transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" xlink:href="#image0_2_697" />
+                        </pattern>
+                        <image height="144" id="image0_2_697" width="351" xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+            </footer>
+            <!-- //footer -->
+        </section>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

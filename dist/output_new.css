@@ -1713,6 +1713,14 @@ input:hover,
   height: 100%;
 }
 
+.h-\[8px\] {
+  height: 8px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -4061,8 +4069,8 @@ input:hover,
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(237 233 254 / var(--tw-bg-opacity));
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 /* container */
@@ -4085,7 +4093,7 @@ input:hover,
   bottom: 0px;
   z-index: 30;
   display: flex;
-  height: 76px;
+  height: 58px;
   width: 100%;
   max-width: 475px;
   --tw-bg-opacity: 1;
@@ -4283,7 +4291,7 @@ address {
 
 #m_footer .f_mnu {
   display: flex;
-  height: 76px;
+  height: 58px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -4296,7 +4304,8 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 #m_footer .f_mnu button svg {
@@ -6432,7 +6441,7 @@ input:checked + .customChk .bullet svg {
 
 .prms-detail .dayTop > div {
   display: flex;
-  height: 56px;
+  height: 48px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -6453,6 +6462,7 @@ input:checked + .customChk .bullet svg {
 
 .prms-detail .dayTop > div div {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -6465,7 +6475,7 @@ input:checked + .customChk .bullet svg {
 .prms-detail .dayTop > div .dday {
   display: block;
   font-family: GmarketSans;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -6474,7 +6484,7 @@ input:checked + .customChk .bullet svg {
 .prms-detail .dayTop > div .usr {
   display: block;
   font-family: GmarketSans;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -6662,9 +6672,9 @@ input:checked + .customChk .bullet svg {
 
 .floatingButton.scldn {
   position: fixed;
-  top: calc(100% - 148px);
+  top: calc(100% - 106px);
   z-index: 20;
-  height: 72px;
+  height: 48px;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -7021,6 +7031,30 @@ input:checked + .customChk .bullet svg {
   --tw-shadow: 0 0 #0000 !important;
   --tw-shadow-colored: 0 0 #0000 !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.prms-detail .page-btn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prms-detail .page-btn button {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* event bg */

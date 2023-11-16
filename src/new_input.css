@@ -108,7 +108,7 @@
     0px 0px 2px 0px rgba(184, 184, 184, 0.2);
 }
 #m_header.sub {
-  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-6;
+  @apply sticky top-0 z-40 w-full bg-[#EDE9FE] py-[19px];
 }
 
 /* container */
@@ -121,7 +121,7 @@
 
 /* footer */
 #m_footer {
-  @apply fixed bottom-0 z-30 flex h-[76px] w-full max-w-[475px] bg-white;
+  @apply fixed bottom-0 z-30 flex h-[58px] w-full max-w-[475px] bg-white;
 }
 #footer {
   @apply mt-5 w-full pb-6;
@@ -203,10 +203,10 @@ address {
 }
 /* footer */
 #m_footer .f_mnu {
-  @apply flex h-[76px] w-full items-center justify-center gap-8 bg-white;
+  @apply flex h-[58px] w-full items-center justify-center gap-8 bg-white;
 }
 #m_footer .f_mnu button {
-  @apply flex flex-col items-center gap-2;
+  @apply flex flex-col items-center justify-center gap-1;
 }
 #m_footer .f_mnu button svg {
   @apply block;
@@ -986,19 +986,19 @@ input:checked + .customChk .bullet svg {
   @apply w-full px-6;
 }
 .prms-detail .dayTop > div {
-  @apply flex h-[56px] w-full items-center justify-between rounded-[12px] bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF] px-4 shadow-cs4;
+  @apply flex h-[48px] w-full items-center justify-between rounded-[12px] bg-gradient-to-r from-[#FC5185] via-[#D665F4] to-[#7B61FF] px-4 shadow-cs4;
 }
 .prms-detail .dayTop > div div {
-  @apply flex gap-2;
+  @apply flex items-center gap-2;
 }
 .prms-detail .dayTop > div .ico {
   @apply block text-[24px] font-semibold;
 }
 .prms-detail .dayTop > div .dday {
-  @apply block font-gm text-[24px] font-bold text-white;
+  @apply block font-gm text-[18px] font-bold text-white;
 }
 .prms-detail .dayTop > div .usr {
-  @apply block font-gm text-[14px] font-bold text-white;
+  @apply block font-gm text-[12px] font-bold text-white;
 }
 
 /* 약속상세-진행도 */
@@ -1068,7 +1068,7 @@ input:checked + .customChk .bullet svg {
   @apply relative flex w-full max-w-[471px] justify-center bg-violet-100 px-10 py-6  transition-all duration-500 ease-in-out;
 }
 .floatingButton.scldn {
-  @apply fixed top-[calc(100%-148px)] z-20 h-[72px] px-0 py-0;
+  @apply fixed top-[calc(100%-106px)] z-20 h-[48px] px-0 py-0;
 }
 .floatingButton button {
   @apply flex h-[48px] w-full items-center justify-center rounded-[10px] bg-violet-500 text-[16px] font-bold text-white shadow-cs4;
@@ -1195,6 +1195,12 @@ input:checked + .customChk .bullet svg {
 }
 .reset-date .modal-content .progress_input {
   @apply m-0 border-transparent shadow-none !important;
+}
+.prms-detail .page-btn {
+  @apply flex w-full flex-col items-center justify-center;
+}
+.prms-detail .page-btn button {
+  @apply h-fit w-fit bg-transparent text-[16px] font-normal text-slate-900 underline shadow-none;
 }
 
 /* event bg */

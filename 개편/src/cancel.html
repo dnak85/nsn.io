@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/gm/GmarketSans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../dist/animate.css">
+    <link rel="stylesheet" href="../dist/calendar.css">
+    <link rel="stylesheet" href="../dist/micromodal.css">
+    <link rel="stylesheet" href="../dist/modal.css">
+    <link rel="stylesheet" href="../dist/offcanvas.css">
+    <link rel="stylesheet" href="../dist/timepicker.css">
+    <link rel="stylesheet" href="../dist/output_new.css">
+
+    <!-- svg icon js -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- calendar url:https://vanilla-calendar.frontend.uvarov.tech/getting-started/-->
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js" defer></script>
+    <!-- microModal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- swipejs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body class="h-full">
+    <div class="" id="wrap">
+        <header id="header" class="">
+            <div class="backButton absolute top-6 left-4 flex h-8 flex-wrap content-center text-[24px] text-white">
+                <button class="w-6 h-6 leading-6 text-center shadow-none">
+                    <!-- 개편 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                        <path d="M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z" fill="#0F172A" />
+                    </svg>
+                </button>
+            </div>
+            <!-- //backbutton -->
+
+            <div class="leading-9 title">
+                <!-- 개편 -->
+                <span class="text-[24px] text-slate-900">약속 생성</span>
+            </div>
+            <!-- //title -->
+
+            <div class="absolute flex flex-wrap items-center content-center justify-between gap-3 userable top-6 right-4">
+                <div class="inline-block h-6">
+                    <button class="relative p-0 text-center shadow-none group/alarm alarm active">
+                        <!-- 개편 -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 17H20L18.595 15.595C18.4063 15.4063 18.2567 15.1822 18.1546 14.9357C18.0525 14.6891 18 14.4249 18 14.158V11C18.0002 9.75894 17.6156 8.54834 16.8992 7.53489C16.1829 6.52144 
+                            15.17 5.75496 14 5.341V5C14 4.46957 13.7893 3.96086 13.4142 3.58579C13.0391 3.21071 12.5304 3 12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5V5.341C7.67 
+                            6.165 6 8.388 6 11V14.159C6 14.697 5.786 15.214 5.405 15.595L4 17H9M15 17H9M15 17V18C15 18.7956 14.6839 19.5587 14.1213 20.1213C13.5587 20.6839 12.7956 21 12 21C11.2044 21 
+                            10.4413 20.6839 9.87868 20.1213C9.31607 19.5587 9 18.7956 9 18V17" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span class="absolute top-1 right-1 h-[6px] w-[6px] rounded-full flex">
+                            <em class="absolute inset-0 inline-flex w-full h-full bg-pink-500 rounded-full opacity-75 animate-ping"></em>
+                            <em class="inline-flex w-full h-full bg-pink-600 rounded-full"></em>
+                        </span>
+
+                    </button>
+                </div>
+                <!-- //alarm -->
+
+                <div class="inline-block my">
+                    <a href="#" class="block w-8 h-8 rounded-full">
+                        <img src="./img/avata.png" alt="아바타" width="100%" />
+                    </a>
+                </div>
+                <!-- //my -->
+            </div>
+            <!-- //userable -->
+        </header>
+        <!-- //header -->
+
+        <section class="" id="container">
+            <div class="block w-full">
+                <div class="block w-full px-7"> <!-- 개편 px-4 ->7 -->
+                    <div class="block w-full inputName">
+                        <input type="text" name="" id="" value="신라대 26회 졸업생 (약속명)" class="h-[58px] w-full rounded-[15px] border-[2px] border-[#7B61FF] bg-transparent text-center text-[20px] font-semibold text-violet-900">
+                    </div>
+                    <!-- // 입력  개편 -->
+                </div>
+                <!-- // 약속명 -->
+
+                <!-- 반환금 정보 -->
+                <div class="w-full px-4 mt-8">
+                    <!-- dl -->
+                    <!-- dl -->
+                    <dl class="flex h-fit w-full flex-wrap justify-start gap-x-3 gap-y-3 overflow-hidden rounded-[12px] bg-[#5742C3] px-3 py-6 xsm:px-2 xsm:py-3 shadow-cs4">
+                        <!-- start -->
+
+                        <dt class="before:text-bold float-left clear-left block h-6  text-[14px] font-[800] leading-6 text-white xsm:text-[12px]">
+                            <span class="flex flex-wrap content-center items-center gap-2  before:block before:w-fit before:text-[20px] before:text-white before:content-['\00b7']">약속유형</span>
+                        </dt>
+
+                        <dd class="block float-left ml-3 xsm:ml-1">
+                            <span class="min-h-5 xsm:min-h-3 block  text-[18px] leading-6 text-white xsm:text-[12px] xsm:leading-3 font-semibold">#1:1 반환형</span>
+                        </dd>
+
+                        <dd class="block w-full float-left mt-[-8px] ml-3 xsm:ml-1">
+                            <span class="min-h-5 xsm:min-h-3 block  text-[16px] leading-6 text-white xsm:text-[12px] xsm:leading-3">
+                                ① 약속을 지킨 멤버는 보증금 입금 <br>
+                                ② 불참멤버 보증금은 약속상대에게 입금 <br>
+                                ③ 응답 미 일치/ 불응답시 입금보류
+                            </span>
+                        </dd>
+
+                        <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">약속일시</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-[calc(100%-155px)] text-[16px] leading-5 text-white">
+                            <span>0000년 00월 00월</span>
+                        </dd>
+                        <!-- //약속일시 -->
+
+                        <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">약속호스트</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-[calc(100%-155px)] text-[16px] leading-5 text-white">
+                            <span>홍길동</span>
+                        </dd>
+                        <!-- //약속호스트 -->
+
+                        <!-- 230627 변경 -->
+                        <dt class="min-h-[40px] h-fit w-[140px] text-[14px] leading-[40px] text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">약속인원</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-[calc(100%-155px)] text-[16px] leading-5 text-white">
+                            <span>2명</span>
+                        </dd>
+                        <!-- //약속호스트 -->
+
+
+                        <dd class="relative w-full h-fit">
+                            <!-- start -->
+                            <div class="mb-3 min-h-[140px] w-full rounded-[10px] border-[2px] border-dashed border-[#CDC3FF] p-6">
+                                <ul class="flex flex-col justify-between gap-6">
+                                    <!-- start -->
+
+                                    <li class="flex flex-wrap items-center content-center justify-between w-full">
+                                        <!--
+                                            ! 약속 안맺은 멤버
+                                            ! css 다름
+                                         -->
+                                        <div class="min-w-[106px]">
+                                            <span class="block h-8 w-fit rounded-full bg-[#cdc3ff] px-4 text-[14px] font-bold leading-8 text-violet-900">게스트1</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="w-[90px] pr-[10px]">
+                                            <span class="block text-right text-[14px] leading-4 text-white">1,000,000 원</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="w-[73px]">
+                                            <span class="block text-right text-[14px] leading-4 text-white">2023.01.02</span>
+                                        </div>
+                                        <!-- // -->
+                                    </li>
+                                    <!-- // -->
+
+                                    <li class="flex flex-wrap items-center content-center justify-between w-full">
+                                        <div class="min-w-[106px]">
+                                            <span class="block text-[14px] leading-4 text-white">게스트2(김아무개)</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="w-[90px] pr-[10px]">
+                                            <span class="block text-right text-[14px] leading-4 text-white">10,000 원</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="w-[73px]">
+                                            <span class="block text-right text-[14px] leading-4 text-white">2023.01.02</span>
+                                        </div>
+                                        <!-- // -->
+                                    </li>
+                                    <!-- // -->
+                                </ul>
+                            </div>
+                            <!-- end -->
+                        </dd>
+                        <!--
+                                    ! dd class 다름
+                                   -->
+                        <!-- //약속인원 -->
+
+                        <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">총 약속보증금</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-[calc(100%-155px)] text-[16px] leading-5 text-white">
+                            <span>123,000원</span>
+                        </dd>
+                        <!-- //총모인약속보증금 -->
+
+                        <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">총 서비스 수수료</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-[calc(100%-155px)] text-[16px] leading-5 text-white">
+                            <span>3,000원</span>
+                        </dd>
+                        <!-- //약속지킴반환 -->
+
+                        <dt class="min-h-4 h-fit w-[140px] text-[14px] leading-5 text-white before:text-[16px] before:font-bold before:content-['\00b7'] pl-1">
+                            <span class="font-[800]">기타내용</span>
+                        </dt>
+                        <dd class="min-h-4 h-fit w-full text-[16px] font-normal leading-5 text-white mt-[-10px] px-2">
+                            <span> 자신과 무엇이 그와 약동하다. 꽃 그들의 풀이 봄날의 품었기 예수는 만물은 있는가? </span>
+                        </dd>
+                        <!-- //기타내용 -->
+
+                        <!-- end -->
+                    </dl>
+                </div>
+                <!-- //반환금 정보 -->
+
+                <!-- 완료메시지 -->
+                <div class="mt-[48px] h-[30px] w-full text-center leading-[30px]">
+                    <span class="text-[24px] text-violet-900">약속 취소 대기 중</span>
+
+                    <button data-custom-open="alert01" class="block mx-auto shadow-none text-violet-500">알럿창1(임시)</button>
+                    <button data-custom-open="alert02" class="block mx-auto shadow-none text-violet-500">알럿창2(임시)</button>
+                </div>
+
+
+
+
+                <div class="h-[64px] w-full"></div>
+                <!-- // 하단여백 -->
+            </div>
+            <!-- // -->
+
+            <footer class="" id="footer">
+                <svg class="mx-auto" fill="none" height="29" viewBox="0 0 70 29" width="70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect fill="url(#pattern0)" height="29" width="70" />
+                    <defs>
+                        <pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+                            <use transform="matrix(0.00287698 0 0 0.00694444 -0.00491071 0)" xlink:href="#image0_2_697" />
+                        </pattern>
+                        <image height="144" id="image0_2_697" width="351" xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+            </footer>
+            <!-- //footer -->
+        </section>
+        <!-- //container -->
+
+        <!-- modal 약속취소
+                   is-open class 일때 팝업 자동오픈
+                   -->
+        <div aria-hidden="true" class="modal micromodal-slide cancel" id="reCancel">
+            <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                <div aria-labelledby="약속반환확정" aria-modal="true" class="modal__container" role="dialog">
+                    <main class="modal__content">
+                        <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                        <div class="w-full px-1 pt-[56px]">
+                            <div class="flex flex-col w-full gap-4 text-center text-white">
+                                <strong class="block text-[20px] font-gm font-medium leading-5">홍길동 님께 <br>약속 취소 요청이 도착했습니다.</strong>
+                                <div class="block w-[calc(100%-32px)] my-1 mx-4 border-t-[1px] border-b-[1px] border-white py-4">
+                                    <dl class="flex flex-wrap items-center justify-between w-full gap-y-4">
+                                        <dt class="flex gap-2 w-[70px] text-[14px] font-bold"><span>&middot;</span><span>약속명</span></dt>
+                                        <dd class="block w-[calc(100%-70px)] text-[16px] text-right">씽크풀 정기 스터디모임</dd>
+                                        <!-- // -->
+
+                                        <dt class="flex gap-2 w-[70px] text-[14px] font-bold"><span>&middot;</span><span>약속일시</span></dt>
+                                        <dd class="block w-[calc(100%-70px)] text-[16px] text-right">2023년 9월 10일 10시 30분</dd>
+                                        <!-- // -->
+
+                                        <dt class="flex gap-2 w-[70px] text-[14px] font-bold"><span>&middot;</span><span>약속인원</span></dt>
+                                        <dd class="block w-[calc(100%-70px)] text-[16px] text-right">3명</dd>
+                                        <!-- // -->
+                                    </dl>
+                                </div>
+                                <span class="block font-gm text-[20px] text-white">약속을 취소하겠습니까?</span>
+                                <span class="block mt-1 text-[16px] leading-5">* 24시간 안에 약속을 체결한 모든 멤버가<br>동의하면 약속이 취소됩니다.</span>
+                            </div>
+                            <!-- text -->
+
+                            <div class="mt-[35px] flex w-full flex-col gap-4 px-5">
+                                <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">동의</button>
+                                <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">비동의</button>
+                            </div>
+                            <!-- button -->
+                        </div>
+                    </main>
+                    <!-- //main -->
+                </div>
+                <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+        </div>
+        <!-- //modal -->
+
+        <div aria-hidden="true" class="modal micromodal-slide cancel" id="reCancel2">
+            <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                <div aria-labelledby="약속반환확정" aria-modal="true" class="modal__container" role="dialog">
+                    <main class="modal__content">
+                        <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                        <div class="w-full px-1 pt-[56px]">
+                            <div class="flex flex-col w-full gap-4 text-center text-white">
+                                <strong class="block text-[20px] font-gm font-medium leading-5">홍길동 님께 <br>약속 취소 요청이 도착했습니다.</strong>
+                                <span class="block font-gm text-[20px] leading-5 text-white mt-[-8px]">약속을 취소하겠습니까?</span>
+                                <span class="block mt-1 text-[16px] leading-5">*약속을 체결한 모든 멤버가 동의하면 약속이<br> 취소됩니다.</span>
+                            </div>
+                            <!-- text -->
+
+                            <div class="flex justify-center w-full mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="95" height="100" viewBox="0 0 95 100" fill="none">
+                                    <path d="M63.3316 15.7891H73.8859C76.6851 15.7891 79.3697 16.8981 81.349 18.8721C83.3283 20.8461 84.4403 23.5234 84.4403 26.3151V69.314C87.9628 70.5556 90.9318 72.9992 92.8224 76.2128C94.713 79.4265 95.4036 83.2032 94.7721 86.8756C94.1405 90.548 92.2275 93.8794 89.3712 96.2811C86.5149 98.6827 82.8991 100 79.1631 100C75.4271 100 71.8114 98.6827 68.9551 96.2811C66.0988 93.8794 64.1858 90.548 63.5542 86.8756C62.9227 83.2032 63.6132 79.4265 65.5039 76.2128C67.3945 72.9992 70.3635 70.5556 73.8859 69.314V26.3151H63.3316V42.1042L39.5842 21.0521L63.3316 0V15.7891ZM10.5597 35.9464C7.0372 34.7049 4.06825 32.2613 2.17761 29.0476C0.286976 25.834 -0.4036 22.0572 0.227948 18.3848C0.859497 14.7125 2.7725 11.3811 5.62883 8.97938C8.48515 6.57771 12.1009 5.26046 15.8369 5.26046C19.5729 5.26046 23.1886 6.57771 26.0449 8.97938C28.9012 11.3811 30.8143 14.7125 31.4458 18.3848C32.0773 22.0572 31.3868 25.834 29.4961 29.0476C27.6055 32.2613 24.6365 34.7049 21.1141 35.9464V69.314C24.6365 70.5556 27.6055 72.9992 29.4961 76.2128C31.3868 79.4265 32.0773 83.2032 31.4458 86.8756C30.8143 90.548 28.9012 93.8794 26.0449 96.2811C23.1886 98.6827 19.5729 100 15.8369 100C12.1009 100 8.48515 98.6827 5.62883 96.2811C2.7725 93.8794 0.859497 90.548 0.227948 86.8756C-0.4036 83.2032 0.286976 79.4265 2.17761 76.2128C4.06825 72.9992 7.0372 70.5556 10.5597 69.314V35.9464ZM15.8369 26.3151C17.2365 26.3151 18.5787 25.7606 19.5684 24.7736C20.5581 23.7866 21.1141 22.4479 21.1141 21.0521C21.1141 19.6562 20.5581 18.3176 19.5684 17.3306C18.5787 16.3436 17.2365 15.7891 15.8369 15.7891C14.4373 15.7891 13.095 16.3436 12.1053 17.3306C11.1157 18.3176 10.5597 19.6562 10.5597 21.0521C10.5597 22.4479 11.1157 23.7866 12.1053 24.7736C13.095 25.7606 14.4373 26.3151 15.8369 26.3151ZM15.8369 89.4714C17.2365 89.4714 18.5787 88.9169 19.5684 87.9299C20.5581 86.9429 21.1141 85.6042 21.1141 84.2084C21.1141 82.8125 20.5581 81.4738 19.5684 80.4868C18.5787 79.4998 17.2365 78.9453 15.8369 78.9453C14.4373 78.9453 13.095 79.4998 12.1053 80.4868C11.1157 81.4738 10.5597 82.8125 10.5597 84.2084C10.5597 85.6042 11.1157 86.9429 12.1053 87.9299C13.095 88.9169 14.4373 89.4714 15.8369 89.4714ZM79.1631 89.4714C80.5627 89.4714 81.905 88.9169 82.8947 87.9299C83.8843 86.9429 84.4403 85.6042 84.4403 84.2084C84.4403 82.8125 83.8843 81.4738 82.8947 80.4868C81.905 79.4998 80.5627 78.9453 79.1631 78.9453C77.7635 78.9453 76.4212 79.4998 75.4316 80.4868C74.4419 81.4738 73.8859 82.8125 73.8859 84.2084C73.8859 85.6042 74.4419 86.9429 75.4316 87.9299C76.4212 88.9169 77.7635 89.4714 79.1631 89.4714Z" fill="#8B5CF6" />
+                                </svg>
+                            </div>
+
+                            <div class="mt-[58px] flex w-full flex-col gap-4 px-5">
+                                <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">약속 취소 동의</button>
+                            </div>
+                            <!-- button -->
+                        </div>
+                    </main>
+                    <!-- //main -->
+                </div>
+                <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+        </div>
+        <!-- //modal -->
+
+        <div aria-hidden="true" class="modal micromodal-slide cancel" id="alert02">
+            <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                <div aria-labelledby="약속반환확정" aria-modal="true" class="modal__container" role="dialog">
+                    <main class="modal__content">
+                        <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                        <div class="w-full px-1 pt-[56px]">
+                            <div class="flex flex-col w-full gap-4 text-center text-white">
+                                <strong class="block text-[20px] font-gm font-medium leading-5">체결 완료된 약속입니다.</strong>
+                                <span class="block font-gm text-[20px] leading-5 text-white mt-[-8px]">
+                                    약속을 체결한 멤버에게 <br>
+                                    취소요청을 보내겠습니까?
+                                </span>
+                                <span class="block mt-1 text-[16px] leading-5">
+                                    *약속을 체결한 모든 멤버가 동의하면 약속이 <br>
+                                    취소됩니다.
+                                </span>
+                            </div>
+                            <!-- text -->
+
+                            <div class="flex justify-center w-full mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="95" height="105" viewBox="0 0 95 105" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M63.75 11.25H75C76.9873 11.2559 78.8915 12.048 80.2967 13.4533C81.702 14.8585 82.4941 16.7627 82.5 18.75V60H75V18.75H63.75V30H18.75V18.75H7.5V97.5H41.25V105H7.5C5.5127 104.994 3.60849 104.202 2.20326 102.797C0.798018 101.392 0.00593523 99.4873 0 97.5V18.75C0.00593523 16.7627 0.798018 14.8585 2.20326 13.4533C3.60849 12.048 5.5127 11.2559 7.5 11.25H18.75V7.5C18.7559 5.5127 19.548 3.60849 20.9533 2.20326C22.3585 0.798018 24.2627 0.00593523 26.25 0H56.25C58.2373 0.00593523 60.1415 0.798018 61.5467 2.20326C62.952 3.60849 63.7441 5.5127 63.75 7.5V11.25ZM26.25 22.5H56.25V7.5H26.25V22.5ZM55.2875 84.7124L65 94.4249L89.7125 69.7124L95 74.9999L65 105L50 89.9999L55.2875 84.7124Z" fill="#8B5CF6" />
+                                </svg>
+                            </div>
+
+                            <div class="mt-[58px] flex w-full flex-col gap-4 px-5">
+                                <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">약속취소 요청 보내기</button>
+                            </div>
+                            <!-- button -->
+                        </div>
+                    </main>
+                    <!-- //main -->
+                </div>
+                <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+        </div>
+        <!-- //modal -->
+
+
+        <div aria-hidden="true" class="modal micromodal-slide" id="alert01">
+            <div class="modal__overlay" data-micromodal-close tabindex="-1">
+                <div aria-labelledby="알럿창" aria-modal="true" class="modal__container" role="dialog">
+                    <main class="modal__content">
+                        <button aria-label="Close modal" class="modal__close" data-custom-close></button>
+
+                        <div class="w-full px-1 pt-[50px]">
+                            <div class="flex flex-col w-full gap-2 text-[20px] leading-5 text-center text-white">
+
+                                게스트1(홍길동)님과 <br>
+                                응답이 일치하지 않습니다. <br>
+                                확인 후 다시 선택해주세요
+                            </div>
+                            <!-- text -->
+
+                            <div class="mt-[80px] flex w-full flex-col gap-6">
+                                <button class="h-[48px] w-full rounded-[10px] bg-[#CDC3FF] font-bold text-violet-900 shadow-none">다시 선택하기</button>
+                            </div>
+                            <!-- button -->
+                        </div>
+                    </main>
+                    <!-- //main -->
+                </div>
+                <!-- //modal__container -->
+            </div>
+            <!-- //modal__overlay -->
+        </div>
+        <!-- alert01 -->
+
+
+
+        <script>
+            // MicroModal.show('reCancel2');
+            // const closeB = document.querySelectorAll('.modal__close');
+            // for (i = 0; i < closeB.length; i++) {
+            //     const _this = closeB[i];
+
+            //     _this.addEventListener('click', () => {
+            //         MicroModal.close('reCancel2');
+            //     })
+            // }
+
+
+            MicroModal.init({
+                onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+                onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+                openTrigger: 'data-custom-open', // [3]
+                closeTrigger: 'data-custom-close', // [4]
+                openClass: 'is-open', // [5]
+                disableScroll: true, // [6]
+                disableFocus: false, // [7]
+                awaitOpenAnimation: true, // [8]
+                awaitCloseAnimation: true, // [9]
+                debugMode: true, // [10]
+            });
+        </script>
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
