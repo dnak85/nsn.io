@@ -7667,6 +7667,121 @@ input:checked + .customChk .bullet svg {
   content: var(--tw-content);
 }
 
+.customer_view {
+  margin-top: 1.25rem;
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.customer_view .top {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(205 195 255 / var(--tw-border-opacity));
+  padding-bottom: 0.625rem;
+}
+
+.customer_view .top .obj {
+  display: block;
+  width: 100%;
+  line-height: 1.25rem;
+}
+
+.customer_view .top .obj .new {
+  display: inline-block;
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 90 90 / var(--tw-bg-opacity));
+}
+
+.customer_view .top .obj .txt {
+  font-size: 14px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.customer_view .top .obj .bu {
+  display: inline-block;
+  height: 1.5rem;
+  width: 2.5rem;
+  border-radius: 99px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.customer_view .top .obj .bu_default {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.customer_view .top .date {
+  display: block;
+  height: 0.75rem;
+  width: 100%;
+  line-height: .75rem;
+}
+
+.customer_view .top .date span {
+  font-size: 11px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(109 108 149 / var(--tw-text-opacity));
+}
+
+.customer_view .view_button {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.customer_view .view_button button {
+  display: flex;
+  height: 1.5rem;
+  width: 46px;
+  border-collapse: collapse;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(205 195 255 / var(--tw-border-opacity));
+  font-size: 14px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(88 87 112 / var(--tw-text-opacity));
+}
+
+.customer_view .view_button button:last-child {
+  border-left-width: 0px;
+}
+
+.customer_view .cont {
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(88 87 112 / var(--tw-text-opacity));
+}
+
+/* modal - micro */
+
 .micromodal-slide {
   display: none;
 }

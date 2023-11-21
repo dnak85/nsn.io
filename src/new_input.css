@@ -1460,6 +1460,49 @@ input:checked + .customChk .bullet svg {
   @apply absolute left-0 top-1 h-[32px] w-[2px] bg-[#5742C3] content-[''];
 }
 
+.customer_view {
+  @apply mt-5 block w-full px-4;
+}
+.customer_view .top {
+  @apply flex w-full flex-col border-b-[1px] border-[#CDC3FF] pb-2.5;
+}
+
+.customer_view .top .obj {
+  @apply block w-full leading-5;
+}
+
+.customer_view .top .obj .new {
+  @apply inline-block h-2.5 w-2.5 rounded-full bg-[#ff5a5a];
+}
+.customer_view .top .obj .txt {
+  @apply text-[14px] font-semibold text-slate-900;
+}
+.customer_view .top .obj .bu {
+  @apply inline-block h-6 w-10 rounded-[99px] px-2 py-1 text-center font-inter text-[12px] font-semibold leading-[16px];
+}
+.customer_view .top .obj .bu_default {
+  @apply bg-[#BFDBFE] text-blue-600;
+}
+.customer_view .top .date {
+  @apply block h-3 w-full leading-3;
+}
+.customer_view .top .date span {
+  @apply text-[11px] font-[400] text-[#6d6c95];
+}
+
+.customer_view .view_button {
+  @apply mt-4 flex w-full justify-end;
+}
+.customer_view .view_button button {
+  @apply flex h-6 w-[46px] border-collapse items-center justify-center border-[1px] border-[#CDC3FF] text-[14px] font-semibold text-[#585770] last:border-l-0;
+}
+
+.customer_view .cont {
+  @apply mt-6 w-full text-[12px] leading-4 text-[#585770];
+}
+
+/* modal - micro */
+
 .micromodal-slide {
   @apply hidden;
 }
