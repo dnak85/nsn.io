@@ -113,7 +113,7 @@
 
 /* container */
 #m_container {
-  @apply relative w-full pb-[76px];
+  @apply relative flex h-fit w-full flex-col justify-between pb-[58px];
 }
 #m_container.fpage {
   @apply h-full pb-0;
@@ -320,7 +320,7 @@ address {
 
 /* 내약속목록 - 리스트 */
 .prms-my-list .list {
-  @apply flex w-full flex-col gap-6 pt-8;
+  @apply flex min-h-[160px] w-full flex-col gap-6 pt-8;
 }
 
 /* 내약속목록 - 리스트 - 요약박스 */
@@ -1213,7 +1213,7 @@ input:checked + .customChk .bullet svg {
 
 /* 마이페이지 */
 .myInfo {
-  @apply w-full pb-[80px];
+  @apply w-full;
 }
 .myInfo .usr {
   @apply flex w-full flex-col items-center justify-center gap-3;
@@ -2022,4 +2022,27 @@ input:checked + .customChk .bullet svg {
 }
 .msg.bgmsg .time {
   @apply text-white;
+}
+
+/* container footer */
+.con_footer {
+  @apply block w-full bg-white bg-opacity-50 py-5;
+}
+.cf_menu {
+  @apply flex h-[14px] w-full justify-center gap-2.5 leading-[14px];
+}
+.cf_menu a {
+  @apply text-[12px] text-[#8994a4];
+}
+.cf_menu a:last-child {
+  @apply font-bold;
+}
+.con_footer address {
+  @apply mt-2 block w-full text-center;
+}
+.con_footer address .addrs {
+  @apply block text-[11px] text-[#8994a4];
+}
+.con_footer address .copy {
+  @apply mt-2 block text-[11px] text-[#8994a4];
 }

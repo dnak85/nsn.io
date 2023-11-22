@@ -215,40 +215,62 @@
                         <button>프로필에 적용하기</button>
                     </div>
                     <input type="file" style="display: none;" onchange="handleFileSelect(this)">
+
+                    <div class="h-10"></div>
+                    <!-- // -->
+                    <script>
+                        function changeIcon(button) {
+                            // 클릭한 버튼에서 이미지 소스를 가져옵니다.
+                            var newIconSrc = button.querySelector('img').src;
+
+                            // 사용자 아이콘 버튼에 새 이미지 소스를 설정합니다.
+                            document.getElementById('userIcon').querySelector('img').src = newIconSrc;
+                        }
+
+                        function selectImageFile() {
+                            // 파일 선택 대화상자를 열기 위해 입력 파일 엘리먼트를 트리거합니다.
+                            document.querySelector('input[type="file"]').click();
+                        }
+
+                        function handleFileSelect(input) {
+                            var file = input.files[0];
+
+                            if (file) {
+                                // 선택한 파일을 읽고 사용자 아이콘 버튼의 소스로 설정합니다.
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    document.getElementById('userIcon').querySelector('img').src = e.target.result;
+                                };
+                                reader.readAsDataURL(file);
+                            }
+                        }
+
+                        function applyToProfile() {
+                            // 사용자 프로필에 변경 내용을 적용하는 로직을 추가하세요.
+                            alert('프로필에 변경이 적용되었습니다!');
+                        }
+                    </script>
                 </div>
                 <!-- // -->
-                <script>
-                    function changeIcon(button) {
-                        // 클릭한 버튼에서 이미지 소스를 가져옵니다.
-                        var newIconSrc = button.querySelector('img').src;
 
-                        // 사용자 아이콘 버튼에 새 이미지 소스를 설정합니다.
-                        document.getElementById('userIcon').querySelector('img').src = newIconSrc;
-                    }
+                <section class="con_footer">
+                    <div class="cf_menu">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <!-- //cf_menu -->
 
-                    function selectImageFile() {
-                        // 파일 선택 대화상자를 열기 위해 입력 파일 엘리먼트를 트리거합니다.
-                        document.querySelector('input[type="file"]').click();
-                    }
-
-                    function handleFileSelect(input) {
-                        var file = input.files[0];
-
-                        if (file) {
-                            // 선택한 파일을 읽고 사용자 아이콘 버튼의 소스로 설정합니다.
-                            var reader = new FileReader();
-                            reader.onload = function (e) {
-                                document.getElementById('userIcon').querySelector('img').src = e.target.result;
-                            };
-                            reader.readAsDataURL(file);
-                        }
-                    }
-
-                    function applyToProfile() {
-                        // 사용자 프로필에 변경 내용을 적용하는 로직을 추가하세요.
-                        alert('프로필에 변경이 적용되었습니다!');
-                    }
-                </script>
+                    <address>
+                        <span class="addrs">
+                            (주)씽크풀 서울시 영등포구 국제금융로70,15층(여의도동, 미원빌딩) <br>
+                            고객센터: <a href="tel:1566-9378">1566-9378</a> 사업자등록번호: 116-81-54775 대표: 김동진
+                        </span>
+                        <span class="copy">
+                            Copyright since 1999 &copy; ThinkPool Co.,Ltd. All Rights Reserved
+                        </span>
+                    </address>
+                </section>
+                <!-- //con_footer -->
             </div>
             <!-- mobile-container -->
 
