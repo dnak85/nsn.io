@@ -1644,6 +1644,10 @@ input:hover,
   height: 600px;
 }
 
+.h-\[60px\] {
+  height: 60px;
+}
+
 .h-\[64px\] {
   height: 64px;
 }
@@ -1711,10 +1715,6 @@ input:hover,
 
 .h-full {
   height: 100%;
-}
-
-.h-\[60px\] {
-  height: 60px;
 }
 
 .max-h-0 {
@@ -4078,8 +4078,6 @@ input:hover,
 #m_container {
   position: relative;
   display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
@@ -4355,7 +4353,8 @@ address {
   position: relative;
   z-index: 10;
   margin-top: -120px;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -8524,7 +8523,7 @@ input:checked + .customChk .bullet svg {
   position: absolute;
   /* Fallback */
   position: fixed;
-  bottom: 100px;
+  bottom: -100px;
   left: 50%;
   width: calc(100% - 16px);
   min-width: 320px;
@@ -8537,6 +8536,7 @@ input:checked + .customChk .bullet svg {
 }
 
 .toastjs-container[aria-hidden="false"] {
+  bottom: 100px;
   transform: translateY(0%);
   opacity: 1;
 }

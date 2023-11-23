@@ -193,3 +193,16 @@ for (let i = 0; i < moreBtn.length; i++) {
     animateElement(_this, [{ opacity: 0 }, { opacity: 1 }], 500);
   }, 1500);
 }
+
+// container 높이
+
+const screenHeight = window.screen.height;
+const headerHeight = document.querySelector("#m_header").offsetHeight;
+const footerHeight = document.querySelector("#m_footer").offsetHeight;
+const container = document.querySelector("#m_container");
+
+const containerHeight = screenHeight - (headerHeight + footerHeight) + 149;
+function updateHeight() {
+  container.style.height = containerHeight + "px";
+}
+updateHeight();

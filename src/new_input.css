@@ -113,7 +113,7 @@
 
 /* container */
 #m_container {
-  @apply relative flex h-fit w-full flex-col justify-between pb-[58px];
+  @apply relative flex w-full flex-col justify-between pb-[58px];
 }
 #m_container.fpage {
   @apply h-full pb-0;
@@ -229,7 +229,7 @@ address {
 
 /* main */
 #m_main {
-  @apply relative z-10 mt-[-120px] h-full w-full px-4;
+  @apply relative z-10 mt-[-120px] h-fit w-full px-4;
 }
 /* main-welcome */
 #m_main .welcome-box {
@@ -1918,7 +1918,7 @@ input:checked + .customChk .bullet svg {
 .toastjs-container {
   position: absolute; /* Fallback */
   position: fixed;
-  bottom: 100px;
+  bottom: -100px;
   left: 50%;
   width: calc(100% - 16px);
   min-width: 320px;
@@ -1930,6 +1930,7 @@ input:checked + .customChk .bullet svg {
 }
 
 .toastjs-container[aria-hidden="false"] {
+  bottom: 100px;
   transform: translateY(0%);
   opacity: 1;
 }
