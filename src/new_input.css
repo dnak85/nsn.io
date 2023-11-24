@@ -1187,8 +1187,11 @@ input:checked + .customChk .bullet svg {
 .prms-content-box .txt .pp_table .tbl-list .list .date {
   @apply h-5 w-[100px] text-right text-[14px] leading-5 text-slate-900;
 }
-.prms-content-box .txt .pp_table .tbl-list .list.invite .name {
+.prms-content-box .txt .pp_table .tbl-list .list.invite span.name {
   @apply font-[800] text-[#5742c3];
+}
+.prms-content-box .txt .pp_table .tbl-list .list.invite button.name {
+  @apply font-[800] text-[#5742c3] underline;
 }
 .reset-date .modal-content {
   @apply p-0 shadow-none;

@@ -7017,10 +7017,17 @@ input:checked + .customChk .bullet svg {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
-.prms-content-box .txt .pp_table .tbl-list .list.invite .name {
+.prms-content-box .txt .pp_table .tbl-list .list.invite span.name {
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(87 66 195 / var(--tw-text-opacity));
+}
+
+.prms-content-box .txt .pp_table .tbl-list .list.invite button.name {
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(87 66 195 / var(--tw-text-opacity));
+  text-decoration-line: underline;
 }
 
 .reset-date .modal-content {
