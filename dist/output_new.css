@@ -1841,16 +1841,16 @@ input:hover,
   width: 104px;
 }
 
+.w-\[105px\] {
+  width: 105px;
+}
+
 .w-\[106px\] {
   width: 106px;
 }
 
 .w-\[116\.31px\] {
   width: 116.31px;
-}
-
-.w-\[117px\] {
-  width: 117px;
 }
 
 .w-\[1200px\] {
@@ -1995,6 +1995,10 @@ input:hover,
 
 .w-\[75\%\] {
   width: 75%;
+}
+
+.w-\[75px\] {
+  width: 75px;
 }
 
 .w-\[80px\] {
@@ -3935,13 +3939,13 @@ input:hover,
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 3px;
+  gap: 0.5rem;
   padding-left: 1rem;
 }
 
 #m_main .notice-box .main-alm-box #w_wrap .visual > .txt strong {
   display: block;
-  height: 21px;
+  min-height: 21px;
   width: 100%;
   font-size: 18px;
   font-weight: 900;
@@ -3958,6 +3962,16 @@ input:hover,
   line-height: 17px;
   --tw-text-opacity: 1;
   color: rgb(63 54 111 / var(--tw-text-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-02 #w_wrap .visual > .txt span {
+  --tw-text-opacity: 1;
+  color: rgb(111 67 54 / var(--tw-text-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-03 #w_wrap .visual > .txt span {
+  --tw-text-opacity: 1;
+  color: rgb(111 88 54 / var(--tw-text-opacity));
 }
 
 #w_wrap .visual > .vi01 {
@@ -4434,13 +4448,13 @@ address {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 3px;
+  gap: 0.5rem;
   padding-left: 1rem;
 }
 
 #m_main .notice-box .main-alm-box .text strong {
   display: block;
-  height: 21px;
+  min-height: 21px;
   width: 100%;
   font-size: 18px;
   font-weight: 900;
@@ -4460,9 +4474,9 @@ address {
 }
 
 #m_main .notice-box .main-alm-box .bg {
-  display: block;
-  width: 120px;
-  text-align: center;
+  display: flex;
+  min-width: 110px;
+  justify-content: center;
 }
 
 #m_main .notice-box .main-alm-box.box-st-01 {
@@ -4478,7 +4492,25 @@ address {
   --tw-border-opacity: 1;
   border-color: rgb(255 135 97 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(254 216 149 / var(--tw-bg-opacity));
+  background-color: rgb(254 181 149 / var(--tw-bg-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-03 {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(238 163 45 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 213 147 / var(--tw-bg-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-02 .text span {
+  --tw-text-opacity: 1;
+  color: rgb(111 67 54 / var(--tw-text-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-03 .text span {
+  --tw-text-opacity: 1;
+  color: rgb(111 88 54 / var(--tw-text-opacity));
 }
 
 #m_main .notice-box .main-alm-box.box-st-01 .bullet {
@@ -4489,6 +4521,11 @@ address {
 #m_main .notice-box .main-alm-box.box-st-02 .bullet {
   --tw-bg-opacity: 1;
   background-color: rgb(255 118 40 / var(--tw-bg-opacity));
+}
+
+#m_main .notice-box .main-alm-box.box-st-03 .bullet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 121 46 / var(--tw-bg-opacity));
 }
 
 /* 약속만들기 */

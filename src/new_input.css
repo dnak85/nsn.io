@@ -252,28 +252,40 @@ address {
   @apply flex h-[21px] w-[63px] items-center justify-center rounded-[99px] text-[12px] font-[900] text-white;
 }
 #m_main .notice-box .main-alm-box .text {
-  @apply flex w-full flex-col gap-[3px] pl-4;
+  @apply flex w-full flex-col gap-2 pl-4;
 }
 #m_main .notice-box .main-alm-box .text strong {
-  @apply block h-[21px] w-full text-[18px] font-[900] leading-[21px] text-black;
+  @apply block min-h-[21px] w-full text-[18px] font-[900] leading-[21px] text-black;
 }
 #m_main .notice-box .main-alm-box .text span {
   @apply block w-full text-[14px] font-semibold leading-[17px] text-[#3f366f];
 }
 #m_main .notice-box .main-alm-box .bg {
-  @apply block w-[120px] text-center;
+  @apply flex min-w-[110px] justify-center;
 }
 #m_main .notice-box .main-alm-box.box-st-01 {
   @apply border-[1px] border-[#7b61ff] bg-[#D1C6FF];
 }
 #m_main .notice-box .main-alm-box.box-st-02 {
-  @apply border-[1px] border-[#FF8761] bg-[#FED895];
+  @apply border-[1px] border-[#FF8761] bg-[#FEB595];
+}
+#m_main .notice-box .main-alm-box.box-st-03 {
+  @apply border-[1px] border-[#EEA32D] bg-[#FFD593];
+}
+#m_main .notice-box .main-alm-box.box-st-02 .text span {
+  @apply text-[#6F4336];
+}
+#m_main .notice-box .main-alm-box.box-st-03 .text span {
+  @apply text-[#6F5836];
 }
 #m_main .notice-box .main-alm-box.box-st-01 .bullet {
   @apply bg-[#7B61FF];
 }
 #m_main .notice-box .main-alm-box.box-st-02 .bullet {
   @apply bg-[#ff7628];
+}
+#m_main .notice-box .main-alm-box.box-st-03 .bullet {
+  @apply bg-[#FF792E];
 }
 
 /* 약속만들기 */
