@@ -2093,3 +2093,14 @@ input:checked + .customChk .bullet svg {
 .loading em:nth-child(4) {
   animation-delay: 0.6s;
 }
+
+/* 약속초대 메인링크 */
+.invite_txt {
+  @apply flex w-full items-center gap-5 p-[32px_16px_0];
+}
+.invite_txt button {
+  @apply h-[56px] w-[56px];
+}
+.invite_txt span {
+  @apply text-[18px] font-semibold leading-5 text-slate-900;
+}
